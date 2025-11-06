@@ -1,0 +1,22 @@
+site_name: myNotes
+site_url: https://JanikHenz.github.io/myNotes/ 
+repo_url: https://github.com/JanikHenz/myNotes 
+
+# Verwende das Material Theme
+theme:
+  name: material
+  palette:
+    scheme: slate  
+    primary: deep orange
+    accent: deep orange
+  features:
+    - navigation.sections # Ordnet die Navigation nach Überschriften
+    - navigation.expand # Hält die Abschnitte in der Navigationsleiste offen
+    - search.suggest # Vorschläge in der Suche
+
+markdown_extensions:
+  - admonition # Für Info/Warn-Boxen
+  - codehilite # Für Syntax Highlighting
+
+nav:
+  - Home: index.md # Ihre Startseite
