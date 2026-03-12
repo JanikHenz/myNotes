@@ -2,7 +2,6 @@ site_name: myNotes
 site_url: https://JanikHenz.github.io/myNotes/ 
 repo_url: https://github.com/JanikHenz/myNotes 
 
-# Verwende das Material Theme
 theme:
   name: material
   palette:
@@ -10,13 +9,22 @@ theme:
     primary: deep orange
     accent: deep orange
   features:
-    - navigation.sections # Ordnet die Navigation nach Überschriften
-    - navigation.expand # Hält die Abschnitte in der Navigationsleiste offen
-    - search.suggest # Vorschläge in der Suche
+    - navigation.sections 
+    - navigation.expand 
+    - search.suggest 
 
 markdown_extensions:
-  - admonition # Für Info/Warn-Boxen
-  - codehilite # Für Syntax Highlighting
+  - admonition 
+  - codehilite 
 
 nav:
-  - Home: index.md # Ihre Startseite
+  - Home: index.md 
+  - Neovim Config:
+    - Grundlagen: neovim/basics.md
+    - Plugins: neovim/plugins.md
+  - ip5:
+    - projectdeclaration: ip5/projectdeclaration.md
+    - risks: ip5/risks.md
+    - setup: ip5/setup.md
+    - helper: ip5/helper.md
+    - milestone01: ip5/milestone01.md
