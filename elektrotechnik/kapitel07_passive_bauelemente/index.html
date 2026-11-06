@@ -1,0 +1,3927 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Janik Henz's Wissensdatenbank, Elektrotechnik-Referenzhandbuch & Projektnotizen">
+      
+      
+        <meta name="author" content="Janik Henz">
+      
+      
+        <link rel="canonical" href="https://JanikHenz.github.io/myNotes/elektrotechnik/kapitel07_passive_bauelemente/">
+      
+      
+        <link rel="prev" href="../kapitel06_messtechnik_sicherheit/">
+      
+      
+        <link rel="next" href="../kapitel08_dioden_halbleiter/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>7. Passive Bauelemente & Fertigung - myNotes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kapitel-7-passive-bauelemente-fertigungstechnik" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../.." title="myNotes" class="md-header__button md-logo" aria-label="myNotes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            myNotes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              7. Passive Bauelemente & Fertigung
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-label="Heller Modus"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Heller Modus" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-label="Dunkler Modus"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dunkler Modus" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/JanikHenz/myNotes" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    JanikHenz/myNotes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="myNotes" class="md-nav__button md-logo" aria-label="myNotes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    myNotes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/JanikHenz/myNotes" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    JanikHenz/myNotes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elektrotechnik
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Elektrotechnik
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht & Download
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel01_mathematik/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Mathematik & Vektoren
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel02_elektrostatik_felder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Elektrostatik & Felder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel03_kondensatoren/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Kondensatoren
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel04_gleichstrom_netzwerke/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Gleichstromtechnik
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel05_magnetismus_spulen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Magnetismus & Spulen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel06_messtechnik_sicherheit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Messtechnik & Sicherheit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Passive Bauelemente & Fertigung
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Passive Bauelemente & Fertigung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#71-mechanische-fertigungstechnik" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Mechanische Fertigungstechnik
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.1 Mechanische Fertigungstechnik">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#normen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normen:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toleranzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Toleranzen:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-ma-form-und-lagetoleranzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Maß-, Form- und Lagetoleranzen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2 Maß-, Form- und Lagetoleranzen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ebenheitstoleranz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ebenheitstoleranz:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rechtwinkligkeitstoleranz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rechtwinkligkeitstoleranz:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paralellitatstoleranz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paralellitätstoleranz:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73-technische-zeichnung-projektionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Technische Zeichnung &amp; Projektionen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3 Technische Zeichnung &amp; Projektionen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perspektiven" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perspektiven:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#darstellungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Darstellungen:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#74-fertigungsverfahren-der-mechanik" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Fertigungsverfahren der Mechanik
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.4 Fertigungsverfahren der Mechanik">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hauptgruppen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hauptgruppen:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#75-bohren-zerspanung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5 Bohren &amp; Zerspanung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#76-prufen-messzeuge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.6 Prüfen &amp; Messzeuge
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.6 Prüfen &amp; Messzeuge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formlehren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formlehren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#masslehren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Masslehren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#messen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Messen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#77-kabelaufbau-adern-litzen-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.7 Kabelaufbau, Adern, Litzen &amp; Isolation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.7 Kabelaufbau, Adern, Litzen &amp; Isolation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kabelarten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kabelarten:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#netzkabel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Netzkabel:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steuerkabel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steuerkabel:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flachkabel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flachkabel:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#awg-american-wire-gauge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AWG (American Wire Gauge):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#koaxialkabel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Koaxialkabel:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lichtwellenleiter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lichtwellenleiter:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buskabel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buskabel:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#78-kabelquerschnitte-awg-norm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.8 Kabelquerschnitte &amp; AWG-Norm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#79-kabelfarben-nach-dinvde" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.9 Kabelfarben nach DIN/VDE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.9 Kabelfarben nach DIN/VDE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generell
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steuerkreis-steuerspannung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steuerkreis (Steuerspannung)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hauptstromkreis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hauptstromkreis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#710-festwiderstande-schicht-vs-drahtwiderstande" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.10 Festwiderstände: Schicht- vs. Drahtwiderstände
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.10 Festwiderstände: Schicht- vs. Drahtwiderstände">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funktion-aufbau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funktion &amp; Aufbau
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drahtwiederstand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drahtwiederstand
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kohlenschicht-metallschichtwiederstande" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kohlenschicht-, Metallschichtwiederstände
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#711-farbcode-kennzeichnung-von-widerstanden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.11 Farbcode-Kennzeichnung von Widerständen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.11 Farbcode-Kennzeichnung von Widerständen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schaltungssymbol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schaltungssymbol:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#712-e-normreihen-e6-bis-e96-toleranzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.12 E-Normreihen (E6 bis E96) &amp; Toleranzen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#713-veranderbare-widerstande-potentiometer-trimmer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.13 Veränderbare Widerstände (Potentiometer &amp; Trimmer)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.13 Veränderbare Widerstände (Potentiometer &amp; Trimmer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schaltsymbole" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schaltsymbole:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kohlenschichtpotentiometer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kohlenschichtpotentiometer:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cermetpotentiometer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cermetpotentiometer:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drahtpotentiometer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drahtpotentiometer:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#714-widerstandsnetzwerke-silsip-dipdil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.14 Widerstandsnetzwerke (SIL/SIP &amp; DIP/DIL)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.14 Widerstandsnetzwerke (SIL/SIP &amp; DIP/DIL)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beispiel-vom-aufbau-von-sil-sip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beispiel vom Aufbau von SIL (SIP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispiel-vom-aufbau-von-dip-dil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beispiel vom Aufbau von DIP (DIL)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#715-anwendungsbereiche-von-widerstanden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.15 Anwendungsbereiche von Widerständen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.15 Anwendungsbereiche von Widerständen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vorwiderstand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vorwiderstand
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kleinere-aber-feinere-potentiometer-einstellmoglichkeit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kleinere aber feinere Potentiometer Einstellmöglichkeit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#716-r-2r-widerstandsleiter-netzwerk-da-wandlung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.16 R-2R-Widerstandsleiter-Netzwerk (D/A-Wandlung)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#717-widerstandstrimmung-durch-parallelschaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.17 Widerstandstrimmung durch Parallelschaltung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#718-lotverfahren-tauch-und-wellenloten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.18 Lötverfahren: Tauch- und Wellenlöten
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.18 Lötverfahren: Tauch- und Wellenlöten">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lotzinn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lötzinn
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tauchloten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tauchlöten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wellenloten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wellenlöten
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#719-reflowloten-mit-heiluft-ofen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.19 Reflowlöten mit Heißluft / Ofen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#720-dampfphasenloten-vapor-phase-soldering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.20 Dampfphasenlöten (Vapor Phase Soldering)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#721-bga-ball-grid-array-kugelgitteranordnung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.21 BGA (Ball Grid Array) Kugelgitteranordnung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#722-der-grabsteineffekt-tombstoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.22 Der Grabsteineffekt (Tombstoning)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#723-metalloxid-varistoren-mov-vdr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.23 Metalloxid-Varistoren (MOV / VDR)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.23 Metalloxid-Varistoren (MOV / VDR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aufbau-wirkungsweise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aufbau &amp; Wirkungsweise
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#724-selbstruckstellende-sicherungen-polyfuse-pptc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.24 Selbstrückstellende Sicherungen (PolyFuse / PPTC)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.24 Selbstrückstellende Sicherungen (PolyFuse / PPTC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funktionsprinzip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funktionsprinzip
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wichtige-kennwerte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wichtige Kennwerte
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#725-bauteil-codierung-farbringe-smd-codes-eia-96" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.25 Bauteil-Codierung: Farbringe, SMD-Codes &amp; EIA-96
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.25 Bauteil-Codierung: Farbringe, SMD-Codes &amp; EIA-96">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-farbcode-kennzeichnung-bedrahteter-widerstande" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Farbcode-Kennzeichnung bedrahteter Widerstände
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-smd-widerstandscodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. SMD-Widerstandscodes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel08_dioden_halbleiter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Dioden & Halbleiter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel09_transistoren_schaltungen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Transistoren & Schaltungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel10_opv_filter_analog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. OPVs, Filter & Signalverarbeitung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel11_digitaltechnik_mikrocontroller/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Digitaltechnik & Mikrocontroller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel12_hochspannung_praxis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Hochspannungstechnik (EMC Partner)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../anhang_formelsammlung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anhang: Formelsammlung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../komplett/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vollständiges Skript
+  
+
+    
+      <br>
+      <small>Vollständiges Referenzhandbuch & Formelsammlung</small>
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--completed"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IP5
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IP5
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/projectdeclaration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projektvereinbarung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/risks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risiken
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/helper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Helper
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/milestone01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meilenstein 01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/milestone02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meilenstein 02
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    C++
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week45/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 45
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week46/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 46
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week47/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 47
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week48/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 48
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week49/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 49
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Weitere Notizen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Weitere Notizen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vesys/week01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VeSys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wosm/week01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WoSM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Allgemein
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#71-mechanische-fertigungstechnik" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Mechanische Fertigungstechnik
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.1 Mechanische Fertigungstechnik">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#normen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normen:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toleranzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Toleranzen:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-ma-form-und-lagetoleranzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Maß-, Form- und Lagetoleranzen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2 Maß-, Form- und Lagetoleranzen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ebenheitstoleranz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ebenheitstoleranz:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rechtwinkligkeitstoleranz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rechtwinkligkeitstoleranz:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paralellitatstoleranz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paralellitätstoleranz:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73-technische-zeichnung-projektionen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 Technische Zeichnung &amp; Projektionen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3 Technische Zeichnung &amp; Projektionen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perspektiven" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perspektiven:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#darstellungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Darstellungen:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#74-fertigungsverfahren-der-mechanik" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Fertigungsverfahren der Mechanik
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.4 Fertigungsverfahren der Mechanik">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hauptgruppen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hauptgruppen:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#75-bohren-zerspanung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.5 Bohren &amp; Zerspanung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#76-prufen-messzeuge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.6 Prüfen &amp; Messzeuge
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.6 Prüfen &amp; Messzeuge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formlehren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Formlehren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#masslehren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Masslehren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#messen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Messen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#77-kabelaufbau-adern-litzen-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.7 Kabelaufbau, Adern, Litzen &amp; Isolation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.7 Kabelaufbau, Adern, Litzen &amp; Isolation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kabelarten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kabelarten:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#netzkabel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Netzkabel:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steuerkabel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steuerkabel:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flachkabel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flachkabel:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#awg-american-wire-gauge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AWG (American Wire Gauge):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#koaxialkabel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Koaxialkabel:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lichtwellenleiter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lichtwellenleiter:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buskabel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buskabel:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#78-kabelquerschnitte-awg-norm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.8 Kabelquerschnitte &amp; AWG-Norm
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#79-kabelfarben-nach-dinvde" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.9 Kabelfarben nach DIN/VDE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.9 Kabelfarben nach DIN/VDE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generell
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steuerkreis-steuerspannung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steuerkreis (Steuerspannung)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hauptstromkreis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hauptstromkreis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#710-festwiderstande-schicht-vs-drahtwiderstande" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.10 Festwiderstände: Schicht- vs. Drahtwiderstände
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.10 Festwiderstände: Schicht- vs. Drahtwiderstände">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funktion-aufbau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funktion &amp; Aufbau
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drahtwiederstand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drahtwiederstand
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kohlenschicht-metallschichtwiederstande" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kohlenschicht-, Metallschichtwiederstände
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#711-farbcode-kennzeichnung-von-widerstanden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.11 Farbcode-Kennzeichnung von Widerständen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.11 Farbcode-Kennzeichnung von Widerständen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schaltungssymbol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schaltungssymbol:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#712-e-normreihen-e6-bis-e96-toleranzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.12 E-Normreihen (E6 bis E96) &amp; Toleranzen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#713-veranderbare-widerstande-potentiometer-trimmer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.13 Veränderbare Widerstände (Potentiometer &amp; Trimmer)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.13 Veränderbare Widerstände (Potentiometer &amp; Trimmer)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schaltsymbole" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schaltsymbole:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kohlenschichtpotentiometer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kohlenschichtpotentiometer:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cermetpotentiometer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cermetpotentiometer:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drahtpotentiometer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Drahtpotentiometer:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#714-widerstandsnetzwerke-silsip-dipdil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.14 Widerstandsnetzwerke (SIL/SIP &amp; DIP/DIL)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.14 Widerstandsnetzwerke (SIL/SIP &amp; DIP/DIL)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beispiel-vom-aufbau-von-sil-sip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beispiel vom Aufbau von SIL (SIP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispiel-vom-aufbau-von-dip-dil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beispiel vom Aufbau von DIP (DIL)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#715-anwendungsbereiche-von-widerstanden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.15 Anwendungsbereiche von Widerständen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.15 Anwendungsbereiche von Widerständen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vorwiderstand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vorwiderstand
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kleinere-aber-feinere-potentiometer-einstellmoglichkeit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kleinere aber feinere Potentiometer Einstellmöglichkeit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#716-r-2r-widerstandsleiter-netzwerk-da-wandlung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.16 R-2R-Widerstandsleiter-Netzwerk (D/A-Wandlung)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#717-widerstandstrimmung-durch-parallelschaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.17 Widerstandstrimmung durch Parallelschaltung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#718-lotverfahren-tauch-und-wellenloten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.18 Lötverfahren: Tauch- und Wellenlöten
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.18 Lötverfahren: Tauch- und Wellenlöten">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lotzinn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lötzinn
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tauchloten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tauchlöten
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wellenloten" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wellenlöten
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#719-reflowloten-mit-heiluft-ofen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.19 Reflowlöten mit Heißluft / Ofen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#720-dampfphasenloten-vapor-phase-soldering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.20 Dampfphasenlöten (Vapor Phase Soldering)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#721-bga-ball-grid-array-kugelgitteranordnung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.21 BGA (Ball Grid Array) Kugelgitteranordnung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#722-der-grabsteineffekt-tombstoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.22 Der Grabsteineffekt (Tombstoning)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#723-metalloxid-varistoren-mov-vdr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.23 Metalloxid-Varistoren (MOV / VDR)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.23 Metalloxid-Varistoren (MOV / VDR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aufbau-wirkungsweise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aufbau &amp; Wirkungsweise
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#724-selbstruckstellende-sicherungen-polyfuse-pptc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.24 Selbstrückstellende Sicherungen (PolyFuse / PPTC)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.24 Selbstrückstellende Sicherungen (PolyFuse / PPTC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funktionsprinzip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funktionsprinzip
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wichtige-kennwerte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wichtige Kennwerte
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#725-bauteil-codierung-farbringe-smd-codes-eia-96" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.25 Bauteil-Codierung: Farbringe, SMD-Codes &amp; EIA-96
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.25 Bauteil-Codierung: Farbringe, SMD-Codes &amp; EIA-96">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-farbcode-kennzeichnung-bedrahteter-widerstande" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Farbcode-Kennzeichnung bedrahteter Widerstände
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-smd-widerstandscodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. SMD-Widerstandscodes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="kapitel-7-passive-bauelemente-fertigungstechnik">Kapitel 7: Passive Bauelemente &amp; Fertigungstechnik<a class="headerlink" href="#kapitel-7-passive-bauelemente-fertigungstechnik" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Überblick</p>
+<p>Widerstandsbauformen, Farbcode, E-Reihen, Potentiometer, R2R, Kabel, Mechanik und Lötverfahren.</p>
+</div>
+<h2 id="71-mechanische-fertigungstechnik">7.1 Mechanische Fertigungstechnik<a class="headerlink" href="#71-mechanische-fertigungstechnik" title="Permanent link">&para;</a></h2>
+<h3 id="normen">Normen:<a class="headerlink" href="#normen" title="Permanent link">&para;</a></h3>
+<p>Die Normen sind von Organisationen festgelegte Anforderungen, sie sind eine Vereinheitlichung von Massen, rechnerische Regeln und vielen anderen Angaben.
+Es gibt den Landesnorm z.B SNR, die europäische Normen EN und die weltweit geltenen Normen ISO. Die Normen gibt es für verschiedene Fachrichtungen.</p>
+<h3 id="toleranzen">Toleranzen:<a class="headerlink" href="#toleranzen" title="Permanent link">&para;</a></h3>
+<p>So genau wie nötig, nicht so genau wie möglich.
+Eine Toleranz schreibt man so <span class="arithmatex">\(\pm 0{,}1\,\text{mm}\)</span>.</p>
+<hr />
+<hr />
+<h2 id="72-ma-form-und-lagetoleranzen">7.2 Maß-, Form- und Lagetoleranzen<a class="headerlink" href="#72-ma-form-und-lagetoleranzen" title="Permanent link">&para;</a></h2>
+<p><img alt="Form- und Lagetoleranzen nach ISO 1101" src="../illustrations/form_lage_toleranzen.svg" /></p>
+<h3 id="ebenheitstoleranz">Ebenheitstoleranz:<a class="headerlink" href="#ebenheitstoleranz" title="Permanent link">&para;</a></h3>
+<p><code>[ ⏥ | 0,2 ]</code></p>
+<p><em>Abbildung: Werkstückkörper mit planer Oberseite. Ein Toleranzhinweispfeil mit gefülltem Dreieck zeigt auf die Oberfläche und trägt das Toleranzfeld <code>[ ⏥ | 0,2 ]</code>.</em></p>
+<h3 id="rechtwinkligkeitstoleranz">Rechtwinkligkeitstoleranz:<a class="headerlink" href="#rechtwinkligkeitstoleranz" title="Permanent link">&para;</a></h3>
+<p><code>[ ⊥ | 0,2 | A ]</code></p>
+<p><em>Abbildung: L-förmiger Werkstückquerschnitt. An der linken vertikalen Außenfläche befindet sich das Bezugselement <code>[A]</code> mit gefülltem Dreieck. Auf die Oberseite des unteren horizontalen Schenkels weist der Toleranzpfeil mit dem Rahmen <code>[ ⊥ | 0,2 | A ]</code>.</em></p>
+<h3 id="paralellitatstoleranz">Paralellitätstoleranz:<a class="headerlink" href="#paralellitatstoleranz" title="Permanent link">&para;</a></h3>
+<p><code>[ // | 0,2 | A ]</code></p>
+<p><em>Abbildung: Ein Hohlblockprofil mit innenliegender Aussparung. An der unteren Grundfläche ist das Bezugsdreieck <code>[A]</code> platziert. Auf die gegenüberliegende obere Außenfläche zeigt die Toleranzangabe <code>[ // | 0,2 | A ]</code>.</em></p>
+<hr />
+<hr />
+<h2 id="73-technische-zeichnung-projektionen">7.3 Technische Zeichnung &amp; Projektionen<a class="headerlink" href="#73-technische-zeichnung-projektionen" title="Permanent link">&para;</a></h2>
+<p>Bei einer technischen Zeichnung gibt es 2 Teile: einmal die Zeichnung und den Zeichnungskopf mit wichtigen Angaben. Bei einer technischer Zeichnung ist fast alles genormt.</p>
+<h3 id="perspektiven">Perspektiven:<a class="headerlink" href="#perspektiven" title="Permanent link">&para;</a></h3>
+<p>Es werden nur soviele Ansichten gezeichnet wie man braucht. Die Frontperspektive ist die Ansicht welche dir am meisten Informationen [gibt].</p>
+<h3 id="darstellungen">Darstellungen:<a class="headerlink" href="#darstellungen" title="Permanent link">&para;</a></h3>
+<p><img alt="Axonometrische Projektionsarten (Isometrisch, Dimetrisch, Kabinett)" src="../illustrations/technische_zeichnung_projektionen.svg" /></p>
+<ul>
+<li><strong>Isometrisch</strong> <span class="arithmatex">\(\longrightarrow\)</span></li>
+</ul>
+<p><em>Abbildung: Quader/Würfel in isometrischer Axonometrie, aufsteigende Kanten jeweils im <span class="arithmatex">\(30^\circ\)</span>-Winkel zur Horizontalen.</em></p>
+<p>$<span class="arithmatex">\(a : b : c = 1 : 1 : 1\)</span>$
+  $<span class="arithmatex">\(\alpha = 30^\circ \quad \beta = 30^\circ\)</span>$</p>
+<ul>
+<li><strong>Kabinett</strong></li>
+</ul>
+<p><em>Abbildung: Quader in Kavalier-/Kabinettperspektive; Frontfläche unverzerrt parallel zur Bildebene, <span class="arithmatex">\(\alpha = 0^\circ\)</span>, Fluchtachse unter <span class="arithmatex">\(\beta = 45^\circ\)</span> verkürzt.</em></p>
+<p>$<span class="arithmatex">\(a : b : c = 0{,}5 : 1 : 1\)</span>$
+  $<span class="arithmatex">\(\alpha = 0^\circ \quad \beta = 45^\circ\)</span>$</p>
+<ul>
+<li><strong>Dimetrisch</strong></li>
+</ul>
+<p><em>Abbildung: Quader in dimetrischer Projektion; Winkel <span class="arithmatex">\(\alpha = 7^\circ\)</span> und <span class="arithmatex">\(\beta = 42^\circ\)</span> zur Horizontalen, Breitenachse verkürzt.</em></p>
+<p>$<span class="arithmatex">\(a : b : c = 0{,}5 : 1 : 1\)</span>$
+  $<span class="arithmatex">\(\alpha = 7^\circ \quad \beta = 42^\circ\)</span>$</p>
+<hr />
+<hr />
+<h2 id="74-fertigungsverfahren-der-mechanik">7.4 Fertigungsverfahren der Mechanik<a class="headerlink" href="#74-fertigungsverfahren-der-mechanik" title="Permanent link">&para;</a></h2>
+<p>Die Form der Werkstücke wird nach dem Verfahren...</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">geschaffen</th>
+<th style="text-align: left;">geändert</th>
+<th style="text-align: left;">beibehalten</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Urformen (HG 1)</td>
+<td style="text-align: left;">Umformen (HG 2) | Trennen (HG 3)</td>
+<td style="text-align: left;">Fügen (HG 4) | Beschichten (HG 5) | Änderung der Stoffeigenschaften (HG 6)</td>
+</tr>
+</tbody>
+</table>
+<p>Der Zusammenhalt des Werkstoffes wird durch das Verfahren...
+- geschaffen (HG 1)
+- beibehalten (HG 2)
+- verkleinert (HG 3)
+- vergrössert (HG 4)
+- beibehalten / verkleinert / vergrössert (HG 5, HG 6)</p>
+<h3 id="hauptgruppen">Hauptgruppen:<a class="headerlink" href="#hauptgruppen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>HG 1:</strong> Giessen</li>
+<li><strong>HG 2:</strong> Biegeumformen, Zugdruckumformen (Druckformen, Zugformen)</li>
+<li><strong>HG 3:</strong> Fräsen</li>
+<li><strong>HG 4:</strong> Form-, Kraft-, Stoff-schlüssiges Fügen, Vorgespannetes Formschlüssiges Fügen</li>
+<li><strong>HG 5:</strong> Galvanisieren, Anodisieren</li>
+<li><strong>HG 6:</strong> Glühen, Härten, Vergüten, Randschichthärten, Einsatzhärten.</li>
+</ul>
+<hr />
+<hr />
+<h2 id="75-bohren-zerspanung">7.5 Bohren &amp; Zerspanung<a class="headerlink" href="#75-bohren-zerspanung" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[v_c = \frac{d \cdot \pi \cdot n}{1000}\]</div>
+<div class="arithmatex">\[n = \frac{v_c \cdot 1000}{d \cdot \pi}\]</div>
+<ul>
+<li><span class="arithmatex">\(v_c =\)</span> Schnittgeschwindigkeit</li>
+<li><span class="arithmatex">\(n =\)</span> Drehzahl</li>
+<li><span class="arithmatex">\(d =\)</span> Durchmesser</li>
+</ul>
+<hr />
+<h2 id="76-prufen-messzeuge">7.6 Prüfen &amp; Messzeuge<a class="headerlink" href="#76-prufen-messzeuge" title="Permanent link">&para;</a></h2>
+<h3 id="formlehren">Formlehren<a class="headerlink" href="#formlehren" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fasenlehre</li>
+<li>Radiuslehre</li>
+<li>Kreislehre</li>
+</ul>
+<h3 id="masslehren">Masslehren<a class="headerlink" href="#masslehren" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fühlerlehre</li>
+<li>Lochlehre</li>
+</ul>
+<h3 id="messen">Messen<a class="headerlink" href="#messen" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Massstab</li>
+<li>Messschieber</li>
+</ul>
+<p><em>(Strukturdiagramm: Prüfen unterteilt sich in:</em>
+<em>- <strong>subjektives Prüfen</strong> <span class="arithmatex">\(\rightarrow\)</span> Sinneswahrnehmung</em>
+<em>- <strong>Objektives Prüfen</strong> <span class="arithmatex">\(\rightarrow\)</span> Lehren, Messen)</em></p>
+<hr />
+<hr />
+<h2 id="77-kabelaufbau-adern-litzen-isolation">7.7 Kabelaufbau, Adern, Litzen &amp; Isolation<a class="headerlink" href="#77-kabelaufbau-adern-litzen-isolation" title="Permanent link">&para;</a></h2>
+<h3 id="kabelarten">Kabelarten:<a class="headerlink" href="#kabelarten" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Litze:</strong> 
+<em>Abbildung: Zylindrische Isolierhülse, aus der mehrere schräg verdrillte Leiterdrähte hervortreten</em></li>
+</ul>
+<p>mit mehreren Drähten (unter <span class="arithmatex">\(1\,\mathrm{mm}\)</span>) verdreht<br />
+<em>Seil:</em> mit mehreren Drähten (<span class="arithmatex">\(1\text{--}4\,\mathrm{mm}\)</span>) verdreht</p>
+<ul>
+<li><strong>Draht:</strong> 
+<em>Abbildung: Isolierhülse mit einem einzelnen, massiven Innenleiter</em></li>
+</ul>
+<p>mit 1 dickeren Draht</p>
+<ul>
+<li><strong>Flexible Litze:</strong> 
+<em>Abbildung: Isolierhülse, aus der viele sehr feine Drähte fächerförmig austreten</em></li>
+</ul>
+<p>mit vielen sehr feinen Drähte</p>
+<p>Der Draht kann sehr schnell brechen, die Litze ist schon eher beweglich aber am besten ist die Flexible Litze, wenn man eine bewegliche Verbindung braucht. Die Drähte werden nur noch als Verbindung zwischen 2 Platinen gebraucht, aber auch nur, wenn die Verbindung nicht bewegt wird.</p>
+<hr />
+<h3 id="netzkabel">Netzkabel:<a class="headerlink" href="#netzkabel" title="Permanent link">&para;</a></h3>
+<p>Wird auch Apparatekabel genannt.</p>
+<p><img alt="Kabelbauformen (Mehradriges Netzkabel und Flachbandkabel)" src="../illustrations/kabel_mehradrig_flachband.svg" /></p>
+<p><em>Abbildung: Aufbau eines mehradrigen Netzkabels. Links die äußere Schicht „Mantel“, daraus hervortretend drei einzeln isolierte Adern („Isolation“), nummeriert mit ①, ②, ③, an deren Enden die metallische „Litze“ sichtbar ist.</em></p>
+<ul>
+<li>① Neutralleiter [N] (Blau)</li>
+<li>② Polleiter (Braun oder Schwarz) [P]</li>
+<li>③ Schutzerde [PE] (gelb-grün)</li>
+</ul>
+<p>Erhältlich mit 2–5 Adern<br />
+<strong>Anwendung:</strong> Netz-, Geräte- und Verlängerungskabel</p>
+<h3 id="steuerkabel">Steuerkabel:<a class="headerlink" href="#steuerkabel" title="Permanent link">&para;</a></h3>
+<p><em>Abbildung: Kabelaufbau mit äußerem „Mantel“, mehreren Adern mit „Isolation“ und freigelegter „Litze“</em></p>
+<p><strong>Anwendung:</strong> Verbindung von Bedienungs- zu Steuerungseinheit<br />
+Erhältlich mit 2–50 Adern und mit oder ohne Abschirmung</p>
+<h3 id="flachkabel">Flachkabel:<a class="headerlink" href="#flachkabel" title="Permanent link">&para;</a></h3>
+<p><em>Abbildung: Flachbandkabel mit mehreren parallel nebeneinander geführten Adern, beschriftet mit „Isolation“</em></p>
+<p>Farbig nach genormten Farbcode<br />
+Erhältlich mit 10–96 Adern, mit und ohne Abschirmung<br />
+<strong>Anwendung:</strong> Verbindung zwischen Leiterplatten</p>
+<h3 id="awg-american-wire-gauge">AWG (American Wire Gauge):<a class="headerlink" href="#awg-american-wire-gauge" title="Permanent link">&para;</a></h3>
+<p>Einheit für den Leiterquerschnitt.</p>
+<p><strong>Beispiel:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">AWG</th>
+<th style="text-align: center;">Querschnitt [<span class="arithmatex">\(\mathrm{mm}^2\)</span>]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;"><span class="arithmatex">\(1{,}039\,\mathrm{mm}^2\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;"><span class="arithmatex">\(0{,}518\,\mathrm{mm}^2\)</span></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="koaxialkabel">Koaxialkabel:<a class="headerlink" href="#koaxialkabel" title="Permanent link">&para;</a></h3>
+<p><em>Abbildung: Konzentrischer Aufbau eines Koaxialkabels von außen nach innen:</em>
+<em>- Mantel</em>
+<em>- Kupfergeflecht <span class="arithmatex">\(\rightarrow\)</span> Schirm</em>
+<em>- Isolierung</em>
+<em>- Kupferdraht</em></p>
+<p><strong>Vorteil:</strong><br />
+Stördämpfend</p>
+<p><strong>Nachteil:</strong><br />
+Brüchig (es wird ein biegeradius angegeben, den man nicht überschreiten darf)</p>
+<p><strong>Anwendung:</strong><br />
+Hochfrequenzübertragung<br />
+Datenübertragung</p>
+<h3 id="lichtwellenleiter">Lichtwellenleiter:<a class="headerlink" href="#lichtwellenleiter" title="Permanent link">&para;</a></h3>
+<p><strong>Vorteil:</strong><br />
+Grosse Datenübertragung<br />
+Störabsicherung</p>
+<p><strong>Nachteil:</strong><br />
+Brüchig, teuer</p>
+<p><strong>Anwendung:</strong></p>
+<p><img alt="Aufbau von Koaxialkabel und Lichtwellenleiter (LWL)" src="../illustrations/kabel_koaxial_lichtwellenleiter.svg" /></p>
+<p><em>Abbildung: Schichtweiser Aufbau eines Lichtwellenleiters:</em>
+<em>- Umhüllung aus Kunststoff</em>
+<em>- Mantel aus Kunststoff</em>
+<em>- Kern aus Glas, Kunststoff</em></p>
+<hr />
+<h3 id="buskabel">Buskabel:<a class="headerlink" href="#buskabel" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ASI (Flachkabel)</th>
+<th style="text-align: center;">Profibus</th>
+<th style="text-align: center;">Ethernet</th>
+<th style="text-align: center;">KNX (EIB)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><em>Abbildung: Flaches Profil mit Mantel und 2 Adern</em></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><br> Mantel</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><em>Abbildung: Runder Mantel, Abschirmung / Kupfergeflecht, 2 Adern</em></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><br> Mantel, Abschirrm</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><em>Abbildung: Runder Mantel / Kunststoff, Kupfergeflecht-Schirm, 4 Adern</em></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"><br> Mantel / Kunststoff</td>
+<td style="text-align: center;"><em>(leer)</em></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>ASI:</strong><br />
+Flaches Kabel, nicht paarweise verdrillt und hat keine Schirmung</p>
+<p><strong>Profibus:</strong><br />
+Rundes Kabel, nicht paarweise verdrillt geschirmt gegen äussere Einflüsse</p>
+<p><strong>Ethernet:</strong><br />
+Rundes Kabel, paarweise verdrillt geschirmt gegen äussere Einflüsse</p>
+<p><em>(Post-it Notiz:)</em></p>
+<blockquote>
+<p>Ethernet ist twisted-pair</p>
+</blockquote>
+<hr />
+<hr />
+<h2 id="78-kabelquerschnitte-awg-norm">7.8 Kabelquerschnitte &amp; AWG-Norm<a class="headerlink" href="#78-kabelquerschnitte-awg-norm" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">ab</th>
+<th style="text-align: center;">Querschnitt</th>
+<th style="text-align: center;">Bis maximal</th>
+<th style="text-align: left;">Einsatz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(&lt; 16\,\text{A}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2{,}5\,\mathrm{mm}^2\)</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: left;">Hauptstromkreis 230/400 V</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(&lt; 10\,\text{A}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1{,}5\,\mathrm{mm}^2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\le 16\,\text{A}\)</span></td>
+<td style="text-align: left;">Hauptstromkreis 230/400 Vac</td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(&lt; 6\,\text{A}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1\,\mathrm{mm}^2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\le 10\,\text{A}\)</span></td>
+<td style="text-align: left;">Hauptstromkreis 230/400 Vac</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="arithmatex">\(0{,}75\,\mathrm{mm}^2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\le 6\,\text{A}\)</span></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><span class="arithmatex">\(0{,}5\,\mathrm{mm}^2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\le 1{,}5\,\text{A}\)</span></td>
+<td style="text-align: left;">Steuerspannung 24 V</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="79-kabelfarben-nach-dinvde">7.9 Kabelfarben nach DIN/VDE<a class="headerlink" href="#79-kabelfarben-nach-dinvde" title="Permanent link">&para;</a></h2>
+<h3 id="generell">Generell<a class="headerlink" href="#generell" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Schutzerde [PE] = grün-gelb</li>
+</ul>
+<h3 id="steuerkreis-steuerspannung">Steuerkreis (Steuerspannung)<a class="headerlink" href="#steuerkreis-steuerspannung" title="Permanent link">&para;</a></h3>
+<p><strong>Wechselstrom:</strong>
+- 24 Vac (Phase) = dunkelblau
+- Rückleiter AC = weiss-dunkelblau</p>
+<p><strong>Gleichstrom:</strong>
+- +24 Vdc = rot
+- Rückleiter DC = weiss-rot</p>
+<h3 id="hauptstromkreis">Hauptstromkreis<a class="headerlink" href="#hauptstromkreis" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Polleiter / Phase [P] 230/400 Vac = schwarz</li>
+<li>Nullleiter [N] = hellblau</li>
+</ul>
+<hr />
+<hr />
+<h2 id="710-festwiderstande-schicht-vs-drahtwiderstande">7.10 Festwiderstände: Schicht- vs. Drahtwiderstände<a class="headerlink" href="#710-festwiderstande-schicht-vs-drahtwiderstande" title="Permanent link">&para;</a></h2>
+<h3 id="funktion-aufbau">Funktion &amp; Aufbau<a class="headerlink" href="#funktion-aufbau" title="Permanent link">&para;</a></h3>
+<p>Widerstände beeinflussen in einer Schaltung die Ströme &amp; Spannungen. Der Wert der abgebaut wird, verlässt den Widerstand in Form von Wärme.<br />
+Es gibt verschiede Widerstände:</p>
+<h3 id="drahtwiederstand">Drahtwiederstand<a class="headerlink" href="#drahtwiederstand" title="Permanent link">&para;</a></h3>
+<p><img alt="Aufbau von Draht- und Schichtwiderständen mit Wendelschnitt" src="../illustrations/widerstand_draht_schicht_wendel.svg" /></p>
+<p><em>Abbildung: Zylindrischer Keramikkörper mit gewickeltem Widerstandsdraht und zwei axialen Anschlussdrähten</em></p>
+<p>Der Keramikzylinder wird mit einem dünnem Draht umwickelt. Die Drahtwiederstände sind gut für hohe Leistungen geeignet, sie werden auch mit dem Aluminiumgehäuse gekühlt.</p>
+<h3 id="kohlenschicht-metallschichtwiederstande">Kohlenschicht-, Metallschichtwiederstände<a class="headerlink" href="#kohlenschicht-metallschichtwiederstande" title="Permanent link">&para;</a></h3>
+<p><em>Abbildung: Schichtwiderstand mit wendelförmigen/mäanderförmigen Einschnitten:</em>
+<em>- Pfeil oben: „Kohle-, Metallschicht“</em>
+<em>- Pfeil rechts: „Einschleiffungen“</em>
+<em>- Pfeil unten: „Keramikzylinder (ausgerollt)“</em></p>
+<p>Auf dem Keramikzylinder ist eine Dünne Metall- oder Kohlenschicht aufgetragen, um den Widerstand zu definieren wird die Schicht eingeschliffen.</p>
+<hr />
+<hr />
+<h2 id="711-farbcode-kennzeichnung-von-widerstanden">7.11 Farbcode-Kennzeichnung von Widerständen<a class="headerlink" href="#711-farbcode-kennzeichnung-von-widerstanden" title="Permanent link">&para;</a></h2>
+<p><img alt="Widerstands-Farbcodierung und 4-Ring-System" src="../illustrations/widerstand_farbcode_bauformen.svg" /></p>
+<p>Die Widerstände werden mit einem Farbcode bedruckt, damit man den Widerstandswert anhand der Farben feststellen kann.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Farbe</th>
+<th style="text-align: center;">Wert</th>
+<th style="text-align: center;">Multiplikator</th>
+<th style="text-align: center;">Toleranz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Schwarz</td>
+<td style="text-align: center;"><span class="arithmatex">\(0\,\Omega\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\times 1\)</span></td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">Braun</td>
+<td style="text-align: center;"><span class="arithmatex">\(1\,\Omega\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\times 10\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1\%\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Rot</td>
+<td style="text-align: center;"><span class="arithmatex">\(2\,\Omega\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\times 100\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2\%\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Orange</td>
+<td style="text-align: center;"><span class="arithmatex">\(3\,\Omega\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\times 1\,\text{k}\)</span></td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">Gelb</td>
+<td style="text-align: center;"><span class="arithmatex">\(4\,\Omega\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\times 10\,\text{k}\)</span></td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">Grün</td>
+<td style="text-align: center;"><span class="arithmatex">\(5\,\Omega\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\times 100\,\text{k}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0{,}5\%\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Blau</td>
+<td style="text-align: center;"><span class="arithmatex">\(6\,\Omega\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\times 1\,\text{M}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0{,}25\%\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Violet</td>
+<td style="text-align: center;"><span class="arithmatex">\(7\,\Omega\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\times 10\,\text{M}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(0{,}1\%\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Grau</td>
+<td style="text-align: center;"><span class="arithmatex">\(8\,\Omega\)</span></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">Weiss</td>
+<td style="text-align: center;"><span class="arithmatex">\(9\,\Omega\)</span></td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">Silber</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"><span class="arithmatex">\(\times 0{,}01\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(10\%\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Gold</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"><span class="arithmatex">\(\times 0{,}1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(5\%\)</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="schaltungssymbol">Schaltungssymbol:<a class="headerlink" href="#schaltungssymbol" title="Permanent link">&para;</a></h3>
+<p><em>Abbildung: Genormtes Schaltsymbol eines Festwiderstands als Rechteck mit Anschlussleitungen, darüber bezeichnet mit „R“</em></p>
+<p><strong>Wichtig:</strong><br />
+Nicht jeder Widerstand verträgt die selbe Leistung.</p>
+<hr />
+<hr />
+<h2 id="712-e-normreihen-e6-bis-e96-toleranzen">7.12 E-Normreihen (E6 bis E96) &amp; Toleranzen<a class="headerlink" href="#712-e-normreihen-e6-bis-e96-toleranzen" title="Permanent link">&para;</a></h2>
+<p>Das ist eine klar definierte Reihe an Widerstandswerte die man festgelegt hat. Je höher die Reihe (z.B E12 oder E96) desto genauer werden sie und desto mehr Werte sind von ihnen vorhanden.</p>
+<p><strong>Beispiel an E6 und E12</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">E6 (hat 20% Toleranz)</th>
+<th style="text-align: center;">E12 (hat 10% Toleranz)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1,0</td>
+<td style="text-align: center;">1,0</td>
+</tr>
+<tr>
+<td style="text-align: center;">1,5</td>
+<td style="text-align: center;">1,2</td>
+</tr>
+<tr>
+<td style="text-align: center;">2,2</td>
+<td style="text-align: center;">1,5</td>
+</tr>
+<tr>
+<td style="text-align: center;">3,3</td>
+<td style="text-align: center;">1,8</td>
+</tr>
+<tr>
+<td style="text-align: center;">4,7</td>
+<td style="text-align: center;">2,2</td>
+</tr>
+<tr>
+<td style="text-align: center;">6,8</td>
+<td style="text-align: center;">2,7</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">3,3</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">3,9</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">4,7</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">5,6</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">6,8</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">8,2</td>
+</tr>
+</tbody>
+</table>
+<p>Diese Werte können multipliziert werden<br />
+z.B <span class="arithmatex">\(\times 1\,\Omega\)</span>, <span class="arithmatex">\(10\,\Omega\)</span>, <span class="arithmatex">\(100\,\Omega\)</span>, <span class="arithmatex">\(1\,\text{k}\Omega\)</span>, <span class="arithmatex">\(10\,\text{k}\Omega\)</span>, <span class="arithmatex">\(100\,\text{k}\Omega\)</span>, <span class="arithmatex">\(1\,\text{M}\Omega\)</span> usw...</p>
+<hr />
+<hr />
+<h2 id="713-veranderbare-widerstande-potentiometer-trimmer">7.13 Veränderbare Widerstände (Potentiometer &amp; Trimmer)<a class="headerlink" href="#713-veranderbare-widerstande-potentiometer-trimmer" title="Permanent link">&para;</a></h2>
+<p><img alt="Potentiometer und Widerstandsnetzwerke (SIL/DIP)" src="../illustrations/potentiometer_widerstandsnetzwerke.svg" /></p>
+<p>Das sind Widerstände bei dem man den Wert in Begrenzung beliebig einstellen kann.</p>
+<h3 id="schaltsymbole">Schaltsymbole:<a class="headerlink" href="#schaltsymbole" title="Permanent link">&para;</a></h3>
+<p><img alt="Schaltsymbole für einstellbare Widerstände nach DIN EN 60617" src="../illustrations/potentiometer_schaltsymbole_typen.svg" /></p>
+<p><em>Abbildung: n dreier Schaltsymbole für einstellbare Widerstände:</em>
+<em>1. „Verstellbarer Widerstand“: Rechteckiger Widerstandskörper mit diagonal durchgehendem Pfeil nach rechts oben, links bezeichnet mit „R“.</em>
+<em>2. „Einstellpotentiometer“: Rechteckiger Widerstandskörper mit diagonaler Linie, die oben links mit einem Querbalken abschließt (Trimmer-Symbol), links bezeichnet mit „R“.</em>
+<em>3. „Widerstand mit beweglichem Abgriff“: Rechteckiger Widerstandskörper mit oberem und unterem Festanschluss sowie einem seitlich rechtwinklig herangeführten Pfeilabgriff, links bezeichnet mit „R“.</em></p>
+<p>Bei den veränderbaren Widerstände gibt es auch wieder verschiedene Aufbauten z.B</p>
+<h3 id="kohlenschichtpotentiometer">Kohlenschichtpotentiometer:<a class="headerlink" href="#kohlenschichtpotentiometer" title="Permanent link">&para;</a></h3>
+<p>Durch bewegung des Schleiffers wird der Wert verändert (Aufbau 1 Seite vorher)</p>
+<h3 id="cermetpotentiometer">Cermetpotentiometer:<a class="headerlink" href="#cermetpotentiometer" title="Permanent link">&para;</a></h3>
+<p>Ist eine Keramikzylinder wie beim Kohlenschichtwied. einfach mit einem Gemisch aus Keramik &amp; Metall (genannt Cermet) aufgetragen.</p>
+<h3 id="drahtpotentiometer">Drahtpotentiometer:<a class="headerlink" href="#drahtpotentiometer" title="Permanent link">&para;</a></h3>
+<p>Die Position des Schleiffers gibt dann eine höheren oder tieferen Widerstandswert</p>
+<hr />
+<hr />
+<h2 id="714-widerstandsnetzwerke-silsip-dipdil">7.14 Widerstandsnetzwerke (SIL/SIP &amp; DIP/DIL)<a class="headerlink" href="#714-widerstandsnetzwerke-silsip-dipdil" title="Permanent link">&para;</a></h2>
+<p><img alt="SIL und DIP Widerstandsnetzwerke Innenbeschaltung" src="../illustrations/widerstandsnetzwerke_sil_dip_schaltungen.svg" /></p>
+<p>SIP (single inline package), DIP (dual inline package)</p>
+<p>Das sind normale Widerstände in einem gefertigten Baustein, es gibt sie mit verschiedenen Werten, Anzahl und Pins (die sind im Datenblatt zum nachschlagen)</p>
+<h3 id="beispiel-vom-aufbau-von-sil-sip">Beispiel vom Aufbau von SIL (SIP)<a class="headerlink" href="#beispiel-vom-aufbau-von-sil-sip" title="Permanent link">&para;</a></h3>
+<p><em>Abbildung: n zu SIL/SIP-Widerstandsnetzwerken:</em>
+<em>- Links (Sternschaltung / Sammelschiene): Eine horizontale gemeinsame Busleitung oben mit einem gemeinsamen Pin ganz links. Daran hängen 5 parallele Widerstände, die jeweils nach unten zu separaten Anschluss-Pins führen.</em>
+<em>- oder -</em>
+<em>- Rechts (Einzelelemente): Drei voneinander isolierte Widerstände nebeneinander, jeweils mit separatem Pin oben und unten.</em></p>
+<h3 id="beispiel-vom-aufbau-von-dip-dil">Beispiel vom Aufbau von DIP (DIL)<a class="headerlink" href="#beispiel-vom-aufbau-von-dip-dil" title="Permanent link">&para;</a></h3>
+<p><em>Abbildung: n zu DIP/DIL-Widerstandsnetzwerken:</em>
+<em>- Links (Zentraler Bus): Eine horizontale Mittelleitung mit Pin links, an die abwechselnd Widerstände nach oben (3 Stück) und nach unten (2 Stück) zu externen Pins führen.</em>
+<em>- oder -</em>
+<em>- Rechts (Isolierte Einzelwiderstände): Vier parallele, voneinander getrennte Widerstände mit je einem Anschluss oben und unten.</em></p>
+<hr />
+<hr />
+<h2 id="715-anwendungsbereiche-von-widerstanden">7.15 Anwendungsbereiche von Widerständen<a class="headerlink" href="#715-anwendungsbereiche-von-widerstanden" title="Permanent link">&para;</a></h2>
+<h3 id="vorwiderstand">Vorwiderstand<a class="headerlink" href="#vorwiderstand" title="Permanent link">&para;</a></h3>
+<p>Zum begrenzen des Strom wird ein Vorwiderstand benötigt z.B bei einer LED. Ein LED darf maximal mit <span class="arithmatex">\(20\,\mathrm{mA}\)</span> &amp; <span class="arithmatex">\(2\,\mathrm{V}\)</span> betrieben werden.</p>
+<p>*Abbildung: *
+<em>- Links: LED direkt zwischen zwei Klemmen an eine Spannungsquelle geschaltet.</em>
+<em>- Pfeil <span class="arithmatex">\(\rightarrow\)</span> nach rechts:</em>
+<em>- Rechts: Schaltung an <span class="arithmatex">\(5\,\mathrm{V}\)</span>: Vorwiderstand <span class="arithmatex">\(R_v\)</span> in Reihe vor der LED zur Strombegrenzung geschaltet zwischen <span class="arithmatex">\(+5\,\mathrm{V}\)</span> und Masse.</em></p>
+<h3 id="kleinere-aber-feinere-potentiometer-einstellmoglichkeit">Kleinere aber feinere Potentiometer Einstellmöglichkeit<a class="headerlink" href="#kleinere-aber-feinere-potentiometer-einstellmoglichkeit" title="Permanent link">&para;</a></h3>
+<p>Je nach Anordnung von Widerstand &amp; Potentiometer kann man verschiedene Einstellmöglichkeiten erlangen.</p>
+<p><img alt="Berechnungsbeispiele für Potentiometer-Spannungsteiler" src="../illustrations/spannungsteiler_potentiometer_berechnung.svg" /></p>
+<p><em>Abbildung: &amp; Rechnung 1: Spannungsteiler an <span class="arithmatex">\(10\,\mathrm{V}\)</span> bestehend aus einem oberen Vorwiderstand <span class="arithmatex">\(R_v\)</span> und einem unteren Potentiometer <span class="arithmatex">\(R_{\mathrm{pot}}\)</span>.</em></p>
+<div class="arithmatex">\[U_{Rv} = 0{,}9 \cdot 10\,\mathrm{V} = 9\,\mathrm{V}$$
+$$U_{Rpot} = 0{,}1 \cdot 10\,\mathrm{V} = 1\,\mathrm{V}\]</div>
+<p><em>(Notiz daneben: <span class="arithmatex">\(\rightarrow R = \frac{U_{Rpot}}{I_{\text{ges}}} = \frac{1\,\mathrm{V}}{\dots}\)</span>)</em></p>
+<p>Somit ist der Einstellbereich zwischen 90% &amp; 100% also 10%</p>
+<p><em>Abbildung: &amp; Rechnung 2: Dreiteiliger Spannungsteiler an <span class="arithmatex">\(10\,\mathrm{V}\)</span> bestehend aus einem oberen Vorwiderstand <span class="arithmatex">\(R_v\)</span>, einem mittleren Potentiometer <span class="arithmatex">\(R_{\mathrm{pot}}\)</span> und einem unteren Widerstand <span class="arithmatex">\(R_n\)</span>.</em></p>
+<div class="arithmatex">\[U_{Rv} = 0{,}45 \cdot 10\,\mathrm{V} = 4{,}5\,\mathrm{V}$$
+$$U_{Rpot} = 0{,}1 \cdot 10\,\mathrm{V} = 1\,\mathrm{V}$$
+$$U_{Rn} = 0{,}45 \cdot 10\,\mathrm{V} = 4{,}5\,\mathrm{V}\]</div>
+<p>Der Einstellbereich ist zwischen 45% &amp; 55% also 10%</p>
+<hr />
+<hr />
+<h2 id="716-r-2r-widerstandsleiter-netzwerk-da-wandlung">7.16 R-2R-Widerstandsleiter-Netzwerk (D/A-Wandlung)<a class="headerlink" href="#716-r-2r-widerstandsleiter-netzwerk-da-wandlung" title="Permanent link">&para;</a></h2>
+<p><img alt="3-Bit R-2R-Widerstandsleiter-Netzwerk" src="../illustrations/seite80_r2r_netzwerk.svg" /></p>
+<p>Das ist eine spezielle Schaltung von Widerständen, sie wandelt Digital-Werte zu Analoge-Spannung um. (Digital-Analog-Umsetzung).</p>
+<p><em>Abbildung: 3-Bit R-2R-Widerstandsleiter-Netzwerk:
+Drei digitale Eingänge, jeweils über Widerstände mit dem Wert <span class="arithmatex">\(2R\)</span>:
+- „Höchster Bit“ (MSB) führt über <span class="arithmatex">\(2R\)</span> an den oberen Knotenpunkt (Ausgang)
+- „Mittlerer Bit“ führt über <span class="arithmatex">\(2R\)</span> an den mittleren Knotenpunkt
+- „kleinster Bit“ (LSB) führt über <span class="arithmatex">\(2R\)</span> an den unteren Knotenpunkt
+Zwischen den Knotenpunkten liegt jeweils ein Längswiderstand <span class="arithmatex">\(R\)</span>.
+Vom untersten Knotenpunkt führt ein Widerstand <span class="arithmatex">\(2R\)</span> nach Masse (GND).
+Rechts ist vermerkt: <span class="arithmatex">\(2R = 2 \cdot R\)</span>.</em></p>
+<hr />
+<h2 id="717-widerstandstrimmung-durch-parallelschaltung">7.17 Widerstandstrimmung durch Parallelschaltung<a class="headerlink" href="#717-widerstandstrimmung-durch-parallelschaltung" title="Permanent link">&para;</a></h2>
+<p><img alt="Widerstandstrimmung durch Parallelschaltung" src="../illustrations/widerstandstrimmung_parallel.svg" /></p>
+<p>Der Widerstand kann man mit einem anderem Widerstand kontrollieren, durch Parallelschaltung.</p>
+<p><em>Abbildung: Schaltung zur Widerstandstrimmung / Spannungsteiler:
+Eingangsklemmen links führen auf eine Reihenschaltung aus Längswiderstand <span class="arithmatex">\(R_1\)</span> und Parallelwiderstand <span class="arithmatex">\(R_2\)</span>.
+Parallel zu <span class="arithmatex">\(R_2\)</span> kann über zwei Klemmen ein dritter Widerstand <span class="arithmatex">\(R_3\)</span> zugeschaltet werden.
+Über der Parallelschaltung von <span class="arithmatex">\(R_2\)</span> und <span class="arithmatex">\(R_3\)</span> wird die Ausgangsspannung <span class="arithmatex">\(U\)</span> abgegriffen.</em></p>
+<p>Der Ersatzwiderstand aus <span class="arithmatex">\(R_2\)</span> &amp; <span class="arithmatex">\(R_3\)</span> wird verändert.</p>
+<p>Je grösser <span class="arithmatex">\(R_3\)</span> ist umso „genauer“ wird der Ersatzwiderstand (<span class="arithmatex">\(R_{23}\)</span>).</p>
+<div class="arithmatex">\[R_{23} = \frac{1}{\frac{1}{R_2} + \frac{1}{R_3}} \quad \text{ans} \rightarrow \frac{1}{\dots} = \frac{1}{\frac{1}{R_2} + \frac{1}{R_3}}\]</div>
+<p>Der Ersatzwiderstand kann nicht grösser werden als der kleinste Widerstand in der Parallelschaltung.</p>
+<hr />
+<h2 id="718-lotverfahren-tauch-und-wellenloten">7.18 Lötverfahren: Tauch- und Wellenlöten<a class="headerlink" href="#718-lotverfahren-tauch-und-wellenloten" title="Permanent link">&para;</a></h2>
+<h3 id="lotzinn">Lötzinn<a class="headerlink" href="#lotzinn" title="Permanent link">&para;</a></h3>
+<p>Es gibt verschiedene Lötzinnlegierungen<br />
+z.B. <span class="arithmatex">\(\text{Sn}99\text{Cu}1\)</span>, <span class="arithmatex">\(\text{Sn}95{,}5\text{Ag}3{,}8\,\text{Cu}0{,}7\)</span>, <span class="arithmatex">\(\text{Sn}60\text{Pb}40\)</span><br />
+Das Silberhaltige Lötzinn ist sehr teuer aber es leitet am besten.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Material</th>
+<th style="text-align: left;">Leitfähigkeit bei <span class="arithmatex">\(20\,^\circ\text{C}\)</span> <span class="arithmatex">\([\text{m}/(\Omega \cdot \text{mm}^2)]\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Silber</td>
+<td style="text-align: left;">62</td>
+</tr>
+<tr>
+<td style="text-align: left;">Kupfer</td>
+<td style="text-align: left;">56</td>
+</tr>
+<tr>
+<td style="text-align: left;">Gold</td>
+<td style="text-align: left;">43,5</td>
+</tr>
+<tr>
+<td style="text-align: left;">Aluminium</td>
+<td style="text-align: left;">36</td>
+</tr>
+</tbody>
+</table>
+<p>In einem Lötzinn hat es ein Flussmittel enthalten, Das Flussmittel löst die Oxydschicht an der Lötstelle.</p>
+<hr />
+<h3 id="tauchloten">Tauchlöten<a class="headerlink" href="#tauchloten" title="Permanent link">&para;</a></h3>
+<p>Die Leiterplatte mit den THT bestückten Bauelementen wird exakt in das flüssige Lötzinn eingetaucht, sodass nur die Beinchen belötet werden.</p>
+<p><img alt="Übersicht industrieller Lötverfahren (Tauch-, Wellen-, Reflow-Löten und BGA)" src="../illustrations/loetverfahren_tauch_welle_reflow_bga.svg" /></p>
+<p><em>Abbildung: Tauchlöten – Leiterplatte mit bedrahteten Bauelementen wird nach unten in ein Zinnbad abgesenkt, sodass lediglich die Anschlussbeinchen das flüssige Zinn berühren.</em></p>
+<hr />
+<h3 id="wellenloten">Wellenlöten<a class="headerlink" href="#wellenloten" title="Permanent link">&para;</a></h3>
+<p>Es wird eine Welle im Lötbecken erzeugt die exakt an die untere Seite an der Platine reicht, so werden THT Bauteile nicht all zu heiss gelötet.</p>
+<p><em>Abbildung: Wellenlöten – Bestückte Platine bewegt sich horizontal über ein Lötbecken, in dem eine Zinnwelle an die Unterseite der Leiterplatte geführt wird.</em></p>
+<hr />
+<h2 id="719-reflowloten-mit-heiluft-ofen">7.19 Reflowlöten mit Heißluft / Ofen<a class="headerlink" href="#719-reflowloten-mit-heiluft-ofen" title="Permanent link">&para;</a></h2>
+<p><img alt="Reflow-Lötprozess mit Heißluft" src="../illustrations/reflowloeten_heissluft_prozess.svg" /></p>
+<p>Zuerst wird eine Lötpaste auf die gewollte Stelle aufgetragen, danach wird es im Ofen oder mit einem Föhn verflüssigt. Bei diesem Verfahren wird das Bauteil enorm erhitzt.<br />
+SMD's und THT können so angebracht werden, jedoch besteht die Gefahr auf den Grabsteineffekt.</p>
+<p><em>Abbildung: Reflow-Lötprozess – Ein SMD-Bauteil auf einer Leiterplatte wird mittels einer Heißluftdüse/Föhn erwärmt.</em></p>
+<hr />
+<hr />
+<h2 id="720-dampfphasenloten-vapor-phase-soldering">7.20 Dampfphasenlöten (Vapor Phase Soldering)<a class="headerlink" href="#720-dampfphasenloten-vapor-phase-soldering" title="Permanent link">&para;</a></h2>
+<p><img alt="Dampfphasenlöten in geschlossener Prozesskammer" src="../illustrations/dampfphasenloeten_kammer_prinzip.svg" /></p>
+<p>Die Leiterplatte wird in Dampf eingebracht, welcher nur eine konstante Temperatur aufweisen kann. Das überhitzen ist damit unmöglich. Dieser Vorgang ist gut zum Löten von THT, SMD und BGA (Kugelgitteranordnung) geeignet.</p>
+<p><em>Abbildung: Dampfphasenlöten – Leiterplatte mit Bauteilen in einer geschlossenen Kammer mit definierter Dampfatmosphäre.</em></p>
+<hr />
+<hr />
+<h2 id="721-bga-ball-grid-array-kugelgitteranordnung">7.21 BGA (Ball Grid Array) Kugelgitteranordnung<a class="headerlink" href="#721-bga-ball-grid-array-kugelgitteranordnung" title="Permanent link">&para;</a></h2>
+<p><img alt="Ball Grid Array Kugelgitteranordnung" src="../illustrations/bga_ball_grid_array_aufbau.svg" /></p>
+<p>Das ist eine spezielle Anordnung von Lötverbindungen auf einer Platine, die ist z.B. bei einer CPU zu sehen.</p>
+<p><em>Abbildung: Ball Grid Array (BGA) – Bausteinbeschriftung „CPU“ mit einem darunterliegenden Feld aus Lötkugeln/Lötbällen auf einer Trägerplatine.</em></p>
+<hr />
+<h2 id="722-der-grabsteineffekt-tombstoning">7.22 Der Grabsteineffekt (Tombstoning)<a class="headerlink" href="#722-der-grabsteineffekt-tombstoning" title="Permanent link">&para;</a></h2>
+<p><img alt="Grabsteineffekt (Tombstoning)" src="../illustrations/tombstoning_grabstein.svg" /></p>
+<p>Das ist, wenn sich ein SMD Bauteil Vertikal aufrichtet, das passiert wenn die Hitzeverteilung durch grössere oder kleinere Leiterflächen auf der Platine ungleich ist.</p>
+<p><em>Abbildung: Grabsteineffekt (Tombstoning):<br />
+Links: SMD-Bauteil flach auf zwei Lötpads montiert – linkes Lötpad ist schmal („klein“), rechtes Lötpad ist großflächig („Gross“, z.B. GND).<br />
+Pfeil <span class="arithmatex">\(\rightarrow\)</span><br />
+Rechts: Durch ungleichmäßige Wärmeabfuhr und unterschiedliche Schmelzzeiten der Lötpaste richtet sich das SMD-Bauteil einseitig senkrecht auf wie ein Grabstein.</em></p>
+<hr />
+<h2 id="723-metalloxid-varistoren-mov-vdr">7.23 Metalloxid-Varistoren (MOV / VDR)<a class="headerlink" href="#723-metalloxid-varistoren-mov-vdr" title="Permanent link">&para;</a></h2>
+<p>Ein Varistor (<strong>Var</strong>iable Res<strong>istor</strong> oder VDR = Voltage Dependent Resistor) ist ein spannungsabhängiger Halbleiterwiderstand mit stark nichtlinearer Strom-Spannungs-Kennlinie.</p>
+<p><img alt="Varistor Kennlinie und Schaltsymbol" src="../illustrations/lerndoku/Varistor_image10.png" /></p>
+<p><img alt="Varistor Kennlinie Klemmspannung bei Stoßstrom" src="../illustrations/lerndoku/Varistor_image11.png" /></p>
+<p><img alt="Pulsenergie-Derating Diagramm von Metalloxid-Varistoren" src="../illustrations/lerndoku/Varistor_image12.png" /></p>
+<h3 id="aufbau-wirkungsweise">Aufbau &amp; Wirkungsweise<a class="headerlink" href="#aufbau-wirkungsweise" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Zusammensetzung:</strong> Gesinterte Keramikscheibe aus Zinkoxid-Körnern (<span class="arithmatex">\(\text{ZnO}\)</span>) mit Beimischungen von Wismut-, Antimon- und Manganoxiden.</li>
+<li><strong>Mikrostruktur:</strong> An den Berührungspunkten der leitfähigen ZnO-Kristallkörner entstehen mikroskopische Halbleiter-Sperrschichten (Reihen- und Parallelschaltung Tausender winziger Diodenbarrieren).</li>
+<li><strong>Kennlinie:</strong>
+  $<span class="arithmatex">\(I = k \cdot U^\alpha \quad \text{mit Nichtlinearitätskoeffizient } \alpha \approx 30\dots 50\)</span>$</li>
+<li>Bei Nennbetriebsspannung fließt nur ein winziger Sperr-Leckstrom (<span class="arithmatex">\(&lt;10\,\mu\text{A}\)</span>).</li>
+<li>Steigt die anliegende Spannung über die Ansprechspannung (Schwellspannung <span class="arithmatex">\(U_V\)</span>), bricht der Widerstand lawinenartig um viele Zehnerpotenzen zusammen und leitet hochenergetische Ströme (bis mehrere Kiloampere) gegen Erde ab.</li>
+<li><strong>Polung:</strong> Varistoren sind symmetrisch bidirektional und eignen sich gleichermaßen für Wechsel- und Gleichspannung.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Alterung &amp; Brandgefahr bei Varistoren</p>
+<p>Jeder abgeleitete Surge-Impuls erzeugt punktuelle Mikro-Schmelzkanäle im Zinkoxid-Gefüge. Mit zunehmender Impulsanzahl sinkt die Schwellspannung <span class="arithmatex">\(U_V\)</span>, und der dauerhafte Leckstrom steigt an. Dies führt zu thermischem Durchgehen (Thermal Runaway). Professionelle Überspannungsschutzmodule verfügen deshalb über integrierte thermische Trennschalter (Thermo-Fuse).</p>
+</div>
+<h2 id="724-selbstruckstellende-sicherungen-polyfuse-pptc">7.24 Selbstrückstellende Sicherungen (PolyFuse / PPTC)<a class="headerlink" href="#724-selbstruckstellende-sicherungen-polyfuse-pptc" title="Permanent link">&para;</a></h2>
+<p>Eine PolyFuse (auch PolySwitch oder PPTC = Polymeric Positive Temperature Coefficient) ist ein nichtlineares Schutzelement, das bei Überstrom hochohmig wird und sich nach Behebung des Fehlers <strong>selbsttätig wieder zurückstellt</strong>:</p>
+<p><img alt="Polyfuse Aufbau und Schaltfunktion" src="../illustrations/lerndoku/Polyfuse_image5.png" /></p>
+<p><img alt="PolyFuse Haltestrom-Derating über Temperatur" src="../illustrations/lerndoku/Polyfuse_image4.jpeg" /></p>
+<h3 id="funktionsprinzip">Funktionsprinzip<a class="headerlink" href="#funktionsprinzip" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Materialaufbau:</strong> Matrix aus unpolarem Polymer (z. B. Polyethylen), gefüllt mit mikroskopischen Partikeln aus leitfähigem Ruß/Kohlenstoff (Carbon Black).</li>
+<li><strong>Ruhezustand:</strong> Bei Nennstrom berühren sich die Rußpartikel <span class="arithmatex">\(\implies\)</span> geringer Kaltwiderstand (<span class="arithmatex">\(R_{cold} \approx 20\,\text{m}\Omega \dots 1\,\Omega\)</span>).</li>
+<li><strong>Auslösevorgang:</strong> Bei Überstrom erwärmt sich das Bauteil durch <span class="arithmatex">\(P = I^2 \cdot R\)</span>. Beim Erreichen der Phasenumwandlungstemperatur dehnt sich das Polymer kristallin schlagartig aus. Die Rußketten reißen ab; der Widerstand springt sprunghaft um das <span class="arithmatex">\(10\,000\)</span>-fache in die Höhe.</li>
+<li><strong>Rückstellung:</strong> Nach Abschalten der Last und Abkühlung sintert das Polymer in den Ausgangszustand zurück.</li>
+</ul>
+<h3 id="wichtige-kennwerte">Wichtige Kennwerte<a class="headerlink" href="#wichtige-kennwerte" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><span class="arithmatex">\(I_{hold}\)</span> (Haltestrom):</strong> Maximaler Dauerstrom, bei dem die Sicherung garantiert nicht auslöst.</li>
+<li><strong><span class="arithmatex">\(I_{trip}\)</span> (Auslösestrom):</strong> Mindeststrom, bei dem die Sicherung sicher auslöst (typisch <span class="arithmatex">\(I_{trip} \approx 2 \cdot I_{hold}\)</span>).</li>
+<li><strong><span class="arithmatex">\(V_{max}\)</span>:</strong> Maximale Betriebsspannung im hochohmigen Zustand.</li>
+</ul>
+<h2 id="725-bauteil-codierung-farbringe-smd-codes-eia-96">7.25 Bauteil-Codierung: Farbringe, SMD-Codes &amp; EIA-96<a class="headerlink" href="#725-bauteil-codierung-farbringe-smd-codes-eia-96" title="Permanent link">&para;</a></h2>
+<p><img alt="EIA-96 SMD-Widerstandscodes Lookup-Tabelle" src="../illustrations/lerndoku/Bauteil-Codierung_image10.png" /></p>
+<p><img alt="Kabelquerschnitte und AWG Umrechnung" src="../illustrations/lerndoku/Kabel_-durchmesser_%26_-farben_image4.png" /></p>
+<p><img alt="Kabel-Schirmungsarten (U/UTP, F/UTP, S/FTP)" src="../illustrations/lerndoku/Kabelarten_image4.jpeg" /></p>
+<p><img alt="Koaxialkabel Schichtaufbau" src="../illustrations/lerndoku/Kabelarten_image7.png" /></p>
+<h3 id="1-farbcode-kennzeichnung-bedrahteter-widerstande">1. Farbcode-Kennzeichnung bedrahteter Widerstände<a class="headerlink" href="#1-farbcode-kennzeichnung-bedrahteter-widerstande" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>4-Ring-Widerstand (Standard):</strong> Ring 1 &amp; 2 = Ziffern, Ring 3 = Multiplikator (<span class="arithmatex">\(10^x\)</span>), Ring 4 = Toleranz.</li>
+<li><strong>5-Ring-Widerstand (Metallschicht 1%):</strong> Ring 1, 2 &amp; 3 = Ziffern, Ring 4 = Multiplikator, Ring 5 = Toleranz (Braun = 1%, Rot = 2%).</li>
+<li><strong>6-Ring-Widerstand (Präzision):</strong> Ring 6 gibt den Temperaturkoeffizienten an (z. B. Blau = <span class="arithmatex">\(10\,\text{ppm}/\text{K}\)</span>, Gelb = <span class="arithmatex">\(25\,\text{ppm}/\text{K}\)</span>, Rot = <span class="arithmatex">\(50\,\text{ppm}/\text{K}\)</span>).</li>
+</ul>
+<h3 id="2-smd-widerstandscodes">2. SMD-Widerstandscodes<a class="headerlink" href="#2-smd-widerstandscodes" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>3-stelliger Standardcode (5% Toleranz):</strong></li>
+<li><code>472</code> <span class="arithmatex">\(= 47 \cdot 10^2\,\Omega = 4{,}7\,\text{k}\Omega\)</span></li>
+<li><code>104</code> <span class="arithmatex">\(= 10 \cdot 10^4\,\Omega = 100\,\text{k}\Omega\)</span></li>
+<li><code>4R7</code> <span class="arithmatex">\(= 4{,}7\,\Omega\)</span> (<span class="arithmatex">\(R\)</span> dient als Dezimalpunkt)</li>
+<li><code>0R0</code> <span class="arithmatex">\(= 0\,\Omega\)</span> (Null-Ohm-Jumper)</li>
+<li><strong>4-stelliger Code (1% Toleranz):</strong></li>
+<li><code>1001</code> <span class="arithmatex">\(= 100 \cdot 10^1\,\Omega = 1{,}00\,\text{k}\Omega\)</span></li>
+<li><code>4702</code> <span class="arithmatex">\(= 470 \cdot 10^2\,\Omega = 47{,}0\,\text{k}\Omega\)</span></li>
+<li><strong>EIA-96 System (für Bauform 0603 mit 1% Toleranz):</strong>
+  Besteht aus zwei Ziffern (Wert aus E96-Tabelle) und einem Buchstaben (Multiplikator):</li>
+<li>Multiplikatoren: <span class="arithmatex">\(A=10^0\)</span>, <span class="arithmatex">\(B=10^1\)</span>, <span class="arithmatex">\(C=10^2\)</span>, <span class="arithmatex">\(D=10^3\)</span>, <span class="arithmatex">\(E=10^4\)</span>, <span class="arithmatex">\(X=10^{-1}\)</span>, <span class="arithmatex">\(Y=10^{-2}\)</span>.</li>
+<li>Beispiel: <code>01C</code> <span class="arithmatex">\(\to\)</span> Code <code>01</code> entspricht <span class="arithmatex">\(100 \implies 100 \cdot 10^2\,\Omega = \mathbf{10\,\text{k}\Omega}\)</span>.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

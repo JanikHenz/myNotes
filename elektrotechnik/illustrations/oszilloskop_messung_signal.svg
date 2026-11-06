@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 270" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+  <defs>
+    <marker id="arr-osc" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#16a34a" />
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
+    </marker>
+  </defs>
+
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Oszilloskop: Signalparameter &amp; Bildschirm-Messung</text>
+
+  <!-- Left: Screen Graticule (Dark Scope Grid) -->
+  <g transform="translate(30, 50)">
+    <!-- Screen background -->
+    <rect x="0" y="0" width="280" height="200" rx="8" fill="#091e13" stroke="#1e293b" stroke-width="2" />
+    
+    <!-- Grid Lines (10 x 8 DIV) -->
+    <g stroke="#14532d" stroke-width="0.8" opacity="0.6">
+      <!-- Verticals -->
+      <line x1="28" y1="0" x2="28" y2="200" /><line x1="56" y1="0" x2="56" y2="200" /><line x1="84" y1="0" x2="84" y2="200" />
+      <line x1="112" y1="0" x2="112" y2="200" /><line x1="140" y1="0" x2="140" y2="200" stroke-width="1.2" stroke="#22c55e" />
+      <line x1="168" y1="0" x2="168" y2="200" /><line x1="196" y1="0" x2="196" y2="200" /><line x1="224" y1="0" x2="224" y2="200" /><line x1="252" y1="0" x2="252" y2="200" />
+      <!-- Horizontals -->
+      <line x1="0" y1="25" x2="280" y2="25" /><line x1="0" y1="50" x2="280" y2="50" /><line x1="0" y1="75" x2="280" y2="75" />
+      <line x1="0" y1="100" x2="280" y2="100" stroke-width="1.2" stroke="#22c55e" />
+      <line x1="0" y1="125" x2="280" y2="125" /><line x1="0" y1="150" x2="280" y2="150" /><line x1="0" y1="175" x2="280" y2="175" />
+    </g>
+
+    <!-- Sine Wave Trace (bright green/cyan) -->
+    <path d="M 0,100 Q 35,20 70,100 T 140,100 T 210,100 T 280,100" fill="none" stroke="#4ade80" stroke-width="2.5" />
+
+    <!-- Period T Dimension Arrow -->
+    <line x1="70" y1="140" x2="210" y2="140" stroke="#facc15" stroke-width="1.8" marker-end="url(#arr-osc)" />
+    <line x1="70" y1="95" x2="70" y2="155" stroke="#facc15" stroke-width="1" stroke-dasharray="2,2" />
+    <line x1="210" y1="95" x2="210" y2="155" stroke="#facc15" stroke-width="1" stroke-dasharray="2,2" />
+    <text x="140" y="158" font-size="11" font-weight="bold" fill="#facc15" text-anchor="middle">Periodendauer T = 4 DIV</text>
+
+    <!-- Peak-to-Peak Up-p Dimension -->
+    <line x1="35" y1="30" x2="35" y2="170" stroke="#ef4444" stroke-width="1.8" marker-end="url(#arr-red)" />
+    <rect x="40" y="93" width="76" height="17" rx="3" fill="#091e13" fill-opacity="0.92" stroke="#ef4444" stroke-width="0.8"/>
+    <text x="44" y="106" font-size="10" font-weight="bold" fill="#ef4444">U_pp = 6 DIV</text>
+  </g>
+
+  <!-- Right: Explanations -->
+  <rect x="330" y="50" width="195" height="200" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+  <text x="342" y="75" font-size="13" font-weight="bold" fill="#0f172a">Messgrößen &amp; Formeln:</text>
+  
+  <text x="342" y="100" font-size="12" fill="#eab308" font-weight="bold">Zeitbasis (Horizontal):</text>
+  <text x="342" y="116" font-size="11" fill="#334155">z. B. Time/DIV = 1 ms/DIV</text>
+  <text x="342" y="132" font-size="12" font-weight="bold" fill="#0f172a">T = DIV_x · (Time/DIV)</text>
+  <text x="342" y="148" font-size="12" font-weight="bold" fill="#16a34a">f = 1 / T  [Hz]</text>
+
+  <line x1="342" y1="158" x2="510" y2="158" stroke="#e2e8f0" stroke-width="1" />
+
+  <text x="342" y="178" font-size="12" fill="#ef4444" font-weight="bold">Spannung (Vertikal):</text>
+  <text x="342" y="194" font-size="11" fill="#334155">z. B. Volt/DIV = 2 V/DIV</text>
+  <text x="342" y="210" font-size="12" font-weight="bold" fill="#0f172a">U_pp = DIV_y · (Volt/DIV)</text>
+  <text x="342" y="226" font-size="11" fill="#64748b">Amplitude Û = U_pp / 2</text>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 260" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Gemischte Widerstandsschaltung: R_ges = R₁ + (R₂ || (R₃ + R₄))</text>
+
+  <!-- Left: Schematic -->
+  <g transform="translate(30, 55)">
+    <!-- Source left -->
+    <line x1="20" y1="45" x2="50" y2="45" stroke="#1e293b" stroke-width="2" />
+    <!-- R1 Series -->
+    <rect x="50" y="37" width="35" height="16" fill="#ffffff" stroke="#1e293b" stroke-width="1.8" />
+    <text x="67" y="49" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="middle">R₁</text>
+    <line x1="85" y1="45" x2="120" y2="45" stroke="#1e293b" stroke-width="2" />
+
+    <!-- Parallel split at node A -->
+    <circle cx="120" cy="45" r="3" fill="#1e293b" />
+    <line x1="120" y1="45" x2="120" y2="85" stroke="#1e293b" stroke-width="2" />
+
+    <!-- Branch 1: R2 -->
+    <line x1="120" y1="45" x2="150" y2="45" stroke="#1e293b" stroke-width="2" />
+    <rect x="150" y="37" width="35" height="16" fill="#ffffff" stroke="#1e293b" stroke-width="1.8" />
+    <text x="167" y="49" font-size="10" font-weight="bold" fill="#2563eb" text-anchor="middle">R₂</text>
+    <line x1="185" y1="45" x2="230" y2="45" stroke="#1e293b" stroke-width="2" />
+
+    <!-- Branch 2: R3 and R4 in series -->
+    <line x1="120" y1="85" x2="135" y2="85" stroke="#1e293b" stroke-width="2" />
+    <rect x="135" y="77" width="30" height="16" fill="#ffffff" stroke="#1e293b" stroke-width="1.8" />
+    <text x="150" y="89" font-size="9" font-weight="bold" fill="#0f172a" text-anchor="middle">R₃</text>
+    <line x1="165" y1="85" x2="180" y2="85" stroke="#1e293b" stroke-width="2" />
+    <rect x="180" y="77" width="30" height="16" fill="#ffffff" stroke="#1e293b" stroke-width="1.8" />
+    <text x="195" y="89" font-size="9" font-weight="bold" fill="#0f172a" text-anchor="middle">R₄</text>
+    <line x1="210" y1="85" x2="230" y2="85" stroke="#1e293b" stroke-width="2" />
+
+    <!-- Junction B -->
+    <line x1="230" y1="45" x2="230" y2="85" stroke="#1e293b" stroke-width="2" />
+    <circle cx="230" cy="45" r="3" fill="#1e293b" />
+    <line x1="230" y1="45" x2="260" y2="45" stroke="#1e293b" stroke-width="2" />
+  </g>
+
+  <!-- Right: Step-by-Step Reduction -->
+  <rect x="290" y="55" width="230" height="185" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+  <text x="305" y="80" font-size="12" font-weight="bold" fill="#0f172a">Schrittweise Vereinfachung:</text>
+
+  <text x="305" y="105" font-size="11" fill="#2563eb" font-weight="bold">1. Reihenschaltung:</text>
+  <text x="305" y="122" font-size="12" font-weight="bold" fill="#0f172a">R₃₄ = R₃ + R₄</text>
+
+  <text x="305" y="145" font-size="11" fill="#16a34a" font-weight="bold">2. Parallelschaltung:</text>
+  <text x="305" y="162" font-size="12" font-weight="bold" fill="#0f172a">R_p = (R₂ · R₃₄) / (R₂ + R₃₄)</text>
+
+  <line x1="305" y1="175" x2="505" y2="175" stroke="#e2e8f0" stroke-width="1" />
+
+  <text x="305" y="195" font-size="11" fill="#dc2626" font-weight="bold">3. Gesamtwiderstand:</text>
+  <text x="305" y="215" font-size="13" font-weight="bold" fill="#dc2626">R_ges = R₁ + R_p</text>
+</svg>

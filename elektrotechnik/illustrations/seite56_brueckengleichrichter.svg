@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 480 280"
+   width="100%"
+   height="100%"
+   style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;"
+   version="1.1"
+   id="svg16"
+   sodipodi:docname="seite56_brueckengleichrichter.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview16"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="3.9928571"
+     inkscape:cx="240.05367"
+     inkscape:cy="140"
+     inkscape:window-width="2560"
+     inkscape:window-height="1371"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg16" />
+  <defs
+     id="defs4">
+    <marker
+       id="arrow"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto">
+      <path
+         d="M 0 1 L 10 5 L 0 9 z"
+         fill="#2563eb"
+         id="path1" />
+    </marker>
+    <marker
+       id="arrow-red"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto">
+      <path
+         d="M 0 1 L 10 5 L 0 9 z"
+         fill="#dc2626"
+         id="path2" />
+    </marker>
+    <marker
+       id="arrow-green"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto">
+      <path
+         d="M 0 1 L 10 5 L 0 9 z"
+         fill="#16a34a"
+         id="path3" />
+    </marker>
+    <marker
+       id="arrow-dark"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto">
+      <path
+         d="M 0 1 L 10 5 L 0 9 z"
+         fill="#1e293b"
+         id="path4" />
+    </marker>
+  </defs>
+  <text
+     x="20"
+     y="30"
+     font-size="16"
+     font-weight="bold"
+     fill="#0f172a"
+     id="text4">Brückengleichrichter (Graetz-Schaltung) mit Glättung</text>
+  <!-- AC Input terminals -->
+  <circle
+     cx="53.738819"
+     cy="70.178894"
+     r="4"
+     fill="#1e293b"
+     id="circle4" />
+  <circle
+     cx="60"
+     cy="170"
+     r="4"
+     fill="#1e293b"
+     id="circle5" />
+  <text
+     x="21.234346"
+     y="120.45617"
+     font-size="14px"
+     font-weight="bold"
+     fill="#1e293b"
+     id="text5">U_AC ~</text>
+  <line
+     x1="50.483006"
+     y1="70.178894"
+     x2="150.483"
+     y2="70.178894"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line5" />
+  <line
+     x1="60"
+     y1="170"
+     x2="240"
+     y2="170"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line6" />
+  <line
+     x1="240"
+     y1="170"
+     x2="240"
+     y2="200"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line7" />
+  <!-- Diode Bridge (Rhombus) -->
+  <rect
+     x="150"
+     y="70"
+     width="100"
+     height="100"
+     fill="none"
+     stroke="#94a3b8"
+     stroke-width="1.5"
+     stroke-dasharray="3,3"
+     id="rect7" />
+  <!-- DC Output lines -->
+  <line
+     x1="200"
+     y1="70"
+     x2="420"
+     y2="70"
+     stroke="#dc2626"
+     stroke-width="2"
+     id="line8" />
+  <circle
+     cx="420"
+     cy="70"
+     r="4"
+     fill="#dc2626"
+     id="circle8" />
+  <text
+     x="430"
+     y="75"
+     font-size="14"
+     font-weight="bold"
+     fill="#dc2626"
+     id="text8">+ DC</text>
+  <line
+     x1="200"
+     y1="170"
+     x2="420"
+     y2="170"
+     stroke="#2563eb"
+     stroke-width="2"
+     id="line9" />
+  <circle
+     cx="420"
+     cy="170"
+     r="4"
+     fill="#2563eb"
+     id="circle9" />
+  <text
+     x="430"
+     y="175"
+     font-size="14"
+     font-weight="bold"
+     fill="#2563eb"
+     id="text9">− GND</text>
+  <!-- Smoothing Capacitor C -->
+  <line
+     x1="320"
+     y1="70"
+     x2="320"
+     y2="108"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line10" />
+  <line
+     x1="305"
+     y1="108"
+     x2="335"
+     y2="108"
+     stroke="#1e293b"
+     stroke-width="3"
+     id="line11" />
+  <line
+     x1="305"
+     y1="118"
+     x2="335"
+     y2="118"
+     stroke="#1e293b"
+     stroke-width="3"
+     id="line12" />
+  <line
+     x1="320"
+     y1="118"
+     x2="320"
+     y2="170"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line13" />
+  <text
+     x="345"
+     y="117"
+     font-size="14"
+     font-weight="bold"
+     fill="#0f172a"
+     id="text13">C_L</text>
+  <!-- Load Resistor R_L -->
+  <line
+     x1="390"
+     y1="70"
+     x2="390"
+     y2="100"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line14" />
+  <rect
+     x="380"
+     y="100"
+     width="20"
+     height="40"
+     fill="#f8fafc"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="rect14" />
+  <line
+     x1="390"
+     y1="140"
+     x2="390"
+     y2="170"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line15" />
+  <text
+     x="405"
+     y="125"
+     font-size="13"
+     font-weight="bold"
+     fill="#0f172a"
+     id="text15">R_L</text>
+  <!-- Bridge label -->
+  <text
+     x="200"
+     y="125"
+     font-size="14"
+     font-weight="bold"
+     fill="#64748b"
+     text-anchor="middle"
+     id="text16">Graetz 4×D</text>
+</svg>

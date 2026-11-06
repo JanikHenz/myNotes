@@ -1,0 +1,3120 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Janik Henz's Wissensdatenbank, Elektrotechnik-Referenzhandbuch & Projektnotizen">
+      
+      
+        <meta name="author" content="Janik Henz">
+      
+      
+        <link rel="canonical" href="https://JanikHenz.github.io/myNotes/elektrotechnik/kapitel06_messtechnik_sicherheit/">
+      
+      
+        <link rel="prev" href="../kapitel05_magnetismus_spulen/">
+      
+      
+        <link rel="next" href="../kapitel07_passive_bauelemente/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>6. Messtechnik & Sicherheit - myNotes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kapitel-6-messtechnik-elektrische-sicherheit" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../.." title="myNotes" class="md-header__button md-logo" aria-label="myNotes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            myNotes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6. Messtechnik & Sicherheit
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-label="Heller Modus"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Heller Modus" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-label="Dunkler Modus"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dunkler Modus" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/JanikHenz/myNotes" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    JanikHenz/myNotes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="myNotes" class="md-nav__button md-logo" aria-label="myNotes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    myNotes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/JanikHenz/myNotes" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    JanikHenz/myNotes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elektrotechnik
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Elektrotechnik
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht & Download
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel01_mathematik/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Mathematik & Vektoren
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel02_elektrostatik_felder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Elektrostatik & Felder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel03_kondensatoren/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Kondensatoren
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel04_gleichstrom_netzwerke/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Gleichstromtechnik
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel05_magnetismus_spulen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Magnetismus & Spulen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Messtechnik & Sicherheit
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Messtechnik & Sicherheit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61-grundlagen-der-messtechnik-einfuhrung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Grundlagen der Messtechnik &amp; Einführung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1 Grundlagen der Messtechnik &amp; Einführung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spannungsmessung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spannungsmessung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strommessung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strommessung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#messbereicherweiterung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Messbereicherweiterung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-indirekte-widerstandsmessung-strom-vs-spannungsfehlerschaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Indirekte Widerstandsmessung (Strom- vs. Spannungsfehlerschaltung)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2 Indirekte Widerstandsmessung (Strom- vs. Spannungsfehlerschaltung)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spannungsfehlerschaltung-genauer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spannungsfehlerschaltung (genauer)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stromfehlerschatung-ungenau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stromfehlerschatung (ungenau)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-direkte-widerstandsmessung-vierleiter-kelvin-messung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Direkte Widerstandsmessung &amp; Vierleiter-Kelvin-Messung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 Direkte Widerstandsmessung &amp; Vierleiter-Kelvin-Messung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-drahttechnik" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-Drahttechnik
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-drahttechnik" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4-Drahttechnik
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-strom-und-spannungsmessung-mit-shunt-widerstand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Strom- und Spannungsmessung mit Shunt-Widerstand
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-messgerate-innenwiderstande-burde" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 Messgeräte-Innenwiderstände &amp; Bürde
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.5 Messgeräte-Innenwiderstände &amp; Bürde">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-fundamentalvoraussetzung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Fundamentalvoraussetzung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fundamentalvoraussetzung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Fundamentalvoraussetzung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#messungen-mussen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Messungen müssen:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66-begriffsdefinitionen-toleranz-messfehler-auflosung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6 Begriffsdefinitionen (Toleranz, Messfehler, Auflösung)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#67-analoge-drehspulmesswerke-vs-digitalmultimeter-dmm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7 Analoge Drehspulmesswerke vs. Digitalmultimeter (DMM)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.7 Analoge Drehspulmesswerke vs. Digitalmultimeter (DMM)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analog
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Digital
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#68-oszilloskop-funktionsprinzip-schirmaufbau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.8 Oszilloskop: Funktionsprinzip &amp; Schirmaufbau
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.8 Oszilloskop: Funktionsprinzip &amp; Schirmaufbau">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#betriebe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Betriebe:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sonde" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sonde:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#69-oszilloskop-einstellungen-messpraxis-trigger-timebase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.9 Oszilloskop: Einstellungen &amp; Messpraxis (Trigger, Timebase)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.9 Oszilloskop: Einstellungen &amp; Messpraxis (Trigger, Timebase)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#einstellungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        einstellungen:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#horizontal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Horizontal:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vertikal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vertikal:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#610-wheatstonesche-messbrucke-abgleichbedingung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.10 Wheatstonesche Messbrücke &amp; Abgleichbedingung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#611-elektrische-sicherheit-schmelzsicherungen-rcd-fi-schutzschalter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.11 Elektrische Sicherheit: Schmelzsicherungen &amp; RCD (FI-Schutzschalter)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.11 Elektrische Sicherheit: Schmelzsicherungen &amp; RCD (FI-Schutzschalter)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schaltsymbol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schaltsymbol:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aufbau-funktion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aufbau &amp; Funktion:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nennstrom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nennstrom:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nennspannung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nennspannung:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schnelligkeit-der-sicherung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schnelligkeit der Sicherung:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fehlerstromschutzschalter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fehlerstromschutzschalter:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#612-temperaturmessung-mit-thermoelementen-seebeck-effekt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.12 Temperaturmessung mit Thermoelementen (Seebeck-Effekt)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.12 Temperaturmessung mit Thermoelementen (Seebeck-Effekt)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funktionsweise-bedingungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funktionsweise &amp; Bedingungen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispiel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beispiel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#613-messkategorien-cat-i-bis-cat-iv-nach-iecen-61010" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.13 Messkategorien CAT I bis CAT IV nach IEC/EN 61010
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.13 Messkategorien CAT I bis CAT IV nach IEC/EN 61010">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stospannungsfestigkeit-im-vergleich" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stoßspannungsfestigkeit im Vergleich
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#614-gefahren-des-elektrischen-stroms-ac-vs-dc-5-sicherheitsregeln" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.14 Gefahren des elektrischen Stroms (AC vs. DC) &amp; 5 Sicherheitsregeln
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.14 Gefahren des elektrischen Stroms (AC vs. DC) &amp; 5 Sicherheitsregeln">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schutzkleinspannungsgrenzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schutzkleinspannungsgrenzen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physiologische-wirkung-auf-den-menschlichen-organismus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physiologische Wirkung auf den menschlichen Organismus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gleichstrom-vs-wechselstrom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gleichstrom vs. Wechselstrom
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#die-5-sicherheitsregeln-din-vde-0105-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Die 5 Sicherheitsregeln (DIN VDE 0105-100)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#615-transienten-surge-burst-in-der-emv-prufpraxis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.15 Transienten, Surge &amp; Burst in der EMV-Prüfpraxis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.15 Transienten, Surge &amp; Burst in der EMV-Prüfpraxis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genormte-storimpulse-emv-prufung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Genormte Störimpulse (EMV-Prüfung)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#616-hochspannungs-tastkopfe-hv-probes-frequenzabgleich" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.16 Hochspannungs-Tastköpfe (HV-Probes): Frequenzabgleich
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.16 Hochspannungs-Tastköpfe (HV-Probes): Frequenzabgleich">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abgleichbedingung-des-frequenzkompensierten-spannungsteilers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abgleichbedingung des frequenzkompensierten Spannungsteilers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#617-aufbau-dokumentation-professioneller-messprotokolle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.17 Aufbau &amp; Dokumentation professioneller Messprotokolle
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel07_passive_bauelemente/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Passive Bauelemente & Fertigung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel08_dioden_halbleiter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Dioden & Halbleiter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel09_transistoren_schaltungen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Transistoren & Schaltungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel10_opv_filter_analog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. OPVs, Filter & Signalverarbeitung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel11_digitaltechnik_mikrocontroller/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Digitaltechnik & Mikrocontroller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel12_hochspannung_praxis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Hochspannungstechnik (EMC Partner)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../anhang_formelsammlung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anhang: Formelsammlung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../komplett/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vollständiges Skript
+  
+
+    
+      <br>
+      <small>Vollständiges Referenzhandbuch & Formelsammlung</small>
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--completed"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IP5
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IP5
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/projectdeclaration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projektvereinbarung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/risks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risiken
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/helper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Helper
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/milestone01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meilenstein 01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/milestone02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meilenstein 02
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    C++
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week45/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 45
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week46/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 46
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week47/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 47
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week48/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 48
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week49/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 49
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Weitere Notizen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Weitere Notizen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vesys/week01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VeSys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wosm/week01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WoSM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Allgemein
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#61-grundlagen-der-messtechnik-einfuhrung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Grundlagen der Messtechnik &amp; Einführung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1 Grundlagen der Messtechnik &amp; Einführung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spannungsmessung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spannungsmessung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strommessung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strommessung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#messbereicherweiterung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Messbereicherweiterung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-indirekte-widerstandsmessung-strom-vs-spannungsfehlerschaltung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Indirekte Widerstandsmessung (Strom- vs. Spannungsfehlerschaltung)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2 Indirekte Widerstandsmessung (Strom- vs. Spannungsfehlerschaltung)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spannungsfehlerschaltung-genauer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spannungsfehlerschaltung (genauer)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stromfehlerschatung-ungenau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stromfehlerschatung (ungenau)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-direkte-widerstandsmessung-vierleiter-kelvin-messung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Direkte Widerstandsmessung &amp; Vierleiter-Kelvin-Messung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 Direkte Widerstandsmessung &amp; Vierleiter-Kelvin-Messung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-drahttechnik" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2-Drahttechnik
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-drahttechnik" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4-Drahttechnik
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-strom-und-spannungsmessung-mit-shunt-widerstand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Strom- und Spannungsmessung mit Shunt-Widerstand
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-messgerate-innenwiderstande-burde" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 Messgeräte-Innenwiderstände &amp; Bürde
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.5 Messgeräte-Innenwiderstände &amp; Bürde">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-fundamentalvoraussetzung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Fundamentalvoraussetzung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fundamentalvoraussetzung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Fundamentalvoraussetzung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#messungen-mussen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Messungen müssen:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66-begriffsdefinitionen-toleranz-messfehler-auflosung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6 Begriffsdefinitionen (Toleranz, Messfehler, Auflösung)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#67-analoge-drehspulmesswerke-vs-digitalmultimeter-dmm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7 Analoge Drehspulmesswerke vs. Digitalmultimeter (DMM)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.7 Analoge Drehspulmesswerke vs. Digitalmultimeter (DMM)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Analog
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Digital
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#68-oszilloskop-funktionsprinzip-schirmaufbau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.8 Oszilloskop: Funktionsprinzip &amp; Schirmaufbau
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.8 Oszilloskop: Funktionsprinzip &amp; Schirmaufbau">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#betriebe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Betriebe:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sonde" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sonde:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#69-oszilloskop-einstellungen-messpraxis-trigger-timebase" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.9 Oszilloskop: Einstellungen &amp; Messpraxis (Trigger, Timebase)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.9 Oszilloskop: Einstellungen &amp; Messpraxis (Trigger, Timebase)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#einstellungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        einstellungen:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#horizontal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Horizontal:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vertikal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vertikal:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#610-wheatstonesche-messbrucke-abgleichbedingung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.10 Wheatstonesche Messbrücke &amp; Abgleichbedingung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#611-elektrische-sicherheit-schmelzsicherungen-rcd-fi-schutzschalter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.11 Elektrische Sicherheit: Schmelzsicherungen &amp; RCD (FI-Schutzschalter)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.11 Elektrische Sicherheit: Schmelzsicherungen &amp; RCD (FI-Schutzschalter)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schaltsymbol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schaltsymbol:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aufbau-funktion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aufbau &amp; Funktion:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nennstrom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nennstrom:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nennspannung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nennspannung:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schnelligkeit-der-sicherung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schnelligkeit der Sicherung:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fehlerstromschutzschalter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fehlerstromschutzschalter:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#612-temperaturmessung-mit-thermoelementen-seebeck-effekt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.12 Temperaturmessung mit Thermoelementen (Seebeck-Effekt)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.12 Temperaturmessung mit Thermoelementen (Seebeck-Effekt)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funktionsweise-bedingungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funktionsweise &amp; Bedingungen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#beispiel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beispiel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#613-messkategorien-cat-i-bis-cat-iv-nach-iecen-61010" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.13 Messkategorien CAT I bis CAT IV nach IEC/EN 61010
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.13 Messkategorien CAT I bis CAT IV nach IEC/EN 61010">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stospannungsfestigkeit-im-vergleich" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stoßspannungsfestigkeit im Vergleich
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#614-gefahren-des-elektrischen-stroms-ac-vs-dc-5-sicherheitsregeln" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.14 Gefahren des elektrischen Stroms (AC vs. DC) &amp; 5 Sicherheitsregeln
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.14 Gefahren des elektrischen Stroms (AC vs. DC) &amp; 5 Sicherheitsregeln">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schutzkleinspannungsgrenzen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schutzkleinspannungsgrenzen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physiologische-wirkung-auf-den-menschlichen-organismus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Physiologische Wirkung auf den menschlichen Organismus
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gleichstrom-vs-wechselstrom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gleichstrom vs. Wechselstrom
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#die-5-sicherheitsregeln-din-vde-0105-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Die 5 Sicherheitsregeln (DIN VDE 0105-100)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#615-transienten-surge-burst-in-der-emv-prufpraxis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.15 Transienten, Surge &amp; Burst in der EMV-Prüfpraxis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.15 Transienten, Surge &amp; Burst in der EMV-Prüfpraxis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#genormte-storimpulse-emv-prufung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Genormte Störimpulse (EMV-Prüfung)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#616-hochspannungs-tastkopfe-hv-probes-frequenzabgleich" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.16 Hochspannungs-Tastköpfe (HV-Probes): Frequenzabgleich
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.16 Hochspannungs-Tastköpfe (HV-Probes): Frequenzabgleich">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#abgleichbedingung-des-frequenzkompensierten-spannungsteilers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Abgleichbedingung des frequenzkompensierten Spannungsteilers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#617-aufbau-dokumentation-professioneller-messprotokolle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.17 Aufbau &amp; Dokumentation professioneller Messprotokolle
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="kapitel-6-messtechnik-elektrische-sicherheit">Kapitel 6: Messtechnik &amp; Elektrische Sicherheit<a class="headerlink" href="#kapitel-6-messtechnik-elektrische-sicherheit" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Überblick</p>
+<p>Messverfahren, Shunts, Drehspulwerk, DMM, Kelvin-Messung, Wheatstone-Brücke, Oszilloskop und RCD.</p>
+</div>
+<h2 id="61-grundlagen-der-messtechnik-einfuhrung">6.1 Grundlagen der Messtechnik &amp; Einführung<a class="headerlink" href="#61-grundlagen-der-messtechnik-einfuhrung" title="Permanent link">&para;</a></h2>
+<h3 id="spannungsmessung">Spannungsmessung<a class="headerlink" href="#spannungsmessung" title="Permanent link">&para;</a></h3>
+<p><img alt="Grundregeln der Spannungs- und Strommessung" src="../illustrations/spannungsmessung_strommessung_prinzip.svg" /></p>
+<p><em>Abbildung: Zwei Leitungen führen von links zu einem Lastwiderstand. Parallel dazu liegt ein Voltmeter <span class="arithmatex">\((V)\)</span> zusammen mit seinem Innenwiderstand <span class="arithmatex">\(R_V\)</span>.</em></p>
+<p><span class="arithmatex">\(R_V = \text{Hochohmig}\)</span></p>
+<h3 id="strommessung">Strommessung<a class="headerlink" href="#strommessung" title="Permanent link">&para;</a></h3>
+<p><img alt="Messbereichserweiterung mit Shunt" src="../illustrations/shunt_strommessung.svg" /></p>
+<p><em>Abbildung: In Reihe zu einem Lastwiderstand <span class="arithmatex">\(R_L\)</span> liegt im Leitungszweig ein Amperemeter <span class="arithmatex">\((A)\)</span> mit seinem Innenwiderstand <span class="arithmatex">\(R_A\)</span>.</em></p>
+<p><span class="arithmatex">\(R_A = \text{Niederohmig}\)</span></p>
+<h3 id="messbereicherweiterung">Messbereicherweiterung<a class="headerlink" href="#messbereicherweiterung" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(R_S = \text{Vorwiederstand}\)</span> <em>(Shunt / Nebenwiderstand)</em></p>
+<div class="arithmatex">\[R_{\text{ges}} = \frac{R_S \cdot R_A}{R_S + R_A} + R_L\]</div>
+<div class="arithmatex">\[\frac{I_A}{I_S} = \frac{R_S}{R_A}\]</div>
+<div class="arithmatex">\[I_{\text{max}} = I_S + I_A\]</div>
+<p><em>Abbildung: Schaltkreis mit Lastwiderstand <span class="arithmatex">\(R_L\)</span>. Dahinter zweigt parallel ein Nebenwiderstand <span class="arithmatex">\(R_S\)</span> mit Teilstrom <span class="arithmatex">\(I_S\)</span> ab, während der Hauptmesszweig über das Amperemeter <span class="arithmatex">\((A)\)</span> und dessen Innenwiderstand <span class="arithmatex">\(R_A\)</span> mit Teilstrom <span class="arithmatex">\(I_A\)</span> verläuft. Das eigentliche Messwerk ist durch eine Umrahmung hervorgehoben.</em></p>
+<hr />
+<hr />
+<h2 id="62-indirekte-widerstandsmessung-strom-vs-spannungsfehlerschaltung">6.2 Indirekte Widerstandsmessung (Strom- vs. Spannungsfehlerschaltung)<a class="headerlink" href="#62-indirekte-widerstandsmessung-strom-vs-spannungsfehlerschaltung" title="Permanent link">&para;</a></h2>
+<p><img alt="Strom- und spannungsrichtige Widerstandsmessung" src="../illustrations/widerstandsmessung_strom_spannungsrichtig.svg" /></p>
+<h3 id="spannungsfehlerschaltung-genauer">Spannungsfehlerschaltung (genauer)<a class="headerlink" href="#spannungsfehlerschaltung-genauer" title="Permanent link">&para;</a></h3>
+<p><em>Abbildung: Eine Gleichspannungsquelle speist die Schaltung. Das Voltmeter <span class="arithmatex">\((V)\)</span> samt Innenwiderstand liegt direkt parallel zur Quelle an den Hauptleitungen. In der unteren Leitung liegt dahinter in Reihe der Innenwiderstand und das Strommessgerät <span class="arithmatex">\((A)\)</span>, gefolgt vom Lastwiderstand <span class="arithmatex">\(R_L\)</span>. Das Amperemeter misst exakt den Strom durch <span class="arithmatex">\(R_L\)</span>, während das Voltmeter zusätzlich den Spannungsabfall über dem Amperemeter erfasst.</em></p>
+<p>Es hat durch das Ampeere-messgerät eine Abweichung ist aber trotzdem relativ genau.</p>
+<h3 id="stromfehlerschatung-ungenau">Stromfehlerschatung (ungenau)<a class="headerlink" href="#stromfehlerschatung-ungenau" title="Permanent link">&para;</a></h3>
+<p><em>Abbildung: Eine Gleichspannungsquelle mit nachgeschaltetem Amperemeter <span class="arithmatex">\((A)\)</span> samt Innenwiderstand in der Zuleitung. Dahinter liegen der Lastwiderstand <span class="arithmatex">\(R_L\)</span> und das Voltmeter <span class="arithmatex">\((V)\)</span> samt Innenwiderstand <span class="arithmatex">\(R_V\)</span> parallel. Das Voltmeter misst exakt die Spannung an <span class="arithmatex">\(R_L\)</span>, das Amperemeter misst jedoch die Summe aus Laststrom und Voltmeterstrom.</em></p>
+<p>Ist sehr ungenau, wenn man Volt und Ampeere gleichzeitig misst.</p>
+<hr />
+<hr />
+<h2 id="63-direkte-widerstandsmessung-vierleiter-kelvin-messung">6.3 Direkte Widerstandsmessung &amp; Vierleiter-Kelvin-Messung<a class="headerlink" href="#63-direkte-widerstandsmessung-vierleiter-kelvin-messung" title="Permanent link">&para;</a></h2>
+<p><img alt="Vierleiter-Kelvin-Messung" src="../illustrations/vierleiter_kelvin_messung.svg" /></p>
+<h3 id="2-drahttechnik">2-Drahttechnik<a class="headerlink" href="#2-drahttechnik" title="Permanent link">&para;</a></h3>
+<p><em>Abbildung: n: Drei Stufen der direkten 2-Leiter-Widerstandsmessung:</em>
+<em>1. Links: Ersatzschaltbild mit interner Stromquelle, parallel liegendem Spannungsmesser <span class="arithmatex">\((V)\)</span> und Prüfling (Widerstand).</em>
+<em>2. Mitte: Symbolische Darstellung eines Widerstandsmessgeräts <span class="arithmatex">\((\Omega)\)</span> parallel zum Prüfwiderstand.</em>
+<em>3. Rechts: Praktischer Anschluss über zwei Messleitungen an Anschlüssen <span class="arithmatex">\(\circ\)</span>. Auf den Zuleitungsdrähten sind schräge Markierungen angebracht, die den Einfluss der Leitungswiderstände andeuten.</em></p>
+<p>Bei elektronischer Schaltung ist Vorsicht geboten</p>
+<h3 id="4-drahttechnik">4-Drahttechnik<a class="headerlink" href="#4-drahttechnik" title="Permanent link">&para;</a></h3>
+<p><em>Abbildung: Kelvin-Vierdrahtmessung. Eine Stromquelle links speist einen definierten Messstrom über zwei äußere Leitungen (mit eingezeichneten Leitungswiderständen) durch den Prüfwiderstand rechts. Die Spannung am Prüfwiderstand wird über zwei separate innere Leitungen mit Leitungswiderständen hochohmig durch ein Voltmeter <span class="arithmatex">\((V)\)</span> abgegriffen.</em></p>
+<hr />
+<hr />
+<h2 id="64-strom-und-spannungsmessung-mit-shunt-widerstand">6.4 Strom- und Spannungsmessung mit Shunt-Widerstand<a class="headerlink" href="#64-strom-und-spannungsmessung-mit-shunt-widerstand" title="Permanent link">&para;</a></h2>
+<p><img alt="Übersicht der Messkategorien CAT I bis CAT IV" src="../illustrations/messkategorien_cat_uebersicht.svg" /></p>
+<p>Messgeräte haben Kategorien:
+cat I, cat II, cat III und cat IV</p>
+<p>Je näher man der Energiequelle kommt desto grösser wird die Kategorie</p>
+<p>Es können durch Blitzeinschläge oder anderen Ursachen in Schaltungen Transienten entstehen, Transienten sind hohe Spannungsüberschüse auf kurzer Zeit, dass kann währen dem Messen ein Lichtbogen verursach: das ist eine Explosion.
+Bei guten Messgeräte ist man dagegen geschützt</p>
+<hr />
+<hr />
+<h2 id="65-messgerate-innenwiderstande-burde">6.5 Messgeräte-Innenwiderstände &amp; Bürde<a class="headerlink" href="#65-messgerate-innenwiderstande-burde" title="Permanent link">&para;</a></h2>
+<h3 id="1-fundamentalvoraussetzung">1. Fundamentalvoraussetzung<a class="headerlink" href="#1-fundamentalvoraussetzung" title="Permanent link">&para;</a></h3>
+<p>Die zu messende Grösse muss qualitativ eindeutig definiert sein und quantitativ bestimmbar sein.</p>
+<h3 id="2-fundamentalvoraussetzung">2. Fundamentalvoraussetzung<a class="headerlink" href="#2-fundamentalvoraussetzung" title="Permanent link">&para;</a></h3>
+<p>Das Messnormal muss durch eine Konventation festgelegt sein (Si-Einheit)
+<em>(Hinweis / Klammer darunter: kann man von t/s/m ableiten)</em></p>
+<h3 id="messungen-mussen">Messungen müssen:<a class="headerlink" href="#messungen-mussen" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Objektiv sein</li>
+<li>reproduzierbar sein</li>
+<li>quantitativ (mit einer Zahl versehen)</li>
+</ul>
+<hr />
+<hr />
+<h2 id="66-begriffsdefinitionen-toleranz-messfehler-auflosung">6.6 Begriffsdefinitionen (Toleranz, Messfehler, Auflösung)<a class="headerlink" href="#66-begriffsdefinitionen-toleranz-messfehler-auflosung" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Messgrösse:</strong> Die physikalische Grösse, die bestimmt werden soll</li>
+<li><strong>Messgerät:</strong> Für die Messung geeignete Einrichtung</li>
+<li><strong>Messeinrichtung:</strong> Alles um das Messgerät herum</li>
+<li><strong>Sensor:</strong> Teil des Messgeräts der in direkter Verbindung mit der physikalischen Grösse steht.</li>
+<li><strong>Messwert:</strong> Gemessener Wert</li>
+<li><strong>richtiger Wert:</strong> gemessener Wert mit Fehlerberechnung</li>
+<li><strong>wahrer Wert:</strong> unmessbar</li>
+<li><strong>Messabweichung:</strong> differenz von wahrer Wert und gemessener Wert</li>
+<li><strong>Messergebnis:</strong> Zahl und Einheit ist vorhanden</li>
+<li><strong>kalibrieren:</strong> Ermittle die Messabweichung vom richtigen Wert (wird amtlich geeicht)</li>
+<li><strong>Messbereich:</strong> Ein Spannungsbereich den man Messen kann.</li>
+</ul>
+<hr />
+<hr />
+<h2 id="67-analoge-drehspulmesswerke-vs-digitalmultimeter-dmm">6.7 Analoge Drehspulmesswerke vs. Digitalmultimeter (DMM)<a class="headerlink" href="#67-analoge-drehspulmesswerke-vs-digitalmultimeter-dmm" title="Permanent link">&para;</a></h2>
+<p><img alt="Funktionsprinzip des Drehspulmesswerks" src="../illustrations/drehspulmesswerk_prinzip.svg" /></p>
+<h3 id="analog">Analog<a class="headerlink" href="#analog" title="Permanent link">&para;</a></h3>
+<p><img alt="Analoges Zeigerinstrument vs. Digitalmultimeter" src="../illustrations/analog_digital_messgeraet_vergleich.svg" /></p>
+<p><em>Abbildung: Zeigerinstrument mit Skala von 0 bis 200: <span class="arithmatex">\(0 \backslash | / 200\)</span>. Links unter der Skala: "Genauigkeitsklasse 0,5". Ein Pfeil verknüpft den Skalenendwert 200 mit dem Messbereich.</em></p>
+<p>Abweichung berechnet mit:
+- Genauigkeit <span class="arithmatex">\(= 0{,}5\%\)</span>
+- Messbereich <span class="arithmatex">\(= 200\,\text{V}\)</span>
+- Messwert <span class="arithmatex">\(= 12\,\text{V}\)</span></p>
+<div class="arithmatex">\[0{,}5\% \text{ von } 200\,\text{V} = 1{,}0\,\text{V}$$
+$$\text{Abweichung} = 12\,\text{V} \pm 1{,}0\,\text{V}\]</div>
+<h3 id="digital">Digital<a class="headerlink" href="#digital" title="Permanent link">&para;</a></h3>
+<p><em>Abbildung: Digitalanzeige mit LCD-Feld "12 V". Darunter Spezifikation: <span class="arithmatex">\(\pm 5\% + 3\,\text{digit}\)</span>.</em></p>
+<p>Abweichung berechnen mit
+Anzeigeumfang:
+<span class="arithmatex">\(3\frac{1}{2}\)</span> stellen <span class="arithmatex">\(= \frac{1}{2}\)</span> für 1 und 3 für 999
+<span class="arithmatex">\(\min 0000\)</span> und <span class="arithmatex">\(\max 1999\)</span>
+Anzeigeumfang <span class="arithmatex">\(= 2000\)</span></p>
+<div class="arithmatex">\[\text{Auflösung} = \frac{\text{Messbereich}}{\text{Anzeigeumfang}}\]</div>
+<p>Messbereich <span class="arithmatex">\(= 10\,\text{V}\)</span>
+$<span class="arithmatex">\(\text{Auflösung} = \frac{10}{2000} = 0{,}005\)</span>$</p>
+<p>$<span class="arithmatex">\(\text{Abweichung} = 0{,}015 = 0{,}005 \cdot 3 \text{ für 3 digit} + \text{Absoluter Fehler } \pm 0{,}6\,\text{V}\)</span>$
+<em>(Hinweis: <span class="arithmatex">\(5\% \text{ von } 12\,\text{V} = 0{,}6\,\text{V}\)</span>)</em></p>
+<hr />
+<hr />
+<h2 id="68-oszilloskop-funktionsprinzip-schirmaufbau">6.8 Oszilloskop: Funktionsprinzip &amp; Schirmaufbau<a class="headerlink" href="#68-oszilloskop-funktionsprinzip-schirmaufbau" title="Permanent link">&para;</a></h2>
+<h3 id="betriebe">Betriebe:<a class="headerlink" href="#betriebe" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>yt-Betrieb</strong> <span class="arithmatex">\(\rightarrow\)</span> Misst den zeitlichen Verlauf einer Spannung (<span class="arithmatex">\(y = \text{Spannung} \,/\, x = t = \text{Zeit}\)</span>)</li>
+<li><strong>xy-Betrieb</strong> <span class="arithmatex">\(\rightarrow\)</span> Misst man die Spanung von den Kanälen CH1 und CH2 gegeneinander. (<span class="arithmatex">\(x = \text{CH}1, y = \text{CH}2\)</span>) zum Messen von Kennlinien der Bauteile</li>
+</ul>
+<p><strong>Trigger = Auslöser:</strong> Wenn man eine bestimmte Spannung erfassen möchte, dafür gibt's auch ein externer Eingang.</p>
+<p>Auf dem Oszilloskop steht der Spitzenwert <span class="arithmatex">\(V_{pk}\)</span> was gemessen werden darf und den Innenwiederstand.
+<span class="arithmatex">\(\triangle\)</span> immer das Handbuch lesen (<span class="arithmatex">\(R_i\)</span> ist meistens <span class="arithmatex">\(1\,\text{M}\Omega\)</span>)</p>
+<h3 id="sonde">Sonde:<a class="headerlink" href="#sonde" title="Permanent link">&para;</a></h3>
+<p>Ist meist ein Hochohmiges Kabel mit einem Spannungsteiler. Sie ist mit einem BNC stecker mit dem Oszilloskop verbunden und gleichzeitig auch geerdet.</p>
+<hr />
+<hr />
+<h2 id="69-oszilloskop-einstellungen-messpraxis-trigger-timebase">6.9 Oszilloskop: Einstellungen &amp; Messpraxis (Trigger, Timebase)<a class="headerlink" href="#69-oszilloskop-einstellungen-messpraxis-trigger-timebase" title="Permanent link">&para;</a></h2>
+<p><img alt="Oszilloskop-Signalparameter und DIV-Messung" src="../illustrations/oszilloskop_messung_signal.svg" /></p>
+<h3 id="einstellungen">einstellungen:<a class="headerlink" href="#einstellungen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>AC:</strong> Die Gleichspannungssignale werden ausgeblendet</li>
+<li><strong>DC:</strong> Direkte verbindung ohne Änderung</li>
+</ul>
+<h3 id="horizontal">Horizontal:<a class="headerlink" href="#horizontal" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Wert <span class="arithmatex">\(\frac{\text{sec}}{\text{div}}\)</span> vergrössern/verkleinern</strong> (bei yt Betrieb)</li>
+<li><strong>Position von der horizontale Grundlinie (Achse)</strong></li>
+<li><strong>Wert <span class="arithmatex">\(\frac{\text{V}}{\text{div}}\)</span> vergrössern/verkleinern</strong> (bei xy Betrieb)</li>
+</ul>
+<h3 id="vertikal">Vertikal:<a class="headerlink" href="#vertikal" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Vertikale Empfindlichkeit (<span class="arithmatex">\(\frac{\text{V}}{\text{div}}\)</span>) einstellen:</strong> Skaliert die Amplitude der Messkurve auf dem Schirm.</li>
+<li><strong>Position der Vertikalen Achse</strong></li>
+</ul>
+<hr />
+<hr />
+<h2 id="610-wheatstonesche-messbrucke-abgleichbedingung">6.10 Wheatstonesche Messbrücke &amp; Abgleichbedingung<a class="headerlink" href="#610-wheatstonesche-messbrucke-abgleichbedingung" title="Permanent link">&para;</a></h2>
+<p><img alt="Wheatstonesche Messbrücke" src="../illustrations/seite55_wheatstone_bruecke.svg" /></p>
+<p><em>Abbildung: Wheatstonesche Messbrücke in Rautenform. Vier Brückenzweige mit Widerständen: links oben <span class="arithmatex">\(R_1\)</span> mit Spannungsabfall <span class="arithmatex">\(U_1\)</span>, rechts oben <span class="arithmatex">\(R_2\)</span> mit <span class="arithmatex">\(U_2\)</span>, links unten Prüfling <span class="arithmatex">\(R_L\)</span> mit <span class="arithmatex">\(U_L\)</span>, rechts unten Regelwiderstand <span class="arithmatex">\(R_P\)</span> mit <span class="arithmatex">\(U_P\)</span>. In der Querdiagonale zwischen den seitlichen Abgriffen liegt ein Voltmeter <span class="arithmatex">\((V)\)</span>. Die Speisespannung wird an den oberen und unteren Knotenpunkten von links zugeführt. Rechts ist parallel zur Brücke eine Reihenschaltung aus Kondensator und Widerstand skizziert.</em></p>
+<p>Wenn <span class="arithmatex">\(R_1\)</span> und <span class="arithmatex">\(R_2\)</span> gleich ist und man <span class="arithmatex">\(R_L\)</span> herausfinden will, dreht man den <span class="arithmatex">\(R_P\)</span> bis der gesamter Spannungsabfall 0 ist</p>
+<div class="arithmatex">\[U_{12} = U_2 - U_1 = U_L - U_P = 0\]</div>
+<div class="arithmatex">\[\frac{U_1}{U_L} = \frac{U_2}{U_P}\]</div>
+<p><img alt="Wheatstonesche Messbrücke in H-Anordnung" src="../illustrations/wheatstone_bruecke_h_anordnung.svg" /></p>
+<p><em>Abbildung: Darunter befindet sich eine zweite Schaltskizze derselben Brücke in H-Anordnung mit zwei parallelen Brückenzweigen <span class="arithmatex">\([R_1 \text{ in Reihe mit } R_L]\)</span> und <span class="arithmatex">\([R_2 \text{ in Reihe mit } R_P]\)</span>, verbunden über das zentrale Voltmeter <span class="arithmatex">\((V)\)</span>.</em></p>
+<hr />
+<div class="admonition warning">
+<p class="admonition-title">Allgemeine Abgleichbedingung der Wheatstone-Brücke</p>
+<p>Die Brückenspannung zwischen den Querabgriffen wird genau dann zu null (<span class="arithmatex">\(U_{\text{Brücke}} = 0\,\text{V}\)</span>), wenn die Diagonalprodukte der Brückenwiderstände identisch sind:
+$<span class="arithmatex">\(R_1 \cdot R_P = R_2 \cdot R_L \iff R_L = R_P \cdot \frac{R_1}{R_2}\)</span>$
+Dies gilt universell für beliebige Widerstandswerte.</p>
+</div>
+<hr />
+<h2 id="611-elektrische-sicherheit-schmelzsicherungen-rcd-fi-schutzschalter">6.11 Elektrische Sicherheit: Schmelzsicherungen &amp; RCD (FI-Schutzschalter)<a class="headerlink" href="#611-elektrische-sicherheit-schmelzsicherungen-rcd-fi-schutzschalter" title="Permanent link">&para;</a></h2>
+<h3 id="schaltsymbol">Schaltsymbol:<a class="headerlink" href="#schaltsymbol" title="Permanent link">&para;</a></h3>
+<p><img alt="Schmelzsicherung und RCD / FI-Schutzschalter" src="../illustrations/schmelzsicherung_fi_rcd.svg" /></p>
+<p><em>Abbildung: Schaltsymbol einer Sicherung: Schmales Rechteck mit mittig hindurchgeführter Leitung, darüber bezeichnet mit „F“</em></p>
+<h3 id="aufbau-funktion">Aufbau &amp; Funktion:<a class="headerlink" href="#aufbau-funktion" title="Permanent link">&para;</a></h3>
+<p>Ein Schmelzsicherung ist nichts weiter als ein sehr dünner Draht (hochohmig weil <span class="arithmatex">\(R = \frac{\rho \cdot l}{A}\)</span>), der, wenn zu viel Strom fliesst verglüht.</p>
+<h3 id="nennstrom">Nennstrom:<a class="headerlink" href="#nennstrom" title="Permanent link">&para;</a></h3>
+<p>Der Nennstrom ist die maximal zulässige Stromzufuhr welche die Sicherung (auch auf ewig) aushält.<br />
+Je grösser die Differenz zwischen <span class="arithmatex">\(I_{\text{real}} - I_{\text{Nennstrom}}\)</span> ist desto schneller löst die Sicherung aus.</p>
+<h3 id="nennspannung">Nennspannung:<a class="headerlink" href="#nennspannung" title="Permanent link">&para;</a></h3>
+<p>Die Nennspannung ist die maximal zulässige Spannung, bei der die Sicherung den Strom sicher unterbrechen kann.</p>
+<h3 id="schnelligkeit-der-sicherung">Schnelligkeit der Sicherung:<a class="headerlink" href="#schnelligkeit-der-sicherung" title="Permanent link">&para;</a></h3>
+<p>Es gibt...</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Flink</th>
+<th style="text-align: left;">Träge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Superflink (FF)</td>
+<td style="text-align: left;">Träge (T)</td>
+</tr>
+<tr>
+<td style="text-align: left;">flink (F)</td>
+<td style="text-align: left;">Superträge (TT)</td>
+</tr>
+<tr>
+<td style="text-align: left;">mittelträge (M)</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>Es gibt grössere Sicherungen für grösseren Strom z.B Leitungsschutz, findet man in einer Wohnung.<br />
+oder es gibt Feinsicherungen die in Geräten verbaut sind. (Geräteschutz)</p>
+<h3 id="fehlerstromschutzschalter">Fehlerstromschutzschalter:<a class="headerlink" href="#fehlerstromschutzschalter" title="Permanent link">&para;</a></h3>
+<p>Wird auch RCD (Residual Current protective Device) genannt.</p>
+<p><strong>Schaltungssymbol:</strong>  </p>
+<p><em>Abbildung: 4-poliges Schaltsymbol eines RCD/FI-Schutzschalters:</em>
+<em>Obere Anschlüsse: L1 (Klemme 1), L2 (Klemme 3), L3 (Klemme 5), N (Klemme 7N).</em>
+<em>Untere Anschlüsse: Klemme 2, Klemme 4, Klemme 6, Klemme 8N.</em>
+<em>Vier gekoppelte Schaltglieder mit Auslösekennzeichnung.</em></p>
+<p>Sie unterbrechen den Stromkreis an allen Polen, sobald ein definierter Fehlerstrom z.B durch das berühren eines Strom führenden Teils.</p>
+<p><strong>Wichtig:</strong><br />
+Sie unterbrechen nicht bei Überlast oder Kurzschluss.<br />
+Sie ersetzen kein Leitungsschutzschalter.</p>
+<hr />
+<hr />
+<h2 id="612-temperaturmessung-mit-thermoelementen-seebeck-effekt">6.12 Temperaturmessung mit Thermoelementen (Seebeck-Effekt)<a class="headerlink" href="#612-temperaturmessung-mit-thermoelementen-seebeck-effekt" title="Permanent link">&para;</a></h2>
+<p><img alt="Prinzip des Thermoelements (Seebeck-Effekt)" src="../illustrations/seite123_thermoelement.svg" /></p>
+<p><em>Abbildung: Prinzipskizze eines Thermoelements (Seebeck-Effekt):</em>
+- <em>Zwei Drähte aus unterschiedlichen Metallen:</em>
+  - <em>Oberer Leiter: Eisen</em>
+  - <em>Unterer Leiter: Konstantan</em>
+- <em>Rechte Verbindungsstelle (Messstelle) auf Temperatur <span class="arithmatex">\(T_1\)</span>, Thermospannung <span class="arithmatex">\(U_1\)</span>.</em>
+- <em>Linke Verbindungsstelle (Vergleichsstelle) auf Temperatur <span class="arithmatex">\(T_2\)</span>, Thermospannung <span class="arithmatex">\(U_2\)</span>.</em>
+- <em>Vom aufgetrennten Konstantan-Leiter führen zwei Leitungen zu einem Messgerät / Messverstärker (Kasten).</em></p>
+<h3 id="funktionsweise-bedingungen">Funktionsweise &amp; Bedingungen<a class="headerlink" href="#funktionsweise-bedingungen" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Einer der beiden Temperaturen (<span class="arithmatex">\(T_1 / T_2\)</span>) sollte konstant auf <span class="arithmatex">\(0^\circ\text{C}\)</span> gekühlt werden, um eine Vergleichstemperatur festzulegen.</li>
+<li>Um mit dem was anfangen zu können, braucht man einen Messverstärker.</li>
+</ul>
+<h3 id="beispiel">Beispiel<a class="headerlink" href="#beispiel" title="Permanent link">&para;</a></h3>
+<p>Wenn:
+$<span class="arithmatex">\(T_2 = 0^\circ\text{C}\)</span>$
+und:
+$<span class="arithmatex">\(T_1 = 1200^\circ\text{C}\)</span>$</p>
+<p>Thermospannung:
+$<span class="arithmatex">\(U_t = 70\,\text{mV}\)</span>$</p>
+<hr />
+<hr />
+<h2 id="613-messkategorien-cat-i-bis-cat-iv-nach-iecen-61010">6.13 Messkategorien CAT I bis CAT IV nach IEC/EN 61010<a class="headerlink" href="#613-messkategorien-cat-i-bis-cat-iv-nach-iecen-61010" title="Permanent link">&para;</a></h2>
+<p>Bei Arbeiten an elektrischen Anlagen droht die größte Lebensgefahr nicht durch die reguläre Betriebsspannung (<span class="arithmatex">\(230\,\text{V}/400\,\text{V}\)</span>), sondern durch energiereiche <strong>Überspannungs-Transienten</strong> (Blitzeinschläge, Schaltvorgänge im Mittelspannungsnetz). Schlägt ein Transient in einem Messgerät über, zündet ein Lichtbogen, der durch die nachfließende Kurzschlussleistung zur Explosion führen kann.</p>
+<p>Die Sicherheitsnorm <strong>DIN EN 61010-1</strong> unterteilt Messumgebungen in vier Kategorien:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[Mittelspannungsnetz / Trafostation]
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>                 |
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>            [ CAT IV ]   Netzursprung, Zählerplatz, Freileitung, Hausanschlusskasten
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>                 |
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>            [ CAT III ]  Gebäudeinstallation, Unterverteiler, Sicherungskästen, CEE-Dosen
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>                 |
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>            [ CAT II ]   Steckdosenbetriebene Verbraucher (Haushaltsgeräte, Netzteile)
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>                 |
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>            [ CAT I ]    Galvanisch getrennte Elektronik, Labornetzteile, Batteriegeräte
+</span></code></pre></div>
+<h3 id="stospannungsfestigkeit-im-vergleich">Stoßspannungsfestigkeit im Vergleich<a class="headerlink" href="#stospannungsfestigkeit-im-vergleich" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Nennspannung gegen Erde</th>
+<th style="text-align: center;">CAT I Prüfstoß</th>
+<th style="text-align: center;">CAT II Prüfstoß</th>
+<th style="text-align: center;">CAT III Prüfstoß</th>
+<th style="text-align: center;">CAT IV Prüfstoß</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong><span class="arithmatex">\(300\,\text{V}\)</span></strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(800\,\text{V}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(1\,500\,\text{V}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2\,500\,\text{V}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(4\,000\,\text{V}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span class="arithmatex">\(600\,\text{V}\)</span></strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(1\,500\,\text{V}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(2\,500\,\text{V}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(4\,000\,\text{V}\)</span></td>
+<td style="text-align: center;"><strong><span class="arithmatex">\(6\,000\,\text{V}\)</span></strong></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong><span class="arithmatex">\(1\,000\,\text{V}\)</span></strong></td>
+<td style="text-align: center;"><span class="arithmatex">\(2\,500\,\text{V}\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(4\,000\,\text{V}\)</span></td>
+<td style="text-align: center;"><strong><span class="arithmatex">\(6\,000\,\text{V}\)</span></strong></td>
+<td style="text-align: center;"><strong><span class="arithmatex">\(8\,000\,\text{V}\)</span></strong></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Sicherheitsmerkmale von Qualitäts-Multimetern</p>
+<p>Echte CAT-III/IV-Multimeter besitzen sandgefüllte Hochenergie-Schmelzsicherungen (<span class="arithmatex">\(10\times 38\,\text{mm}\)</span>) mit einem Abschaltvermögen von mindestens <span class="arithmatex">\(10\dots 50\,\text{kA}\)</span> bei <span class="arithmatex">\(1\,000\,\text{V}\)</span>, um interne Lichtbögen sicher zu löschen, sowie Messleitungen mit Fingerschutzkragen und reduzierten Spitzenlängen (<span class="arithmatex">\(&lt;4\,\text{mm}\)</span>).</p>
+</div>
+<h2 id="614-gefahren-des-elektrischen-stroms-ac-vs-dc-5-sicherheitsregeln">6.14 Gefahren des elektrischen Stroms (AC vs. DC) &amp; 5 Sicherheitsregeln<a class="headerlink" href="#614-gefahren-des-elektrischen-stroms-ac-vs-dc-5-sicherheitsregeln" title="Permanent link">&para;</a></h2>
+<h3 id="schutzkleinspannungsgrenzen">Schutzkleinspannungsgrenzen<a class="headerlink" href="#schutzkleinspannungsgrenzen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Wechselspannung (AC):</strong> <span class="arithmatex">\(U_{max} \le \mathbf{50\,\text{V AC}}\)</span> (Effektivwert)</li>
+<li><strong>Gleichspannung (DC):</strong> <span class="arithmatex">\(U_{max} \le \mathbf{120\,\text{V DC}}\)</span> (Restwelligkeit <span class="arithmatex">\(&lt;10\%\)</span>)</li>
+<li>Bei feuchter Umgebung oder Tieren: <span class="arithmatex">\(\le 25\,\text{V AC}\)</span> / <span class="arithmatex">\(\le 60\,\text{V DC}\)</span>.</li>
+</ul>
+<h3 id="physiologische-wirkung-auf-den-menschlichen-organismus">Physiologische Wirkung auf den menschlichen Organismus<a class="headerlink" href="#physiologische-wirkung-auf-den-menschlichen-organismus" title="Permanent link">&para;</a></h3>
+<p>Der menschliche Körperinnenwiderstand beträgt von Hand zu Hand im Mittel ca. <span class="arithmatex">\(R_K \approx 1\,000\,\Omega\)</span>:
+- <strong><span class="arithmatex">\(0{,}5\,\text{mA}\)</span>:</strong> Wahrnehmungsschwelle (Kribbeln).
+- <strong><span class="arithmatex">\(10\,\text{mA}\)</span>:</strong> Loslass-Schwelle (Verkrampfung der Beugemuskulatur, „Festkleben“ an der Leitung).
+- <strong><span class="arithmatex">\(30\,\text{mA}\)</span>:</strong> Atembeklemmung, Gefahr des Erstickens bei längerer Einwirkzeit (Auslösegrenze von Personenschutz-FI/RCD!).
+- <strong><span class="arithmatex">\(&gt;50\,\text{mA}\)</span>:</strong> Akute Lebensgefahr durch <strong>Herzkammerflimmern</strong> bei <span class="arithmatex">\(50/60\,\text{Hz}\)</span> Wechselstrom.
+- <strong><span class="arithmatex">\(&gt;1\,\text{A}\)</span>:</strong> Schwerste innere Organverbrennungen und Herzstillstand.</p>
+<h3 id="gleichstrom-vs-wechselstrom">Gleichstrom vs. Wechselstrom<a class="headerlink" href="#gleichstrom-vs-wechselstrom" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Wechselstrom (<span class="arithmatex">\(50\,\text{Hz}\)</span>)</strong> ist bei gleicher Spannung für das menschliche Herz gefährlicher, da <span class="arithmatex">\(50\,\text{Hz}\)</span> genau in die vulnerable Erregungsphase des Herzmuskels fällt.</li>
+<li><strong>Gleichstrom</strong> führt primär zu thermischen Verbrennungen und gefährlicher Blut-Elektrolyse (Vergiftung). Ein Gleichstrom-Lichtbogen hat keinen natürlichen Nulldurchgang und erlischt extrem schwer!</li>
+</ul>
+<h3 id="die-5-sicherheitsregeln-din-vde-0105-100">Die 5 Sicherheitsregeln (DIN VDE 0105-100)<a class="headerlink" href="#die-5-sicherheitsregeln-din-vde-0105-100" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Freischalten</strong> (allpolig abschalten).</li>
+<li><strong>Gegen Wiedereinschalten sichern</strong> (Schaltsperre, Vorhängeschloss, Warnschild).</li>
+<li><strong>Spannungsfreiheit allpolig feststellen</strong> (zweipoliger Prüfer, z. B. Duspol, vor und nach Messung testen!).</li>
+<li><strong>Erden und kurzschließen</strong> (zuerst Erde, dann Leiter kontaktieren).</li>
+<li><strong>Benachbarte, unter Spannung stehende Teile abdecken oder abschranken</strong>.</li>
+</ol>
+<h2 id="615-transienten-surge-burst-in-der-emv-prufpraxis">6.15 Transienten, Surge &amp; Burst in der EMV-Prüfpraxis<a class="headerlink" href="#615-transienten-surge-burst-in-der-emv-prufpraxis" title="Permanent link">&para;</a></h2>
+<p>Transiente Überspannungen sind impulsartige Spannungsstöße mit extrem schneller Anstiegszeit und hoher Amplitude.</p>
+<p><img alt="Transienten Stoßwellenform" src="../illustrations/lerndoku/Transzorpdiode_image4.png" /></p>
+<p><img alt="Surge-Prüfimpuls 1,2/50 µs nach IEC 61000-4-5" src="../illustrations/lerndoku/Transient_image10.png" /></p>
+<p><img alt="Burst-Störimpulsfolge 5/50 ns nach IEC 61000-4-4" src="../illustrations/lerndoku/Transient_image13.png" /></p>
+<h3 id="genormte-storimpulse-emv-prufung">Genormte Störimpulse (EMV-Prüfung)<a class="headerlink" href="#genormte-storimpulse-emv-prufung" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Surge (Blitz-Stoßspannung nach IEC 61000-4-5):</strong></li>
+<li>Hochenergetischer Impuls mit Wellenform <span class="arithmatex">\(1{,}2/50\,\mu\text{s}\)</span> (Spannung) bzw. <span class="arithmatex">\(8/20\,\mu\text{s}\)</span> (Strom).</li>
+<li>Prüfpegel: typisch <span class="arithmatex">\(0{,}5\,\text{kV}\)</span> bis <span class="arithmatex">\(&gt;4\,\text{kV}\)</span>.</li>
+<li><strong>Burst (Schnelle transiente elektrische Störgrößen nach IEC 61000-4-4):</strong></li>
+<li>Schauer von Tausenden extrem schnellen Nadelimpulsen (<span class="arithmatex">\(5/50\,\text{ns}\)</span>) mit Wiederholfrequenzen von <span class="arithmatex">\(5\,\text{kHz}\dots 100\,\text{kHz}\)</span>, hervorgerufen durch prellende Relais- und Schützkontakte.</li>
+</ol>
+<h2 id="616-hochspannungs-tastkopfe-hv-probes-frequenzabgleich">6.16 Hochspannungs-Tastköpfe (HV-Probes): Frequenzabgleich<a class="headerlink" href="#616-hochspannungs-tastkopfe-hv-probes-frequenzabgleich" title="Permanent link">&para;</a></h2>
+<p>Um Hochspannungssignale bis zu mehreren Kilovolt unverfälscht auf dem Oszilloskop darzustellen, werden kompensierte <span class="arithmatex">\(100:1\)</span>- oder <span class="arithmatex">\(1\,000:1\)</span>-Tastköpfe verwendet.</p>
+<h3 id="abgleichbedingung-des-frequenzkompensierten-spannungsteilers">Abgleichbedingung des frequenzkompensierten Spannungsteilers<a class="headerlink" href="#abgleichbedingung-des-frequenzkompensierten-spannungsteilers" title="Permanent link">&para;</a></h3>
+<p>Damit das Teilerverhältnis über den gesamten Frequenzbereich von Gleichstrom bis in den Megahertz-Bereich konstant bleibt, muss die RC-Zeitkonstante des Tastkopfes exakt derjenigen des Oszilloskopeingangs entsprechen:</p>
+<div class="arithmatex">\[R_1 \cdot C_1 = R_2 \cdot C_2 \iff \frac{R_1}{R_2} = \frac{C_2}{C_1}\]</div>
+<p><img alt="Messaufbau zum Tastkopf-Frequenzabgleich" src="../illustrations/lerndoku/HV-Prbe_abgleichen%24_image4.png" /></p>
+<p><img alt="Unterkompensierter Tastkopf (R1 C1 &gt; R2 C2)" src="../illustrations/lerndoku/HV-Prbe_abgleichen%24_image5.png" /></p>
+<p><img alt="Überkompensierter Tastkopf (R1 C1 &lt; R2 C2)" src="../illustrations/lerndoku/HV-Prbe_abgleichen%24_image6.png" /></p>
+<p><img alt="Korrekt abgeglichener Tastkopf (R1 C1 = R2 C2)" src="../illustrations/lerndoku/HV-Prbe_abgleichen%24_image7.png" /></p>
+<ul>
+<li><strong>Abgleichpraxis:</strong> Anlegen des internen <span class="arithmatex">\(1\,\text{kHz}\)</span>-Rechteck-Kalibriersignals des Oszilloskops. Mit einem isolierten Abgleichschraubendreher wird die Trimmerkapazität <span class="arithmatex">\(C_1\)</span> justiert:</li>
+<li><strong>Unterkompensation (<span class="arithmatex">\(R_1 C_1 &gt; R_2 C_2\)</span>):</strong> Abgerundete Vorderflanke, Tiefpassverhalten.</li>
+<li><strong>Überkompensation (<span class="arithmatex">\(R_1 C_1 &lt; R_2 C_2\)</span>):</strong> Scharfe Überschwinger an den Ecken.</li>
+<li><strong>Idealer Abgleich:</strong> Perfekt horizontales Rechteckdach ohne Dachschräge.</li>
+</ul>
+<h2 id="617-aufbau-dokumentation-professioneller-messprotokolle">6.17 Aufbau &amp; Dokumentation professioneller Messprotokolle<a class="headerlink" href="#617-aufbau-dokumentation-professioneller-messprotokolle" title="Permanent link">&para;</a></h2>
+<p>Ein normgerechtes Prüf- und Messprotokoll (im Prüffeld sowie bei Qualifikationsprüfungen) muss folgende Pflichtelemente aufweisen:
+1. <strong>Kopfdaten:</strong> Prüfdatum, Prüfer/Autor, Prüflingsbezeichnung, Seriennummer, Artikelnummer, Auftragsnummer.
+2. <strong>Umgebungsbedingungen:</strong> Raumtemperatur (z. B. <span class="arithmatex">\(22\,^\circ\text{C}\)</span>), relative Luftfeuchte (z. B. <span class="arithmatex">\(45\,\%\)</span>) und Luftdruck.
+3. <strong>Eingesetzte Messmittel:</strong> Exakte Modellbezeichnung, Seriennummer, Kalibrierdatum und gültige Prüfplakette.
+4. <strong>Messaufbau &amp; Schaltskizze:</strong> Blockschaltbild mit Kennzeichnung aller Messpunkte (TP = Test Points).
+5. <strong>Messwerttabelle:</strong> Systematischer tabellarischer Soll-Ist-Vergleich mit Toleranzangaben (<span class="arithmatex">\(\pm\,\%\)</span>) und klarer Statusbewertung (PASS / FAIL).
+6. <strong>Fehlerdiskussion &amp; Fazit:</strong> Zusammenfassung und rechtsverbindliche Freigabe-Unterschrift.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

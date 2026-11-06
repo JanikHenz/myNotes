@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 270" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Bipolare Transistor-Grundschaltungen im Vergleich</text>
+
+  <!-- 1. Emitterschaltung -->
+  <g transform="translate(20, 55)">
+    <rect x="0" y="0" width="160" height="200" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="80" y="24" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Emitterschaltung</text>
+    
+    <text x="15" y="50" font-size="10" fill="#64748b">Eingang: <tspan font-weight="bold" fill="#0f172a">Basis (B)</tspan></text>
+    <text x="15" y="68" font-size="10" fill="#64748b">Ausgang: <tspan font-weight="bold" fill="#0f172a">Kollektor (C)</tspan></text>
+    <text x="15" y="86" font-size="10" fill="#64748b">Gemeinsam: <tspan font-weight="bold" fill="#0f172a">Emitter (E)</tspan></text>
+
+    <line x1="15" y1="98" x2="145" y2="98" stroke="#e2e8f0" stroke-width="1" />
+
+    <text x="15" y="118" font-size="10" fill="#16a34a" font-weight="bold">Spannungsverstärkung: HOCH</text>
+    <text x="15" y="136" font-size="10" fill="#16a34a" font-weight="bold">Stromverstärkung: HOCH</text>
+    <text x="15" y="154" font-size="10" fill="#dc2626" font-weight="bold">Phasendrehung: 180°</text>
+    <text x="15" y="172" font-size="10" fill="#334155">r_in: mittel (~1–2 kΩ)</text>
+    <text x="15" y="190" font-size="10" fill="#334155">r_out: mittel (~10–50 kΩ)</text>
+  </g>
+
+  <!-- 2. Kollektorschaltung -->
+  <g transform="translate(195, 55)">
+    <rect x="0" y="0" width="160" height="200" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="80" y="24" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Kollektorschaltung</text>
+    
+    <text x="15" y="50" font-size="10" fill="#64748b">Eingang: <tspan font-weight="bold" fill="#0f172a">Basis (B)</tspan></text>
+    <text x="15" y="68" font-size="10" fill="#64748b">Ausgang: <tspan font-weight="bold" fill="#0f172a">Emitter (E)</tspan></text>
+    <text x="15" y="86" font-size="10" fill="#64748b">Gemeinsam: <tspan font-weight="bold" fill="#0f172a">Kollektor (C)</tspan></text>
+
+    <line x1="15" y1="98" x2="145" y2="98" stroke="#e2e8f0" stroke-width="1" />
+
+    <text x="15" y="118" font-size="10" fill="#2563eb" font-weight="bold">Spannungsverstärkung: ≈ 1</text>
+    <text x="15" y="136" font-size="10" fill="#16a34a" font-weight="bold">Stromverstärkung: HOCH</text>
+    <text x="15" y="154" font-size="10" fill="#16a34a" font-weight="bold">Phasendrehung: 0°</text>
+    <text x="15" y="172" font-size="10" fill="#16a34a" font-weight="bold">r_in: SEHR HOCH (&gt;100kΩ)</text>
+    <text x="15" y="190" font-size="10" fill="#16a34a" font-weight="bold">r_out: SEHR NIEDRIG (~Ω)</text>
+  </g>
+
+  <!-- 3. Basisschaltung -->
+  <g transform="translate(370, 55)">
+    <rect x="0" y="0" width="160" height="200" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="80" y="24" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Basisschaltung</text>
+    
+    <text x="15" y="50" font-size="10" fill="#64748b">Eingang: <tspan font-weight="bold" fill="#0f172a">Emitter (E)</tspan></text>
+    <text x="15" y="68" font-size="10" fill="#64748b">Ausgang: <tspan font-weight="bold" fill="#0f172a">Kollektor (C)</tspan></text>
+    <text x="15" y="86" font-size="10" fill="#64748b">Gemeinsam: <tspan font-weight="bold" fill="#0f172a">Basis (B)</tspan></text>
+
+    <line x1="15" y1="98" x2="145" y2="98" stroke="#e2e8f0" stroke-width="1" />
+
+    <text x="15" y="118" font-size="10" fill="#16a34a" font-weight="bold">Spannungsverstärkung: HOCH</text>
+    <text x="15" y="136" font-size="10" fill="#2563eb" font-weight="bold">Stromverstärkung: ≈ 1</text>
+    <text x="15" y="154" font-size="10" fill="#16a34a" font-weight="bold">Phasendrehung: 0°</text>
+    <text x="15" y="172" font-size="10" fill="#334155">r_in: SEHR NIEDRIG (~10–50Ω)</text>
+    <text x="15" y="190" font-size="10" fill="#16a34a" font-weight="bold">Einsatz: HF-Verstärker</text>
+  </g>
+</svg>

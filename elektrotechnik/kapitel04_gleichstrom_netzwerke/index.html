@@ -1,0 +1,2493 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Janik Henz's Wissensdatenbank, Elektrotechnik-Referenzhandbuch & Projektnotizen">
+      
+      
+        <meta name="author" content="Janik Henz">
+      
+      
+        <link rel="canonical" href="https://JanikHenz.github.io/myNotes/elektrotechnik/kapitel04_gleichstrom_netzwerke/">
+      
+      
+        <link rel="prev" href="../kapitel03_kondensatoren/">
+      
+      
+        <link rel="next" href="../kapitel05_magnetismus_spulen/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>4. Gleichstromtechnik - myNotes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kapitel-4-gleichstromtechnik-netzwerkanalyse-grundgesetze" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../.." title="myNotes" class="md-header__button md-logo" aria-label="myNotes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            myNotes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4. Gleichstromtechnik
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-label="Heller Modus"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Heller Modus" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-label="Dunkler Modus"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dunkler Modus" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/JanikHenz/myNotes" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    JanikHenz/myNotes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="myNotes" class="md-nav__button md-logo" aria-label="myNotes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    myNotes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/JanikHenz/myNotes" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    JanikHenz/myNotes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elektrotechnik
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Elektrotechnik
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht & Download
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel01_mathematik/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Mathematik & Vektoren
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel02_elektrostatik_felder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Elektrostatik & Felder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel03_kondensatoren/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Kondensatoren
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Gleichstromtechnik
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Gleichstromtechnik
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-elektrischer-strom-stromdichte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Elektrischer Strom &amp; Stromdichte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Elektrischer Strom &amp; Stromdichte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#volumenstromdichte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Volumenstromdichte
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-ladungsbewegung-im-metallischen-leiter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Ladungsbewegung im metallischen Leiter
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-ohmsches-gesetz-spezifischer-widerstand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Ohmsches Gesetz &amp; Spezifischer Widerstand
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 Ohmsches Gesetz &amp; Spezifischer Widerstand">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#widerstand-bei-einer-bestimmten-temperatur-t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Widerstand bei einer bestimmten Temperatur (\(T\))
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-joulesches-gesetz-elektrische-leistung-arbeit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Joulesches Gesetz, elektrische Leistung &amp; Arbeit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-zahlpfeilsysteme-erzeuger-vs-verbraucherpfeilsystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Zählpfeilsysteme (Erzeuger- vs. Verbraucherpfeilsystem)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5 Zählpfeilsysteme (Erzeuger- vs. Verbraucherpfeilsystem)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spannungsquellen-schaltsymbole" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spannungsquellen-Schaltsymbole:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-1-kirchhoffsches-gesetz-knotenregel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 1. Kirchhoffsches Gesetz (Knotenregel)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47-2-kirchhoffsches-gesetz-maschenregel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7 2. Kirchhoffsches Gesetz (Maschenregel)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#48-reihen-und-parallelschaltung-von-widerstanden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8 Reihen- und Parallelschaltung von Widerständen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.8 Reihen- und Parallelschaltung von Widerständen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#serie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Serie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parallel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49-spannungsteiler-unbelastet-belastet-stromteiler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.9 Spannungsteiler (unbelastet &amp; belastet) &amp; Stromteiler
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.9 Spannungsteiler (unbelastet &amp; belastet) &amp; Stromteiler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spannungsteiler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spannungsteiler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stromteiler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stromteiler
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#410-reale-spannungs-und-stromquellen-innenwiderstand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10 Reale Spannungs- und Stromquellen (Innenwiderstand)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.10 Reale Spannungs- und Stromquellen (Innenwiderstand)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reale-spannungsquelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reale Spannungsquelle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reale-stromquelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reale Stromquelle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#berechnung-von-r_i" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Berechnung von \(R_i\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#411-wirkungsgrad-leistungsanpassung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.11 Wirkungsgrad &amp; Leistungsanpassung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#412-leistungs-impedanzanpassung-in-der-praxis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.12 Leistungs- &amp; Impedanzanpassung in der Praxis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#413-einschaltstrombegrenzung-inrush-current-sanftanlauf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.13 Einschaltstrombegrenzung (Inrush Current) &amp; Sanftanlauf
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.13 Einschaltstrombegrenzung (Inrush Current) &amp; Sanftanlauf">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ursachen-des-einschaltstroms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ursachen des Einschaltstroms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schaltungstechnische-schutzmanahmen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schaltungstechnische Schutzmaßnahmen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#414-ruckstromschutz-reverse-dc-current-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.14 Rückstromschutz (Reverse DC Current Protection)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.14 Rückstromschutz (Reverse DC Current Protection)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#losungsansatze-im-vergleich" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lösungsansätze im Vergleich
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel05_magnetismus_spulen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Magnetismus & Spulen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel06_messtechnik_sicherheit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Messtechnik & Sicherheit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel07_passive_bauelemente/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Passive Bauelemente & Fertigung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel08_dioden_halbleiter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Dioden & Halbleiter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel09_transistoren_schaltungen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Transistoren & Schaltungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel10_opv_filter_analog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. OPVs, Filter & Signalverarbeitung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel11_digitaltechnik_mikrocontroller/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Digitaltechnik & Mikrocontroller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel12_hochspannung_praxis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Hochspannungstechnik (EMC Partner)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../anhang_formelsammlung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anhang: Formelsammlung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../komplett/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vollständiges Skript
+  
+
+    
+      <br>
+      <small>Vollständiges Referenzhandbuch & Formelsammlung</small>
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--completed"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IP5
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IP5
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/projectdeclaration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projektvereinbarung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/risks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risiken
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/helper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Helper
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/milestone01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meilenstein 01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/milestone02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meilenstein 02
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    C++
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week45/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 45
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week46/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 46
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week47/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 47
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week48/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 48
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week49/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 49
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Weitere Notizen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Weitere Notizen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vesys/week01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VeSys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wosm/week01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WoSM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Allgemein
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-elektrischer-strom-stromdichte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Elektrischer Strom &amp; Stromdichte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Elektrischer Strom &amp; Stromdichte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#volumenstromdichte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Volumenstromdichte
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-ladungsbewegung-im-metallischen-leiter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Ladungsbewegung im metallischen Leiter
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-ohmsches-gesetz-spezifischer-widerstand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 Ohmsches Gesetz &amp; Spezifischer Widerstand
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 Ohmsches Gesetz &amp; Spezifischer Widerstand">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#widerstand-bei-einer-bestimmten-temperatur-t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Widerstand bei einer bestimmten Temperatur (\(T\))
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-joulesches-gesetz-elektrische-leistung-arbeit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 Joulesches Gesetz, elektrische Leistung &amp; Arbeit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-zahlpfeilsysteme-erzeuger-vs-verbraucherpfeilsystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 Zählpfeilsysteme (Erzeuger- vs. Verbraucherpfeilsystem)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5 Zählpfeilsysteme (Erzeuger- vs. Verbraucherpfeilsystem)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spannungsquellen-schaltsymbole" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spannungsquellen-Schaltsymbole:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-1-kirchhoffsches-gesetz-knotenregel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 1. Kirchhoffsches Gesetz (Knotenregel)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47-2-kirchhoffsches-gesetz-maschenregel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7 2. Kirchhoffsches Gesetz (Maschenregel)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#48-reihen-und-parallelschaltung-von-widerstanden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8 Reihen- und Parallelschaltung von Widerständen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.8 Reihen- und Parallelschaltung von Widerständen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#serie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Serie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parallel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49-spannungsteiler-unbelastet-belastet-stromteiler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.9 Spannungsteiler (unbelastet &amp; belastet) &amp; Stromteiler
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.9 Spannungsteiler (unbelastet &amp; belastet) &amp; Stromteiler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spannungsteiler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spannungsteiler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stromteiler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stromteiler
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#410-reale-spannungs-und-stromquellen-innenwiderstand" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10 Reale Spannungs- und Stromquellen (Innenwiderstand)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.10 Reale Spannungs- und Stromquellen (Innenwiderstand)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reale-spannungsquelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reale Spannungsquelle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reale-stromquelle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reale Stromquelle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#berechnung-von-r_i" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Berechnung von \(R_i\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#411-wirkungsgrad-leistungsanpassung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.11 Wirkungsgrad &amp; Leistungsanpassung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#412-leistungs-impedanzanpassung-in-der-praxis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.12 Leistungs- &amp; Impedanzanpassung in der Praxis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#413-einschaltstrombegrenzung-inrush-current-sanftanlauf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.13 Einschaltstrombegrenzung (Inrush Current) &amp; Sanftanlauf
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.13 Einschaltstrombegrenzung (Inrush Current) &amp; Sanftanlauf">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ursachen-des-einschaltstroms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ursachen des Einschaltstroms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schaltungstechnische-schutzmanahmen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schaltungstechnische Schutzmaßnahmen
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#414-ruckstromschutz-reverse-dc-current-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.14 Rückstromschutz (Reverse DC Current Protection)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.14 Rückstromschutz (Reverse DC Current Protection)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#losungsansatze-im-vergleich" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lösungsansätze im Vergleich
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="kapitel-4-gleichstromtechnik-netzwerkanalyse-grundgesetze">Kapitel 4: Gleichstromtechnik, Netzwerkanalyse &amp; Grundgesetze<a class="headerlink" href="#kapitel-4-gleichstromtechnik-netzwerkanalyse-grundgesetze" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Überblick</p>
+<p>Strom, Ohmsches Gesetz, Joulesche Wärme, Zählpfeile, Kirchhoffsche Regeln und Quellen.</p>
+</div>
+<h2 id="41-elektrischer-strom-stromdichte">4.1 Elektrischer Strom &amp; Stromdichte<a class="headerlink" href="#41-elektrischer-strom-stromdichte" title="Permanent link">&para;</a></h2>
+<p><em>Abbildung: Zwei räumliche Leiterkörper mit Ladungen <span class="arithmatex">\(Q+\)</span> und <span class="arithmatex">\(Q-\)</span>, zwischen denen elektrische Feldlinien bzw. ein Stromfaden verlaufen. Eine schematische Augen-Skizze betrachtet den Leitungsquerschnitt, durch den sich ein Elektron <span class="arithmatex">\(e^-\)</span> mit Driftgeschwindigkeit <span class="arithmatex">\(\vec{v}_e\)</span> bewegt.</em></p>
+<div class="arithmatex">\[\frac{n \times e}{\Delta t} = \frac{\Delta Q}{\Delta t} = I \; [\text{A}]\]</div>
+<div class="arithmatex">\[\lambda = \frac{\Delta Q}{\Delta l} \rightarrow I = \frac{\lambda \times \Delta l}{\Delta t} = \lambda \times \vec{v}\]</div>
+<p><img alt="Elektrischer Strom und Volumenstromdichte" src="../illustrations/stromdichte_ladungstransport.svg" /></p>
+<p><em>Abbildung: Ein zylindrischer Leiter entlang einer Koordinatenachse <span class="arithmatex">\(x\)</span> mit Querschnittsfläche <span class="arithmatex">\(\Delta A\)</span> und sich bewegenden positiven Ladungen <span class="arithmatex">\(+\)</span>, betrachtet durch ein Auge.</em></p>
+<div class="arithmatex">\[\frac{\frac{n \times e}{\Delta t}}{\Delta A} = \frac{I}{\Delta A} = J \; \left[\frac{\text{A}}{\text{m}^2}\right]\]</div>
+<h3 id="volumenstromdichte">Volumenstromdichte<a class="headerlink" href="#volumenstromdichte" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(J =\)</span> Volumenstromdichte</p>
+<div class="arithmatex">\[J = \rho \times \vec{v} = \frac{\rho \times \Delta V}{\Delta t \times \Delta A}\]</div>
+<ul>
+<li><span class="arithmatex">\(\vec{v}_e =\)</span> Driftgeschwindigkeit</li>
+<li><span class="arithmatex">\(\vec{v} =\)</span> Geschwindigkeit</li>
+<li><span class="arithmatex">\(\vec{v}_e = -\mu \vec{E} \qquad \mu = \text{Beweglichkeit}\)</span></li>
+</ul>
+<div class="arithmatex">\[J = n(-e) \times \vec{v}_e = n(-e) \times (-\mu e \vec{E}) = \underbrace{n e \, \mu}_{\gamma} \vec{E} \rightarrow J = \gamma \vec{E}\]</div>
+<hr />
+<hr />
+<h2 id="42-ladungsbewegung-im-metallischen-leiter">4.2 Ladungsbewegung im metallischen Leiter<a class="headerlink" href="#42-ladungsbewegung-im-metallischen-leiter" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[J = \text{Volumenstromdichte} = [\text{A}/\text{m}^2]\]</div>
+<p>$<span class="arithmatex">\(\vec{J} = \frac{\Delta I}{\Delta A} :\)</span>$
+heisst welcher Stromanteil durch eine bestimmte Fläche fliesst.</p>
+<p>Je grösser die Volumenstromdichte ist desto wärmer wird der Leiter, je wärmer er wird desto grösser ist der Widerstand, bei gewissen Halbleiter ist es genau anders rum.</p>
+<div class="arithmatex">\[Q = \rho \cdot \Delta V\]</div>
+<div class="arithmatex">\[\rho = \frac{Q}{\Delta V}\]</div>
+<div class="arithmatex">\[\vec{J} = \rho \cdot \vec{v}\]</div>
+<p><strong>Größen:</strong>
+- <span class="arithmatex">\(\Delta V = \text{Volumen} = \Delta A \cdot \Delta l\)</span>
+- <span class="arithmatex">\(\rho = \text{Raumladungsdichte}\)</span>
+- <span class="arithmatex">\(\vec{v} = \text{Geschwindigkeit}\)</span></p>
+<hr />
+<hr />
+<h2 id="43-ohmsches-gesetz-spezifischer-widerstand">4.3 Ohmsches Gesetz &amp; Spezifischer Widerstand<a class="headerlink" href="#43-ohmsches-gesetz-spezifischer-widerstand" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[R = \frac{U}{I} = \frac{l}{\gamma \cdot A} = \frac{\rho \cdot l}{A} \quad \text{mit } \rho = \frac{1}{\gamma}\]</div>
+<ul>
+<li><span class="arithmatex">\(\gamma =\)</span> Spezifische Leitfähigkeit</li>
+<li><span class="arithmatex">\(\rho =\)</span> Spezifische Widerstandfähigkeit</li>
+</ul>
+<h3 id="widerstand-bei-einer-bestimmten-temperatur-t">Widerstand bei einer bestimmten Temperatur (<span class="arithmatex">\(T\)</span>)<a class="headerlink" href="#widerstand-bei-einer-bestimmten-temperatur-t" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[R(T) = R_{20^\circ} \cdot (1 + \alpha \cdot \Delta T)\]</div>
+<p><em>(Beschriftung der Formelbestandteile):</em>
+- ① <span class="arithmatex">\(R(T)\)</span>: Widerstand in der Gewissen Temperatur
+- ② <span class="arithmatex">\(R_{20^\circ}\)</span>: Spezifischer Widerstand bei <span class="arithmatex">\(20^\circ\text{C}\)</span>
+- ③ <span class="arithmatex">\(\alpha\)</span>: Temperaturbeiwerte
+- ④ <span class="arithmatex">\(\Delta T\)</span>: Gewollte Temperatur (differenz zu <span class="arithmatex">\(20^\circ\text{C}\)</span>)</p>
+<p><strong>Einheiten:</strong>
+- <span class="arithmatex">\(R = [\Omega] \text{ ohm}\)</span>
+- <span class="arithmatex">\(R_{20^\circ} = \rho = [\Omega \cdot \text{mm}^2/\text{m}]\)</span>
+- <span class="arithmatex">\(\gamma = [\text{m}/(\Omega \cdot \text{mm}^2)]\)</span></p>
+<hr />
+<hr />
+<h2 id="44-joulesches-gesetz-elektrische-leistung-arbeit">4.4 Joulesches Gesetz, elektrische Leistung &amp; Arbeit<a class="headerlink" href="#44-joulesches-gesetz-elektrische-leistung-arbeit" title="Permanent link">&para;</a></h2>
+<ul>
+<li><span class="arithmatex">\(P =\)</span> Leistung</li>
+<li><span class="arithmatex">\(W =\)</span> Arbeit</li>
+<li><span class="arithmatex">\(t =\)</span> Zeit</li>
+</ul>
+<div class="arithmatex">\[P = \frac{W}{t} = U \cdot I \quad \text{mit } W = F \cdot s \quad [\text{Nm}]\]</div>
+<p>Zum berechnen der Verlustleistung z.B eines Widerstandes:</p>
+<div class="arithmatex">\[P = U \cdot I = I^2 \cdot R = \frac{U^2}{R}\]</div>
+<p><strong>Einheiten:</strong>
+- <span class="arithmatex">\(P = [\text{W}] \text{ Watt}\)</span>
+- <span class="arithmatex">\(W = [\text{J}] \text{ Joule}\)</span>
+- <span class="arithmatex">\(t = [\text{s}] \text{ Sek (time)}\)</span></p>
+<hr />
+<hr />
+<h2 id="45-zahlpfeilsysteme-erzeuger-vs-verbraucherpfeilsystem">4.5 Zählpfeilsysteme (Erzeuger- vs. Verbraucherpfeilsystem)<a class="headerlink" href="#45-zahlpfeilsysteme-erzeuger-vs-verbraucherpfeilsystem" title="Permanent link">&para;</a></h2>
+<p><img alt="Zählpfeilsysteme (Erzeuger- vs. Verbraucherpfeilsystem)" src="../illustrations/zaehlpfeilsysteme_erzeuger_verbraucher.svg" /></p>
+<p><em>Abbildung: Ein einfacher Stromkreis aus Quelle links und Verbraucherwiderstand rechts. Bei der Quelle zeigt der Zählpfeil <span class="arithmatex">\(u \uparrow\)</span> parallel zur Quellspannung („Generatorpfeilsystem“). Beim Verbraucher zeigt der Spannungsabfallpfeil <span class="arithmatex">\(u \downarrow\)</span> in Richtung des durchfließenden Stroms („Verbraucherpfeilsystem“).</em></p>
+<h3 id="spannungsquellen-schaltsymbole">Spannungsquellen-Schaltsymbole:<a class="headerlink" href="#spannungsquellen-schaltsymbole" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Kreis mit durchgehendem Strich: <strong>Spannungsquelle Allgemein</strong></li>
+<li>Kreis mit Querstrich/Minus: <strong>Gleichspannung</strong></li>
+<li>Kreis mit Sinuswelle <span class="arithmatex">\(\sim\)</span>: <strong>Wechselspannung</strong></li>
+<li>Kreis mit Pfeil nach unten <span class="arithmatex">\(\downarrow\)</span>: <strong>Zeitlich veränderbare spannung</strong></li>
+</ul>
+<hr />
+<hr />
+<h2 id="46-1-kirchhoffsches-gesetz-knotenregel">4.6 1. Kirchhoffsches Gesetz (Knotenregel)<a class="headerlink" href="#46-1-kirchhoffsches-gesetz-knotenregel" title="Permanent link">&para;</a></h2>
+<p><img alt="1. Kirchhoffsches Gesetz (Knotensatz)" src="../illustrations/seite35_kirchhoff_knoten.svg" /></p>
+<p>Die Summe der vom Knoten wegfliessenden Ladungsträger ergibt die Anzahl der in den Knoten reinfliessenden Ladungsträger.</p>
+<p><em>Abbildung: Ein Verzweigungsknoten. Ein Strom <span class="arithmatex">\(I_1\)</span> fließt horizontal in den Knoten hinein, zwei Teilströme <span class="arithmatex">\(I_2\)</span> (schräg nach oben) und <span class="arithmatex">\(I_3\)</span> (nach unten) fließen aus dem Knoten heraus.</em></p>
+<div class="arithmatex">\[I_1 = I_2 + I_3\]</div>
+<div class="arithmatex">\[\sum_{k=1}^n I_k = 0 = I_1 - I_2 - I_3\]</div>
+<p><img alt="Netzwerkknoten und Bilanzierung über Hüllfläche" src="../illustrations/netzwerk_fuenf_widerstaende_knoten.svg" /></p>
+<p><em>Abbildung: Netzwerk / Brückenschaltung mit Gleichspannungsquelle links und fünf Widerständen <span class="arithmatex">\(R_1, R_2, R_3, R_4, R_5\)</span>. Über eine gestrichelte grüne Hüllfläche um die Teilknoten rechts wird der Summenstrom bilanziert:</em></p>
+<div class="arithmatex">\[I_{R1} + I_{R4} = I_{R3} + I_{R4} + I_{R5}\]</div>
+<hr />
+<hr />
+<h2 id="47-2-kirchhoffsches-gesetz-maschenregel">4.7 2. Kirchhoffsches Gesetz (Maschenregel)<a class="headerlink" href="#47-2-kirchhoffsches-gesetz-maschenregel" title="Permanent link">&para;</a></h2>
+<p><img alt="2. Kirchhoffsches Gesetz (Maschensatz)" src="../illustrations/maschenregel_kirchhoff.svg" /></p>
+<p>Wenn eine Ladung von <span class="arithmatex">\(P_1\)</span> ein Weg zu <span class="arithmatex">\(P_1\)</span> zurücklegt ist die Arbeit Null somit ist auch die Spannung Null.</p>
+<p><em>Abbildung: Dreieckige Leiterschleife mit den Punkten <span class="arithmatex">\(P_1, P_2, P_3\)</span>. Zwischen <span class="arithmatex">\(P_1\)</span> und <span class="arithmatex">\(P_2\)</span> liegt Widerstand <span class="arithmatex">\(R_1\)</span> mit Zählpfeil <span class="arithmatex">\(U_{R1} \rightarrow\)</span>. Zwischen <span class="arithmatex">\(P_2\)</span> und <span class="arithmatex">\(P_3\)</span> liegt Widerstand <span class="arithmatex">\(R_3\)</span> mit Zählpfeil <span class="arithmatex">\(U_{R3} \downarrow\)</span>. Zwischen <span class="arithmatex">\(P_3\)</span> und <span class="arithmatex">\(P_1\)</span> liegt Widerstand <span class="arithmatex">\(R_4\)</span> mit Pfeil <span class="arithmatex">\(U_{R4} \nwarrow\)</span>. Ein zentraler Kreispfeil gibt den Umlaufsinn im Uhrzeigersinn vor.</em></p>
+<div class="arithmatex">\[P_1 - P_1 = U_{R1} + U_{R3} - U_{R4} = 0\]</div>
+<div class="arithmatex">\[\sum_{k=1}^n U_k = 0\]</div>
+<hr />
+<hr />
+<h2 id="48-reihen-und-parallelschaltung-von-widerstanden">4.8 Reihen- und Parallelschaltung von Widerständen<a class="headerlink" href="#48-reihen-und-parallelschaltung-von-widerstanden" title="Permanent link">&para;</a></h2>
+<p><img alt="Serien- und Parallelschaltung von Widerständen" src="../illustrations/serie_parallel_netzwerk.svg" /></p>
+<h3 id="serie">Serie<a class="headerlink" href="#serie" title="Permanent link">&para;</a></h3>
+<p><em>Abbildung: Stromkreis mit einer Quelle <span class="arithmatex">\(I \uparrow\)</span> in Reihe mit drei Widerständen <span class="arithmatex">\(R_1\)</span> (horizontal, Spannung <span class="arithmatex">\(U_1 \rightarrow\)</span>), <span class="arithmatex">\(R_2\)</span> (vertikal, Spannung <span class="arithmatex">\(U_2 \downarrow\)</span>) und <span class="arithmatex">\(R_3\)</span> (vertikal, Spannung <span class="arithmatex">\(U_3 \downarrow\)</span>).</em></p>
+<div class="arithmatex">\[R_{\text{ges}} = R_1 + R_2 + R_3\]</div>
+<div class="arithmatex">\[U_{\text{ges}} = R_{\text{ges}} \cdot I = U_1 + U_2 + U_3\]</div>
+<div class="arithmatex">\[I = \frac{U_{\text{ges}}}{R_{\text{ges}}}\]</div>
+<blockquote>
+<p>Der Strom bleibt überall gleich aber die Spannung ändert sich</p>
+</blockquote>
+<h3 id="parallel">Parallel<a class="headerlink" href="#parallel" title="Permanent link">&para;</a></h3>
+<p><img alt="Gemischte Widerstandsschaltung und Ersatzwiderstand" src="../illustrations/gemischte_schaltung_ersatzwiderstand.svg" /></p>
+<p><em>Abbildung: Umformung einer Schaltung. Links schematische Parallelschaltung mit Quelle. Rechts Schaltung mit Speisung <span class="arithmatex">\(I \uparrow, U_q \downarrow\)</span>, Vorwiderstand <span class="arithmatex">\(R_1\)</span> und zwei Parallelzweigen: Zweig 1 mit <span class="arithmatex">\(R_2\)</span> (Strom <span class="arithmatex">\(I_1 \downarrow\)</span>, Spannung <span class="arithmatex">\(U_1 \downarrow\)</span>), Zweig 2 mit Reihenschaltung aus <span class="arithmatex">\(R_3\)</span> und <span class="arithmatex">\(R_4\)</span> (Strom <span class="arithmatex">\(I_2 \downarrow\)</span>, Gesamtspannung <span class="arithmatex">\(U_1 \downarrow\)</span>).</em></p>
+<div class="arithmatex">\[R_{34} \,||\, R_2\]</div>
+<div class="arithmatex">\[R_1 + (R_{34} \,||\, R_2) = \text{Ersatzwiederstand} : R_{\text{ges}} = \frac{1}{\sum_{k=1}^n \frac{1}{R_k}}\]</div>
+<div class="arithmatex">\[I = I_1 + I_2\]</div>
+<div class="arithmatex">\[U_q = U_1\]</div>
+<div class="arithmatex">\[I_1 = \frac{U_1}{R_2}\]</div>
+<blockquote>
+<p>Der Strom teilt sich je nach wiederstand auf, die Spannung bleibt aber überall gleich</p>
+</blockquote>
+<hr />
+<hr />
+<h2 id="49-spannungsteiler-unbelastet-belastet-stromteiler">4.9 Spannungsteiler (unbelastet &amp; belastet) &amp; Stromteiler<a class="headerlink" href="#49-spannungsteiler-unbelastet-belastet-stromteiler" title="Permanent link">&para;</a></h2>
+<p><img alt="Unbelasteter Spannungsteiler" src="../illustrations/seite38_spannungsteiler_stromteiler.svg" /></p>
+<h3 id="spannungsteiler">Spannungsteiler<a class="headerlink" href="#spannungsteiler" title="Permanent link">&para;</a></h3>
+<p><em>Abbildung: Reihenschaltung an einer Spannungsquelle <span class="arithmatex">\(U \downarrow\)</span>, bestehend aus zwei in Reihe geschalteten Widerständen <span class="arithmatex">\(R_1\)</span> mit Teilspannung <span class="arithmatex">\(U_1 \downarrow\)</span> und <span class="arithmatex">\(R_2\)</span> mit Teilspannung <span class="arithmatex">\(U_2 \downarrow\)</span>. Pfeilbeschriftung: „<span class="arithmatex">\(\subset\)</span> Serieschaltung“.</em></p>
+<div class="arithmatex">\[U_1 = R_1 \cdot I, \quad U_2 = R_2 \cdot I \quad \&amp; \quad U = U_1 + U_2 = I(R_1 + R_2)\]</div>
+<div class="arithmatex">\[\downarrow\]</div>
+<div class="arithmatex">\[\frac{U_1}{U_2} = \frac{R_1}{R_2} \quad \&amp; \quad \frac{U_2}{U} = \frac{R_2}{R_1 + R_2}\]</div>
+<h3 id="stromteiler">Stromteiler<a class="headerlink" href="#stromteiler" title="Permanent link">&para;</a></h3>
+<p><img alt="Stromteiler-Regel bei Parallelschaltung" src="../illustrations/stromteiler_schaltung_parallel.svg" /></p>
+<p><em>Abbildung: Parallelschaltung an einer Stromquelle (Pfeil <span class="arithmatex">\(\uparrow\)</span>) mit zwei parallelen Zweigen: Widerstand <span class="arithmatex">\(R_1\)</span> mit Strom <span class="arithmatex">\(I_1 \downarrow\)</span> und Widerstand <span class="arithmatex">\(R_2\)</span> mit Strom <span class="arithmatex">\(I_2 \downarrow\)</span>. An beiden liegt die Gesamtspannung <span class="arithmatex">\(U \downarrow\)</span>.</em></p>
+<div class="arithmatex">\[I_1 = U / R_1 \quad \&amp; \quad I_2 = U / R_2\]</div>
+<div class="arithmatex">\[I = I_1 + I_2 = U \left(\frac{1}{R_1} + \frac{1}{R_2}\right) = U \frac{R_1 + R_2}{R_1 \cdot R_2}\]</div>
+<div class="arithmatex">\[\downarrow\]</div>
+<div class="arithmatex">\[\frac{I_1}{I_2} = \frac{R_2}{R_1} = \frac{G_1}{G_2} \quad \&amp; \quad \frac{I_2}{I} = \frac{R_1}{R_1 + R_2}\]</div>
+<div class="admonition example">
+<p class="admonition-title">Praxisbeispiel: Belasteter vs. unbelasteter Spannungsteiler</p>
+<p>Ein Spannungsteiler aus <span class="arithmatex">\(R_1 = 10\,\text{k}\Omega\)</span> und <span class="arithmatex">\(R_2 = 10\,\text{k}\Omega\)</span> an <span class="arithmatex">\(U_{\text{in}} = 10\,\text{V}\)</span> liefert im Leerlauf exakt <span class="arithmatex">\(U_{\text{out}} = 5{,}0\,\text{V}\)</span>.</p>
+<p>Schließt man nun einen Lastwiderstand <span class="arithmatex">\(R_L = 10\,\text{k}\Omega\)</span> an:
+1. <strong>Ersatzwiderstand des Querzweigs:</strong>
+   $<span class="arithmatex">\(R_{2\parallel L} = \frac{R_2 \cdot R_L}{R_2 + R_L} = \frac{10\,\text{k}\Omega \cdot 10\,\text{k}\Omega}{20\,\text{k}\Omega} = 5{,}0\,\text{k}\Omega\)</span>$
+2. <strong>Eingebrochene Ausgangsspannung:</strong>
+   $<span class="arithmatex">\(U_{\text{out,belastet}} = U_{\text{in}} \cdot \frac{R_{2\parallel L}}{R_1 + R_{2\parallel L}} = 10\,\text{V} \cdot \frac{5\,\text{k}\Omega}{10\,\text{k}\Omega + 5\,\text{k}\Omega} = 3{,}33\,\text{V} \quad (\ll 5\,\text{V}!)\)</span>$</p>
+<p><strong>Schaltungsregel:</strong> Ein resistiver Spannungsteiler bricht unter Last ein. Er muss entweder niederohmig dimensioniert werden (<span class="arithmatex">\(R_L \gg R_2\)</span>) oder durch einen [[#10.5 Der Impedanzwandler (Spannungsfolger / Buffer)|Operationsverstärker-Buffer]] entkoppelt werden.</p>
+</div>
+<hr />
+<hr />
+<h2 id="410-reale-spannungs-und-stromquellen-innenwiderstand">4.10 Reale Spannungs- und Stromquellen (Innenwiderstand)<a class="headerlink" href="#410-reale-spannungs-und-stromquellen-innenwiderstand" title="Permanent link">&para;</a></h2>
+<p><img alt="Reale Spannungs- und Stromquelle" src="../illustrations/reale_spannungsquelle_stromquelle.svg" /></p>
+<h3 id="reale-spannungsquelle">Reale Spannungsquelle<a class="headerlink" href="#reale-spannungsquelle" title="Permanent link">&para;</a></h3>
+<p><em>Abbildung: Ersatzschaltbild einer realen Spannungsquelle mit idealer Quellenspannung <span class="arithmatex">\(U_0 \downarrow\)</span> in Reihe zum Innenwiderstand <span class="arithmatex">\(R_i\)</span> mit Spannungsabfall <span class="arithmatex">\(U_{Ri} \rightarrow\)</span>, abgeschlossen mit Ausgangsklemmen und Klemmenspannung <span class="arithmatex">\(U \downarrow\)</span>. Beschriftung: „Spannungsquelle mit Innenwiederstand“.</em></p>
+<ul>
+<li><span class="arithmatex">\(\text{Leerlaufspannung: } U = U_L = U_0\)</span></li>
+<li><span class="arithmatex">\(U_L \, (=\text{Quellspannung}) = \text{Leerlaufspannung}\)</span></li>
+<li><span class="arithmatex">\(\text{Kurzschlussstrom: } I_k = \frac{U_0}{R_i}\)</span> <em>(in der Handschrift als „Kurzschlussspannung“ tituliert)</em></li>
+</ul>
+<h3 id="reale-stromquelle">Reale Stromquelle<a class="headerlink" href="#reale-stromquelle" title="Permanent link">&para;</a></h3>
+<p><em>Abbildung: Reale Stromquelle bestehend aus idealer Stromquelle <span class="arithmatex">\(I_0 \uparrow\)</span> parallel zu einem Innenwiderstand, mit Ausgangsspannung <span class="arithmatex">\(U \downarrow\)</span>.</em></p>
+<ul>
+<li><span class="arithmatex">\(\text{Kurzschlussbetrieb: } I = I_k = I_0\)</span></li>
+<li><span class="arithmatex">\(I_k \, (=\text{Quellstrom})\)</span></li>
+<li><span class="arithmatex">\(\text{Leerlaufspannung: } U_L = I_0 \cdot R_i\)</span></li>
+</ul>
+<h3 id="berechnung-von-r_i">Berechnung von <span class="arithmatex">\(R_i\)</span><a class="headerlink" href="#berechnung-von-r_i" title="Permanent link">&para;</a></h3>
+<p><em>(Im roten Kasten notiert):</em>
+- <span class="arithmatex">\(U_0 \rightarrow (\text{Leerlaufspannung})\)</span>
+- <span class="arithmatex">\(I_k \rightarrow (\text{Kurzschlussstrom})\)</span></p>
+<div class="arithmatex">\[R_i = \frac{U_0}{I_k}\]</div>
+<hr />
+<h2 id="411-wirkungsgrad-leistungsanpassung">4.11 Wirkungsgrad &amp; Leistungsanpassung<a class="headerlink" href="#411-wirkungsgrad-leistungsanpassung" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[\eta = \frac{P_L}{P_{\text{ges}}} \cdot 100\%\]</div>
+<ul>
+<li><span class="arithmatex">\(P_L =\)</span> Nutzleistung (am Lastwiederstand verbrauchte Leistung)</li>
+<li><span class="arithmatex">\(P_{\text{ges}} =\)</span> Gesamtleistung</li>
+</ul>
+<p><img alt="Leistungsanpassung und Wirkungsgrad einer realen Quelle" src="../illustrations/wirkungsgrad_leistungsanpassung.svg" /></p>
+<p><em>Abbildung: Vollständiger Stromkreis. Eine reale Spannungsquelle (grün umrahmt: ideale Spannungsquelle mit Innenwiderstand <span class="arithmatex">\(R_i\)</span> und Spannungsabfall <span class="arithmatex">\(U_{Ri}\)</span>) treibt den Strom <span class="arithmatex">\(I \downarrow\)</span> durch einen externen Lastwiderstand <span class="arithmatex">\(R_L\)</span>, über dem die Klemmenspannung <span class="arithmatex">\(U \downarrow\)</span> abfällt.</em></p>
+<hr />
+<div class="admonition warning">
+<p class="admonition-title">Leistungsanpassung vs. Spannungsanpassung</p>
+<ul>
+<li><strong>Leistungsanpassung (<span class="arithmatex">\(R_L = R_i\)</span>):</strong></li>
+<li>Am Lastwiderstand wird die maximal mögliche Leistung umgesetzt: <span class="arithmatex">\(P_{L,\max} = \frac{U_0^2}{4 R_i}\)</span>.</li>
+<li>Der Wirkungsgrad beträgt dabei genau <strong><span class="arithmatex">\(\eta = 50\%\)</span></strong> (die andere Hälfte wird im Innenwiderstand <span class="arithmatex">\(R_i\)</span> in Wärme umgewandelt).</li>
+<li><strong>Spannungsanpassung (<span class="arithmatex">\(R_L \gg R_i\)</span>):</strong></li>
+<li>Minimale thermische Verluste in der Quelle, Klemmenspannung <span class="arithmatex">\(U \approx U_0\)</span>.</li>
+<li>Wirkungsgrad <strong><span class="arithmatex">\(\eta \to 100\%\)</span></strong> (Standard im Stromnetz und der Signalübertragung).</li>
+<li><strong>Stromanpassung (<span class="arithmatex">\(R_L \ll R_i\)</span>):</strong></li>
+<li>Laststrom entspricht nahezu dem Kurzschlussstrom <span class="arithmatex">\(I_L \approx I_K\)</span>.</li>
+</ul>
+</div>
+<hr />
+<h2 id="412-leistungs-impedanzanpassung-in-der-praxis">4.12 Leistungs- &amp; Impedanzanpassung in der Praxis<a class="headerlink" href="#412-leistungs-impedanzanpassung-in-der-praxis" title="Permanent link">&para;</a></h2>
+<p>Wird ein elektrischer Verbraucher mit dem Lastwiderstand <span class="arithmatex">\(R_L\)</span> an eine reale Spannungsquelle mit der Quellenspannung <span class="arithmatex">\(U_0\)</span> und dem Innenwiderstand <span class="arithmatex">\(R_i\)</span> angeschlossen, unterscheidet man je nach Schaltungsziel drei fundamentale Betriebsarten:</p>
+<p><img alt="Leistungs- und Impedanzanpassung Kennlinie" src="../illustrations/lerndoku/Leistungs_%26_Impedanzanpassung_image4.png" /></p>
+<ol>
+<li><strong>Leistungsanpassung (<span class="arithmatex">\(R_L = R_i\)</span>):</strong></li>
+<li>Ziel: Die an den Verbraucher übertragene Wirkleistung <span class="arithmatex">\(P_L\)</span> soll ein Maximum erreichen.</li>
+<li>Herleitung:
+     $<span class="arithmatex">\(I = \frac{U_0}{R_i + R_L} \implies P_L = I^2 \cdot R_L = \frac{U_0^2 \cdot R_L}{(R_i + R_L)^2}\)</span>$
+     Durch Ableitung <span class="arithmatex">\(\frac{dP_L}{dR_L} = 0\)</span> ergibt sich das Maximum exakt bei:
+     $<span class="arithmatex">\(R_L = R_i \implies P_{L,max} = \frac{U_0^2}{4 \cdot R_i}\)</span>$</li>
+<li>
+<p><strong>Wirkungsgrad bei Leistungsanpassung:</strong>
+     $<span class="arithmatex">\(\eta = \frac{P_L}{P_{ges}} = \frac{I^2 \cdot R_L}{I^2 \cdot (R_i + R_L)} = \frac{R_L}{R_i + R_L} = \frac{R_i}{2R_i} = \mathbf{50\,\%}\)</span>$
+     Genau die Hälfte der erzeugten Leistung wird im Innenwiderstand <span class="arithmatex">\(R_i\)</span> der Quelle in Wärme umgesetzt. Anwendung: HF-Technik, Antennentechnik (<span class="arithmatex">\(50\,\Omega / 75\,\Omega\)</span>), Audio-Endstufen.</p>
+</li>
+<li>
+<p><strong>Spannungsanpassung (<span class="arithmatex">\(R_L \gg R_i\)</span>, z. B. <span class="arithmatex">\(R_L \ge 10 \cdot R_i\)</span>):</strong></p>
+</li>
+<li>Ziel: Die Klemmenspannung <span class="arithmatex">\(U_L\)</span> soll möglichst lastunabhängig und nahe an der Quellenspannung <span class="arithmatex">\(U_0\)</span> liegen.</li>
+<li>Wirkungsgrad <span class="arithmatex">\(\eta \to 100\,\%\)</span>.</li>
+<li>
+<p>Anwendung: Netzspannung (<span class="arithmatex">\(230\,\text{V}\)</span>-Steckdosennetz), Operationsverstärker-Ausgänge, Audio-Line-Pegel.</p>
+</li>
+<li>
+<p><strong>Stromanpassung (<span class="arithmatex">\(R_L \ll R_i\)</span>):</strong></p>
+</li>
+<li>Ziel: Ein möglichst konstanter, lastunabhängiger Stromfluss.</li>
+<li>Anwendung: Stromschleifen (<span class="arithmatex">\(4\dots 20\,\text{mA}\)</span> in der Prozessautomatisierung), LED-Treiber.</li>
+</ol>
+<h2 id="413-einschaltstrombegrenzung-inrush-current-sanftanlauf">4.13 Einschaltstrombegrenzung (Inrush Current) &amp; Sanftanlauf<a class="headerlink" href="#413-einschaltstrombegrenzung-inrush-current-sanftanlauf" title="Permanent link">&para;</a></h2>
+<p>Beim Einschalten elektronischer Geräte treten häufig extrem hohe Stromspitzen (das Vielfache des Nennbetriebsstroms) auf, die Gerätesicherungen auslösen oder Schalterkontakte verschweißen können:</p>
+<p><img alt="Einschaltstrom Oszillogramm" src="../illustrations/lerndoku/Inrush_current_sideeffect_image4.png" /></p>
+<h3 id="ursachen-des-einschaltstroms">Ursachen des Einschaltstroms<a class="headerlink" href="#ursachen-des-einschaltstroms" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Laden von Puffer- und Siebkondensatoren:</strong>
+   Im ungeladenen Zustand (<span class="arithmatex">\(t=0\)</span>) ist die Spannung am Kondensator <span class="arithmatex">\(u_C(0) = 0\,\text{V}\)</span>. Der Kondensator wirkt im ersten Schaltmoment wie ein Kurzschluss; der Spitzenstrom wird ausschließlich durch den Netzinnenwiderstand, die Leitungsinduktivität und den Ersatzserienwiderstand (ESR) begrenzt:
+   $<span class="arithmatex">\(i_{peak} = \frac{U_{peak}}{R_{Netz} + ESR}\)</span>$</li>
+<li><strong>Magnetische Einschaltstromspitzen bei Transformatoren:</strong>
+   Wird ein Ringkerntrafo im Spannungsnulldurchgang eingeschaltet, treibt die Flussakkumulation den Kern tief in die magnetische Sättigung. Die Induktivität bricht zusammen, und es fließen kurzzeitig Ströme bis zum 20- bis 50-fachen des Nennstroms.</li>
+</ol>
+<h3 id="schaltungstechnische-schutzmanahmen">Schaltungstechnische Schutzmaßnahmen<a class="headerlink" href="#schaltungstechnische-schutzmanahmen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>NTC-Einschaltstrombegrenzer (Heißleiter):</strong>
+  Ein NTC-Widerstand besitzt im kalten Zustand einen hohen Widerstand (z. B. <span class="arithmatex">\(5\dots 10\,\Omega\)</span>), der den Einschaltstrom sicher deckelt. Durch den fließenden Betriebsstrom erwärmt er sich und sinkt auf einen minimalen Restwiderstand (<span class="arithmatex">\(&lt;0{,}5\,\Omega\)</span>) ab.</li>
+<li><strong>Relais-Überbrückungsschaltung (Sanftanlauf):</strong>
+  Ein fester Leistungswiderstand (<span class="arithmatex">\(10\dots 47\,\Omega\)</span>, z. B. <span class="arithmatex">\(25\,\text{W}\)</span>) liegt in der Ladeleitung. Sobald der Zwischenkreis auf ca. <span class="arithmatex">\(80\dots 90\,\%\)</span> aufgeladen ist, überbrückt ein Relaiskontakt den Vorwiderstand verlustfrei für den Dauerbetrieb.</li>
+</ul>
+<p><img alt="Sanftanlauf-Schaltung mit Vorladewiderstand und Überbrückungsrelais" src="../illustrations/lerndoku/Inrush_current_sideeffect_image5.png" /></p>
+<h2 id="414-ruckstromschutz-reverse-dc-current-protection">4.14 Rückstromschutz (Reverse DC Current Protection)<a class="headerlink" href="#414-ruckstromschutz-reverse-dc-current-protection" title="Permanent link">&para;</a></h2>
+<p>Wird ein Netzteil oder DC/DC-Wandler an eine Batterie oder an eine busgespeiste Schaltung angeschlossen, kann Strom rückwärts in den Ausgang des Netzteils fließen, wenn die Ausgangsspannung unter die externe Spannung sinkt.</p>
+<h3 id="losungsansatze-im-vergleich">Lösungsansätze im Vergleich<a class="headerlink" href="#losungsansatze-im-vergleich" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Standard-Siliziumdiode:</strong></li>
+<li>Hoher Vorwärtsspannungsabfall <span class="arithmatex">\(U_F \approx 0{,}7\dots 1{,}0\,\text{V}\)</span>.</li>
+<li>Hohe thermische Verlustleistung <span class="arithmatex">\(P_V = U_F \cdot I_L\)</span> (bei <span class="arithmatex">\(5\,\text{A}\)</span> bereits ca. <span class="arithmatex">\(4\,\text{W}\)</span> Kühlbedarf!).</li>
+<li><strong>Schottky-Diode:</strong></li>
+<li>Geringere Schleusenspannung <span class="arithmatex">\(U_F \approx 0{,}3\dots 0{,}5\,\text{V}\)</span>.</li>
+<li>Gut geeignet für kleinere bis mittlere Ströme, aber höherer Sperr-Leckstrom <span class="arithmatex">\(I_R\)</span>.</li>
+</ol>
+<p><img alt="Schottky-Diode als Verpolschutz" src="../illustrations/lerndoku/reverse_dc_current_image4.png" />
+3. <strong>Ideale Diode (MOSFET-basierter Rückstromschutz):</strong>
+   - Ein P-Kanal- oder N-Kanal-Power-MOSFET wird invers in die Versorgungsleitung geschaltet.
+   - Ein Controller misst die Spannungsdifferenz über Source und Drain. Bei normalem Stromfluss schaltet er das Gate voll durch.
+   - Der Spannungsabfall beträgt lediglich <span class="arithmatex">\(U_{drop} = I_L \cdot R_{DS(on)}\)</span> (z. B. <span class="arithmatex">\(5\,\text{A} \cdot 5\,\text{m}\Omega = 25\,\text{mV}\)</span>).
+   - Die Verlustleistung sinkt drastisch auf <span class="arithmatex">\(P_V = I_L^2 \cdot R_{DS(on)} = (5\,\text{A})^2 \cdot 5\,\text{m}\Omega = \mathbf{0{,}125\,\text{W}}\)</span>!</p>
+<p><img alt="P-Kanal-MOSFET Verpolschutzschaltung" src="../illustrations/lerndoku/reverse_dc_current_image5.png" /></p>
+<p><img alt="Ideale Diode Controller Schaltung mit N-Kanal MOSFET" src="../illustrations/lerndoku/reverse_dc_current_image7.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

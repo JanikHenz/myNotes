@@ -1,0 +1,3106 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Janik Henz's Wissensdatenbank, Elektrotechnik-Referenzhandbuch & Projektnotizen">
+      
+      
+        <meta name="author" content="Janik Henz">
+      
+      
+        <link rel="canonical" href="https://JanikHenz.github.io/myNotes/elektrotechnik/kapitel11_digitaltechnik_mikrocontroller/">
+      
+      
+        <link rel="prev" href="../kapitel10_opv_filter_analog/">
+      
+      
+        <link rel="next" href="../kapitel12_hochspannung_praxis/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>11. Digitaltechnik & Mikrocontroller - myNotes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kapitel-11-digitaltechnik-mikrocontroller-programmierung" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../.." title="myNotes" class="md-header__button md-logo" aria-label="myNotes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            myNotes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              11. Digitaltechnik & Mikrocontroller
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-label="Heller Modus"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Heller Modus" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-label="Dunkler Modus"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dunkler Modus" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/JanikHenz/myNotes" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    JanikHenz/myNotes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="myNotes" class="md-nav__button md-logo" aria-label="myNotes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    myNotes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/JanikHenz/myNotes" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    JanikHenz/myNotes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elektrotechnik
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Elektrotechnik
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht & Download
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel01_mathematik/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Mathematik & Vektoren
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel02_elektrostatik_felder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Elektrostatik & Felder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel03_kondensatoren/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Kondensatoren
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel04_gleichstrom_netzwerke/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Gleichstromtechnik
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel05_magnetismus_spulen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Magnetismus & Spulen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel06_messtechnik_sicherheit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Messtechnik & Sicherheit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel07_passive_bauelemente/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Passive Bauelemente & Fertigung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel08_dioden_halbleiter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Dioden & Halbleiter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel09_transistoren_schaltungen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Transistoren & Schaltungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel10_opv_filter_analog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. OPVs, Filter & Signalverarbeitung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Digitaltechnik & Mikrocontroller
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Digitaltechnik & Mikrocontroller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#111-zahlensysteme-von-dezimal-zu-binar-umrechnen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 Zahlensysteme: Von Dezimal zu Binär umrechnen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112-hexadezimales-zahlensystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 Hexadezimales Zahlensystem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.2 Hexadezimales Zahlensystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#von-hexa-zu-binar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Von Hexa zu Binär
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#von-hexadezimal-zu-dezimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Von Hexadezimal zu Dezimal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#von-dezimal-zu-hexadezimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Von Dezimal zu Hexadezimal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113-hexadezimales-binares-und-dezimales-zahlensystem-im-vergleich" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3 Hexadezimales, Binäres und Dezimales Zahlensystem im Vergleich
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114-pull-up-und-pull-down-widerstande" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.4 Pull-Up- und Pull-Down-Widerstände
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.4 Pull-Up- und Pull-Down-Widerstände">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pull-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pull up:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pulldown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pulldown:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115-taster-schalterentprellung-hardware-vs-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.5 Taster- &amp; Schalterentprellung (Hardware vs. Software)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.5 Taster- &amp; Schalterentprellung (Hardware vs. Software)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nach-dem-grundprinzip-iperka" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nach dem Grundprinzip IPERKA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#informieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Informieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#planen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Planen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plan-mu-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plan \(\mu C\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116-c-programmierung-bits-bytes-nibbles-datentypen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.6 C-Programmierung: Bits, Bytes, Nibbles &amp; Datentypen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.6 C-Programmierung: Bits, Bytes, Nibbles &amp; Datentypen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binares-zahlensystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Binäres Zahlensystem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#von-binar-zu-dezimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Von Binär zu Dezimal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117-operatoren-in-c-arithmetik-logik" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.7 Operatoren in C (Arithmetik &amp; Logik)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.7 Operatoren in C (Arithmetik &amp; Logik)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vergleichsoperatoren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vergleichsoperatoren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zuweisung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zuweisung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arithmetische-operatoren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arithmetische Operatoren
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#118-schiebeoperatoren-in-c-und" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.8 Schiebeoperatoren in C (&lt;&lt; und &gt;&gt;)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#119-bitmanipulation-in-mikrocontroller-registern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.9 Bitmanipulation in Mikrocontroller-Registern
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1110-kombinierte-zuweisungsoperatoren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.10 Kombinierte Zuweisungsoperatoren
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1111-interrupts-interrupt-service-routinen-isr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.11 Interrupts &amp; Interrupt Service Routinen (ISR)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.11 Interrupts &amp; Interrupt Service Routinen (ISR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beispiel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beispiel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wichtig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wichtig!
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1112-zustandsdiagramme-finite-state-machines-fsm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.12 Zustandsdiagramme &amp; Finite State Machines (FSM)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1113-zahlensysteme-bcd-code-komplementdarstellung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.13 Zahlensysteme, BCD-Code &amp; Komplementdarstellung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1114-boolesche-algebra-rechengesetze-logikminimierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.14 Boolesche Algebra: Rechengesetze &amp; Logikminimierung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.14 Boolesche Algebra: Rechengesetze &amp; Logikminimierung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fundamentale-rechenregeln" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fundamentale Rechenregeln
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1115-logikgatter-grundtypen-wahrheitstabellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.15 Logikgatter: Grundtypen &amp; Wahrheitstabellen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1116-bistabile-kippstufen-flip-flops-rs-d-jk-t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.16 Bistabile Kippstufen: Flip-Flops (RS, D, JK, T)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1117-c-programmierung-fur-mikrocontroller-arrays-funktionen-schleifen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.17 C-Programmierung für Mikrocontroller: Arrays, Funktionen &amp; Schleifen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.17 C-Programmierung für Mikrocontroller: Arrays, Funktionen &amp; Schleifen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-eindimensionale-zweidimensionale-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Eindimensionale &amp; zweidimensionale Arrays
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-funktionen-parameterubergabe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Funktionen &amp; Parameterübergabe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-header-dateien-include-guards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Header-Dateien &amp; Include-Guards
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1118-mikrocontroller-konfiguration-peripherie-c8051f31x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.18 Mikrocontroller-Konfiguration &amp; Peripherie (C8051F31x)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.18 Mikrocontroller-Konfiguration &amp; Peripherie (C8051F31x)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#software-flankenerkennung-edge-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software-Flankenerkennung (Edge Detection)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel12_hochspannung_praxis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Hochspannungstechnik (EMC Partner)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../anhang_formelsammlung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anhang: Formelsammlung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../komplett/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vollständiges Skript
+  
+
+    
+      <br>
+      <small>Vollständiges Referenzhandbuch & Formelsammlung</small>
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--completed"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IP5
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IP5
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/projectdeclaration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projektvereinbarung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/risks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risiken
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/helper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Helper
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/milestone01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meilenstein 01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/milestone02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meilenstein 02
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    C++
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week45/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 45
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week46/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 46
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week47/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 47
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week48/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 48
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week49/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 49
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Weitere Notizen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Weitere Notizen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vesys/week01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VeSys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wosm/week01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WoSM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Allgemein
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#111-zahlensysteme-von-dezimal-zu-binar-umrechnen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 Zahlensysteme: Von Dezimal zu Binär umrechnen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112-hexadezimales-zahlensystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 Hexadezimales Zahlensystem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.2 Hexadezimales Zahlensystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#von-hexa-zu-binar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Von Hexa zu Binär
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#von-hexadezimal-zu-dezimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Von Hexadezimal zu Dezimal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#von-dezimal-zu-hexadezimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Von Dezimal zu Hexadezimal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113-hexadezimales-binares-und-dezimales-zahlensystem-im-vergleich" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.3 Hexadezimales, Binäres und Dezimales Zahlensystem im Vergleich
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114-pull-up-und-pull-down-widerstande" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.4 Pull-Up- und Pull-Down-Widerstände
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.4 Pull-Up- und Pull-Down-Widerstände">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pull-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pull up:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pulldown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pulldown:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115-taster-schalterentprellung-hardware-vs-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.5 Taster- &amp; Schalterentprellung (Hardware vs. Software)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.5 Taster- &amp; Schalterentprellung (Hardware vs. Software)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nach-dem-grundprinzip-iperka" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nach dem Grundprinzip IPERKA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#informieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Informieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#planen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Planen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Planen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#plan-mu-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plan \(\mu C\)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116-c-programmierung-bits-bytes-nibbles-datentypen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.6 C-Programmierung: Bits, Bytes, Nibbles &amp; Datentypen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.6 C-Programmierung: Bits, Bytes, Nibbles &amp; Datentypen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binares-zahlensystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Binäres Zahlensystem
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#von-binar-zu-dezimal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Von Binär zu Dezimal
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117-operatoren-in-c-arithmetik-logik" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.7 Operatoren in C (Arithmetik &amp; Logik)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.7 Operatoren in C (Arithmetik &amp; Logik)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vergleichsoperatoren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vergleichsoperatoren
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zuweisung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zuweisung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arithmetische-operatoren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arithmetische Operatoren
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#118-schiebeoperatoren-in-c-und" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.8 Schiebeoperatoren in C (&lt;&lt; und &gt;&gt;)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#119-bitmanipulation-in-mikrocontroller-registern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.9 Bitmanipulation in Mikrocontroller-Registern
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1110-kombinierte-zuweisungsoperatoren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.10 Kombinierte Zuweisungsoperatoren
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1111-interrupts-interrupt-service-routinen-isr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.11 Interrupts &amp; Interrupt Service Routinen (ISR)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.11 Interrupts &amp; Interrupt Service Routinen (ISR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#beispiel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Beispiel
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wichtig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wichtig!
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1112-zustandsdiagramme-finite-state-machines-fsm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.12 Zustandsdiagramme &amp; Finite State Machines (FSM)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1113-zahlensysteme-bcd-code-komplementdarstellung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.13 Zahlensysteme, BCD-Code &amp; Komplementdarstellung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1114-boolesche-algebra-rechengesetze-logikminimierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.14 Boolesche Algebra: Rechengesetze &amp; Logikminimierung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.14 Boolesche Algebra: Rechengesetze &amp; Logikminimierung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fundamentale-rechenregeln" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fundamentale Rechenregeln
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1115-logikgatter-grundtypen-wahrheitstabellen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.15 Logikgatter: Grundtypen &amp; Wahrheitstabellen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1116-bistabile-kippstufen-flip-flops-rs-d-jk-t" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.16 Bistabile Kippstufen: Flip-Flops (RS, D, JK, T)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1117-c-programmierung-fur-mikrocontroller-arrays-funktionen-schleifen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.17 C-Programmierung für Mikrocontroller: Arrays, Funktionen &amp; Schleifen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.17 C-Programmierung für Mikrocontroller: Arrays, Funktionen &amp; Schleifen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-eindimensionale-zweidimensionale-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Eindimensionale &amp; zweidimensionale Arrays
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-funktionen-parameterubergabe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Funktionen &amp; Parameterübergabe
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-header-dateien-include-guards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Header-Dateien &amp; Include-Guards
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1118-mikrocontroller-konfiguration-peripherie-c8051f31x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.18 Mikrocontroller-Konfiguration &amp; Peripherie (C8051F31x)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11.18 Mikrocontroller-Konfiguration &amp; Peripherie (C8051F31x)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#software-flankenerkennung-edge-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Software-Flankenerkennung (Edge Detection)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="kapitel-11-digitaltechnik-mikrocontroller-programmierung">Kapitel 11: Digitaltechnik &amp; Mikrocontroller-Programmierung<a class="headerlink" href="#kapitel-11-digitaltechnik-mikrocontroller-programmierung" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Überblick</p>
+<p>Zahlensysteme, Pull-Up/Down, Entprellung, C-Operatoren, Bitmanipulation, ISR und FSM.</p>
+</div>
+<h2 id="111-zahlensysteme-von-dezimal-zu-binar-umrechnen">11.1 Zahlensysteme: Von Dezimal zu Binär umrechnen<a class="headerlink" href="#111-zahlensysteme-von-dezimal-zu-binar-umrechnen" title="Permanent link">&para;</a></h2>
+<p>Berechnung per fortgesetzter Division durch 2 mit Rest:</p>
+<div class="arithmatex">\[162 : 2 = 81 \quad \text{Rest } 0$$
+$$81 : 2 = 40 \quad \text{Rest } 1$$
+$$40 : 2 = 20 \quad \text{Rest } 0$$
+$$20 : 2 = 10 \quad \text{Rest } 0$$
+$$10 : 2 = 5 \quad \text{Rest } 0$$
+$$5 : 2 = 2 \quad \text{Rest } 1$$
+$$2 : 2 = 1 \quad \text{Rest } 0$$
+$$1 : 2 = 0 \quad \text{Rest } 1\]</div>
+<p>Die Reste von unten nach oben gelesen ergeben:
+$<span class="arithmatex">\(= 10100010_b\)</span>$</p>
+<hr />
+<hr />
+<h2 id="112-hexadezimales-zahlensystem">11.2 Hexadezimales Zahlensystem<a class="headerlink" href="#112-hexadezimales-zahlensystem" title="Permanent link">&para;</a></h2>
+<h3 id="von-hexa-zu-binar">Von Hexa zu Binär<a class="headerlink" href="#von-hexa-zu-binar" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[8C_h \Rightarrow \underbrace{1000}_{8} \underbrace{1100}_{C} = 140_d\]</div>
+<h3 id="von-hexadezimal-zu-dezimal">Von Hexadezimal zu Dezimal<a class="headerlink" href="#von-hexadezimal-zu-dezimal" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[8C_h = C \cdot 16^0 + 8 \cdot 16^1 = 12 \cdot 1 + 8 \cdot 16 = 140\]</div>
+<h3 id="von-dezimal-zu-hexadezimal">Von Dezimal zu Hexadezimal<a class="headerlink" href="#von-dezimal-zu-hexadezimal" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[140 : 16^1 = 8 \quad \text{Rest } 12 \rightarrow 8$$
+$$12 : 16^0 = 12 \quad \text{Rest } 0 \rightarrow C\]</div>
+<div class="arithmatex">\[\left. \begin{array}{l} 8 \\ C \end{array} \right\} 8C_h\]</div>
+<hr />
+<hr />
+<h2 id="113-hexadezimales-binares-und-dezimales-zahlensystem-im-vergleich">11.3 Hexadezimales, Binäres und Dezimales Zahlensystem im Vergleich<a class="headerlink" href="#113-hexadezimales-binares-und-dezimales-zahlensystem-im-vergleich" title="Permanent link">&para;</a></h2>
+<p><img alt="Zahlensysteme: Binär, Hexadezimal und Dezimal im Vergleich" src="../illustrations/zahlensysteme_binaer_hex_dezimal.svg" /></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Dezimal</th>
+<th style="text-align: center;">Binär</th>
+<th style="text-align: center;">Hexa</th>
+<th style="text-align: center;">Dezimal</th>
+<th style="text-align: center;">Binär</th>
+<th style="text-align: center;">Hexa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0001</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">1001</td>
+<td style="text-align: center;">9</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0010</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">1010</td>
+<td style="text-align: center;">A</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0011</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">1011</td>
+<td style="text-align: center;">B</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0100</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">1100</td>
+<td style="text-align: center;">C</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0101</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">1101</td>
+<td style="text-align: center;">D</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0110</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">1110</td>
+<td style="text-align: center;">E</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0111</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">1111</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">1000</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<hr />
+<h2 id="114-pull-up-und-pull-down-widerstande">11.4 Pull-Up- und Pull-Down-Widerstände<a class="headerlink" href="#114-pull-up-und-pull-down-widerstande" title="Permanent link">&para;</a></h2>
+<p><img alt="Pull-Up- und Pull-Down-Schaltungen" src="../illustrations/seite82_pullup_pulldown.svg" /></p>
+<h3 id="pull-up">Pull up:<a class="headerlink" href="#pull-up" title="Permanent link">&para;</a></h3>
+<p><em>Abbildung: n: Zwei Varianten einer Pull-up-Schaltung:
+1. Links mit mechanischem Schalter: Von der Versorgungsspannung führt ein Pull-up-Widerstand zu einem Knotenpunkt, der an den Mikrokontroller-Pin „PB0“ führt. Vom Knotenpunkt führt ein Taster/Schalter nach Masse.
+2. Rechts mit NPN-Transistor (Open-Collector-Ausgang): Von der Versorgungsspannung führt ein Pull-up-Widerstand an den Kollektor des Transistors und an den Pin „PB0“. Der Emitter liegt an Masse, die Basis wird angesteuert.</em></p>
+<p>Der Eingang wird somit auf logisch 1 gezogen (wenn der Schalter offen bleibt).</p>
+<h3 id="pulldown">Pulldown:<a class="headerlink" href="#pulldown" title="Permanent link">&para;</a></h3>
+<p><em>Abbildung: n: Zwei Varianten einer Pulldown-Schaltung:
+1. Links mit mechanischem Schalter: Von der Versorgungsspannung führt ein Taster/Schalter an den Knotenpunkt zum Pin „PB0“. Vom Knotenpunkt führt ein Pulldown-Widerstand nach Masse.
+2. Rechts mit NPN-Transistor (Emitterfolger / High-Side): Der Kollektor liegt an der Versorgungsspannung. Der Emitter führt an den Pin „PB0“ und über einen Pulldown-Widerstand nach Masse. Die Basis wird angesteuert.</em></p>
+<hr />
+<h2 id="115-taster-schalterentprellung-hardware-vs-software">11.5 Taster- &amp; Schalterentprellung (Hardware vs. Software)<a class="headerlink" href="#115-taster-schalterentprellung-hardware-vs-software" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart LR
+    I["1. Informieren"] --&gt; P["2. Planen"] --&gt; E["3. Entscheiden"] --&gt; R["4. Realisieren"] --&gt; K["5. Kontrollieren"] --&gt; A["6. Analysieren"]</code></pre>
+<pre class="mermaid"><code>flowchart TD
+    S1["(1) Pinbelegung (HW0-Konzept) [10 min]"] --&gt; S2["(2) Zustandsdiagramm [20 min]"]
+    S2 --&gt; S3["(3) µC konfigurieren &amp; (4) Projekt erstellen [5 min]"]
+    S3 --&gt; S5["(5) main &amp; Programm implementieren [60 min]"]
+    S5 --&gt; S6["(6) Testplan bedenken [10 min]"]
+    S6 --&gt; S7["(7) Testen &amp; Debuggen [20 min]"]</code></pre>
+<h3 id="nach-dem-grundprinzip-iperka">Nach dem Grundprinzip IPERKA<a class="headerlink" href="#nach-dem-grundprinzip-iperka" title="Permanent link">&para;</a></h3>
+<p><strong>Informieren – Planen – Entscheiden – Realisieren – Kontrollieren – Analysieren</strong></p>
+<pre class="mermaid"><code>flowchart LR
+    I["1. Informieren"] --&gt; P["2. Planen"] --&gt; E["3. Entscheiden"] --&gt; R["4. Realisieren"] --&gt; K["5. Kontrollieren"] --&gt; A["6. Analysieren"]</code></pre>
+<pre class="mermaid"><code>flowchart TD
+    S1["(1) Pinbelegung (HW0-Konzept) [10 min]"] --&gt; S2["(2) Zustandsdiagramm [20 min]"]
+    S2 --&gt; S3["(3) µC konfigurieren &amp; (4) Projekt erstellen [5 min]"]
+    S3 --&gt; S5["(5) main &amp; Programm implementieren [60 min]"]
+    S5 --&gt; S6["(6) Testplan bedenken [10 min]"]
+    S6 --&gt; S7["(7) Testen &amp; Debuggen [20 min]"]</code></pre>
+<h3 id="informieren">Informieren<a class="headerlink" href="#informieren" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Was ist:</li>
+<li><span class="arithmatex">\(\rightarrow\)</span> gegeben</li>
+<li><span class="arithmatex">\(\rightarrow\)</span> gesucht</li>
+<li><span class="arithmatex">\(\rightarrow\)</span> unklar <span class="arithmatex">\(\rightarrow\)</span> Nachschlagen / Fragen formulieren <span class="arithmatex">\(\rightarrow\)</span> Fragen</li>
+</ul>
+<h3 id="planen">Planen<a class="headerlink" href="#planen" title="Permanent link">&para;</a></h3>
+<p>Plane dein Vorgehen und schätze, wie lange es dauern darf.</p>
+<h4 id="plan-mu-c">Plan <span class="arithmatex">\(\mu C\)</span><a class="headerlink" href="#plan-mu-c" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Schritt</th>
+<th style="text-align: left;">Tätigkeit</th>
+<th style="text-align: center;">Zeit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">(1)</td>
+<td style="text-align: left;">Pinbelegung, Eingang und Ausgang <span class="arithmatex">\(\rightarrow\)</span> Vorlage HW0-Konzept</td>
+<td style="text-align: center;">10 min</td>
+</tr>
+<tr>
+<td style="text-align: center;">(2)</td>
+<td style="text-align: left;">Zustandsdiagramm</td>
+<td style="text-align: center;">20 min</td>
+</tr>
+<tr>
+<td style="text-align: center;">(3)</td>
+<td style="text-align: left;"><span class="arithmatex">\(\mu C\)</span> konfigurieren</td>
+<td style="text-align: center;">5 min <em>(zusammen mit 4)</em></td>
+</tr>
+<tr>
+<td style="text-align: center;">(4)</td>
+<td style="text-align: left;">Projekt erstellen</td>
+<td style="text-align: center;"><em>(5 min)</em></td>
+</tr>
+<tr>
+<td style="text-align: center;">(5)</td>
+<td style="text-align: left;">main erstellen + Programm implementieren</td>
+<td style="text-align: center;">60 min</td>
+</tr>
+<tr>
+<td style="text-align: center;">(6)</td>
+<td style="text-align: left;">Testplan bedenken</td>
+<td style="text-align: center;">10 min</td>
+</tr>
+<tr>
+<td style="text-align: center;">(7)</td>
+<td style="text-align: left;">Testen + debuggen</td>
+<td style="text-align: center;">20 min</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<hr />
+<h2 id="116-c-programmierung-bits-bytes-nibbles-datentypen">11.6 C-Programmierung: Bits, Bytes, Nibbles &amp; Datentypen<a class="headerlink" href="#116-c-programmierung-bits-bytes-nibbles-datentypen" title="Permanent link">&para;</a></h2>
+<h3 id="binares-zahlensystem">Binäres Zahlensystem<a class="headerlink" href="#binares-zahlensystem" title="Permanent link">&para;</a></h3>
+<p>Im binärem Zahlensystem sind nur 2 Dezimalzahlen vorhanden: die 0 &amp; die 1.<br />
+Es wird bei <span class="arithmatex">\(\mu C\)</span> gebraucht, um Ein- und Ausgänge zu bestimmen und sie auf High or Low zu stellen.</p>
+<ul>
+<li>
+<p><strong>1 Bit:</strong> Ein Bit kann nur zwei Zustände haben: <span class="arithmatex">\(1\)</span> &amp; <span class="arithmatex">\(0\)</span><br />
+<span class="arithmatex">\(\Rightarrow 1000_b\)</span> : Ein Bit, insgesamt 4 Bits</p>
+</li>
+<li>
+<p><strong>1 Nibble:</strong> Ein Nibble besteht aus 4 Bits<br />
+<span class="arithmatex">\(1010_b = 10_d\)</span><br />
+  Der maximale Wert von einem Nibble ist 15.</p>
+</li>
+<li>
+<p><strong>1 Byte:</strong> Ein Byte besteht aus 8 Bits<br />
+<span class="arithmatex">\(10111010_b = 186_d\)</span><br />
+  Der maximale Wert von einem Byte ist 255.</p>
+</li>
+</ul>
+<h3 id="von-binar-zu-dezimal">Von Binär zu Dezimal<a class="headerlink" href="#von-binar-zu-dezimal" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="arithmatex">\(2^7\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(2^6\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(2^5\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(2^4\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(2^3\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(2^2\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(2^1\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(2^0\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+<div class="arithmatex">\[128 + 32 + 16 + 8 + 2\]</div>
+<div class="arithmatex">\[\Downarrow\]</div>
+<div class="arithmatex">\[0 \cdot 2^0 + 1 \cdot 2^1 + 0 \cdot 2^2 + 1 \cdot 2^3 + 1 \cdot 2^4 + 1 \cdot 2^5 + 0 \cdot 2^6 + 1 \cdot 2^7\]</div>
+<hr />
+<hr />
+<h2 id="117-operatoren-in-c-arithmetik-logik">11.7 Operatoren in C (Arithmetik &amp; Logik)<a class="headerlink" href="#117-operatoren-in-c-arithmetik-logik" title="Permanent link">&para;</a></h2>
+<h3 id="vergleichsoperatoren">Vergleichsoperatoren<a class="headerlink" href="#vergleichsoperatoren" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Operator</th>
+<th style="text-align: left;">Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>==</code></td>
+<td style="text-align: left;">Gleichheit</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>!=</code></td>
+<td style="text-align: left;">Ungleichheit</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>&lt;</code></td>
+<td style="text-align: left;">Kleiner als</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>&gt;</code></td>
+<td style="text-align: left;">Grösser als</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>&lt;=</code></td>
+<td style="text-align: left;">kleiner gleich</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>&gt;=</code></td>
+<td style="text-align: left;">Grösser gleich</td>
+</tr>
+</tbody>
+</table>
+<h3 id="zuweisung">Zuweisung<a class="headerlink" href="#zuweisung" title="Permanent link">&para;</a></h3>
+<p><code>=</code> : Weist z.B. einer Variable einen Wert zu</p>
+<h3 id="arithmetische-operatoren">Arithmetische Operatoren<a class="headerlink" href="#arithmetische-operatoren" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Operator</th>
+<th style="text-align: left;">Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>+</code></td>
+<td style="text-align: left;">Addition</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>-</code></td>
+<td style="text-align: left;">Subtraktion</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>*</code></td>
+<td style="text-align: left;">Multiplikation</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>/</code></td>
+<td style="text-align: left;">Ganzzahlige-Division</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>%</code></td>
+<td style="text-align: left;">Modulo-Division (ganzzahliger Rest)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>++_</code></td>
+<td style="text-align: left;">Prä-Inkrement</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>_++</code></td>
+<td style="text-align: left;">Post-Inkrement</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>--_</code></td>
+<td style="text-align: left;">Prä-Dekrement</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>_--</code></td>
+<td style="text-align: left;">Post-Dekrement</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<hr />
+<h2 id="118-schiebeoperatoren-in-c-und">11.8 Schiebeoperatoren in C (&lt;&lt; und &gt;&gt;)<a class="headerlink" href="#118-schiebeoperatoren-in-c-und" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[\text{Variable} \ll 1 = \text{Variable} \cdot 2^1$$
+$$\text{Variable} \ll 2 = \text{Variable} \cdot 2^2$$
+$$\text{Variable} \gg 1 = \text{Variable} / 2^1$$
+$$\text{Variable} \gg 2 = \text{Variable} / 2^2\]</div>
+<hr />
+<h2 id="119-bitmanipulation-in-mikrocontroller-registern">11.9 Bitmanipulation in Mikrocontroller-Registern<a class="headerlink" href="#119-bitmanipulation-in-mikrocontroller-registern" title="Permanent link">&para;</a></h2>
+<p><img alt="Bitmanipulation und Registeroperationen in C" src="../illustrations/bitmanipulation_c_register.svg" /></p>
+<ul>
+<li><strong>Bitweise AND <code>[&amp;]</code></strong> : löscht alle Bits, die in der Maske 0 sind</li>
+<li><strong>Bitweise OR <code>[|]</code></strong> : Setzt alle Bits, die in der Maske 1 sind</li>
+<li><strong>Bitweise XOR <code>[^]</code></strong> : Kehrt alle Bits um, die in der Maske 1 sind</li>
+<li><strong>Bitweise Invertieren <code>[~]</code></strong> : Invertiert die Bits 1 zu 0 und 0 zu 1</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Kanonische Bitmanipulation in C (Mikrocontroller-Standard)</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// 1. Bit n setzen (auf 1):</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">PORTB</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// 2. Bit n löschen (auf 0):</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">PORTB</span><span class="w"> </span><span class="o">&amp;=</span><span class="w"> </span><span class="o">~</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1">// 3. Bit n umschalten (toggeln):</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">PORTB</span><span class="w"> </span><span class="o">^=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1">// 4. Bit n abfragen / prüfen:</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">PINB</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="c1">// Bit n ist 1</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">}</span>
+</span></code></pre></div>
+</div>
+<hr />
+<h2 id="1110-kombinierte-zuweisungsoperatoren">11.10 Kombinierte Zuweisungsoperatoren<a class="headerlink" href="#1110-kombinierte-zuweisungsoperatoren" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Operator</th>
+<th style="text-align: left;">Beispiel</th>
+<th style="text-align: left;">Bedeutung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>+=</code></td>
+<td style="text-align: left;"><code>a += 5</code></td>
+<td style="text-align: left;"><code>a = a + 5</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>&lt;&lt;=</code></td>
+<td style="text-align: left;"><code>a &lt;&lt;= 5</code></td>
+<td style="text-align: left;"><code>a = a &lt;&lt; 5</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>&gt;&gt;=</code></td>
+<td style="text-align: left;"><code>a &gt;&gt;= 5</code></td>
+<td style="text-align: left;"><code>a = a &gt;&gt; 5</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>&amp;=</code></td>
+<td style="text-align: left;"><code>a &amp;= 0x5</code></td>
+<td style="text-align: left;"><code>a = a &amp; 0x5</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>\|=</code></td>
+<td style="text-align: left;"><code>a \|= 0x5</code></td>
+<td style="text-align: left;"><code>a = a \| 0x5</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>^=</code></td>
+<td style="text-align: left;"><code>a ^= 0x5</code></td>
+<td style="text-align: left;"><code>a = a ^ 0x5</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<hr />
+<h2 id="1111-interrupts-interrupt-service-routinen-isr">11.11 Interrupts &amp; Interrupt Service Routinen (ISR)<a class="headerlink" href="#1111-interrupts-interrupt-service-routinen-isr" title="Permanent link">&para;</a></h2>
+<p><img alt="Ablauf eines Mikrocontroller-Interrupts (ISR)" src="../illustrations/interrupt_ablauf_isr.svg" /></p>
+<p>Ein Interrupt ist ein Unterbruch deines Hauptprogramms. In dem ISR wird dann ein Befehl durchgeführt, dieser sollte so kurz wie möglich sein.<br />
+ISR heisst Interrupt Service Routine.<br />
+Die Wiederholungsrate kann man mit dem internen Timer/Trigger steuern.</p>
+<h3 id="beispiel">Beispiel<a class="headerlink" href="#beispiel" title="Permanent link">&para;</a></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">ISR_timer3_overflow</span><span class="p">()</span><span class="w"> </span><span class="n">interrupt</span><span class="w"> </span><span class="mi">14</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">TMR3CN</span><span class="w"> </span><span class="o">&amp;=</span><span class="w"> </span><span class="o">~</span><span class="p">(</span><span class="mh">0x80</span><span class="p">);</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">ticks</span><span class="o">++</span><span class="p">;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>Die meisten Befehle für das Einstellen des Interrupts sind im Manual nachzuschlagen.</p>
+<h3 id="wichtig">Wichtig!<a class="headerlink" href="#wichtig" title="Permanent link">&para;</a></h3>
+<p>Die Variablen im ISR-Befehl sind so zu deklarieren:
+<div class="language-c highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">volatile</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">ticks</span><span class="p">;</span>
+</span></code></pre></div>
+Auch der Datentyp muss logisch gewählt sein.<br />
+Um Fehler zu verhindern, sind Datentypen zu nutzen, die die gleiche Bitanzahl haben wie der (<span class="arithmatex">\(\mu C\)</span>) Mikrocontroller.</p>
+<hr />
+<hr />
+<h2 id="1112-zustandsdiagramme-finite-state-machines-fsm">11.12 Zustandsdiagramme &amp; Finite State Machines (FSM)<a class="headerlink" href="#1112-zustandsdiagramme-finite-state-machines-fsm" title="Permanent link">&para;</a></h2>
+<p><em>(Notiz: in C übersetzen)</em></p>
+<pre class="mermaid"><code>stateDiagram-v2
+    [*] --&gt; Zustand1
+    Zustand1 --&gt; Ueberzustand: Event / Aktion
+    state "Überzustand" as Ueberzustand {
+        [*] --&gt; Zustand2
+        Zustand2 --&gt; Zustand3: Event / Aktion
+        Zustand3 --&gt; Zustand2: Event / Aktion
+    }
+    Ueberzustand --&gt; Zustand1: Event / Aktion (Globaler Rücksprung)</code></pre>
+<p><em>Abbildung: Hierarchisches Zustandsdiagramm (Statechart) mit Überzustand:</em>
+- <em>Startzustand (ausgefüllter Kreis) <span class="arithmatex">\(\rightarrow\)</span> Pfeil nach unten auf <code>Zustand 1</code>.</em>
+- <em>Übergang von <code>Zustand 1</code> in den <code>Überzustand</code> beschriftet mit <span class="arithmatex">\(\frac{\text{Event}}{\text{Aktion}}\)</span>.</em>
+- <em>Innerhalb des Rahmens <code>Überzustand</code>:</em>
+  - <em>Ein interner Startknoten führt zu <code>Zustand 2</code>.</em>
+  - <em>Übergang von <code>Zustand 2</code> zu <code>Zustand 3</code> beschriftet mit <span class="arithmatex">\(\frac{\text{Event}}{\text{Aktion}}\)</span>.</em>
+  - <em>Übergang von <code>Zustand 3</code> zurück zu <code>Zustand 2</code> beschriftet mit <span class="arithmatex">\(\frac{\text{Event}}{\text{Aktion}}\)</span>.</em>
+- <em>Vom äußeren Rahmen des <code>Überzustand</code>s führt ein globaler Rücksprung-Pfeil zu <code>Zustand 1</code>, beschriftet mit <span class="arithmatex">\(\frac{\text{Event}}{\text{Aktion}}\)</span>.</em></p>
+<p>Beim Überzustand ist es so, dass jeder Zustand im Überzustand zum Zustand 1 eine Verbindung hat.</p>
+<hr />
+<hr />
+<h2 id="1113-zahlensysteme-bcd-code-komplementdarstellung">11.13 Zahlensysteme, BCD-Code &amp; Komplementdarstellung<a class="headerlink" href="#1113-zahlensysteme-bcd-code-komplementdarstellung" title="Permanent link">&para;</a></h2>
+<p>In der Mikrocontrollertechnik werden Zahlen primär binär und hexadezimal verarbeitet:</p>
+<p><img alt="Zahlensysteme Register und Nibbles" src="../illustrations/lerndoku/Zahlensysteme_image4.png" /></p>
+<ul>
+<li><strong>1 Byte = 8 Bit:</strong> Aufteilung in High-Nibble (Bits 7..4) und Low-Nibble (Bits 3..0).
+  Beispiel: <span class="arithmatex">\(1010\,1100_2 = \text{0xAC} = 172_{10}\)</span>.</li>
+<li><strong>BCD-Code (Binary Coded Decimal):</strong> Jede Dezimalziffer (<span class="arithmatex">\(0\dots 9\)</span>) wird einzeln durch 4 Bit codiert.</li>
+<li><strong>Zweierkomplement für negative Zahlen:</strong>
+  Um eine negative Zahl darzustellen:</li>
+<li>Alle Bits invertieren (Einerkomplement).</li>
+<li><span class="arithmatex">\(+1\)</span> addieren.</li>
+<li>Der Wertebereich einer vorzeichenbehafteten 8-Bit-Zahl (<code>int8_t</code>) reicht von <span class="arithmatex">\(-128\)</span> bis <span class="arithmatex">\(+127\)</span>.</li>
+</ul>
+<h2 id="1114-boolesche-algebra-rechengesetze-logikminimierung">11.14 Boolesche Algebra: Rechengesetze &amp; Logikminimierung<a class="headerlink" href="#1114-boolesche-algebra-rechengesetze-logikminimierung" title="Permanent link">&para;</a></h2>
+<h3 id="fundamentale-rechenregeln">Fundamentale Rechenregeln<a class="headerlink" href="#fundamentale-rechenregeln" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Rechengesetz</th>
+<th style="text-align: left;">UND-Verknüpfung</th>
+<th style="text-align: left;">ODER-Verknüpfung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Neutralität</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(a \cdot 1 = a \qquad a \cdot 0 = 0\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(a + 0 = a \qquad a + 1 = 1\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Idempotenz</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(a \cdot a = a\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(a + a = a\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Komplementarität</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(a \cdot \overline{a} = 0\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(a + \overline{a} = 1\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Doppelte Negation</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(\overline{\overline{a}} = a\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\overline{\overline{a}} = a\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Kommutativgesetz</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(a \cdot b = b \cdot a\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(a + b = b + a\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Assoziativgesetz</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\((a \cdot b) \cdot c = a \cdot (b \cdot c)\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\((a + b) + c = a + (b + c)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Distributivgesetz</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(a \cdot (b + c) = a \cdot b + a \cdot c\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(a + (b \cdot c) = (a + b) \cdot (a + c)\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>De Morgansche Gesetze</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(\mathbf{\overline{a \cdot b} = \overline{a} + \overline{b}}\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\mathbf{\overline{a + b} = \overline{a} \cdot \overline{b}}\)</span></td>
+</tr>
+</tbody>
+</table>
+<h2 id="1115-logikgatter-grundtypen-wahrheitstabellen">11.15 Logikgatter: Grundtypen &amp; Wahrheitstabellen<a class="headerlink" href="#1115-logikgatter-grundtypen-wahrheitstabellen" title="Permanent link">&para;</a></h2>
+<p><img alt="Logikgatter Symbole und Gatter" src="../illustrations/lerndoku/Logikgatter_image4.png" /></p>
+<ul>
+<li><strong>NAND &amp; NOR als Universalgatter:</strong> Jede beliebige logische Schaltung lässt sich ausschließlich aus NAND-Gattern oder ausschließlich aus NOR-Gattern aufbauen.</li>
+<li><strong>XOR (Antivalenz):</strong> Ausgang ist 1, wenn ungleiche Eingangspegel anliegen. Dient als 1-Bit-Halbaddierer und Paritätsgenerator.</li>
+</ul>
+<h2 id="1116-bistabile-kippstufen-flip-flops-rs-d-jk-t">11.16 Bistabile Kippstufen: Flip-Flops (RS, D, JK, T)<a class="headerlink" href="#1116-bistabile-kippstufen-flip-flops-rs-d-jk-t" title="Permanent link">&para;</a></h2>
+<p>Flip-Flops sind die fundamentalen 1-Bit-Speicherelemente der Digitaltechnik.</p>
+<p><img alt="Flip-Flop Typen und Taktsymbole" src="../illustrations/lerndoku/Flip-Flops_image4.png" /></p>
+<p><img alt="Mealy- und Moore-Automat Zustandsübergangsdiagramm" src="../illustrations/lerndoku/Zustandsdiagramm_image4.png" /></p>
+<p><img alt="Praktisches Zustandsdiagramm einer Ablaufsteuerung" src="../illustrations/lerndoku/Zustandsdiagramm_image5.png" /></p>
+<ol>
+<li><strong>RS-Flip-Flop:</strong> Setzen (<span class="arithmatex">\(S=1\)</span>) und Rücksetzen (<span class="arithmatex">\(R=1\)</span>). Der Zustand <span class="arithmatex">\(S=1, R=1\)</span> ist verboten (undefinierter Folgezustand).</li>
+<li><strong>D-Flip-Flop (Data / Delay):</strong> Übernimmt bei einer Taktflanke (<span class="arithmatex">\(\uparrow\)</span>) den Zustand am Eingang <span class="arithmatex">\(D\)</span> an den Ausgang <span class="arithmatex">\(Q\)</span>.</li>
+<li><strong>JK-Flip-Flop:</strong> Universelles Flip-Flop ohne verbotenen Zustand. Bei <span class="arithmatex">\(J=1, K=1\)</span> invertiert der Ausgang bei jeder Taktflanke (<strong>Toggle-Modus</strong>).</li>
+<li><strong>T-Flip-Flop (Toggle):</strong> Schaltet bei jeder aktiven Taktflanke um <span class="arithmatex">\(\implies\)</span> Frequenzhalbierer / Dualzähler.</li>
+</ol>
+<h2 id="1117-c-programmierung-fur-mikrocontroller-arrays-funktionen-schleifen">11.17 C-Programmierung für Mikrocontroller: Arrays, Funktionen &amp; Schleifen<a class="headerlink" href="#1117-c-programmierung-fur-mikrocontroller-arrays-funktionen-schleifen" title="Permanent link">&para;</a></h2>
+<p>In eingebetteten Systemen bestimmt die Speicheranordnung von Datenfeldern und Programmablaufstrukturen direkt die Rechenzeit und Latenz:</p>
+<p><img alt="C-Arrays und Pointer-Adressierung im RAM" src="../illustrations/lerndoku/Array_image4.png" /></p>
+<p><img alt="Programmablaufpläne für C-Steuerstrukturen" src="../illustrations/lerndoku/Programmschleifen_image4.png" /></p>
+<h3 id="1-eindimensionale-zweidimensionale-arrays">1. Eindimensionale &amp; zweidimensionale Arrays<a class="headerlink" href="#1-eindimensionale-zweidimensionale-arrays" title="Permanent link">&para;</a></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">uint8_t</span><span class="w"> </span><span class="n">messwerte</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">35</span><span class="p">};</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kt">uint8_t</span><span class="w"> </span><span class="n">matrix</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">}</span><span class="w"> </span><span class="p">};</span>
+</span></code></pre></div>
+<h3 id="2-funktionen-parameterubergabe">2. Funktionen &amp; Parameterübergabe<a class="headerlink" href="#2-funktionen-parameterubergabe" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Call-by-Value:</strong> Kopie des Wertes wird übergeben.</li>
+<li><strong>Call-by-Reference (über Zeiger):</strong> Adresse der Variablen wird übergeben; Originalwert kann direkt modifiziert werden:
+<div class="language-c highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">adc_kalibrieren</span><span class="p">(</span><span class="kt">uint16_t</span><span class="w"> </span><span class="o">*</span><span class="n">raw_val</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">offset</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="o">*</span><span class="n">raw_val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">uint16_t</span><span class="p">)(</span><span class="o">*</span><span class="n">raw_val</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1.02f</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">offset</span><span class="p">);</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">}</span>
+</span></code></pre></div></li>
+</ul>
+<h3 id="3-header-dateien-include-guards">3. Header-Dateien &amp; Include-Guards<a class="headerlink" href="#3-header-dateien-include-guards" title="Permanent link">&para;</a></h3>
+<p>Jede Header-Datei (<code>.h</code>) muss gegen Mehrfach-Inkludierung geschützt werden:
+<div class="language-c highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cp">#ifndef MY_DRIVER_H</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="cp">#define MY_DRIVER_H</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdint.h&gt;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">timer0_init</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="cp">#endif </span><span class="cm">/* MY_DRIVER_H */</span>
+</span></code></pre></div></p>
+<h2 id="1118-mikrocontroller-konfiguration-peripherie-c8051f31x">11.18 Mikrocontroller-Konfiguration &amp; Peripherie (C8051F31x)<a class="headerlink" href="#1118-mikrocontroller-konfiguration-peripherie-c8051f31x" title="Permanent link">&para;</a></h2>
+<p>Bei 8051-Derivaten (wie dem Silicon Labs C8051F310) müssen Systemtakt, Port-I/O und die digitale <strong>Crossbar-Matrix</strong> explizit initialisiert werden:</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">// Oszillator auf internen 24.5 MHz Takt konfigurieren</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">OSCICN</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="mh">0x03</span><span class="p">;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="c1">// Crossbar aktivieren und Port 0 Pins als Push-Pull konfigurieren</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="n">P0MDOUT</span><span class="w"> </span><span class="o">|=</span><span class="w"> </span><span class="mh">0x0F</span><span class="p">;</span><span class="w">   </span><span class="c1">// P0.0 bis P0.3 als digitale Push-Pull-Ausgänge</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="n">XBR1</span><span class="w">    </span><span class="o">|=</span><span class="w"> </span><span class="mh">0x40</span><span class="p">;</span><span class="w">   </span><span class="c1">// Crossbar Enable</span>
+</span></code></pre></div>
+<h3 id="software-flankenerkennung-edge-detection">Software-Flankenerkennung (Edge Detection)<a class="headerlink" href="#software-flankenerkennung-edge-detection" title="Permanent link">&para;</a></h3>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">static</span><span class="w"> </span><span class="n">bit</span><span class="w"> </span><span class="n">taste_alt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="n">bit</span><span class="w"> </span><span class="n">taste_aktuell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P0_1</span><span class="p">;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="c1">// Positive Flanke (Übergang 0 -&gt; 1)</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">taste_aktuell</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">taste_alt</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="n">led_toggle</span><span class="p">();</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">}</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="n">taste_alt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">taste_aktuell</span><span class="p">;</span>
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

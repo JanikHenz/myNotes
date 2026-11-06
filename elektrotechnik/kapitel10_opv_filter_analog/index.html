@@ -1,0 +1,2827 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Janik Henz's Wissensdatenbank, Elektrotechnik-Referenzhandbuch & Projektnotizen">
+      
+      
+        <meta name="author" content="Janik Henz">
+      
+      
+        <link rel="canonical" href="https://JanikHenz.github.io/myNotes/elektrotechnik/kapitel10_opv_filter_analog/">
+      
+      
+        <link rel="prev" href="../kapitel09_transistoren_schaltungen/">
+      
+      
+        <link rel="next" href="../kapitel11_digitaltechnik_mikrocontroller/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>10. OPVs, Filter & Signalverarbeitung - myNotes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kapitel-10-operationsverstarker-filter-signalverarbeitung" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../.." title="myNotes" class="md-header__button md-logo" aria-label="myNotes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            myNotes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              10. OPVs, Filter & Signalverarbeitung
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-label="Heller Modus"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Heller Modus" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-label="Dunkler Modus"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dunkler Modus" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/JanikHenz/myNotes" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    JanikHenz/myNotes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="myNotes" class="md-nav__button md-logo" aria-label="myNotes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    myNotes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/JanikHenz/myNotes" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    JanikHenz/myNotes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elektrotechnik
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Elektrotechnik
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht & Download
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel01_mathematik/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Mathematik & Vektoren
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel02_elektrostatik_felder/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Elektrostatik & Felder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel03_kondensatoren/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Kondensatoren
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel04_gleichstrom_netzwerke/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Gleichstromtechnik
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel05_magnetismus_spulen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Magnetismus & Spulen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel06_messtechnik_sicherheit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Messtechnik & Sicherheit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel07_passive_bauelemente/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Passive Bauelemente & Fertigung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel08_dioden_halbleiter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Dioden & Halbleiter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel09_transistoren_schaltungen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Transistoren & Schaltungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. OPVs, Filter & Signalverarbeitung
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. OPVs, Filter & Signalverarbeitung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#101-vierpol-grundlagen-verstarkung-dampfung-in-dezibel-db" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Vierpol-Grundlagen: Verstärkung &amp; Dämpfung in Dezibel [dB]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.1 Vierpol-Grundlagen: Verstärkung &amp; Dämpfung in Dezibel [dB]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verstarkung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verstärkung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dampfung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dämpfung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bsp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bsp.:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102-der-ideale-operationsverstarker-opv-kennwerte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 Der ideale Operationsverstärker (OPV): Kennwerte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.2 Der ideale Operationsverstärker (OPV): Kennwerte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schaltsymbol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schaltsymbol
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eigenschaften-idealer-operationsverstarker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eigenschaften idealer Operationsverstärker
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#103-opv-gegenkopplung-mit-widerstanden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 OPV-Gegenkopplung mit Widerständen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#104-der-nicht-invertierende-verstarker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4 Der nicht-invertierende Verstärker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#105-der-impedanzwandler-spannungsfolger-buffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.5 Der Impedanzwandler (Spannungsfolger / Buffer)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#106-der-subtrahierende-verstarker-differenzverstarker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.6 Der subtrahierende Verstärker (Differenzverstärker)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#107-der-invertierende-verstarker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.7 Der invertierende Verstärker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#108-der-addierende-verstarker-summierer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.8 Der addierende Verstärker (Summierer)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#109-frequenzabhangiger-spannungsteiler-bode-diagramm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.9 Frequenzabhängiger Spannungsteiler &amp; Bode-Diagramm
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.9 Frequenzabhängiger Spannungsteiler &amp; Bode-Diagramm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hochpass-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hochpass-Filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1010-passiver-rc-tiefpass-1-ordnung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.10 Passiver RC-Tiefpass 1. Ordnung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1011-passive-tiefpasse-lr-rc-tiefpass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.11 Passive Tiefpässe (LR- &amp; RC-Tiefpass)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.11 Passive Tiefpässe (LR- &amp; RC-Tiefpass)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lr-tiefpass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LR-Tiefpass
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc-tiefpass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RC-Tiefpass
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1012-passive-hochpasse-rl-cr-hochpass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.12 Passive Hochpässe (RL- &amp; CR-Hochpass)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.12 Passive Hochpässe (RL- &amp; CR-Hochpass)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rl-hochpass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RL-Hochpass
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cr-hochpass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CR-Hochpass
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1013-lineare-spannungsregler-festspannungsregler-78xx-lm317" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.13 Lineare Spannungsregler (Festspannungsregler 78xx / LM317)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.13 Lineare Spannungsregler (Festspannungsregler 78xx / LM317)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funktionsweise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funktionsweise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verlustleistung-kuhlkorperberechnung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verlustleistung &amp; Kühlkörperberechnung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1014-schaltregler-buck-konverter-tiefsetzsteller-step-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.14 Schaltregler: Buck-Konverter (Tiefsetzsteller / Step-Down)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.14 Schaltregler: Buck-Konverter (Tiefsetzsteller / Step-Down)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schaltungsaufbau-arbeitsphasen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schaltungsaufbau &amp; Arbeitsphasen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mathematische-ausgangsspannung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mathematische Ausgangsspannung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1015-schaltregler-boost-konverter-hochsetzsteller-step-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.15 Schaltregler: Boost-Konverter (Hochsetzsteller / Step-Up)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.15 Schaltregler: Boost-Konverter (Hochsetzsteller / Step-Up)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arbeitsphasen-spannungsubersetzung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arbeitsphasen &amp; Spannungsübersetzung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1016-der-ne555-timer-schaltungen-dimensionierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.16 Der NE555 Timer: Schaltungen &amp; Dimensionierung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.16 Der NE555 Timer: Schaltungen &amp; Dimensionierung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-astabile-kippstufe-taktgenerator-oszillator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Astabile Kippstufe (Taktgenerator / Oszillator)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-monostabile-kippstufe-monoflop-zeitrelais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Monostabile Kippstufe (Monoflop / Zeitrelais)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1017-der-schmitt-trigger-schalthysterese-signalformung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.17 Der Schmitt-Trigger: Schalthysterese &amp; Signalformung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1018-da-und-ad-wandler-dac-adc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.18 D/A- und A/D-Wandler (DAC &amp; ADC)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.18 D/A- und A/D-Wandler (DAC &amp; ADC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-da-wandler-digital-to-analog-converter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. D/A-Wandler (Digital-to-Analog Converter)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ad-wandler-analog-to-digital-converter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. A/D-Wandler (Analog-to-Digital Converter)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1019-filter-hoherer-ordnung-bandpasse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.19 Filter höherer Ordnung &amp; Bandpässe
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.19 Filter höherer Ordnung &amp; Bandpässe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filter-kaskadieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filter kaskadieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel11_digitaltechnik_mikrocontroller/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Digitaltechnik & Mikrocontroller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel12_hochspannung_praxis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Hochspannungstechnik (EMC Partner)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../anhang_formelsammlung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anhang: Formelsammlung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../komplett/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vollständiges Skript
+  
+
+    
+      <br>
+      <small>Vollständiges Referenzhandbuch & Formelsammlung</small>
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--completed"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IP5
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IP5
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/projectdeclaration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projektvereinbarung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/risks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risiken
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/helper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Helper
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/milestone01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meilenstein 01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/milestone02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meilenstein 02
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    C++
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week45/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 45
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week46/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 46
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week47/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 47
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week48/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 48
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week49/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 49
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Weitere Notizen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Weitere Notizen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vesys/week01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VeSys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wosm/week01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WoSM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Allgemein
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#101-vierpol-grundlagen-verstarkung-dampfung-in-dezibel-db" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 Vierpol-Grundlagen: Verstärkung &amp; Dämpfung in Dezibel [dB]
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.1 Vierpol-Grundlagen: Verstärkung &amp; Dämpfung in Dezibel [dB]">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verstarkung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verstärkung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dampfung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dämpfung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bsp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bsp.:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102-der-ideale-operationsverstarker-opv-kennwerte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 Der ideale Operationsverstärker (OPV): Kennwerte
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.2 Der ideale Operationsverstärker (OPV): Kennwerte">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schaltsymbol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schaltsymbol
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eigenschaften-idealer-operationsverstarker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Eigenschaften idealer Operationsverstärker
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#103-opv-gegenkopplung-mit-widerstanden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.3 OPV-Gegenkopplung mit Widerständen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#104-der-nicht-invertierende-verstarker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.4 Der nicht-invertierende Verstärker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#105-der-impedanzwandler-spannungsfolger-buffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.5 Der Impedanzwandler (Spannungsfolger / Buffer)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#106-der-subtrahierende-verstarker-differenzverstarker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.6 Der subtrahierende Verstärker (Differenzverstärker)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#107-der-invertierende-verstarker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.7 Der invertierende Verstärker
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#108-der-addierende-verstarker-summierer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.8 Der addierende Verstärker (Summierer)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#109-frequenzabhangiger-spannungsteiler-bode-diagramm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.9 Frequenzabhängiger Spannungsteiler &amp; Bode-Diagramm
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.9 Frequenzabhängiger Spannungsteiler &amp; Bode-Diagramm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hochpass-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hochpass-Filter
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1010-passiver-rc-tiefpass-1-ordnung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.10 Passiver RC-Tiefpass 1. Ordnung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1011-passive-tiefpasse-lr-rc-tiefpass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.11 Passive Tiefpässe (LR- &amp; RC-Tiefpass)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.11 Passive Tiefpässe (LR- &amp; RC-Tiefpass)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lr-tiefpass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LR-Tiefpass
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc-tiefpass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RC-Tiefpass
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1012-passive-hochpasse-rl-cr-hochpass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.12 Passive Hochpässe (RL- &amp; CR-Hochpass)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.12 Passive Hochpässe (RL- &amp; CR-Hochpass)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rl-hochpass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RL-Hochpass
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cr-hochpass" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CR-Hochpass
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1013-lineare-spannungsregler-festspannungsregler-78xx-lm317" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.13 Lineare Spannungsregler (Festspannungsregler 78xx / LM317)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.13 Lineare Spannungsregler (Festspannungsregler 78xx / LM317)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funktionsweise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funktionsweise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verlustleistung-kuhlkorperberechnung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verlustleistung &amp; Kühlkörperberechnung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1014-schaltregler-buck-konverter-tiefsetzsteller-step-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.14 Schaltregler: Buck-Konverter (Tiefsetzsteller / Step-Down)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.14 Schaltregler: Buck-Konverter (Tiefsetzsteller / Step-Down)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schaltungsaufbau-arbeitsphasen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schaltungsaufbau &amp; Arbeitsphasen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mathematische-ausgangsspannung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mathematische Ausgangsspannung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1015-schaltregler-boost-konverter-hochsetzsteller-step-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.15 Schaltregler: Boost-Konverter (Hochsetzsteller / Step-Up)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.15 Schaltregler: Boost-Konverter (Hochsetzsteller / Step-Up)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arbeitsphasen-spannungsubersetzung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arbeitsphasen &amp; Spannungsübersetzung
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1016-der-ne555-timer-schaltungen-dimensionierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.16 Der NE555 Timer: Schaltungen &amp; Dimensionierung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.16 Der NE555 Timer: Schaltungen &amp; Dimensionierung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-astabile-kippstufe-taktgenerator-oszillator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Astabile Kippstufe (Taktgenerator / Oszillator)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-monostabile-kippstufe-monoflop-zeitrelais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Monostabile Kippstufe (Monoflop / Zeitrelais)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1017-der-schmitt-trigger-schalthysterese-signalformung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.17 Der Schmitt-Trigger: Schalthysterese &amp; Signalformung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1018-da-und-ad-wandler-dac-adc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.18 D/A- und A/D-Wandler (DAC &amp; ADC)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.18 D/A- und A/D-Wandler (DAC &amp; ADC)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-da-wandler-digital-to-analog-converter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. D/A-Wandler (Digital-to-Analog Converter)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ad-wandler-analog-to-digital-converter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. A/D-Wandler (Analog-to-Digital Converter)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1019-filter-hoherer-ordnung-bandpasse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.19 Filter höherer Ordnung &amp; Bandpässe
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10.19 Filter höherer Ordnung &amp; Bandpässe">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filter-kaskadieren" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filter kaskadieren
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="kapitel-10-operationsverstarker-filter-signalverarbeitung">Kapitel 10: Operationsverstärker, Filter &amp; Signalverarbeitung<a class="headerlink" href="#kapitel-10-operationsverstarker-filter-signalverarbeitung" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Überblick</p>
+<p>Dezibel [dB], OPV-Grundregeln, Grundschaltungen, RC-Tiefpass und Hochpassfilter.</p>
+</div>
+<h2 id="101-vierpol-grundlagen-verstarkung-dampfung-in-dezibel-db">10.1 Vierpol-Grundlagen: Verstärkung &amp; Dämpfung in Dezibel [dB]<a class="headerlink" href="#101-vierpol-grundlagen-verstarkung-dampfung-in-dezibel-db" title="Permanent link">&para;</a></h2>
+<h3 id="verstarkung">Verstärkung<a class="headerlink" href="#verstarkung" title="Permanent link">&para;</a></h3>
+<p>Die Verstärkung wird mit <span class="arithmatex">\(V\)</span>, <span class="arithmatex">\(V_{dB}\)</span> bezeichnet und in <span class="arithmatex">\([1]\)</span>, <span class="arithmatex">\([\text{dB}]\)</span> gegeben.</p>
+<p><strong>Formel:</strong></p>
+<div class="arithmatex">\[V_{dB} = 20 \cdot \log_{10}(V)\]</div>
+<p>mit <span class="arithmatex">\(V = \frac{U_a}{U_e}\)</span>, Rückrechnung: <span class="arithmatex">\(V = 10^{\left(\frac{V_{dB}}{20}\right)}\)</span></p>
+<ul>
+<li><span class="arithmatex">\(U_e\)</span>: Spannung am Eingang</li>
+<li><span class="arithmatex">\(U_a\)</span>: Spannung am Ausgang</li>
+</ul>
+<hr />
+<h3 id="dampfung">Dämpfung<a class="headerlink" href="#dampfung" title="Permanent link">&para;</a></h3>
+<p>Die Dämpfung wird mit <span class="arithmatex">\(D_{dB}\)</span> bezeichnet und in <span class="arithmatex">\([\text{dB}]\)</span> angegeben.</p>
+<p><strong>Formel:</strong></p>
+<div class="arithmatex">\[D_{dB} = 20 \cdot \log_{10}(D)\]</div>
+<p>mit <span class="arithmatex">\(D = \frac{U_e}{U_a}\)</span>, Rückrechnung: <span class="arithmatex">\(D = 10^{\left(\frac{D_{dB}}{20}\right)}\)</span></p>
+<hr />
+<h3 id="bsp">Bsp.:<a class="headerlink" href="#bsp" title="Permanent link">&para;</a></h3>
+<p><img alt="Vierpol-Grundmodell (Verstärkung und Dämpfung in dB)" src="../illustrations/vierpol_verstaerkung_daempfung.svg" /></p>
+<p><em>Abbildung: Vierpol mit Eingangsklemmen für Eingangsspannung <span class="arithmatex">\(U_e\)</span> und Ausgangsklemmen für Ausgangsspannung <span class="arithmatex">\(U_a\)</span>.</em></p>
+<div class="arithmatex">\[U_e = 0{,}1\,\text{V}$$
+$$U_a = 10\,\text{V}\]</div>
+<div class="arithmatex">\[V = \frac{U_a}{U_e} = \frac{10\,\text{V}}{0{,}1\,\text{V}} = 100\]</div>
+<div class="arithmatex">\[V_{dB} = 20 \cdot \log_{10}(V) = 20 \cdot \log_{10}\left(\frac{10\,\text{V}}{0{,}1\,\text{V}}\right) = 20 \cdot \log_{10}(100) = 40\,\text{dB}\]</div>
+<p>Es wird also <span class="arithmatex">\(40\,\text{dB}\)</span> verstärkt.</p>
+<p>Die Verstärkung <span class="arithmatex">\(V\)</span> ist ein Faktor, dies kann man aber in dB umrechnen.</p>
+<div class="arithmatex">\[V_{dB} = 20 \cdot \log_{10}(V) \quad \text{wobei} \quad V = \frac{U_a}{U_e} \text{ ist.}\]</div>
+<p>Die Angabe <span class="arithmatex">\(V_{dB}\)</span> gilt aber nur für <span class="arithmatex">\(U\)</span> &amp; <span class="arithmatex">\(I\)</span>.</p>
+<hr />
+<h2 id="102-der-ideale-operationsverstarker-opv-kennwerte">10.2 Der ideale Operationsverstärker (OPV): Kennwerte<a class="headerlink" href="#102-der-ideale-operationsverstarker-opv-kennwerte" title="Permanent link">&para;</a></h2>
+<p><img alt="Idealer Operationsverstärker" src="../illustrations/seite91_opamp_symbol.svg" /></p>
+<p>Der Operationsverstärker verstärkt die Spannung aber der OP hat verschiedene Eigenschaften je nach Einbau.</p>
+<h3 id="schaltsymbol">Schaltsymbol<a class="headerlink" href="#schaltsymbol" title="Permanent link">&para;</a></h3>
+<p><em>Abbildung: n: Zwei gebräuchliche Schaltsymbole für den Operationsverstärker:
+- Links: Dreieckssymbol mit invertierendem (<span class="arithmatex">\(-\)</span>) und nicht-invertierendem (<span class="arithmatex">\(+\)</span>) Eingang links und Ausgang rechts.
+- Rechts: Rechteckiges Symbol nach DIN/IEC mit Kennzeichnung der Eingänge <span class="arithmatex">\(-\)</span> und <span class="arithmatex">\(+\)</span> und Ausgang rechts.</em></p>
+<hr />
+<h3 id="eigenschaften-idealer-operationsverstarker">Eigenschaften idealer Operationsverstärker<a class="headerlink" href="#eigenschaften-idealer-operationsverstarker" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[V_0 = \infty$$
+$$R_i = \infty$$
+$$I_p = I_n = 0\,\text{mA}$$
+$$R_a = 0$$
+$$V_0 = \frac{U_a}{U_d} = \infty\]</div>
+<p><em>Abbildung: Idealer Operationsverstärker:
+Zwei Eingänge: nicht-invertierender Eingang (<span class="arithmatex">\(+\)</span>) und invertierender Eingang (<span class="arithmatex">\(-\)</span>).
+Eingangsströme <span class="arithmatex">\(I_p\)</span> und <span class="arithmatex">\(I_n\)</span> fließen in die jeweiligen Eingänge (<span class="arithmatex">\(I_p = I_n = 0\)</span>).
+Differenzspannung <span class="arithmatex">\(U_d\)</span> liegt zwischen den Eingängen.
+Eingangsspannungen jeweils gegen Masse bezogen.
+Ausgangsspannung <span class="arithmatex">\(U_a\)</span> liegt am Ausgang gegen Masse an.</em></p>
+<div class="admonition warning">
+<p class="admonition-title">Die beiden Goldenen Regeln des idealen Operationsverstärkers (bei Gegenkopplung)</p>
+<ol>
+<li><strong>Virtueller Kurzschluss:</strong> Die Differenzeingangsspannung ist null:
+   $<span class="arithmatex">\(U_d = U_+ - U_- = 0 \implies U_+ = U_-\)</span>$</li>
+<li><strong>Kein Eingangsstrom:</strong> Wegen des unendlich hohen Eingangswiderstandes (<span class="arithmatex">\(r_e \to \infty\)</span>) fließen keine Ströme in die Eingänge:
+   $<span class="arithmatex">\(I_+ = I_- = 0\)</span>$</li>
+</ol>
+</div>
+<hr />
+<h2 id="103-opv-gegenkopplung-mit-widerstanden">10.3 OPV-Gegenkopplung mit Widerständen<a class="headerlink" href="#103-opv-gegenkopplung-mit-widerstanden" title="Permanent link">&para;</a></h2>
+<p><img alt="OP-Gegenkopplung mit Widerständen" src="../illustrations/opamp_gegenkopplung_widerstaende.svg" /></p>
+<p>Das sorgt für eine kontrollierte Gegenkopplung und Verstärkung, deren Teilerverhältnis auf dem Prinzip des [[#4.9 Spannungsteiler (unbelastet &amp; belastet) &amp; Stromteiler|Spannungsteilers]] beruht.</p>
+<p><em>Abbildung: Nicht-invertierender Operationsverstärker mit Gegenkopplung:
+Eingangsspannung <span class="arithmatex">\(U_e\)</span> liegt am nicht-invertierenden Eingang (<span class="arithmatex">\(+\)</span>) gegen Masse.
+Differenzspannung <span class="arithmatex">\(U_d\)</span> liegt zwischen den Eingängen (<span class="arithmatex">\(+\)</span>) und (<span class="arithmatex">\(-\)</span>).
+Eingangsströme: <span class="arithmatex">\(I_p\)</span> fließt in den <span class="arithmatex">\((+)\)</span> Eingang, <span class="arithmatex">\(I_n\)</span> fließt in den <span class="arithmatex">\((-)\)</span> Eingang.
+Vom Ausgang führt ein Gegenkopplungswiderstand <span class="arithmatex">\(R_2\)</span> (Spannung <span class="arithmatex">\(U_{R2}\)</span>, Strom <span class="arithmatex">\(I_2\)</span>) zurück auf den invertierenden Eingang (<span class="arithmatex">\(-\)</span>).
+Vom invertierenden Eingang führt ein Widerstand <span class="arithmatex">\(R_1\)</span> (Spannung <span class="arithmatex">\(U_{R1}\)</span>, Strom <span class="arithmatex">\(I_1\)</span>) nach Masse.
+Ausgangsspannung <span class="arithmatex">\(U_a\)</span> liegt am Ausgang gegen Masse an.</em></p>
+<hr />
+<hr />
+<h2 id="104-der-nicht-invertierende-verstarker">10.4 Der nicht-invertierende Verstärker<a class="headerlink" href="#104-der-nicht-invertierende-verstarker" title="Permanent link">&para;</a></h2>
+<p><img alt="Nicht-invertierender Operationsverstärker" src="../illustrations/seite92_nicht_invertierender_verstaerker.svg" /></p>
+<div class="arithmatex">\[U_d = 0\]</div>
+<p><em>Abbildung: Nicht-invertierender Operationsverstärker:
+Eingangsspannung <span class="arithmatex">\(U_e\)</span> liegt am nicht-invertierenden Eingang (<span class="arithmatex">\(+\)</span>) gegen Masse.
+Differenzspannung <span class="arithmatex">\(U_d = 0\)</span> zwischen den Eingängen (<span class="arithmatex">\(+\)</span>) und (<span class="arithmatex">\(-\)</span>).
+Gegenkopplung vom Ausgang über Widerstand <span class="arithmatex">\(R_1\)</span> auf den invertierenden Eingang (<span class="arithmatex">\(-\)</span>).
+Vom invertierenden Eingang führt Widerstand <span class="arithmatex">\(R_2\)</span> nach Masse.
+Ausgangsspannung <span class="arithmatex">\(U_a\)</span> am Ausgang gegen Masse.</em></p>
+<div class="arithmatex">\[U_a = U_e \left(1 + \frac{R_1}{R_2}\right)\]</div>
+<div class="arithmatex">\[V = \frac{U_a}{U_e} = 1 + \frac{R_1}{R_2} \implies R_2 = \frac{R_1}{(V - 1)}\]</div>
+<hr />
+<hr />
+<h2 id="105-der-impedanzwandler-spannungsfolger-buffer">10.5 Der Impedanzwandler (Spannungsfolger / Buffer)<a class="headerlink" href="#105-der-impedanzwandler-spannungsfolger-buffer" title="Permanent link">&para;</a></h2>
+<p><img alt="Operationsverstärker als Impedanzwandler / Spannungsfolger" src="../illustrations/opamp_impedanzwandler_buffer.svg" /></p>
+<div class="arithmatex">\[U_e = U_a$$
+$$V = 1\]</div>
+<p><em>Abbildung: Impedanzwandler / Spannungsfolger:
+Eingangsspannung <span class="arithmatex">\(U_e\)</span> liegt am nicht-invertierenden Eingang (<span class="arithmatex">\(+\)</span>) an.
+Der Ausgang ist direkt mit dem invertierenden Eingang (<span class="arithmatex">\(-\)</span>) kurzgeschlossen (100% Gegenkopplung).
+Ausgangsspannung <span class="arithmatex">\(U_a\)</span> steht am Ausgang an.</em></p>
+<p>Der Impedanzwandler ist dafür da, um die Schaltung zuvor unbelastet zu lassen, z.B. bei einer R2R Schaltung.</p>
+<hr />
+<h2 id="106-der-subtrahierende-verstarker-differenzverstarker">10.6 Der subtrahierende Verstärker (Differenzverstärker)<a class="headerlink" href="#106-der-subtrahierende-verstarker-differenzverstarker" title="Permanent link">&para;</a></h2>
+<p><img alt="Subtrahierender Operationsverstärker" src="../illustrations/seite93_subtrahierer.svg" /></p>
+<p><em>Abbildung: Subtrahierverstärker / Differenzverstärker:
+- Invertierender Zweig: Eingangsspannung <span class="arithmatex">\(U_{e2}\)</span> führt über Vorwiderstand <span class="arithmatex">\(R_3\)</span> (Spannungsabfall <span class="arithmatex">\(U_{R3}\)</span>, Strom <span class="arithmatex">\(I_2\)</span>) an den Eingang (<span class="arithmatex">\(-\)</span>). Rückkopplungswiderstand <span class="arithmatex">\(R_4\)</span> (Spannungsabfall <span class="arithmatex">\(U_{R4}\)</span>, Strom <span class="arithmatex">\(I_2\)</span>) verbindet Ausgang und Eingang (<span class="arithmatex">\(-\)</span>). Eingangsstrom <span class="arithmatex">\(I_n = 0\,\text{A}\)</span>.
+- Nicht-invertierender Zweig: Eingangsspannung <span class="arithmatex">\(U_{e1}\)</span> führt über Vorwiderstand <span class="arithmatex">\(R_1\)</span> (Strom <span class="arithmatex">\(I_1\)</span>) an den Eingang (<span class="arithmatex">\(+\)</span>). Von dort führt Widerstand <span class="arithmatex">\(R_2\)</span> (Spannungsabfall <span class="arithmatex">\(U_{R2}\)</span>, Strom <span class="arithmatex">\(I_1\)</span>) nach Masse. Eingangsstrom <span class="arithmatex">\(I_p = 0\,\text{A}\)</span>.
+- Differenzspannung <span class="arithmatex">\(U_d = 0\,\text{V}\)</span> zwischen invertierendem und nicht-invertierendem Eingang.
+- Ausgangsspannung <span class="arithmatex">\(U_a\)</span> gegen Masse.</em></p>
+<div class="arithmatex">\[\text{mit } \begin{cases} R_1 = R_3 \\ R_2 = R_4 \end{cases} \implies U_a = (U_{e1} - U_{e2}) \cdot \frac{R_2}{R_1}\]</div>
+<hr />
+<h2 id="107-der-invertierende-verstarker">10.7 Der invertierende Verstärker<a class="headerlink" href="#107-der-invertierende-verstarker" title="Permanent link">&para;</a></h2>
+<p><img alt="Invertierender Operationsverstärker" src="../illustrations/seite95_invertierender_verstaerker.svg" /></p>
+<p><em>(Im Original: „Der invertierender Verstärker“)</em></p>
+<p><em>Abbildung: Invertierender Operationsverstärker:
+Eingangsspannung <span class="arithmatex">\(U_e\)</span> führt über Widerstand <span class="arithmatex">\(R_2\)</span> an den invertierenden Eingang (<span class="arithmatex">\(-\)</span>).
+Gegenkopplungswiderstand <span class="arithmatex">\(R_1\)</span> führt vom Ausgang auf den invertierenden Eingang (<span class="arithmatex">\(-\)</span>).
+Der nicht-invertierende Eingang (<span class="arithmatex">\(+\)</span>) liegt fest an Masse (GND).
+Ausgangsspannung <span class="arithmatex">\(U_a\)</span> gegen Masse.</em></p>
+<div class="arithmatex">\[V = \frac{U_a}{U_e} = -\frac{R_1}{R_2}\]</div>
+<hr />
+<hr />
+<h2 id="108-der-addierende-verstarker-summierer">10.8 Der addierende Verstärker (Summierer)<a class="headerlink" href="#108-der-addierende-verstarker-summierer" title="Permanent link">&para;</a></h2>
+<p><img alt="Invertierender Addierer / Summierer" src="../illustrations/opamp_summierer.svg" /></p>
+<p><em>Abbildung: Invertierender Addierer / Summierverstärker:
+Zwei Eingangsspannungen <span class="arithmatex">\(U_{e3}\)</span> und <span class="arithmatex">\(U_{e2}\)</span> werden über ihre jeweiligen Eingangswiderstände <span class="arithmatex">\(R_3\)</span> und <span class="arithmatex">\(R_2\)</span> an den invertierenden Eingang (<span class="arithmatex">\(-\)</span>) geführt.
+Gegenkopplungswiderstand <span class="arithmatex">\(R_1\)</span> verbindet den Ausgang mit dem invertierenden Eingang (<span class="arithmatex">\(-\)</span>).
+Der nicht-invertierende Eingang (<span class="arithmatex">\(+\)</span>) liegt an Masse (GND).
+Ausgangsspannung <span class="arithmatex">\(U_a\)</span> liegt am Ausgang gegen Masse.</em></p>
+<div class="arithmatex">\[U_a = - U_{e2} \cdot \frac{R_1}{R_2} - U_{e3} \cdot \frac{R_1}{R_3}\]</div>
+<hr />
+<h2 id="109-frequenzabhangiger-spannungsteiler-bode-diagramm">10.9 Frequenzabhängiger Spannungsteiler &amp; Bode-Diagramm<a class="headerlink" href="#109-frequenzabhangiger-spannungsteiler-bode-diagramm" title="Permanent link">&para;</a></h2>
+<p><img alt="Passiver RC-Tiefpass und RC-Hochpass" src="../illustrations/seite96_rc_hochpass_tiefpass.svg" /></p>
+<h3 id="hochpass-filter">Hochpass-Filter<a class="headerlink" href="#hochpass-filter" title="Permanent link">&para;</a></h3>
+<p>Ein Hochpass-Filter lässt die hohen Frequenzen passier[en], d.h. er filter[t] tiefe Frequenzen.</p>
+<p><em>Abbildung: Passiver RC-Hochpass 1. Ordnung:
+Eingangsklemmen X1-1 und X1-2.
+Im Signalzweig liegt ein Längskondensator <span class="arithmatex">\(C_1\)</span>.
+Dahinter liegt ein Querwiderstand <span class="arithmatex">\(R_1\)</span> nach Masse (GND).
+Ausgangsklemmen X2-1 und X2-2 greifen das Signal über <span class="arithmatex">\(R_1\)</span> ab.</em></p>
+<p>Je höher die Frequenz desto höher die Ausgangsspannung.<br />
+Bzw. je tiefer die Frequenz desto tiefer die Spannung und desto höher <span class="arithmatex">\(V_{dB}\)</span> (Dämpfung).</p>
+<p><span class="arithmatex">\(f_g = \text{Grenzfrequenz}\)</span></p>
+<div class="arithmatex">\[f_g = \frac{1}{2\pi \cdot R_1 \cdot C_1}\]</div>
+<p>Das ist der Punkt wo <span class="arithmatex">\(|R_{1}| = |X_{C1}|_{fg}\)</span> ist.<br />
+(<span class="arithmatex">\(X_C\)</span> ist der Kondensatorwiderstand <span class="arithmatex">\(= \frac{1}{\omega \cdot C}\)</span> mit <span class="arithmatex">\(\omega = 2\pi \cdot f\)</span>)</p>
+<p><span class="arithmatex">\(\varphi = \text{Phasenverschiebung}\)</span><br />
+Das ist die Verschiebung der Phase in <span class="arithmatex">\([^\circ]\)</span>, stellt die Verzögerung dar.<br />
+Die Phasenverschiebung an der Grenzfrequenz beträgt <span class="arithmatex">\(45^\circ\)</span>.</p>
+<hr />
+<h2 id="1010-passiver-rc-tiefpass-1-ordnung">10.10 Passiver RC-Tiefpass 1. Ordnung<a class="headerlink" href="#1010-passiver-rc-tiefpass-1-ordnung" title="Permanent link">&para;</a></h2>
+<p><img alt="Passiver RC-Tiefpass 1. Ordnung" src="../illustrations/rc_tiefpass_filter_schaltung.svg" /></p>
+<p>Ein passiver Tiefpass lässt tiefe Frequenzen passieren und bedämpft hohe Frequenzen. Das Zeitverhalten basiert direkt auf der [[#3.4 Auf- und Entladen des Kondensators (RC-Zeitkonstante τ)|RC-Ladezeitkonstante <span class="arithmatex">\(\tau = R \cdot C\)</span>]].</p>
+<p><em>Abbildung: Passiver RC-Tiefpass 1. Ordnung:
+Eingangsklemmen X1-1 und X1-2.
+Im Längszweig liegt ein Serienwiderstand <span class="arithmatex">\(R_1\)</span>.
+Dahinter liegt ein Querkondensator <span class="arithmatex">\(C_1\)</span> nach Masse (GND).
+Ausgangsklemmen X2-1 und X2-2 greifen das Signal über <span class="arithmatex">\(C_1\)</span> ab.</em></p>
+<p>Je tiefer die Frequenz desto höher die Spannung und desto tiefer die Dämpfung.</p>
+<p><span class="arithmatex">\(f_g = \text{Grenzfrequenz}\)</span></p>
+<div class="arithmatex">\[f_g = \frac{1}{2\pi \cdot R_1 \cdot C_1}\]</div>
+<p><span class="arithmatex">\(\varphi = \text{Phasenverschiebung}\)</span><br />
+Das ist die Verschiebung der Phase in <span class="arithmatex">\([^\circ]\)</span>.</p>
+<p>Mit der Veränderung der Werte von <span class="arithmatex">\(R_1\)</span> &amp; <span class="arithmatex">\(C_1\)</span> kann man die „Empfindlichkeit“ einstellen.</p>
+<div class="admonition note">
+<p class="admonition-title">Definition der Grenzfrequenz <span class="arithmatex">\(f_g\)</span> (-3 dB-Punkt)</p>
+<ul>
+<li>Bei der Grenzfrequenz <span class="arithmatex">\(f = f_g = \frac{1}{2\pi R C}\)</span> ist die Ausgangsspannung auf <span class="arithmatex">\(\frac{1}{\sqrt{2}} \approx 70{,}7\%\)</span> des Maximalwertes abgefallen:
+  $<span class="arithmatex">\(20 \cdot \log_{10}\left(\frac{1}{\sqrt{2}}\right) = -3{,}01\,\text{dB}\)</span>$</li>
+<li>Die Phasenverschiebung beträgt beim RC-Tiefpass genau <strong><span class="arithmatex">\(\varphi = -45^\circ\)</span></strong> (beim CR-Hochpass <strong><span class="arithmatex">\(\varphi = +45^\circ\)</span></strong>).</li>
+<li>Weit oberhalb der Grenzfrequenz fällt das Signal mit <strong><span class="arithmatex">\(-20\,\text{dB/Dekade}\)</span></strong> (entspricht <span class="arithmatex">\(-6\,\text{dB/Oktave}\)</span>) ab.</li>
+</ul>
+<p>[!EXAMPLE] Praxisbeispiel: Dimensionierung eines RC-Tiefpassfilters für Audio
+Ein passives RC-Tiefpassfilter soll hochfrequente Störgeräusche oberhalb der Grenzfrequenz <span class="arithmatex">\(f_g = 1\,\text{kHz}\)</span> dämpfen. Es wird ein gebräuchlicher Folienkondensator mit <span class="arithmatex">\(C_1 = 100\,\text{nF} = 100 \cdot 10^{-9}\,\text{F}\)</span> eingesetzt:
+1. <strong>Berechnung des Serienwiderstands <span class="arithmatex">\(R_1\)</span>:</strong>
+   $<span class="arithmatex">\(f_g = \frac{1}{2\pi \cdot R_1 \cdot C_1} \implies R_1 = \frac{1}{2\pi \cdot f_g \cdot C_1}\)</span>$
+   $<span class="arithmatex">\(R_1 = \frac{1}{2\pi \cdot 1000\,\text{Hz} \cdot 100 \cdot 10^{-9}\,\text{F}} = \frac{1}{6{,}283 \cdot 10^{-4}} \approx 1591{,}5\,\Omega\)</span>$
+2. <strong>Wahl des Normwertes:</strong>
+   Gewählt wird <strong><span class="arithmatex">\(R_1 = 1{,}6\,\text{k}\Omega\)</span></strong> (E24) oder <strong><span class="arithmatex">\(1{,}5\,\text{k}\Omega\)</span></strong> (ergibt <span class="arithmatex">\(f_g \approx 1061\,\text{Hz}\)</span>).
+3. <strong>Dämpfung bei <span class="arithmatex">\(10\,\text{kHz}\)</span>:</strong>
+   Da die Amplitude oberhalb von <span class="arithmatex">\(f_g\)</span> mit <span class="arithmatex">\(-20\,\text{dB/Dekade}\)</span> abfällt, wird eine <span class="arithmatex">\(10\,\text{kHz}\)</span>-Störfrequenz um ca. <strong><span class="arithmatex">\(-20\,\text{dB}\)</span> (auf ein Zehntel der Eingangsspannung!)</strong> bedämpft.</p>
+</div>
+<hr />
+<h2 id="1011-passive-tiefpasse-lr-rc-tiefpass">10.11 Passive Tiefpässe (LR- &amp; RC-Tiefpass)<a class="headerlink" href="#1011-passive-tiefpasse-lr-rc-tiefpass" title="Permanent link">&para;</a></h2>
+<p><img alt="Passiver LR-Tiefpass und RL-Hochpass 1. Ordnung" src="../illustrations/passive_filter_lr_cr_ordnungen.svg" /></p>
+<h3 id="lr-tiefpass">LR-Tiefpass<a class="headerlink" href="#lr-tiefpass" title="Permanent link">&para;</a></h3>
+<p><em>Abbildung: Passiver LR-Tiefpass:
+Im Längszweig liegt eine Spule / Induktivität <span class="arithmatex">\(L\)</span>.
+Im Querzweig liegt ein Widerstand <span class="arithmatex">\(R\)</span>.</em></p>
+<div class="arithmatex">\[f_g = \frac{R}{2\pi \cdot L}\]</div>
+<div class="arithmatex">\[X_L = \omega \cdot L \quad \text{mit} \quad \omega = 2\pi \cdot f\]</div>
+<hr />
+<h3 id="rc-tiefpass">RC-Tiefpass<a class="headerlink" href="#rc-tiefpass" title="Permanent link">&para;</a></h3>
+<p><em>Abbildung: Passiver RC-Tiefpass:
+Im Längszweig liegt ein Widerstand <span class="arithmatex">\(R\)</span>.
+Im Querzweig liegt ein Kondensator <span class="arithmatex">\(C\)</span>.</em></p>
+<div class="arithmatex">\[f_g = \frac{1}{2\pi \cdot R \cdot C}\]</div>
+<div class="arithmatex">\[X_C = \frac{1}{\omega \cdot C}\]</div>
+<hr />
+<hr />
+<h2 id="1012-passive-hochpasse-rl-cr-hochpass">10.12 Passive Hochpässe (RL- &amp; CR-Hochpass)<a class="headerlink" href="#1012-passive-hochpasse-rl-cr-hochpass" title="Permanent link">&para;</a></h2>
+<p><img alt="Passiver RL- und CR-Hochpass" src="../illustrations/hochpass_rl_cr_schaltungen.svg" /></p>
+<h3 id="rl-hochpass">RL-Hochpass<a class="headerlink" href="#rl-hochpass" title="Permanent link">&para;</a></h3>
+<p><em>Abbildung: Passiver RL-Hochpass:
+Im Längszweig liegt ein Widerstand <span class="arithmatex">\(R\)</span>.
+Im Querzweig liegt eine Spule / Induktivität <span class="arithmatex">\(L\)</span>.</em></p>
+<hr />
+<h3 id="cr-hochpass">CR-Hochpass<a class="headerlink" href="#cr-hochpass" title="Permanent link">&para;</a></h3>
+<p><em>Abbildung: Passiver CR-Hochpass:
+Im Längszweig liegt ein Kondensator <span class="arithmatex">\(C\)</span>.
+Im Querzweig liegt ein Widerstand <span class="arithmatex">\(R\)</span>.</em></p>
+<hr />
+<h2 id="1013-lineare-spannungsregler-festspannungsregler-78xx-lm317">10.13 Lineare Spannungsregler (Festspannungsregler 78xx / LM317)<a class="headerlink" href="#1013-lineare-spannungsregler-festspannungsregler-78xx-lm317" title="Permanent link">&para;</a></h2>
+<p>Ein Linearregler stabilisiert eine schwankende Gleichspannung auf einen hochpräzisen, festen DC-Ausgangswert.</p>
+<h3 id="funktionsweise">Funktionsweise<a class="headerlink" href="#funktionsweise" title="Permanent link">&para;</a></h3>
+<p>Intern vergleicht ein Operationsverstärker (Fehlerverstärker) eine heruntergeteilte Ausgangsspannung mit einer internen Bandgap-Referenzspannung und steuert den Durchlasswiderstand eines Leistungstransistors (Längsstellglied) kontinuierlich so, dass <span class="arithmatex">\(U_{out}\)</span> konstant bleibt.</p>
+<h3 id="verlustleistung-kuhlkorperberechnung">Verlustleistung &amp; Kühlkörperberechnung<a class="headerlink" href="#verlustleistung-kuhlkorperberechnung" title="Permanent link">&para;</a></h3>
+<p>Da der gesamte Laststrom durch das Längsstellglied fließt, wird die Spannungsdifferenz vollständig in Wärme umgesetzt:</p>
+<div class="arithmatex">\[P_V = (U_{in} - U_{out}) \cdot I_L + U_{in} \cdot I_q \approx (U_{in} - U_{out}) \cdot I_L\]</div>
+<ul>
+<li><strong>Wirkungsgrad:</strong> <span class="arithmatex">\(\eta = \frac{U_{out}}{U_{in}}\)</span>. Bei <span class="arithmatex">\(U_{in} = 12\,\text{V}\)</span> und <span class="arithmatex">\(U_{out} = 5\,\text{V}\)</span> beträgt der Wirkungsgrad lediglich <span class="arithmatex">\(41{,}7\,\%\)</span>; mehr als die Hälfte der Energie verpufft als Wärme!</li>
+<li><strong>Dropout-Spannung:</strong> Ein Standardregler (z. B. LM7805) benötigt <span class="arithmatex">\(U_{in} \ge U_{out} + 2{,}5\,\text{V}\)</span>. Bei geringeren Spannungsabständen kommen <strong>LDO-Regler (Low Drop-Out)</strong> mit pnp- oder P-Kanal-MOSFET-Längstransistor zum Einsatz (<span class="arithmatex">\(U_{drop} &lt; 0{,}2\dots 0{,}4\,\text{V}\)</span>).</li>
+</ul>
+<h2 id="1014-schaltregler-buck-konverter-tiefsetzsteller-step-down">10.14 Schaltregler: Buck-Konverter (Tiefsetzsteller / Step-Down)<a class="headerlink" href="#1014-schaltregler-buck-konverter-tiefsetzsteller-step-down" title="Permanent link">&para;</a></h2>
+<p>Um eine hohe DC-Eingangsspannung mit hohem Wirkungsgrad (<span class="arithmatex">\(&gt;90\,\%\)</span>) in eine niedrigere Ausgangsspannung umzuwandeln, wird der Buck-Konverter eingesetzt:</p>
+<p><img alt="Buck-Konverter Schaltplan und Signalverlauf" src="../illustrations/lerndoku/Buckkonverter_image4.png" /></p>
+<p><img alt="Buck-Konverter Spulenstrom CCM vs DCM" src="../illustrations/lerndoku/Buckkonverter_image6.png" /></p>
+<h3 id="schaltungsaufbau-arbeitsphasen">Schaltungsaufbau &amp; Arbeitsphasen<a class="headerlink" href="#schaltungsaufbau-arbeitsphasen" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Einschaltphase (<span class="arithmatex">\(T_{on}\)</span>):</strong> Der Transistor (MOSFET) schaltet durch. Strom fließt von <span class="arithmatex">\(U_{in}\)</span> über die Spule <span class="arithmatex">\(L\)</span> in den Ladekondensator <span class="arithmatex">\(C\)</span> und die Last <span class="arithmatex">\(R_L\)</span>. In der Spule baut sich ein Magnetfeld auf (<span class="arithmatex">\(u_L = U_{in} - U_{out}\)</span>).</li>
+<li><strong>Ausschaltphase (<span class="arithmatex">\(T_{off}\)</span>):</strong> Der MOSFET sperrt. Die Spule wirkt der Stromunterbrechung durch Selbstinduktion entgegen und treibt den Strom über die Freilaufdiode (Schottky) weiter in Last und Ausgangskondensator (<span class="arithmatex">\(u_L = -U_{out}\)</span>).</li>
+</ol>
+<h3 id="mathematische-ausgangsspannung">Mathematische Ausgangsspannung<a class="headerlink" href="#mathematische-ausgangsspannung" title="Permanent link">&para;</a></h3>
+<p>Im kontinuierlichen Betrieb (Continuous Conduction Mode / CCM) gilt nach der Spannungs-Zeit-Flächenbilanz der Spule:</p>
+<div class="arithmatex">\[U_{out} = D \cdot U_{in} \quad \text{mit Tastgrad } D = \frac{T_{on}}{T_{on} + T_{off}} = \frac{T_{on}}{T}\]</div>
+<ul>
+<li><strong>Kriterien für Komponenten:</strong></li>
+<li><strong>Schaltfrequenz <span class="arithmatex">\(f_{sw}\)</span>:</strong> Typisch <span class="arithmatex">\(100\,\text{kHz}\dots 2\,\text{MHz}\)</span> (je höher, desto kleiner können Spule und Kondensator gewählt werden).</li>
+<li><strong>Freilaufdiode:</strong> Schnelle Schottky-Diode oder Synchrongleichrichter (aktiver N-Kanal-MOSFET) zur Verlustminimierung.</li>
+<li><strong>Ausgangskondensator:</strong> Low-ESR-Typen zur Minimierung des Ausgangs-Ripples <span class="arithmatex">\(\Delta U_{out}\)</span>.</li>
+</ul>
+<h2 id="1015-schaltregler-boost-konverter-hochsetzsteller-step-up">10.15 Schaltregler: Boost-Konverter (Hochsetzsteller / Step-Up)<a class="headerlink" href="#1015-schaltregler-boost-konverter-hochsetzsteller-step-up" title="Permanent link">&para;</a></h2>
+<p>Der Boost-Konverter erzeugt aus einer niedrigen Eingangsspannung eine höhere Ausgangsspannung (<span class="arithmatex">\(U_{out} &gt; U_{in}\)</span>):</p>
+<p><img alt="Boost-Konverter Schaltungsaufbau" src="../illustrations/lerndoku/Boostconverter_image4.png" /></p>
+<p><img alt="Boost-Konverter Signalverläufe an Diode und Schalter" src="../illustrations/lerndoku/Boostconverter_image6.png" /></p>
+<h3 id="arbeitsphasen-spannungsubersetzung">Arbeitsphasen &amp; Spannungsübersetzung<a class="headerlink" href="#arbeitsphasen-spannungsubersetzung" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Ladephase (<span class="arithmatex">\(T_{on}\)</span>):</strong> Schalter geschlossen. Die Spule liegt direkt an <span class="arithmatex">\(U_{in}\)</span>, der Strom steigt linear an, Energie wird im Magnetfeld gespeichert. Die Diode sperrt; der Ausgang wird aus dem Kondensator gespeist.</li>
+<li><strong>Entladephase (<span class="arithmatex">\(T_{off}\)</span>):</strong> Schalter offen. Die Spule addiert ihre Selbstinduktionsspannung zur Eingangsspannung: <span class="arithmatex">\(U_{L} + U_{in}\)</span>. Die Diode leitet und lädt den Ausgangskondensator auf ein höheres Potenzial auf:</li>
+</ol>
+<div class="arithmatex">\[U_{out} = \frac{U_{in}}{1 - D}\]</div>
+<ul>
+<li>Für <span class="arithmatex">\(D = 0{,}5\)</span> verdoppelt sich die Spannung (<span class="arithmatex">\(U_{out} = 2 \cdot U_{in}\)</span>).</li>
+</ul>
+<h2 id="1016-der-ne555-timer-schaltungen-dimensionierung">10.16 Der NE555 Timer: Schaltungen &amp; Dimensionierung<a class="headerlink" href="#1016-der-ne555-timer-schaltungen-dimensionierung" title="Permanent link">&para;</a></h2>
+<p>Der NE555 ist der weltweit meistgenutzte integrierte Timer-Baustein.</p>
+<p><img alt="NE555 Schaltungen und Pinbelegung" src="../illustrations/lerndoku/LM555_Timer_image4.png" /></p>
+<p><img alt="NE555 Internes Blockschaltbild" src="../illustrations/lerndoku/LM555_Timer_image5.png" /></p>
+<p><img alt="NE555 Monostabile Kippstufe Schaltung und Signalverlauf" src="../illustrations/lerndoku/LM555_Timer_image6.png" /></p>
+<p><img alt="NE555 Astabile Kippstufe Rechteckoszillator" src="../illustrations/lerndoku/LM555_Timer_image8.png" /></p>
+<h3 id="1-astabile-kippstufe-taktgenerator-oszillator">1. Astabile Kippstufe (Taktgenerator / Oszillator)<a class="headerlink" href="#1-astabile-kippstufe-taktgenerator-oszillator" title="Permanent link">&para;</a></h3>
+<p>Widerstand <span class="arithmatex">\(R_1\)</span> zwischen <span class="arithmatex">\(V_{CC}\)</span> und Discharge (Pin 7), <span class="arithmatex">\(R_2\)</span> zwischen Pin 7 und Threshold/Trigger (Pin 6/2), Kondensator <span class="arithmatex">\(C\)</span> nach Masse:</p>
+<div class="arithmatex">\[T_{high} = \ln(2) \cdot (R_1 + R_2) \cdot C \approx 0{,}693 \cdot (R_1 + R_2) \cdot C$$
+$$T_{low} = \ln(2) \cdot R_2 \cdot C \approx 0{,}693 \cdot R_2 \cdot C$$
+$$\mathbf{f = \frac{1{,}44}{(R_1 + 2R_2) \cdot C}}\]</div>
+<h3 id="2-monostabile-kippstufe-monoflop-zeitrelais">2. Monostabile Kippstufe (Monoflop / Zeitrelais)<a class="headerlink" href="#2-monostabile-kippstufe-monoflop-zeitrelais" title="Permanent link">&para;</a></h3>
+<p>Wird Pin 2 durch einen negativen Impuls unter <span class="arithmatex">\(\frac{1}{3} V_{CC}\)</span> gezogen, schaltet der Ausgang auf HIGH für die exakt definierte Zeitdauer:</p>
+<div class="arithmatex">\[\mathbf{T = \ln(3) \cdot R \cdot C \approx 1{,}1 \cdot R \cdot C}\]</div>
+<h2 id="1017-der-schmitt-trigger-schalthysterese-signalformung">10.17 Der Schmitt-Trigger: Schalthysterese &amp; Signalformung<a class="headerlink" href="#1017-der-schmitt-trigger-schalthysterese-signalformung" title="Permanent link">&para;</a></h2>
+<p>Ein Schmitt-Trigger ist ein Komparator mit <strong>positiver Rückkopplung (Mitkopplung)</strong>, der verrauschte, langsame Analogsignale in saubere, steilflankige Digitalsignale umwandelt.</p>
+<p><img alt="Schmitt-Trigger Schaltsymbol und Hysteresekurve" src="../illustrations/lerndoku/Schmitt-Trigger_image4.png" /></p>
+<ul>
+<li><strong>Schalthysterese:</strong> Das Umschalten von LOW auf HIGH erfolgt bei einer höheren Spannung (<span class="arithmatex">\(U_{on}\)</span>) als das Zurückschalten von HIGH auf LOW (<span class="arithmatex">\(U_{off}\)</span>).</li>
+<li>Die Differenz <span class="arithmatex">\(U_H = U_{on} - U_{off}\)</span> verhindert Mehrfachschaltungen (Prellen) bei verrauschten Eingangssignalen.</li>
+</ul>
+<h2 id="1018-da-und-ad-wandler-dac-adc">10.18 D/A- und A/D-Wandler (DAC &amp; ADC)<a class="headerlink" href="#1018-da-und-ad-wandler-dac-adc" title="Permanent link">&para;</a></h2>
+<p>Signalwandler bilden die fundamentale Schnittstelle zwischen analoger Messwelt und digitaler Rechenwelt:</p>
+<p><img alt="DAC Blockschaltbild und R-2R-Leiter" src="../illustrations/lerndoku/DAC-ADC-_Converters_image4.png" /></p>
+<p><img alt="R-2R-Netzwerk Digital-Analog-Wandler" src="../illustrations/lerndoku/DAC-ADC-_Converters_image10.png" /></p>
+<p><img alt="Flash-ADC Parallelwandler mit Komparatorleiter" src="../illustrations/lerndoku/DAC-ADC-_Converters_image11.png" /></p>
+<p><img alt="SAR-ADC Sukzessive Approximation Ablauf" src="../illustrations/lerndoku/DAC-ADC-_Converters_image13.png" /></p>
+<h3 id="1-da-wandler-digital-to-analog-converter">1. D/A-Wandler (Digital-to-Analog Converter)<a class="headerlink" href="#1-da-wandler-digital-to-analog-converter" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>R-2R-Widerstandsleiter:</strong> Benötigt pro Bit nur zwei Präzisionswiderstandswerte (<span class="arithmatex">\(R\)</span> und <span class="arithmatex">\(2R\)</span>). Über Umschalter speisen die Bits gewichtete Ströme in den Summierpunkt eines Operationsverstärkers.</li>
+<li>Ausgangsspannung bei <span class="arithmatex">\(n\)</span> Bits:
+  $<span class="arithmatex">\(U_{out} = U_{ref} \cdot \sum_{i=1}^n \frac{b_i}{2^i}\)</span>$</li>
+</ul>
+<h3 id="2-ad-wandler-analog-to-digital-converter">2. A/D-Wandler (Analog-to-Digital Converter)<a class="headerlink" href="#2-ad-wandler-analog-to-digital-converter" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Flash-Wandler (Parallelverfahren):</strong> Verwendet <span class="arithmatex">\(2^n - 1\)</span> Komparatoren parallel. Extrem schnell (<span class="arithmatex">\(&gt;1\,\text{GSample/s}\)</span>), wird in Oszilloskopen eingesetzt.</li>
+<li><strong>SAR-Wandler (Sukzessive Approximation):</strong> Ermittelt Bit für Bit vom MSB zum LSB über einen internen DAC und Komparator (Bisektionsverfahren). Standard in Mikrocontrollern (<span class="arithmatex">\(10\dots 16\,\text{Bit}\)</span>).</li>
+<li><strong>Delta-Sigma-Wandler (<span class="arithmatex">\(\Delta\Sigma\)</span>):</strong> Überabtastung und Noise Shaping. Höchste Auflösung (<span class="arithmatex">\(24\,\text{Bit}\)</span>) bei niedrigerer Abtastrate (Präzisionsmultimeter, Audio).</li>
+</ul>
+<h2 id="1019-filter-hoherer-ordnung-bandpasse">10.19 Filter höherer Ordnung &amp; Bandpässe<a class="headerlink" href="#1019-filter-hoherer-ordnung-bandpasse" title="Permanent link">&para;</a></h2>
+<p>Passive Filter 1. Ordnung weisen ab der Grenzfrequenz <span class="arithmatex">\(f_g\)</span> eine Dämpfung von <span class="arithmatex">\(-20\,\text{dB/Dekade}\)</span> (<span class="arithmatex">\(-6\,\text{dB/Oktave}\)</span>) auf.</p>
+<h3 id="filter-kaskadieren">Filter kaskadieren<a class="headerlink" href="#filter-kaskadieren" title="Permanent link">&para;</a></h3>
+<p>Werden mehrere Filterstufen hintereinander geschaltet (unter Vermeidung gegenseitiger Belastung durch Impedanzpuffer):
+- <strong>Filter 2. Ordnung:</strong> <span class="arithmatex">\(-40\,\text{dB/Dekade}\)</span> (<span class="arithmatex">\(-12\,\text{dB/Oktave}\)</span>), Phasenverschiebung bis <span class="arithmatex">\(180^\circ\)</span>.
+- <strong>Filter <span class="arithmatex">\(n\)</span>-ter Ordnung:</strong> <span class="arithmatex">\(-n \cdot 20\,\text{dB/Dekade}\)</span>.
+- <strong>Sallen-Key-Topologie:</strong> Ermöglicht aktive Filter 2. Ordnung mit nur einem einzigen Operationsverstärker bei einstellbarer Filtergüte <span class="arithmatex">\(Q\)</span> (Butterworth = maximal flach, Bessel = linearer Phasengang/konstante Gruppenlaufzeit, Tschebyscheff = steilste Flanke mit Welligkeit).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

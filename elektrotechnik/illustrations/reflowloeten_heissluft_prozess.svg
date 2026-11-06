@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="100%" height="100%">
+  <defs>
+    <linearGradient id="heatGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" rx="10"/>
+
+  <text x="400" y="38" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#0f172a" text-anchor="middle">
+    Reflow-Lötprozess (Heißluft / Ofen &amp; Lötpaste)
+  </text>
+  <text x="400" y="62" font-family="system-ui, sans-serif" font-size="13" fill="#64748b" text-anchor="middle">
+    Auftragen von Lötpaste, Bestückung des SMD-Bauteils und Erwärmung bis zur Schmelztemperatur
+  </text>
+
+  <!-- Nozzle -->
+  <path d="M 360 90 L 440 90 L 420 160 L 380 160 Z" fill="#94a3b8" stroke="#475569" stroke-width="2"/>
+  <rect x="375" y="80" width="50" height="12" rx="2" fill="#64748b"/>
+  <text x="400" y="130" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Düse</text>
+
+  <!-- Heat Flow -->
+  <polygon points="380,160 420,160 470,240 330,240" fill="url(#heatGrad)"/>
+  <path d="M 370 170 Q 365 200 355 220" stroke="#dc2626" stroke-width="2" stroke-dasharray="4,3" fill="none"/>
+  <path d="M 400 170 L 400 225" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="4,3" fill="none"/>
+  <path d="M 430 170 Q 435 200 445 220" stroke="#dc2626" stroke-width="2" stroke-dasharray="4,3" fill="none"/>
+  <text x="330" y="195" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="end">Heißluftstrom (~240°C)</text>
+
+  <!-- PCB -->
+  <rect x="150" y="280" width="500" height="24" rx="3" fill="#15803d" stroke="#166534" stroke-width="2"/>
+  <text x="180" y="325" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#15803d">Leiterplatte (FR4)</text>
+
+  <!-- Copper Pads -->
+  <rect x="290" y="274" width="60" height="8" fill="#d97706" stroke="#b45309" stroke-width="1.5"/>
+  <rect x="450" y="274" width="60" height="8" fill="#d97706" stroke="#b45309" stroke-width="1.5"/>
+  <text x="250" y="275" font-family="system-ui, sans-serif" font-size="11" fill="#b45309">Lötpad (Cu)</text>
+
+  <!-- Solder Paste -->
+  <path d="M 290 274 Q 320 260 350 274 Z" fill="#64748b" stroke="#475569" stroke-width="1.5"/>
+  <path d="M 450 274 Q 480 260 510 274 Z" fill="#64748b" stroke="#475569" stroke-width="1.5"/>
+  <text x="240" y="255" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#475569">Lötpaste</text>
+
+  <!-- SMD Component -->
+  <rect x="320" y="235" width="160" height="36" rx="4" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
+  <rect x="320" y="235" width="30" height="36" rx="2" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="450" y="235" width="30" height="36" rx="2" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="400" y="258" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">SMD-Bauteil</text>
+
+  <!-- Grabsteineffekt Info Box -->
+  <rect x="520" y="110" width="240" height="110" rx="6" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="535" y="135" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#b45309">⚠️ Gefahr: Grabsteineffekt</text>
+  <text x="535" y="158" font-family="system-ui, sans-serif" font-size="11" fill="#78350f">Bei ungleichmäßiger Erwärmung</text>
+  <text x="535" y="174" font-family="system-ui, sans-serif" font-size="11" fill="#78350f">schmilzt eine Seite früher.</text>
+  <text x="535" y="195" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#dc2626">Bauteil richtet sich vertikal auf!</text>
+
+  <!-- Bottom Info -->
+  <rect x="100" y="360" width="600" height="75" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="400" y="385" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#0f172a" text-anchor="middle">Eigenschaften Reflow-Löten:</text>
+  <text x="400" y="408" font-family="system-ui, sans-serif" font-size="12" fill="#334155" text-anchor="middle">• Für SMD und spezielle THT-Bauteile   • Enorme thermische Belastung</text>
+  <text x="400" y="425" font-family="system-ui, sans-serif" font-size="12" fill="#334155" text-anchor="middle">• Lötpaste besteht aus Lotpulver (Sn/Ag/Cu) und zähflüssigem Flussmittel</text>
+</svg>

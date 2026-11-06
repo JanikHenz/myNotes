@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb" />
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#16a34a" />
+    </marker>
+    <marker id="arrow-start-dark" viewBox="0 0 10 10" refX="2" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 10 1 L 0 5 L 10 9 z" fill="#1e293b" />
+    </marker>
+    <marker id="arrow-dark" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b" />
+    </marker>
+  </defs>
+
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Coulombsches Gesetz (Kräfte zwischen Ladungen)</text>
+  <!-- Charge q1 -->
+  <circle cx="120" cy="120" r="24" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5" />
+  <text x="120" y="126" font-size="16" font-weight="bold" fill="#dc2626" text-anchor="middle">+q₁</text>
+  <!-- Charge q2 -->
+  <circle cx="360" cy="120" r="24" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5" />
+  <text x="360" y="126" font-size="16" font-weight="bold" fill="#dc2626" text-anchor="middle">+q₂</text>
+  <!-- Distance r -->
+  <line x1="120" y1="120" x2="360" y2="120" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4" />
+  <line x1="120" y1="170" x2="360" y2="170" stroke="#64748b" stroke-width="1.5" marker-start="url(#arrow-start-dark)" marker-end="url(#arrow-dark)" />
+  <text x="240" y="165" font-size="13" font-weight="bold" fill="#64748b" text-anchor="middle">Abstand r</text>
+  <!-- Repulsive Force F on q1 -->
+  <line x1="96" y1="120" x2="25" y2="120" stroke="#dc2626" stroke-width="3" marker-end="url(#arrow-red)" />
+  <text x="50" y="110" font-size="14" font-weight="bold" fill="#dc2626">F₂₁</text>
+  <!-- Repulsive Force F on q2 -->
+  <line x1="384" y1="120" x2="455" y2="120" stroke="#dc2626" stroke-width="3" marker-end="url(#arrow-red)" />
+  <text x="410" y="110" font-size="14" font-weight="bold" fill="#dc2626">F₁₂</text>
+  <!-- Formula -->
+  <rect x="110" y="195" width="260" height="32" rx="4" fill="#eff6ff" stroke="#bfdbfe" />
+  <text x="240" y="216" font-size="13" font-weight="bold" fill="#1e40af" text-anchor="middle">F = (1 / 4πε₀) · (|q₁ · q₂| / r²)</text>
+</svg>

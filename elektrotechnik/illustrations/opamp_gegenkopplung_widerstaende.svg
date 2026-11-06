@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 800 480"
+   width="100%"
+   height="100%"
+   version="1.1"
+   id="svg24"
+   sodipodi:docname="opamp_gegenkopplung_widerstaende.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview24"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.6469695"
+     inkscape:cx="368.2521"
+     inkscape:cy="216.76175"
+     inkscape:window-width="2560"
+     inkscape:window-height="1371"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg24" />
+  <defs
+     id="defs2">
+    <marker
+       id="arr-u"
+       viewBox="0 0 10 10"
+       refX="7"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto">
+      <path
+         d="M 0 1 L 10 5 L 0 9 z"
+         fill="#2563eb"
+         id="path1" />
+    </marker>
+    <marker
+       id="arr-i2"
+       viewBox="0 0 10 10"
+       refX="7"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto">
+      <path
+         d="M 0 1 L 10 5 L 0 9 z"
+         fill="#dc2626"
+         id="path2" />
+    </marker>
+  </defs>
+  <rect
+     width="100%"
+     height="100%"
+     fill="#ffffff"
+     stroke="#cbd5e1"
+     stroke-width="2"
+     rx="10"
+     id="rect2" />
+  <text
+     x="400"
+     y="38"
+     font-family="system-ui, sans-serif"
+     font-size="20"
+     font-weight="bold"
+     fill="#0f172a"
+     text-anchor="middle"
+     id="text2">
+    OP - Gegenkopplung mit Widerständen (Nicht-invertierender Verstärker)
+  </text>
+  <text
+     x="400"
+     y="62"
+     font-family="system-ui, sans-serif"
+     font-size="13"
+     fill="#64748b"
+     text-anchor="middle"
+     id="text3">
+    Gegenkopplung über R₂ auf invertierenden Eingang (−) und R₁ nach Masse
+  </text>
+  <!-- Triangle -->
+  <polygon
+     points="360,160 360,320 480,240"
+     fill="#f8fafc"
+     stroke="#1e293b"
+     stroke-width="2.5"
+     id="polygon3" />
+  <text
+     x="375"
+     y="200"
+     font-family="system-ui, sans-serif"
+     font-size="20"
+     font-weight="bold"
+     fill="#1e293b"
+     id="text4">−</text>
+  <text
+     x="375"
+     y="290"
+     font-family="system-ui, sans-serif"
+     font-size="20"
+     font-weight="bold"
+     fill="#1e293b"
+     id="text5">+</text>
+  <!-- (+) input -->
+  <line
+     x1="200"
+     y1="285"
+     x2="360"
+     y2="285"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line5" />
+  <circle
+     cx="200"
+     cy="285"
+     r="4"
+     fill="#1e293b"
+     id="circle5" />
+  <line
+     x1="245.57957"
+     y1="280.60718"
+     x2="285.57959"
+     y2="280.60718"
+     stroke="#dc2626"
+     stroke-width="2"
+     marker-end="url(#arr-i2)"
+     id="line6" />
+  <text
+     x="247.06071"
+     y="273.94666"
+     font-family="system-ui, sans-serif"
+     font-size="12px"
+     font-weight="bold"
+     fill="#dc2626"
+     id="text6">I_p ≈ 0</text>
+  <!-- Ue -->
+  <line
+     x1="160"
+     y1="400"
+     x2="160"
+     y2="290"
+     stroke="#2563eb"
+     stroke-width="2"
+     marker-end="url(#arr-u)"
+     id="line7" />
+  <text
+     x="131.26118"
+     y="351.71735"
+     font-family="system-ui, sans-serif"
+     font-size="14px"
+     font-weight="bold"
+     fill="#2563eb"
+     id="text7">U_e</text>
+  <line
+     x1="150"
+     y1="400"
+     x2="170"
+     y2="400"
+     stroke="#64748b"
+     stroke-width="2"
+     id="line8" />
+  <line
+     x1="629.66608"
+     y1="360.78473"
+     x2="649.66608"
+     y2="360.78473"
+     stroke="#64748b"
+     stroke-width="2"
+     id="line8-6" />
+  <line
+     x1="160"
+     y1="285"
+     x2="200"
+     y2="285"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line9" />
+  <!-- Ud -->
+  <line
+     x1="330"
+     y1="280"
+     x2="330"
+     y2="200"
+     stroke="#d97706"
+     stroke-width="1.8"
+     marker-end="url(#arr-u)"
+     id="line10" />
+  <text
+     x="-261.85196"
+     y="342.92941"
+     font-family="system-ui, sans-serif"
+     font-size="13px"
+     font-weight="bold"
+     fill="#d97706"
+     id="text10"
+     transform="rotate(-90.116596)">U_d = 0</text>
+  <!-- (-) input -->
+  <line
+     x1="300"
+     y1="195"
+     x2="360"
+     y2="195"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line11" />
+  <circle
+     cx="300"
+     cy="195"
+     r="4"
+     fill="#1e293b"
+     id="circle11" />
+  <!-- R1 down to GND -->
+  <line
+     x1="300"
+     y1="195"
+     x2="300"
+     y2="230"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line12" />
+  <rect
+     x="292"
+     y="230"
+     width="16"
+     height="40"
+     fill="#ffffff"
+     stroke="#2563eb"
+     stroke-width="2"
+     id="rect12" />
+  <text
+     x="275"
+     y="255"
+     font-family="system-ui, sans-serif"
+     font-size="13"
+     font-weight="bold"
+     fill="#2563eb"
+     id="text12">R₁</text>
+  <line
+     x1="300"
+     y1="270"
+     x2="300"
+     y2="310"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line13" />
+  <line
+     x1="285"
+     y1="310"
+     x2="315"
+     y2="310"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line14" />
+  <line
+     x1="290"
+     y1="315"
+     x2="310"
+     y2="315"
+     stroke="#1e293b"
+     stroke-width="1.5"
+     id="line15" />
+  <!-- R2 feedback -->
+  <line
+     x1="300"
+     y1="195"
+     x2="300"
+     y2="120"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line16" />
+  <line
+     x1="300"
+     y1="120"
+     x2="430"
+     y2="120"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line17" />
+  <rect
+     x="430"
+     y="112"
+     width="40"
+     height="16"
+     fill="#ffffff"
+     stroke="#2563eb"
+     stroke-width="2"
+     id="rect17" />
+  <text
+     x="450"
+     y="105"
+     font-family="system-ui, sans-serif"
+     font-size="13"
+     font-weight="bold"
+     fill="#2563eb"
+     text-anchor="middle"
+     id="text17">R₂</text>
+  <line
+     x1="470"
+     y1="120"
+     x2="560"
+     y2="120"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line18" />
+  <line
+     x1="560"
+     y1="120"
+     x2="560"
+     y2="240"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line19" />
+  <!-- Output -->
+  <line
+     x1="480"
+     y1="240"
+     x2="640"
+     y2="240"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line20" />
+  <circle
+     cx="560"
+     cy="240"
+     r="4"
+     fill="#1e293b"
+     id="circle20" />
+  <circle
+     cx="640"
+     cy="240"
+     r="4"
+     fill="#1e293b"
+     id="circle21" />
+  <line
+     x1="640"
+     y1="360"
+     x2="640"
+     y2="250"
+     stroke="#2563eb"
+     stroke-width="2"
+     marker-end="url(#arr-u)"
+     id="line21" />
+  <text
+     x="655"
+     y="310"
+     font-family="system-ui, sans-serif"
+     font-size="14"
+     font-weight="bold"
+     fill="#2563eb"
+     id="text21">U_a</text>
+  <!-- Formulas Box -->
+  <rect
+     x="178.28264"
+     y="387.29874"
+     width="482.20032"
+     height="77.271935"
+     rx="8"
+     fill="#f8fafc"
+     stroke="#cbd5e1"
+     stroke-width="1.5"
+     id="rect21" />
+  <text
+     x="414.44543"
+     y="405.42935"
+     font-family="system-ui, sans-serif"
+     font-size="14px"
+     font-weight="bold"
+     fill="#0f172a"
+     text-anchor="middle"
+     id="text22">Verstärkungsformel (Gegenkopplung):</text>
+  <text
+     x="416.16278"
+     y="432.42935"
+     font-family="system-ui, sans-serif"
+     font-size="15px"
+     font-weight="bold"
+     fill="#2563eb"
+     text-anchor="middle"
+     id="text23">v = U_a / U_e = 1 + (R₂ / R₁)</text>
+  <text
+     x="418.73883"
+     y="453"
+     font-family="system-ui, sans-serif"
+     font-size="12px"
+     fill="#64748b"
+     text-anchor="middle"
+     id="text24">Eingangswiderstand r_e → ∞, Ausgangswiderstand r_a → 0, kontrollierte Verstärkung v ≥ 1</text>
+</svg>

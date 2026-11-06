@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 270" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb" />
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#16a34a" />
+    </marker>
+    <marker id="arrow-dark" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b" />
+    </marker>
+  </defs>
+
+  <!-- PULL UP (Left) -->
+  <g transform="translate(40, 20)">
+    <text x="60" y="20" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">Pull-Up-Schaltung</text>
+    <text x="60" y="50" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">+V_CC (5V)</text>
+    <line x1="60" y1="55" x2="60" y2="75" stroke="#1e293b" stroke-width="2" />
+    <rect x="50" y="75" width="20" height="40" fill="#f8fafc" stroke="#1e293b" stroke-width="2" />
+    <text x="80" y="98" font-size="12" fill="#0f172a">R_PU (10k)</text>
+    <line x1="60" y1="115" x2="60" y2="145" stroke="#1e293b" stroke-width="2" />
+    <circle cx="60" cy="145" r="4" fill="#2563eb" />
+    <line x1="60" y1="145" x2="130" y2="145" stroke="#2563eb" stroke-width="2" />
+    <circle cx="130" cy="145" r="4" fill="#2563eb" />
+    <text x="140" y="150" font-size="13" font-weight="bold" fill="#2563eb">µC-Pin</text>
+    <!-- Switch -->
+    <line x1="60" y1="145" x2="60" y2="170" stroke="#1e293b" stroke-width="2" />
+    <line x1="60" y1="170" x2="45" y2="195" stroke="#1e293b" stroke-width="2" />
+    <line x1="60" y1="195" x2="60" y2="210" stroke="#1e293b" stroke-width="2" />
+    <!-- GND -->
+    <line x1="45" y1="210" x2="75" y2="210" stroke="#1e293b" stroke-width="2" />
+    <text x="60" y="235" font-size="12" fill="#64748b" text-anchor="middle">Offen: HIGH | Zu: LOW</text>
+  </g>
+  <!-- PULL DOWN (Right) -->
+  <g transform="translate(280, 20)">
+    <text x="60" y="20" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">Pull-Down-Schaltung</text>
+    <text x="60" y="50" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">+V_CC (5V)</text>
+    <!-- Switch -->
+    <line x1="60" y1="55" x2="60" y2="75" stroke="#1e293b" stroke-width="2" />
+    <line x1="60" y1="75" x2="45" y2="100" stroke="#1e293b" stroke-width="2" />
+    <line x1="60" y1="100" x2="60" y2="125" stroke="#1e293b" stroke-width="2" />
+    <circle cx="60" cy="125" r="4" fill="#2563eb" />
+    <line x1="60" y1="125" x2="130" y2="125" stroke="#2563eb" stroke-width="2" />
+    <circle cx="130" cy="125" r="4" fill="#2563eb" />
+    <text x="140" y="130" font-size="13" font-weight="bold" fill="#2563eb">µC-Pin</text>
+    <!-- Resistor -->
+    <line x1="60" y1="125" x2="60" y2="145" stroke="#1e293b" stroke-width="2" />
+    <rect x="50" y="145" width="20" height="40" fill="#f8fafc" stroke="#1e293b" stroke-width="2" />
+    <text x="80" y="168" font-size="12" fill="#0f172a">R_PD (10k)</text>
+    <line x1="60" y1="185" x2="60" y2="210" stroke="#1e293b" stroke-width="2" />
+    <!-- GND -->
+    <line x1="45" y1="210" x2="75" y2="210" stroke="#1e293b" stroke-width="2" />
+    <text x="60" y="235" font-size="12" fill="#64748b" text-anchor="middle">Offen: LOW | Zu: HIGH</text>
+  </g>
+</svg>

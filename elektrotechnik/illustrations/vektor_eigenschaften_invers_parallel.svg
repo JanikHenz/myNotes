@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 260" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+  <defs>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb" />
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
+    </marker>
+    <marker id="arr-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#16a34a" />
+    </marker>
+  </defs>
+
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Vektoreigenschaften: Parallelverschiebung &amp; Inversion</text>
+
+  <!-- Left: Vectors comparison -->
+  <g transform="translate(30, 60)">
+    <!-- Reference Line dashed -->
+    <line x1="30" y1="140" x2="270" y2="40" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4" />
+
+    <!-- Vector a (blue) -->
+    <line x1="90" y1="110" x2="170" y2="70" stroke="#2563eb" stroke-width="3" marker-end="url(#arr-blue)" />
+    <circle cx="90" cy="110" r="4" fill="#2563eb" />
+    <text x="130" y="75" font-size="13" font-weight="bold" fill="#2563eb">a</text>
+
+    <!-- Inverse Vector -a (red, opposite direction) -->
+    <line x1="170" y1="140" x2="90" y2="180" stroke="#dc2626" stroke-width="3" marker-end="url(#arr-red)" />
+    <circle cx="170" cy="140" r="4" fill="#dc2626" />
+    <text x="135" y="175" font-size="13" font-weight="bold" fill="#dc2626">−a</text>
+
+    <!-- Parallel Shifted Vector a' (green) -->
+    <line x1="140" y1="50" x2="220" y2="10" stroke="#16a34a" stroke-width="3" marker-end="url(#arr-green)" />
+    <circle cx="140" cy="50" r="4" fill="#16a34a" />
+    <text x="190" y="20" font-size="13" font-weight="bold" fill="#16a34a">a'</text>
+  </g>
+
+  <!-- Right: Explanations -->
+  <rect x="300" y="55" width="205" height="185" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+  <text x="315" y="78" font-size="13" font-weight="bold" fill="#0f172a">Definitionen:</text>
+
+  <text x="315" y="100" font-size="12" fill="#16a34a" font-weight="bold">Vektor a':</text>
+  <text x="315" y="117" font-size="11" fill="#334155">Gleiche Länge + gleiche Neigung,</text>
+  <text x="315" y="133" font-size="11" fill="#64748b">aber anderer Standort (parallel).</text>
+
+  <line x1="315" y1="145" x2="490" y2="145" stroke="#e2e8f0" stroke-width="1" />
+
+  <text x="315" y="165" font-size="12" fill="#dc2626" font-weight="bold">Inverser Vektor −a:</text>
+  <text x="315" y="181" font-size="11" fill="#334155">Gleiche Länge + gleiche Neigung,</text>
+  <text x="315" y="197" font-size="11" fill="#dc2626" font-weight="bold">entgegengesetzte Richtung!</text>
+  <text x="315" y="218" font-size="11" fill="#0f172a">a + (−a) = 0 (Nullvektor)</text>
+</svg>

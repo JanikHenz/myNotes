@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 270" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Übersicht der 4 MOSFET-Typen &amp; Schaltsymbole</text>
+
+  <!-- 2x2 Grid -->
+  <!-- 1. N-Kanal Anreicherung (Enhancement) -->
+  <g transform="translate(30, 50)">
+    <rect x="0" y="0" width="230" height="95" rx="4" fill="#f8fafc" stroke="#cbd5e1" />
+    <text x="115" y="18" font-size="10" font-weight="bold" fill="#2563eb" text-anchor="middle">N-Kanal Anreicherung (selbstsperrend)</text>
+    <!-- Symbol: broken channel line, arrow IN -->
+    <g transform="translate(60, 25)">
+      <line x1="30" y1="5" x2="30" y2="15" stroke="#1e293b" stroke-width="2" />
+      <line x1="30" y1="20" x2="30" y2="30" stroke="#1e293b" stroke-width="2" />
+      <line x1="30" y1="35" x2="30" y2="45" stroke="#1e293b" stroke-width="2" />
+      <!-- D & S -->
+      <line x1="30" y1="10" x2="50" y2="10" stroke="#1e293b" stroke-width="1.5" />
+      <line x1="30" y1="40" x2="50" y2="40" stroke="#1e293b" stroke-width="1.5" />
+      <!-- Substrate arrow IN -->
+      <line x1="15" y1="25" x2="30" y2="25" stroke="#1e293b" stroke-width="1.5" />
+      <polygon points="26,25 20,22 20,28" fill="#2563eb" />
+      <!-- Gate isolated -->
+      <line x1="10" y1="5" x2="10" y2="45" stroke="#1e293b" stroke-width="2" />
+      <line x1="0" y1="25" x2="10" y2="25" stroke="#1e293b" stroke-width="1.5" />
+    </g>
+    <text x="155" y="45" font-size="9" fill="#0f172a">D</text>
+    <text x="155" y="70" font-size="9" fill="#0f172a">S</text>
+    <text x="130" y="85" font-size="9" font-weight="bold" fill="#16a34a">U_GS &gt; U_th (leitet)</text>
+  </g>
+
+  <!-- 2. P-Kanal Anreicherung -->
+  <g transform="translate(280, 50)">
+    <rect x="0" y="0" width="230" height="95" rx="4" fill="#f8fafc" stroke="#cbd5e1" />
+    <text x="115" y="18" font-size="10" font-weight="bold" fill="#dc2626" text-anchor="middle">P-Kanal Anreicherung (selbstsperrend)</text>
+    <g transform="translate(60, 25)">
+      <line x1="30" y1="5" x2="30" y2="15" stroke="#1e293b" stroke-width="2" />
+      <line x1="30" y1="20" x2="30" y2="30" stroke="#1e293b" stroke-width="2" />
+      <line x1="30" y1="35" x2="30" y2="45" stroke="#1e293b" stroke-width="2" />
+      <line x1="30" y1="10" x2="50" y2="10" stroke="#1e293b" stroke-width="1.5" />
+      <line x1="30" y1="40" x2="50" y2="40" stroke="#1e293b" stroke-width="1.5" />
+      <!-- Substrate arrow OUT -->
+      <line x1="15" y1="25" x2="30" y2="25" stroke="#1e293b" stroke-width="1.5" />
+      <polygon points="18,25 24,22 24,28" fill="#dc2626" />
+      <line x1="10" y1="5" x2="10" y2="45" stroke="#1e293b" stroke-width="2" />
+      <line x1="0" y1="25" x2="10" y2="25" stroke="#1e293b" stroke-width="1.5" />
+    </g>
+    <text x="130" y="85" font-size="9" font-weight="bold" fill="#dc2626">U_GS &lt; −U_th</text>
+  </g>
+
+  <!-- 3. N-Kanal Verarmung (Depletion) -->
+  <g transform="translate(30, 155)">
+    <rect x="0" y="0" width="230" height="95" rx="4" fill="#f8fafc" stroke="#cbd5e1" />
+    <text x="115" y="18" font-size="10" font-weight="bold" fill="#2563eb" text-anchor="middle">N-Kanal Verarmung (selbstleitend)</text>
+    <!-- Solid channel line -->
+    <g transform="translate(60, 25)">
+      <line x1="30" y1="5" x2="30" y2="45" stroke="#1e293b" stroke-width="3" />
+      <line x1="30" y1="10" x2="50" y2="10" stroke="#1e293b" stroke-width="1.5" />
+      <line x1="30" y1="40" x2="50" y2="40" stroke="#1e293b" stroke-width="1.5" />
+      <line x1="15" y1="25" x2="30" y2="25" stroke="#1e293b" stroke-width="1.5" />
+      <polygon points="26,25 20,22 20,28" fill="#2563eb" />
+      <line x1="10" y1="5" x2="10" y2="45" stroke="#1e293b" stroke-width="2" />
+      <line x1="0" y1="25" x2="10" y2="25" stroke="#1e293b" stroke-width="1.5" />
+    </g>
+    <text x="130" y="85" font-size="9" fill="#334155">Leitet bei U_GS = 0 V</text>
+  </g>
+
+  <!-- 4. P-Kanal Verarmung -->
+  <g transform="translate(280, 155)">
+    <rect x="0" y="0" width="230" height="95" rx="4" fill="#f8fafc" stroke="#cbd5e1" />
+    <text x="115" y="18" font-size="10" font-weight="bold" fill="#dc2626" text-anchor="middle">P-Kanal Verarmung (selbstleitend)</text>
+    <g transform="translate(60, 25)">
+      <line x1="30" y1="5" x2="30" y2="45" stroke="#1e293b" stroke-width="3" />
+      <line x1="30" y1="10" x2="50" y2="10" stroke="#1e293b" stroke-width="1.5" />
+      <line x1="30" y1="40" x2="50" y2="40" stroke="#1e293b" stroke-width="1.5" />
+      <line x1="15" y1="25" x2="30" y2="25" stroke="#1e293b" stroke-width="1.5" />
+      <polygon points="18,25 24,22 24,28" fill="#dc2626" />
+      <line x1="10" y1="5" x2="10" y2="45" stroke="#1e293b" stroke-width="2" />
+      <line x1="0" y1="25" x2="10" y2="25" stroke="#1e293b" stroke-width="1.5" />
+    </g>
+    <text x="130" y="85" font-size="9" fill="#334155">Leitet bei U_GS = 0 V</text>
+  </g>
+</svg>

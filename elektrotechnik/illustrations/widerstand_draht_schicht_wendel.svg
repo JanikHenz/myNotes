@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 260" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Aufbau von Widerständen: Draht- vs. Schichtwiderstand</text>
+
+  <!-- Top: Wirewound Resistor -->
+  <g transform="translate(30, 55)">
+    <rect x="0" y="0" width="480" height="85" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+    <text x="15" y="20" font-size="11" font-weight="bold" fill="#0f172a">Drahtwiderstand (hohe Verlustleistung, induktiv):</text>
+
+    <!-- Ceramic rod with wound resistance wire -->
+    <line x1="40" y1="50" x2="90" y2="50" stroke="#94a3b8" stroke-width="3" />
+    <rect x="90" y="38" width="180" height="24" rx="3" fill="#e2e8f0" stroke="#64748b" />
+    <text x="180" y="54" font-size="9" fill="#64748b" text-anchor="middle">Keramikkörper</text>
+    <!-- Wire windings -->
+    <path d="M 110,38 L 115,62 M 130,38 L 135,62 M 150,38 L 155,62 M 170,38 L 175,62 M 190,38 L 195,62 M 210,38 L 215,62 M 230,38 L 235,62 M 250,38 L 255,62" stroke="#ea580c" stroke-width="2.5" />
+    <line x1="270" y1="50" x2="320" y2="50" stroke="#94a3b8" stroke-width="3" />
+
+    <text x="350" y="48" font-size="11" font-weight="bold" fill="#2563eb">Widerstandsdraht</text>
+    <text x="350" y="63" font-size="10" fill="#64748b">(z. B. Konstantan)</text>
+  </g>
+
+  <!-- Bottom: Film Resistor with Spiral Cut -->
+  <g transform="translate(30, 155)">
+    <rect x="0" y="0" width="480" height="85" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+    <text x="15" y="20" font-size="11" font-weight="bold" fill="#0f172a">Schichtwiderstand (Kohle-/Metallschicht mit Wendelschnitt):</text>
+
+    <!-- Ceramic body with spiral cuts -->
+    <line x1="40" y1="50" x2="90" y2="50" stroke="#94a3b8" stroke-width="3" />
+    <rect x="90" y="38" width="180" height="24" rx="3" fill="#cbd5e1" stroke="#475569" />
+    <!-- Spiral Cuts (white gaps) -->
+    <line x1="120" y1="38" x2="135" y2="62" stroke="#ffffff" stroke-width="3" />
+    <line x1="150" y1="38" x2="165" y2="62" stroke="#ffffff" stroke-width="3" />
+    <line x1="180" y1="38" x2="195" y2="62" stroke="#ffffff" stroke-width="3" />
+    <line x1="210" y1="38" x2="225" y2="62" stroke="#ffffff" stroke-width="3" />
+    <line x1="240" y1="38" x2="255" y2="62" stroke="#ffffff" stroke-width="3" />
+    <line x1="270" y1="50" x2="320" y2="50" stroke="#94a3b8" stroke-width="3" />
+
+    <text x="350" y="48" font-size="11" font-weight="bold" fill="#16a34a">Wendelschnitt</text>
+    <text x="350" y="63" font-size="10" fill="#64748b">Präzise Lasertrimmung</text>
+  </g>
+</svg>

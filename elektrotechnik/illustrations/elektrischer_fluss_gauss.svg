@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 460 260"
+   width="100%"
+   height="100%"
+   style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;"
+   version="1.1"
+   id="svg16"
+   sodipodi:docname="elektrischer_fluss_gauss.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview16"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4.3"
+     inkscape:cx="229.88372"
+     inkscape:cy="130"
+     inkscape:window-width="2560"
+     inkscape:window-height="1371"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg16" />
+  <defs
+     id="defs4">
+    <marker
+       id="arrow"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto">
+      <path
+         d="M 0 1 L 10 5 L 0 9 z"
+         fill="#2563eb"
+         id="path1" />
+    </marker>
+    <marker
+       id="arrow-red"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto">
+      <path
+         d="M 0 1 L 10 5 L 0 9 z"
+         fill="#dc2626"
+         id="path2" />
+    </marker>
+    <marker
+       id="arrow-green"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto">
+      <path
+         d="M 0 1 L 10 5 L 0 9 z"
+         fill="#16a34a"
+         id="path3" />
+    </marker>
+    <marker
+       id="arrow-dark"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto">
+      <path
+         d="M 0 1 L 10 5 L 0 9 z"
+         fill="#1e293b"
+         id="path4" />
+    </marker>
+  </defs>
+  <text
+     x="20"
+     y="30"
+     font-size="16"
+     font-weight="bold"
+     fill="#0f172a"
+     id="text4">Gaußscher Satz &amp; Elektrischer Fluss (Hüllfläche)</text>
+  <!-- Closed Surface (Sphere) -->
+  <circle
+     cx="210"
+     cy="140"
+     r="75"
+     fill="#f8fafc"
+     stroke="#2563eb"
+     stroke-width="2"
+     stroke-dasharray="6,4"
+     id="circle4" />
+  <text
+     x="207.44186"
+     y="94.651161"
+     font-size="12px"
+     font-weight="bold"
+     fill="#2563eb"
+     text-anchor="middle"
+     id="text5">Gaußsche Fläche A</text>
+  <!-- Enclosed Charge Q -->
+  <circle
+     cx="210"
+     cy="140"
+     r="18"
+     fill="#fee2e2"
+     stroke="#dc2626"
+     stroke-width="2"
+     id="circle5" />
+  <text
+     x="210"
+     y="145"
+     font-size="14"
+     font-weight="bold"
+     fill="#dc2626"
+     text-anchor="middle"
+     id="text6">+Q</text>
+  <!-- Radial E-field lines -->
+  <g
+     stroke="#2563eb"
+     stroke-width="2"
+     marker-end="url(#arrow)"
+     id="g13">
+    <line
+       x1="228"
+       y1="140"
+       x2="330"
+       y2="140"
+       id="line6" />
+    <line
+       x1="192"
+       y1="140"
+       x2="90"
+       y2="140"
+       id="line7" />
+    <line
+       x1="210"
+       y1="122"
+       x2="210"
+       y2="35"
+       id="line8" />
+    <line
+       x1="210"
+       y1="158"
+       x2="210"
+       y2="240"
+       id="line9" />
+    <line
+       x1="223"
+       y1="127"
+       x2="295"
+       y2="65"
+       id="line10" />
+    <line
+       x1="223"
+       y1="153"
+       x2="295"
+       y2="215"
+       id="line11" />
+    <line
+       x1="197"
+       y1="127"
+       x2="125"
+       y2="65"
+       id="line12" />
+    <line
+       x1="197"
+       y1="153"
+       x2="125"
+       y2="215"
+       id="line13" />
+  </g>
+  <text
+     x="315"
+     y="130"
+     font-size="13"
+     font-weight="bold"
+     fill="#2563eb"
+     id="text13">E</text>
+  <!-- Normal vector dA -->
+  <line
+     x1="285"
+     y1="140"
+     x2="320"
+     y2="140"
+     stroke="#16a34a"
+     stroke-width="2.5"
+     marker-end="url(#arrow-green)"
+     id="line14" />
+  <text
+     x="300"
+     y="160"
+     font-size="12"
+     font-weight="bold"
+     fill="#16a34a"
+     id="text14">dA, n</text>
+  <!-- Formula -->
+  <rect
+     x="298.3721"
+     y="185.11627"
+     width="144.06976"
+     height="45"
+     rx="5"
+     fill="#eff6ff"
+     stroke="#bfdbfe"
+     id="rect14"
+     ry="0.23255815" />
+  <text
+     x="367"
+     y="200"
+     font-size="12"
+     font-weight="bold"
+     fill="#1e40af"
+     text-anchor="middle"
+     id="text15">Φ = ∮ E · dA</text>
+  <text
+     x="367"
+     y="218"
+     font-size="12"
+     font-weight="bold"
+     fill="#1e40af"
+     text-anchor="middle"
+     id="text16">= Q_eingeschlossen / ε₀</text>
+</svg>

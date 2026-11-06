@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 260" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb" />
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#16a34a" />
+    </marker>
+    <marker id="arrow-dark" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b" />
+    </marker>
+  </defs>
+
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Vierleiter-Widerstandsmessung (Kelvin-Technik)</text>
+  <!-- Current Source (Sense current I) -->
+  <rect x="40" y="70" width="80" height="120" rx="5" fill="#f8fafc" stroke="#1e293b" stroke-width="2" />
+  <text x="80" y="105" font-size="12" font-weight="bold" fill="#16a34a" text-anchor="middle">Konstant-</text>
+  <text x="80" y="125" font-size="12" font-weight="bold" fill="#16a34a" text-anchor="middle">strom I</text>
+  <!-- Device Under Test (R_x) -->
+  <rect x="340" y="105" width="40" height="50" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5" />
+  <text x="360" y="135" font-size="15" font-weight="bold" fill="#dc2626" text-anchor="middle">Rₓ</text>
+  <!-- Force lines (Strompfad) -->
+  <line x1="120" y1="90" x2="340" y2="90" stroke="#16a34a" stroke-width="2.5" />
+  <line x1="340" y1="90" x2="340" y2="105" stroke="#16a34a" stroke-width="2.5" />
+  <text x="220" y="80" font-size="11" fill="#16a34a">Stromleitung Force+ (R_L)</text>
+  <line x1="120" y1="170" x2="340" y2="170" stroke="#16a34a" stroke-width="2.5" />
+  <line x1="340" y1="170" x2="340" y2="155" stroke="#16a34a" stroke-width="2.5" />
+  <text x="220" y="185" font-size="11" fill="#16a34a">Stromleitung Force- (R_L)</text>
+  <!-- Sense lines (Spannungspfad stromlos) -->
+  <circle cx="340" cy="115" r="3" fill="#2563eb" />
+  <circle cx="340" cy="145" r="3" fill="#2563eb" />
+  <line x1="340" y1="115" x2="250" y2="115" stroke="#2563eb" stroke-width="2" stroke-dasharray="3,3" />
+  <line x1="340" y1="145" x2="250" y2="145" stroke="#2563eb" stroke-width="2" stroke-dasharray="3,3" />
+  <!-- Voltmeter -->
+  <circle cx="230" cy="130" r="16" fill="#eff6ff" stroke="#2563eb" stroke-width="2" />
+  <text x="230" y="135" font-size="13" font-weight="bold" fill="#2563eb" text-anchor="middle">V</text>
+  <text x="230" y="105" font-size="11" font-weight="bold" fill="#2563eb" text-anchor="middle">Sense U (I ≈ 0)</text>
+  <!-- Explanation note -->
+  <text x="250" y="230" font-size="12" fill="#0f172a" text-anchor="middle">Leitungswiderstände verfälschen die Messung NICHT: Rₓ = U / I</text>
+</svg>

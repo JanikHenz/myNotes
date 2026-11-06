@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 840 480"
+   width="100%"
+   height="100%"
+   version="1.1"
+   id="svg27"
+   sodipodi:docname="hochpass_rl_cr_schaltungen.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview27"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.3291667"
+     inkscape:cx="420.10733"
+     inkscape:cy="240"
+     inkscape:window-width="2560"
+     inkscape:window-height="1371"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg27" />
+  <defs
+     id="defs2">
+    <marker
+       id="arr-u4"
+       viewBox="0 0 10 10"
+       refX="7"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto">
+      <path
+         d="M 0 1 L 10 5 L 0 9 z"
+         fill="#2563eb"
+         id="path1" />
+    </marker>
+    <marker
+       id="arr-u5"
+       viewBox="0 0 10 10"
+       refX="7"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto">
+      <path
+         d="M 0 1 L 10 5 L 0 9 z"
+         fill="#059669"
+         id="path2" />
+    </marker>
+  </defs>
+  <rect
+     width="100%"
+     height="100%"
+     fill="#ffffff"
+     stroke="#cbd5e1"
+     stroke-width="2"
+     rx="10"
+     id="rect2" />
+  <text
+     x="420"
+     y="38"
+     font-family="system-ui, sans-serif"
+     font-size="20"
+     font-weight="bold"
+     fill="#0f172a"
+     text-anchor="middle"
+     id="text2">
+    Passiver Hochpass 1. Ordnung (RL- &amp; CR-Glied)
+  </text>
+  <text
+     x="420"
+     y="62"
+     font-family="system-ui, sans-serif"
+     font-size="13"
+     fill="#64748b"
+     text-anchor="middle"
+     id="text3">
+    Blockiert tiefe Frequenzen / Gleichspannung und lässt hohe Frequenzen ungehindert passieren
+  </text>
+  <!-- RL-Hochpass Left -->
+  <rect
+     x="40"
+     y="85"
+     width="365"
+     height="300"
+     rx="8"
+     fill="#f8fafc"
+     stroke="#cbd5e1"
+     stroke-width="1.5"
+     id="rect3" />
+  <text
+     x="222"
+     y="115"
+     font-family="system-ui, sans-serif"
+     font-size="16"
+     font-weight="bold"
+     fill="#1e293b"
+     text-anchor="middle"
+     id="text4">A) RL-Hochpass</text>
+  <text
+     x="222"
+     y="135"
+     font-family="system-ui, sans-serif"
+     font-size="12"
+     fill="#64748b"
+     text-anchor="middle"
+     id="text5">Längszweig: Widerstand R  |  Querzweig: Spule L</text>
+  <!-- RL Input -->
+  <circle
+     cx="80"
+     cy="180"
+     r="5"
+     fill="#1e293b"
+     id="circle5" />
+  <circle
+     cx="80"
+     cy="310"
+     r="5"
+     fill="#1e293b"
+     id="circle6" />
+  <line
+     x1="100"
+     y1="300"
+     x2="100"
+     y2="190"
+     stroke="#2563eb"
+     stroke-width="2"
+     marker-end="url(#arr-u4)"
+     id="line6" />
+  <text
+     x="110"
+     y="250"
+     font-family="system-ui, sans-serif"
+     font-size="13"
+     font-weight="bold"
+     fill="#2563eb"
+     id="text6">U_e</text>
+  <!-- R -->
+  <line
+     x1="80"
+     y1="180"
+     x2="140"
+     y2="180"
+     stroke="#1e293b"
+     stroke-width="2.5"
+     id="line7" />
+  <rect
+     x="140"
+     y="168"
+     width="55"
+     height="24"
+     fill="#ffffff"
+     stroke="#2563eb"
+     stroke-width="2.5"
+     id="rect7" />
+  <text
+     x="167"
+     y="185"
+     font-family="system-ui, sans-serif"
+     font-size="14"
+     font-weight="bold"
+     fill="#2563eb"
+     text-anchor="middle"
+     id="text7">R</text>
+  <line
+     x1="195"
+     y1="180"
+     x2="260"
+     y2="180"
+     stroke="#1e293b"
+     stroke-width="2.5"
+     id="line8" />
+  <!-- L -->
+  <circle
+     cx="260"
+     cy="180"
+     r="4"
+     fill="#1e293b"
+     id="circle8" />
+  <line
+     x1="260"
+     y1="180"
+     x2="260"
+     y2="210"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line9" />
+  <path
+     d="M 260 210 Q 280 218 260 226 Q 280 234 260 242 Q 280 250 260 258 Q 280 266 260 274"
+     fill="none"
+     stroke="#d97706"
+     stroke-width="3"
+     id="path9" />
+  <text
+     x="280.98389"
+     y="245.85867"
+     font-family="system-ui, sans-serif"
+     font-size="14px"
+     font-weight="bold"
+     fill="#d97706"
+     id="text9">L</text>
+  <line
+     x1="260"
+     y1="274"
+     x2="260"
+     y2="310"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line10" />
+  <circle
+     cx="260"
+     cy="310"
+     r="4"
+     fill="#1e293b"
+     id="circle10" />
+  <line
+     x1="80"
+     y1="310"
+     x2="360"
+     y2="310"
+     stroke="#1e293b"
+     stroke-width="2.5"
+     id="line11" />
+  <!-- Output RL -->
+  <line
+     x1="260"
+     y1="180"
+     x2="360"
+     y2="180"
+     stroke="#1e293b"
+     stroke-width="2.5"
+     id="line12" />
+  <circle
+     cx="360"
+     cy="180"
+     r="5"
+     fill="#1e293b"
+     id="circle12" />
+  <circle
+     cx="360"
+     cy="310"
+     r="5"
+     fill="#1e293b"
+     id="circle13" />
+  <line
+     x1="335"
+     y1="300"
+     x2="335"
+     y2="190"
+     stroke="#059669"
+     stroke-width="2"
+     marker-end="url(#arr-u5)"
+     id="line13" />
+  <text
+     x="305.98389"
+     y="247.42397"
+     font-family="system-ui, sans-serif"
+     font-size="13px"
+     font-weight="bold"
+     fill="#059669"
+     id="text13">U_a</text>
+  <text
+     x="222"
+     y="355"
+     font-family="system-ui, sans-serif"
+     font-size="13"
+     font-weight="bold"
+     fill="#1e293b"
+     text-anchor="middle"
+     id="text14">Grenzfrequenz: f_g = R / (2π · L)</text>
+  <!-- CR-Hochpass Right -->
+  <rect
+     x="435"
+     y="85"
+     width="365"
+     height="300"
+     rx="8"
+     fill="#f8fafc"
+     stroke="#cbd5e1"
+     stroke-width="1.5"
+     id="rect14" />
+  <text
+     x="617"
+     y="115"
+     font-family="system-ui, sans-serif"
+     font-size="16"
+     font-weight="bold"
+     fill="#1e293b"
+     text-anchor="middle"
+     id="text15">B) CR-Hochpass</text>
+  <text
+     x="617"
+     y="135"
+     font-family="system-ui, sans-serif"
+     font-size="12"
+     fill="#64748b"
+     text-anchor="middle"
+     id="text16">Längszweig: Kondensator C  |  Querzweig: Widerstand R</text>
+  <!-- Input CR -->
+  <circle
+     cx="475"
+     cy="180"
+     r="5"
+     fill="#1e293b"
+     id="circle16" />
+  <circle
+     cx="475"
+     cy="310"
+     r="5"
+     fill="#1e293b"
+     id="circle17" />
+  <line
+     x1="495"
+     y1="300"
+     x2="495"
+     y2="190"
+     stroke="#2563eb"
+     stroke-width="2"
+     marker-end="url(#arr-u4)"
+     id="line17" />
+  <text
+     x="505"
+     y="250"
+     font-family="system-ui, sans-serif"
+     font-size="13"
+     font-weight="bold"
+     fill="#2563eb"
+     id="text17">U_e</text>
+  <!-- C -->
+  <line
+     x1="475"
+     y1="180"
+     x2="540"
+     y2="180"
+     stroke="#1e293b"
+     stroke-width="2.5"
+     id="line18" />
+  <line
+     x1="540"
+     y1="165"
+     x2="540"
+     y2="195"
+     stroke="#059669"
+     stroke-width="3.5"
+     id="line19" />
+  <line
+     x1="552"
+     y1="165"
+     x2="552"
+     y2="195"
+     stroke="#059669"
+     stroke-width="3.5"
+     id="line20" />
+  <text
+     x="546"
+     y="155"
+     font-family="system-ui, sans-serif"
+     font-size="14"
+     font-weight="bold"
+     fill="#059669"
+     text-anchor="middle"
+     id="text20">C</text>
+  <line
+     x1="552"
+     y1="180"
+     x2="655"
+     y2="180"
+     stroke="#1e293b"
+     stroke-width="2.5"
+     id="line21" />
+  <!-- R -->
+  <circle
+     cx="655"
+     cy="180"
+     r="4"
+     fill="#1e293b"
+     id="circle21" />
+  <line
+     x1="655"
+     y1="180"
+     x2="655"
+     y2="215"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line22" />
+  <rect
+     x="643"
+     y="215"
+     width="24"
+     height="55"
+     fill="#ffffff"
+     stroke="#2563eb"
+     stroke-width="2.5"
+     id="rect22" />
+  <text
+     x="650.52771"
+     y="246.57066"
+     font-family="system-ui, sans-serif"
+     font-size="14px"
+     font-weight="bold"
+     fill="#2563eb"
+     id="text22">R</text>
+  <line
+     x1="655"
+     y1="270"
+     x2="655"
+     y2="310"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line23" />
+  <circle
+     cx="655"
+     cy="310"
+     r="4"
+     fill="#1e293b"
+     id="circle23" />
+  <line
+     x1="475"
+     y1="310"
+     x2="755"
+     y2="310"
+     stroke="#1e293b"
+     stroke-width="2.5"
+     id="line24" />
+  <!-- Output CR -->
+  <line
+     x1="655"
+     y1="180"
+     x2="755"
+     y2="180"
+     stroke="#1e293b"
+     stroke-width="2.5"
+     id="line25" />
+  <circle
+     cx="755"
+     cy="180"
+     r="5"
+     fill="#1e293b"
+     id="circle25" />
+  <circle
+     cx="755"
+     cy="310"
+     r="5"
+     fill="#1e293b"
+     id="circle26" />
+  <line
+     x1="730"
+     y1="300"
+     x2="730"
+     y2="190"
+     stroke="#059669"
+     stroke-width="2"
+     marker-end="url(#arr-u5)"
+     id="line26" />
+  <text
+     x="697.97852"
+     y="249.57066"
+     font-family="system-ui, sans-serif"
+     font-size="13px"
+     font-weight="bold"
+     fill="#059669"
+     id="text26">U_a</text>
+  <text
+     x="617"
+     y="355"
+     font-family="system-ui, sans-serif"
+     font-size="13"
+     font-weight="bold"
+     fill="#1e293b"
+     text-anchor="middle"
+     id="text27">Grenzfrequenz: f_g = 1 / (2π · R · C)</text>
+</svg>

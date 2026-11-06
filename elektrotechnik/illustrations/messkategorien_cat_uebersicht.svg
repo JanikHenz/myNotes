@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 260" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Messkategorien nach IEC 61010 (CAT I bis CAT IV)</text>
+
+  <!-- 4 Step Boxes -->
+  <!-- CAT I -->
+  <g transform="translate(20, 55)">
+    <rect x="0" y="0" width="118" height="190" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+    <rect x="0" y="0" width="118" height="30" rx="6" fill="#eff6ff" />
+    <text x="59" y="20" font-size="13" font-weight="bold" fill="#2563eb" text-anchor="middle">CAT I</text>
+    
+    <text x="59" y="52" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="middle">Elektronik</text>
+    <text x="59" y="75" font-size="9" fill="#64748b" text-anchor="middle">Batteriebetriebene</text>
+    <text x="59" y="88" font-size="9" fill="#64748b" text-anchor="middle">Geräte, Leiterplatten,</text>
+    <text x="59" y="101" font-size="9" fill="#64748b" text-anchor="middle">geschützte</text>
+    <text x="59" y="114" font-size="9" fill="#64748b" text-anchor="middle">Kleinspannung</text>
+
+    <line x1="15" y1="130" x2="103" y2="130" stroke="#e2e8f0" stroke-width="1" />
+    <text x="59" y="155" font-size="9" font-weight="bold" fill="#16a34a" text-anchor="middle">Transienten:</text>
+    <text x="59" y="172" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="middle">Geringes Risiko</text>
+  </g>
+
+  <!-- CAT II -->
+  <g transform="translate(150, 55)">
+    <rect x="0" y="0" width="118" height="190" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+    <rect x="0" y="0" width="118" height="30" rx="6" fill="#f0fdf4" />
+    <text x="59" y="20" font-size="13" font-weight="bold" fill="#16a34a" text-anchor="middle">CAT II</text>
+    
+    <text x="59" y="52" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="middle">Haushalt</text>
+    <text x="59" y="75" font-size="9" fill="#64748b" text-anchor="middle">Standardsteckdose,</text>
+    <text x="59" y="88" font-size="9" fill="#64748b" text-anchor="middle">tragbare Elektro-</text>
+    <text x="59" y="101" font-size="9" fill="#64748b" text-anchor="middle">werkzeuge,</text>
+    <text x="59" y="114" font-size="9" fill="#64748b" text-anchor="middle">Haushaltsgeräte</text>
+
+    <line x1="15" y1="130" x2="103" y2="130" stroke="#e2e8f0" stroke-width="1" />
+    <text x="59" y="155" font-size="9" font-weight="bold" fill="#16a34a" text-anchor="middle">Transienten:</text>
+    <text x="59" y="172" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="middle">Bis zu 2,5 kV</text>
+  </g>
+
+  <!-- CAT III -->
+  <g transform="translate(280, 55)">
+    <rect x="0" y="0" width="118" height="190" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+    <rect x="0" y="0" width="118" height="30" rx="6" fill="#fefce8" />
+    <text x="59" y="20" font-size="13" font-weight="bold" fill="#ca8a04" text-anchor="middle">CAT III</text>
+    
+    <text x="59" y="52" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="middle">Gebäudeinstallation</text>
+    <text x="59" y="75" font-size="9" fill="#64748b" text-anchor="middle">Verteilerkästen,</text>
+    <text x="59" y="88" font-size="9" fill="#64748b" text-anchor="middle">Sicherungsautomaten,</text>
+    <text x="59" y="101" font-size="9" fill="#64748b" text-anchor="middle">3-Phasen-Motoren,</text>
+    <text x="59" y="114" font-size="9" fill="#64748b" text-anchor="middle">Industrie-Bussysteme</text>
+
+    <line x1="15" y1="130" x2="103" y2="130" stroke="#e2e8f0" stroke-width="1" />
+    <text x="59" y="155" font-size="9" font-weight="bold" fill="#ca8a04" text-anchor="middle">Transienten:</text>
+    <text x="59" y="172" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="middle">Bis zu 6 kV</text>
+  </g>
+
+  <!-- CAT IV -->
+  <g transform="translate(410, 55)">
+    <rect x="0" y="0" width="118" height="190" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+    <rect x="0" y="0" width="118" height="30" rx="6" fill="#fee2e2" />
+    <text x="59" y="20" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">CAT IV</text>
+    
+    <text x="59" y="52" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="middle">Netzanschluss</text>
+    <text x="59" y="75" font-size="9" fill="#64748b" text-anchor="middle">Haupteinspeisung,</text>
+    <text x="59" y="88" font-size="9" fill="#64748b" text-anchor="middle">Stromzähler,</text>
+    <text x="59" y="101" font-size="9" fill="#64748b" text-anchor="middle">Freileitungen,</text>
+    <text x="59" y="114" font-size="9" fill="#64748b" text-anchor="middle">Erdoberleitung</text>
+
+    <line x1="15" y1="130" x2="103" y2="130" stroke="#e2e8f0" stroke-width="1" />
+    <text x="59" y="155" font-size="9" font-weight="bold" fill="#dc2626" text-anchor="middle">Transienten:</text>
+    <text x="59" y="172" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="middle">Bis zu 8 kV+</text>
+  </g>
+</svg>

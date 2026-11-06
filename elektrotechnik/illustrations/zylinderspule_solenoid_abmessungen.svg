@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" width="100%" height="100%">
+  <defs>
+    <marker id="arr-mag" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" rx="10"/>
+
+  <text x="410" y="38" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#0f172a" text-anchor="middle">
+    Zylinderspule (Solenoid) &amp; Berechnung der Windungszahl N
+  </text>
+  <text x="410" y="62" font-family="system-ui, sans-serif" font-size="13" fill="#64748b" text-anchor="middle">
+    Geometrische Größen: Spulenlänge l, Querschnittsfläche A, Kernmaterial μ_r und Windungszahl N
+  </text>
+
+  <!-- Core -->
+  <rect x="220" y="160" width="380" height="110" rx="8" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
+  <ellipse cx="600" cy="215" rx="20" ry="55" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <ellipse cx="220" cy="215" rx="20" ry="55" fill="#cbd5e1" stroke="#94a3b8" stroke-width="2"/>
+  <text x="410" y="222" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#64748b" text-anchor="middle">Spulenkern (μ_r)</text>
+
+  <line x1="200" y1="195" x2="620" y2="195" stroke="#2563eb" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arr-mag)"/>
+  <line x1="200" y1="235" x2="620" y2="235" stroke="#2563eb" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arr-mag)"/>
+  <text x="635" y="200" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">B-Feld</text>
+
+  <!-- Windings -->
+  <g stroke="#b45309" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M 180 120 L 250 160"/>
+    <path d="M 250 160 Q 275 160 275 215 Q 275 270 250 270"/>
+    <path d="M 250 270 L 300 160" stroke="#d97706" stroke-dasharray="2,5" stroke-width="3"/>
+    <path d="M 300 160 Q 325 160 325 215 Q 325 270 300 270"/>
+    <path d="M 300 270 L 350 160" stroke="#d97706" stroke-dasharray="2,5" stroke-width="3"/>
+    <path d="M 350 160 Q 375 160 375 215 Q 375 270 350 270"/>
+    <path d="M 350 270 L 400 160" stroke="#d97706" stroke-width="3" stroke-dasharray="2,5"/>
+    <path d="M 400 160 Q 425 160 425 215 Q 425 270 400 270"/>
+    <path d="M 400 270 L 450 160" stroke="#d97706" stroke-width="3" stroke-dasharray="2,5"/>
+    <path d="M 450 160 Q 475 160 475 215 Q 475 270 450 270"/>
+    <path d="M 450 270 L 500 160" stroke="#d97706" stroke-width="3" stroke-dasharray="2,5"/>
+    <path d="M 500 160 Q 525 160 525 215 Q 525 270 500 270"/>
+    <path d="M 500 270 L 550 160" stroke="#d97706" stroke-width="3" stroke-dasharray="2,5"/>
+    <path d="M 550 160 Q 575 160 575 215 Q 575 270 550 270"/>
+    <path d="M 550 270 L 620 310"/>
+  </g>
+  <text x="410" y="145" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309" text-anchor="middle">Windungszahl N</text>
+
+  <!-- Dimensions -->
+  <line x1="220" y1="310" x2="600" y2="310" stroke="#475569" stroke-width="2"/>
+  <line x1="220" y1="295" x2="220" y2="325" stroke="#475569" stroke-width="2"/>
+  <line x1="600" y1="295" x2="600" y2="325" stroke="#475569" stroke-width="2"/>
+  <text x="410" y="335" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#334155" text-anchor="middle">Spulenlänge l</text>
+
+  <rect x="100" y="360" width="620" height="95" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="410" y="388" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">Berechnungsformel für die Windungszahl N:</text>
+  <text x="410" y="418" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#2563eb" text-anchor="middle">N = √( L · l / (μ₀ · μ_r · A) )</text>
+  <text x="410" y="440" font-family="system-ui, sans-serif" font-size="12" fill="#475569" text-anchor="middle">L = Induktivität [H]   |   μ₀ = 1,257 · 10⁻⁶ Vs/(A·m)   |   μ_r = Permeabilitätszahl   |   A = Fläche [m²]   |   l = Länge [m]</text>
+</svg>

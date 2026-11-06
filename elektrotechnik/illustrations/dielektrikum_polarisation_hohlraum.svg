@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 560 280"
+   width="100%"
+   height="100%"
+   style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;"
+   version="1.1"
+   id="svg29"
+   sodipodi:docname="dielektrikum_polarisation_hohlraum.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs29" />
+  <sodipodi:namedview
+     id="namedview29"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="3.9928571"
+     inkscape:cx="280.12522"
+     inkscape:cy="140"
+     inkscape:window-width="2560"
+     inkscape:window-height="1371"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g29" />
+  <text
+     x="20"
+     y="30"
+     font-size="16"
+     font-weight="bold"
+     fill="#0f172a"
+     id="text1">Dielektrische Polarisation &amp; Feldfreier Hohlraum (Faraday-Käfig)</text>
+  <!-- Left: Dielectric in Capacitor -->
+  <g
+     transform="translate(30, 60)"
+     id="g19">
+    <text
+       x="110"
+       y="20"
+       font-size="13"
+       font-weight="bold"
+       fill="#0f172a"
+       text-anchor="middle"
+       id="text2">Dielektrikum (Polarisation)</text>
+    <!-- Left Plate (+) -->
+    <rect
+       x="20"
+       y="40"
+       width="14"
+       height="130"
+       fill="#fee2e2"
+       stroke="#dc2626"
+       stroke-width="1.5"
+       id="rect2" />
+    <text
+       x="27"
+       y="60"
+       font-size="12"
+       font-weight="bold"
+       fill="#dc2626"
+       text-anchor="middle"
+       id="text3">+</text>
+    <text
+       x="27"
+       y="105"
+       font-size="12"
+       font-weight="bold"
+       fill="#dc2626"
+       text-anchor="middle"
+       id="text4">+</text>
+    <text
+       x="27"
+       y="150"
+       font-size="12"
+       font-weight="bold"
+       fill="#dc2626"
+       text-anchor="middle"
+       id="text5">+</text>
+    <!-- Right Plate (-) -->
+    <rect
+       x="190"
+       y="40"
+       width="14"
+       height="130"
+       fill="#dbeafe"
+       stroke="#2563eb"
+       stroke-width="1.5"
+       id="rect5" />
+    <text
+       x="197"
+       y="60"
+       font-size="12"
+       font-weight="bold"
+       fill="#2563eb"
+       text-anchor="middle"
+       id="text6">−</text>
+    <text
+       x="197"
+       y="105"
+       font-size="12"
+       font-weight="bold"
+       fill="#2563eb"
+       text-anchor="middle"
+       id="text7">−</text>
+    <text
+       x="197"
+       y="150"
+       font-size="12"
+       font-weight="bold"
+       fill="#2563eb"
+       text-anchor="middle"
+       id="text8">−</text>
+    <!-- Dielectric Medium -->
+    <rect
+       x="45"
+       y="40"
+       width="135"
+       height="130"
+       fill="#f1f5f9"
+       stroke="#94a3b8"
+       stroke-dasharray="3,3"
+       id="rect8" />
+    <text
+       x="112"
+       y="55"
+       font-size="10"
+       fill="#64748b"
+       text-anchor="middle"
+       id="text9">Dielektrikum (εᵣ &gt; 1)</text>
+    <!-- Aligned Dipoles (- +) -->
+    <g
+       transform="translate(70, 80)"
+       id="g11">
+      <rect
+         x="0"
+         y="0"
+         width="30"
+         height="14"
+         rx="7"
+         fill="#ffffff"
+         stroke="#64748b"
+         id="rect9" />
+      <text
+         x="7"
+         y="11"
+         font-size="10"
+         fill="#2563eb"
+         font-weight="bold"
+         id="text10">−</text>
+      <text
+         x="22"
+         y="11"
+         font-size="10"
+         fill="#dc2626"
+         font-weight="bold"
+         id="text11">+</text>
+    </g>
+    <g
+       transform="translate(125, 80)"
+       id="g13">
+      <rect
+         x="0"
+         y="0"
+         width="30"
+         height="14"
+         rx="7"
+         fill="#ffffff"
+         stroke="#64748b"
+         id="rect11" />
+      <text
+         x="7"
+         y="11"
+         font-size="10"
+         fill="#2563eb"
+         font-weight="bold"
+         id="text12">−</text>
+      <text
+         x="22"
+         y="11"
+         font-size="10"
+         fill="#dc2626"
+         font-weight="bold"
+         id="text13">+</text>
+    </g>
+    <g
+       transform="translate(70, 125)"
+       id="g15">
+      <rect
+         x="0"
+         y="0"
+         width="30"
+         height="14"
+         rx="7"
+         fill="#ffffff"
+         stroke="#64748b"
+         id="rect13" />
+      <text
+         x="7"
+         y="11"
+         font-size="10"
+         fill="#2563eb"
+         font-weight="bold"
+         id="text14">−</text>
+      <text
+         x="22"
+         y="11"
+         font-size="10"
+         fill="#dc2626"
+         font-weight="bold"
+         id="text15">+</text>
+    </g>
+    <g
+       transform="translate(125, 125)"
+       id="g17">
+      <rect
+         x="0"
+         y="0"
+         width="30"
+         height="14"
+         rx="7"
+         fill="#ffffff"
+         stroke="#64748b"
+         id="rect15" />
+      <text
+         x="7"
+         y="11"
+         font-size="10"
+         fill="#2563eb"
+         font-weight="bold"
+         id="text16">−</text>
+      <text
+         x="22"
+         y="11"
+         font-size="10"
+         fill="#dc2626"
+         font-weight="bold"
+         id="text17">+</text>
+    </g>
+    <!-- Formula at bottom -->
+    <text
+       x="110"
+       y="195"
+       font-size="11"
+       font-weight="bold"
+       fill="#2563eb"
+       text-anchor="middle"
+       id="text18">p = Q · d (Dipolmoment)</text>
+    <text
+       x="110"
+       y="210"
+       font-size="11"
+       fill="#334155"
+       text-anchor="middle"
+       id="text19">E = E₀ / εᵣ  ⇒  C = ε₀εᵣ A / d</text>
+  </g>
+  <!-- Divider -->
+  <line
+     x1="285"
+     y1="50"
+     x2="285"
+     y2="265"
+     stroke="#e2e8f0"
+     stroke-width="2"
+     id="line19" />
+  <!-- Right: Faraday Cage Hollow Sphere -->
+  <g
+     transform="translate(305, 60)"
+     id="g29">
+    <text
+       x="115"
+       y="20"
+       font-size="13"
+       font-weight="bold"
+       fill="#0f172a"
+       text-anchor="middle"
+       id="text20">Faraday-Käfig (Hohlkörper)</text>
+    <!-- Outer metallic shell -->
+    <circle
+       cx="115"
+       cy="105"
+       r="70"
+       fill="#cbd5e1"
+       stroke="#64748b"
+       stroke-width="2"
+       id="circle20" />
+    <!-- Inner hollow chamber -->
+    <circle
+       cx="115"
+       cy="105"
+       r="45"
+       fill="#ffffff"
+       stroke="#64748b"
+       stroke-width="1.5"
+       id="circle21" />
+    <!-- Induced Surface Charges -->
+    <text
+       x="50"
+       y="110"
+       font-size="13"
+       font-weight="bold"
+       fill="#2563eb"
+       id="text21">−</text>
+    <text
+       x="55"
+       y="85"
+       font-size="13"
+       font-weight="bold"
+       fill="#2563eb"
+       id="text22">−</text>
+    <text
+       x="55"
+       y="135"
+       font-size="13"
+       font-weight="bold"
+       fill="#2563eb"
+       id="text23">−</text>
+    <text
+       x="175"
+       y="110"
+       font-size="13"
+       font-weight="bold"
+       fill="#dc2626"
+       id="text24">+</text>
+    <text
+       x="170"
+       y="85"
+       font-size="13"
+       font-weight="bold"
+       fill="#dc2626"
+       id="text25">+</text>
+    <text
+       x="170"
+       y="135"
+       font-size="13"
+       font-weight="bold"
+       fill="#dc2626"
+       id="text26">+</text>
+    <!-- Center Feldfrei Label -->
+    <rect
+       x="77.245079"
+       y="93"
+       width="75.259392"
+       height="23.248657"
+       rx="4"
+       fill="#dcfce7"
+       stroke="#16a34a"
+       id="rect26" />
+    <text
+       x="115"
+       y="109"
+       font-size="11"
+       font-weight="bold"
+       fill="#16a34a"
+       text-anchor="middle"
+       id="text27">E = 0 (feldfrei)</text>
+    <text
+       x="115"
+       y="195"
+       font-size="11"
+       font-weight="bold"
+       fill="#0f172a"
+       text-anchor="middle"
+       id="text28">Influenz kompensiert E-Feld</text>
+    <text
+       x="115"
+       y="210"
+       font-size="11"
+       fill="#64748b"
+       text-anchor="middle"
+       id="text29">Schutz gegen äußere Blitze/Felder</text>
+  </g>
+</svg>

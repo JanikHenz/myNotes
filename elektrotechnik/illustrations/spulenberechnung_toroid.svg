@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 260" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Spulenberechnung &amp; Induktivität (Zylinder &amp; Toroid)</text>
+
+  <!-- Left: Solenoid Geometry -->
+  <g transform="translate(30, 55)">
+    <rect x="0" y="0" width="235" height="190" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="117" y="24" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Zylinderspule (Solenoid)</text>
+
+    <!-- Coil loops -->
+    <g transform="translate(35, 45)">
+      <!-- Core -->
+      <rect x="15" y="15" width="135" height="30" rx="4" fill="#e2e8f0" stroke="#94a3b8" />
+      <text x="82" y="34" font-size="10" fill="#64748b" text-anchor="middle">Kern (μᵣ)</text>
+
+      <!-- Helical Windings -->
+      <path d="M 25,10 C 20,25 20,35 25,50 M 50,10 C 45,25 45,35 50,50 M 75,10 C 70,25 70,35 75,50 M 100,10 C 95,25 95,35 100,50 M 125,10 C 120,25 120,35 125,50" fill="none" stroke="#ea580c" stroke-width="3" />
+    </g>
+
+    <!-- Dimension length l and area A -->
+    <line x1="50" y1="115" x2="185" y2="115" stroke="#64748b" stroke-width="1.5" />
+    <line x1="50" y1="110" x2="50" y2="120" stroke="#64748b" stroke-width="1.5" />
+    <line x1="185" y1="110" x2="185" y2="120" stroke="#64748b" stroke-width="1.5" />
+    <text x="117" y="130" font-size="11" fill="#64748b" text-anchor="middle">Spulenlänge l</text>
+
+    <text x="117" y="155" font-size="12" font-weight="bold" fill="#2563eb" text-anchor="middle">L = (μ₀ · μᵣ · N² · A) / l</text>
+    <text x="117" y="175" font-size="10" fill="#64748b" text-anchor="middle">N = Windungszahl, A = Querschnitt</text>
+  </g>
+
+  <!-- Right: Toroid Coil -->
+  <g transform="translate(285, 55)">
+    <rect x="0" y="0" width="235" height="190" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="117" y="24" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Toroidspule (Ringkern)</text>
+
+    <!-- Toroid ring -->
+    <circle cx="117" cy="85" r="45" fill="none" stroke="#cbd5e1" stroke-width="20" />
+    <circle cx="117" cy="85" r="45" fill="none" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3" />
+    
+    <!-- Windings on toroid -->
+    <g stroke="#ea580c" stroke-width="2.5">
+      <line x1="117" y1="30" x2="117" y2="50" />
+      <line x1="117" y1="120" x2="117" y2="140" />
+      <line x1="62" y1="85" x2="82" y2="85" />
+      <line x1="152" y1="85" x2="172" y2="85" />
+      <line x1="78" y1="46" x2="92" y2="60" />
+      <line x1="156" y1="46" x2="142" y2="60" />
+      <line x1="78" y1="124" x2="92" y2="110" />
+      <line x1="156" y1="124" x2="142" y2="110" />
+    </g>
+
+    <text x="117" y="155" font-size="12" font-weight="bold" fill="#16a34a" text-anchor="middle">B = (μ₀ · μᵣ · N · I) / (2π · r_m)</text>
+    <text x="117" y="175" font-size="10" fill="#64748b" text-anchor="middle">Kein magnetisches Streufeld nach außen</text>
+  </g>
+</svg>

@@ -1,0 +1,2253 @@
+
+<!doctype html>
+<html lang="de" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Janik Henz's Wissensdatenbank, Elektrotechnik-Referenzhandbuch & Projektnotizen">
+      
+      
+        <meta name="author" content="Janik Henz">
+      
+      
+        <link rel="canonical" href="https://JanikHenz.github.io/myNotes/elektrotechnik/kapitel02_elektrostatik_felder/">
+      
+      
+        <link rel="prev" href="../kapitel01_mathematik/">
+      
+      
+        <link rel="next" href="../kapitel03_kondensatoren/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>2. Elektrostatik & Felder - myNotes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kapitel-2-elektrostatik-ladungen-elektrische-felder" class="md-skip">
+          Zum Inhalt
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Kopfzeile">
+    <a href="../.." title="myNotes" class="md-header__button md-logo" aria-label="myNotes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            myNotes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2. Elektrostatik & Felder
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-label="Heller Modus"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Heller Modus" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="deep-orange"  aria-label="Dunkler Modus"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Dunkler Modus" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Suche" placeholder="Suche" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Suche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Zurücksetzen" aria-label="Zurücksetzen" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Suche wird initialisiert
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/JanikHenz/myNotes" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    JanikHenz/myNotes
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="myNotes" class="md-nav__button md-logo" aria-label="myNotes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    myNotes
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/JanikHenz/myNotes" title="Zum Repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    JanikHenz/myNotes
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elektrotechnik
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Elektrotechnik
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht & Download
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel01_mathematik/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Mathematik & Vektoren
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Elektrostatik & Felder
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Elektrostatik & Felder
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-atommodell-ladungen-elementarladung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Atommodell, Ladungen &amp; Elementarladung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Atommodell, Ladungen &amp; Elementarladung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elementarladung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elementarladung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ladungsmenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ladungsmenge
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-coulombsches-gesetz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Coulombsches Gesetz
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-superpositionsprinzip-feldstarkeberechnung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Superpositionsprinzip &amp; Feldstärkeberechnung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-kontinuierliche-ladungsverteilungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Kontinuierliche Ladungsverteilungen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-elektrischer-fluss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Elektrischer Fluss
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-gausches-gesetz-symmetrien-kugel-zylinder-ebene" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Gaußsches Gesetz (Symmetrien: Kugel, Zylinder, Ebene)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6 Gaußsches Gesetz (Symmetrien: Kugel, Zylinder, Ebene)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spharische-symmetrie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sphärische Symmetrie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zylindersymmetrie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zylindersymmetrie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ebene-symmetrie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ebene Symmetrie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-elektrisches-potenzial-arbeit-im-e-feld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Elektrisches Potenzial &amp; Arbeit im E-Feld
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-elektrische-spannung-potenzialdifferenz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 Elektrische Spannung &amp; Potenzialdifferenz
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-aquipotenzialflachen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.9 Äquipotenzialflächen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#210-elektrische-felder-in-materie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.10 Elektrische Felder in Materie
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#211-dunne-leitende-platten-im-homogenen-feld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.11 Dünne leitende Platten im homogenen Feld
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.11 Dünne leitende Platten im homogenen Feld">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flachenladungsdichte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flächenladungsdichte
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#212-leitender-korper-faraday-kafig-hohlraum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.12 Leitender Körper &amp; Faraday-Käfig (Hohlraum)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#213-dielektrische-polarisation-materieeinfluss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.13 Dielektrische Polarisation &amp; Materieeinfluss
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel03_kondensatoren/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Kondensatoren
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel04_gleichstrom_netzwerke/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Gleichstromtechnik
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel05_magnetismus_spulen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Magnetismus & Spulen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel06_messtechnik_sicherheit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Messtechnik & Sicherheit
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel07_passive_bauelemente/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7. Passive Bauelemente & Fertigung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel08_dioden_halbleiter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8. Dioden & Halbleiter
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel09_transistoren_schaltungen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9. Transistoren & Schaltungen
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel10_opv_filter_analog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. OPVs, Filter & Signalverarbeitung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel11_digitaltechnik_mikrocontroller/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11. Digitaltechnik & Mikrocontroller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kapitel12_hochspannung_praxis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12. Hochspannungstechnik (EMC Partner)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../anhang_formelsammlung/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Anhang: Formelsammlung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../komplett/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vollständiges Skript
+  
+
+    
+      <br>
+      <small>Vollständiges Referenzhandbuch & Formelsammlung</small>
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--completed"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IP5
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IP5
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Übersicht
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/projectdeclaration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projektvereinbarung
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/risks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Risiken
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/helper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Helper
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/milestone01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meilenstein 01
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ip5/milestone02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Meilenstein 02
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    C++
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    C++
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week45/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 45
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week46/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 46
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week47/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 47
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week48/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 48
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cpp/week49/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Woche 49
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Weitere Notizen
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Weitere Notizen
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vesys/week01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VeSys
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wosm/week01/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WoSM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Allgemein
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhaltsverzeichnis">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhaltsverzeichnis
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-atommodell-ladungen-elementarladung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Atommodell, Ladungen &amp; Elementarladung
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Atommodell, Ladungen &amp; Elementarladung">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#elementarladung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Elementarladung
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ladungsmenge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ladungsmenge
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-coulombsches-gesetz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Coulombsches Gesetz
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-superpositionsprinzip-feldstarkeberechnung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Superpositionsprinzip &amp; Feldstärkeberechnung
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-kontinuierliche-ladungsverteilungen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Kontinuierliche Ladungsverteilungen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-elektrischer-fluss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Elektrischer Fluss
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-gausches-gesetz-symmetrien-kugel-zylinder-ebene" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Gaußsches Gesetz (Symmetrien: Kugel, Zylinder, Ebene)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6 Gaußsches Gesetz (Symmetrien: Kugel, Zylinder, Ebene)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spharische-symmetrie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sphärische Symmetrie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zylindersymmetrie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Zylindersymmetrie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ebene-symmetrie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ebene Symmetrie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-elektrisches-potenzial-arbeit-im-e-feld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Elektrisches Potenzial &amp; Arbeit im E-Feld
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-elektrische-spannung-potenzialdifferenz" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 Elektrische Spannung &amp; Potenzialdifferenz
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-aquipotenzialflachen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.9 Äquipotenzialflächen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#210-elektrische-felder-in-materie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.10 Elektrische Felder in Materie
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#211-dunne-leitende-platten-im-homogenen-feld" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.11 Dünne leitende Platten im homogenen Feld
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.11 Dünne leitende Platten im homogenen Feld">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flachenladungsdichte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flächenladungsdichte
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#212-leitender-korper-faraday-kafig-hohlraum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.12 Leitender Körper &amp; Faraday-Käfig (Hohlraum)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#213-dielektrische-polarisation-materieeinfluss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.13 Dielektrische Polarisation &amp; Materieeinfluss
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="kapitel-2-elektrostatik-ladungen-elektrische-felder">Kapitel 2: Elektrostatik, Ladungen &amp; Elektrische Felder<a class="headerlink" href="#kapitel-2-elektrostatik-ladungen-elektrische-felder" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Überblick</p>
+<p>Ladungsquantelung, Coulombsches Gesetz, E-Feld, Gaußscher Satz, Potenzial und Spannung.</p>
+</div>
+<h2 id="21-atommodell-ladungen-elementarladung">2.1 Atommodell, Ladungen &amp; Elementarladung<a class="headerlink" href="#21-atommodell-ladungen-elementarladung" title="Permanent link">&para;</a></h2>
+<p><img alt="Atommodell nach Bohr &amp; Elementarladung" src="../illustrations/atommodell_bohr_ladungen.svg" /></p>
+<p><em>Abbildung: Schematisches Atommodell für „Wasserstoff“:</em>
+- <em>In der Mitte ein Kern mit Protonen (<span class="arithmatex">\(p\)</span>, grün beschriftet) und Neutronen (<span class="arithmatex">\(n\)</span>, blau beschriftet).</em>
+- <em>Eine äußere Kreisbahn mit einem umlaufenden Elektron (<span class="arithmatex">\(e\)</span>, rot beschriftet).</em></p>
+<ul>
+<li><strong>Wasserstoff</strong></li>
+<li><strong>Elektron</strong> <em>(rot)</em> = negative Ladung</li>
+<li><strong>Proton</strong> <em>(grün)</em> = positive Ladung</li>
+<li><strong>Neutron</strong> <em>(blau)</em> = neutrale Ladung</li>
+</ul>
+<p>Die ungleichnamige Ladungen ziehen sich an und die gleichnamigen stossen sich ab. Nur durch die Zentrifugalkraft stürzt der Elektron nicht zum Proton.</p>
+<p>Ein Atom kann aus mehreren Bahnen bestehen.</p>
+<hr />
+<p>Ein Atom besteht aus einem <strong>Kern</strong> und aus einen oder mehreren <strong>Schalen</strong>, auf diesen können nur eine begrenzte Anzahl von Elektronen sein.</p>
+<p>Reihenfolge:
+1) 2
+2) 8
+3) 18
+4) 32</p>
+<blockquote>
+<p><strong>Merksatz (rot umrandeter Kasten):</strong><br />
+Die Elektronen auf der äussersten Schale des jeweiligen Atoms heissen <strong>Valenzelektronen</strong>.</p>
+</blockquote>
+<hr />
+<h3 id="elementarladung">Elementarladung<a class="headerlink" href="#elementarladung" title="Permanent link">&para;</a></h3>
+<p>Bei einem Atom hat es immer gleichviele Protonen wie Elektronen, die Ladung der Elementarteilchen ist fest gequantelt, diese nennt man:</p>
+<div class="arithmatex">\[\text{Elementarladung} = -e \approx -1{,}602 \times 10^{-19} \, \text{C}\]</div>
+<p>Bei den Protonen ist es fast das selbe:</p>
+<div class="arithmatex">\[\text{Elementarladung} = +e \approx +1{,}602 \times 10^{-19} \, \text{C}\]</div>
+<hr />
+<p>das c steht für coulomb.</p>
+<p>ion = Der Atom während elektronen entzogen oder Beigefügt ~~oder entzogen~~ werden.</p>
+<hr />
+<h3 id="ladungsmenge">Ladungsmenge<a class="headerlink" href="#ladungsmenge" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="arithmatex">\(Q =\)</span> Ladung (Elektrizitätsmenge)</li>
+<li><span class="arithmatex">\(n =\)</span> Anzahl der Elementarladung</li>
+<li><span class="arithmatex">\(e =\)</span> Elementarladung</li>
+</ul>
+<div class="arithmatex">\[Q = n \times \pm e\]</div>
+<p><strong>Bsp.:</strong><br />
+<img alt="Ladungsquantelung und Gesamtladung (Q = n · e)" src="../illustrations/ladung_quantelung_beispiel.svg" /></p>
+<p><em>Abbildung: Eine sechseckige Umrandung mit 8 blauen Punkten im Inneren:</em>
+- <em><span class="arithmatex">\(\bullet \rightarrow \pm \text{Elementarladung} = \pm 1{,}602 \times 10^{-19}\)</span></em>
+- <em><span class="arithmatex">\(n = \text{menge}\)</span> (Pfeil auf die Gesamtheit der Ladungen</em></p>
+<ul>
+<li><em><span class="arithmatex">\(Q = \text{Ladung}\)</span> (Pfeil nach außen aus der Umrandung))</em></li>
+</ul>
+<div class="arithmatex">\[8 \times 1{,}602 \times 10^{-19} = 1{,}2816 \times 10^{-18}\]</div>
+<hr />
+<hr />
+<h2 id="22-coulombsches-gesetz">2.2 Coulombsches Gesetz<a class="headerlink" href="#22-coulombsches-gesetz" title="Permanent link">&para;</a></h2>
+<p><img alt="Coulombsches Gesetz" src="../illustrations/colombsches_gesetz.svg" /> <em>(im Original: „Coulombsches Gesetz“)</em></p>
+<p><em>Abbildung: Zwei punktförmige Ladungen:</em>
+- <em>Quelladung <span class="arithmatex">\(q\)</span> (schwarz</em></p>
+<ul>
+<li><em>Testladung <span class="arithmatex">\(e\)</span> (blau)</em></li>
+<li><em>Gestrichelte Pfeillinie als Abstandsvektor <span class="arithmatex">\(\vec{r}\)</span> von <span class="arithmatex">\(q\)</span> nach <span class="arithmatex">\(e\)</span>.)</em></li>
+</ul>
+<div class="arithmatex">\[F \approx \frac{1}{4\pi\varepsilon_0} \cdot \frac{q \cdot e}{|r|^2} \qquad F = \text{Kraft } [\text{N}]\]</div>
+<div class="arithmatex">\[\vec{F} \approx \frac{1}{4\pi\varepsilon_0} \cdot \frac{q \cdot e}{|r|^2} \, \vec{e}_r \qquad \varepsilon_0 = 8{,}854 \cdot 10^{-12} \, \text{C/Vm}\]</div>
+<p>Dieses Gesetz ist nur bei Punktladungen möglich.</p>
+<div class="arithmatex">\[F = e E\]</div>
+<hr />
+<div class="admonition warning">
+<p class="admonition-title">Coulombsches Gesetz &amp; Dielektrizitätskonstante</p>
+<ul>
+<li>Das Coulombsche Gesetz gilt in dieser Form streng für <strong>ruhende Punktladungen</strong>.</li>
+<li>Befinden sich die Ladungen in einem dielektrischen Medium (z. B. Isolieröl, Kunststoff), verringert sich die wirksame Kraft um die relative Permittivität <span class="arithmatex">\(\varepsilon_r\)</span>:
+  $<span class="arithmatex">\(\vec{F} = \frac{1}{4\pi \varepsilon_0 \varepsilon_r} \cdot \frac{q_1 \cdot q_2}{|\vec{r}|^2} \, \vec{e}_r\)</span>$</li>
+<li>Im Vakuum / Luft gilt <span class="arithmatex">\(\varepsilon_r \approx 1\)</span>.</li>
+</ul>
+</div>
+<hr />
+<h2 id="23-superpositionsprinzip-feldstarkeberechnung">2.3 Superpositionsprinzip &amp; Feldstärkeberechnung<a class="headerlink" href="#23-superpositionsprinzip-feldstarkeberechnung" title="Permanent link">&para;</a></h2>
+<p><em>Abbildung: Zentrale Punktladung <span class="arithmatex">\(q\)</span>, von der 8 radiale Feldlinien (blaue Pfeile) in alle Richtungen nach außen verlaufen. Im ersten Quadranten liegt ein Messpunkt <span class="arithmatex">\(P\)</span> mit gestricheltem Abstandsdreieck <span class="arithmatex">\(r\)</span> zum Zentrum <span class="arithmatex">\(q\)</span>.</em></p>
+<p>Hier gilt:</p>
+<div class="arithmatex">\[\vec{E} = \frac{1}{4\pi\varepsilon_0} \cdot \frac{q}{|r|^2} \, \vec{e}_r\]</div>
+<p>Wir wollen die Feldstärke vom Punkt <span class="arithmatex">\(P\)</span> wissen.</p>
+<p>Vereinfachte Rechnung von mehreren Quelladungen:</p>
+<div class="arithmatex">\[\vec{E}(\vec{r}_P) = \frac{1}{4\pi\varepsilon_0} \cdot \sum_{i=1}^n \frac{q_i}{|r_i|^2} \, \vec{e}_r\]</div>
+<p>Quellladung haben gegenseitig keinen Einfluss.<br />
+Die Dichte der Feldlinien definieren die Stärke vom Elektrischem Feld.</p>
+<hr />
+<p><img alt="Superpositionsprinzip und Ortsvektoren" src="../illustrations/superposition_vektoren_ortsvektor.svg" /></p>
+<p><em>Abbildung: oben: 2D-Koordinatensystem mit Achsen:</em>
+- <em>Quelladung <span class="arithmatex">\(q\)</span> mit Ortsvektor <span class="arithmatex">\(\vec{r}_q\)</span> und nach allen Richtungen ausgehenden Feldlinien.</em>
+- <em>Messpunkt <span class="arithmatex">\(P\)</span> mit Ortsvektor <span class="arithmatex">\(\vec{r}_P\)</span>.</em>
+- <em>Verbindungsvektor <span class="arithmatex">\(\vec{r}\)</span> von <span class="arithmatex">\(q\)</span> nach <span class="arithmatex">\(P\)</span> mit Einheitsvektor <span class="arithmatex">\(\vec{e}_r\)</span>.</em></p>
+<div class="arithmatex">\[\vec{r} = \vec{r}_P - \vec{r}_q\]</div>
+<div class="arithmatex">\[\vec{e}_r = \frac{\vec{r}}{|r|}\]</div>
+<div class="arithmatex">\[\vec{E} = \frac{1}{4\pi\varepsilon_0} \cdot \frac{q}{|r|^2} \, \vec{e}_r \implies \vec{E} = \frac{1}{4\pi\varepsilon_0} \cdot \frac{q \vec{r}}{|r|^3}\]</div>
+<div class="arithmatex">\[\vec{E} = \frac{1}{4\pi\varepsilon_0} \cdot \sum_{i=1}^n q_i \frac{\vec{r}_i}{|r_i|^3} \quad \text{mit } \vec{r}_i = \vec{r}_P - \vec{r}_{qi}\]</div>
+<hr />
+<p><img alt="Elektrische Feldlinien: Dipol vs. gleichnamige Ladungen" src="../illustrations/feldlinien_dipol_gleichnamig.svg" /></p>
+<p><em>(Zwei Feldlinien-Skizzen:</em>
+1. <em>Elektrischer Dipol: Oben Pluspol <span class="arithmatex">\((+)\)</span>, unten Minuspol <span class="arithmatex">\((-)\)</span>. Feldlinien treten aus <span class="arithmatex">\((+)\)</span> aus und verlaufen in symmetrischen Bögen zu <span class="arithmatex">\((-)\)</span>.</em>
+2. <em>Zwei gleichnamige Ladungen: Oben Pluspol <span class="arithmatex">\((+)\)</span>, unten Pluspol <span class="arithmatex">\((+)\)</span>. Die Feldlinien weichen einander aus und biegen nach links und rechts ab. Der feldfreie Zwischenraum in der Mitte ist grün markiert und mit „Neutral“ beschriftet.)</em></p>
+<p><strong>Feldlinien schneiden sich nie.</strong></p>
+<hr />
+<hr />
+<h2 id="24-kontinuierliche-ladungsverteilungen">2.4 Kontinuierliche Ladungsverteilungen<a class="headerlink" href="#24-kontinuierliche-ladungsverteilungen" title="Permanent link">&para;</a></h2>
+<p><img alt="Kontinuierliche Ladungsverteilungen (Linie, Fläche, Volumen)" src="../illustrations/ladungsverteilungen_gauss.svg" /></p>
+<ol>
+<li><strong>Längenbezogene Ladungsdichte:</strong>  </li>
+</ol>
+<p><em>Abbildung: Eine geschwungene Linie/Draht mit einem roten Linienelement <span class="arithmatex">\(\Delta L\)</span> und gestrichelter Verbindungslinie zu einem Punkt oben.</em></p>
+<div class="arithmatex">\[\Delta L = \text{Delta } l$$  
+$$\lambda = \lim_{\Delta L \to 0} \frac{\Delta Q}{\Delta L} \quad \left[\frac{\text{C}}{\text{m}}\right]\]</div>
+<ol>
+<li><strong>Flächenbezogene Ladungsdichte:</strong>  </li>
+</ol>
+<p><em>Abbildung: Eine rautenförmige Ebene mit Ladungspunkten und einem rot hervorgehobenen Flächenelement <span class="arithmatex">\(\Delta A\)</span>, von dem eine gestrichelte Linie zu einem Punkt führt.</em></p>
+<div class="arithmatex">\[\Delta A$$  
+$$\sigma = \lim_{\Delta A \to 0} \frac{\Delta Q}{\Delta A} \quad \left[\frac{\text{C}}{\text{m}^2}\right]\]</div>
+<ol>
+<li><strong>Raumbezogene Ladungsdichte (Volumenladungsdichte):</strong>  </li>
+</ol>
+<p><em>Abbildung: Ein unregelmäßiger 3D-Körper mit Ladungspunkten im Inneren und einem rot umrandeten Volumenelement <span class="arithmatex">\(\Delta V\)</span>, verbunden mit einem Punkt oben.</em></p>
+<div class="arithmatex">\[\Delta V$$  
+$$\rho = \lim_{\Delta V \to 0} \frac{\Delta Q}{\Delta V} \quad \left[\frac{\text{C}}{\text{m}^3}\right]\]</div>
+<div class="arithmatex">\[\vec{E}(\vec{r}_P) = \frac{\lambda \Delta L}{4\pi\varepsilon_0} \sum_{i=1}^n \frac{1}{|\vec{r}_i|^2}\]</div>
+<p><em>(Roter handschriftlicher Kommentar unten:)</em>  </p>
+<blockquote>
+<p><em>„Kann man nicht Rechnen!“</em></p>
+</blockquote>
+<hr />
+<hr />
+<h2 id="25-elektrischer-fluss">2.5 Elektrischer Fluss<a class="headerlink" href="#25-elektrischer-fluss" title="Permanent link">&para;</a></h2>
+<p><img alt="Elektrischer Fluss durch ein Flächenelement" src="../illustrations/elektrischer_fluss_vektor_flaeche.svg" /></p>
+<p><em>Abbildung: Eine ebene rechteckige Fläche <span class="arithmatex">\(\Delta A\)</span> mit Flächennormale <span class="arithmatex">\(\vec{n}\)</span> senkrecht dazu. Parallele elektrische Feldlinien <span class="arithmatex">\(\vec{E}\)</span> (blaue Pfeile) durchstoßen die Fläche schräg.</em></p>
+<div class="arithmatex">\[\Phi_E = \vec{E} \cdot \Delta \vec{A}\]</div>
+<p><em>(mit <span class="arithmatex">\(\Delta \vec{A} = \vec{n} \cdot \Delta A\)</span>)</em></p>
+<ul>
+<li><span class="arithmatex">\(\Delta A = \text{Fläche}\)</span></li>
+<li><span class="arithmatex">\(\vec{n} = \text{Flächennormale}\)</span></li>
+<li><span class="arithmatex">\(\vec{E} = \text{Elektrische Feldlinien}\)</span></li>
+<li><span class="arithmatex">\(\Phi_E = \text{Elektrischer Fluss}\)</span></li>
+</ul>
+<div class="arithmatex">\[\Phi_E = \sum_{i=1}^n \vec{E}_i \cdot \Delta \vec{A}_i = \text{Fluss in homogenen und nicht gerader Fläche.}\]</div>
+<hr />
+<hr />
+<h2 id="26-gausches-gesetz-symmetrien-kugel-zylinder-ebene">2.6 Gaußsches Gesetz (Symmetrien: Kugel, Zylinder, Ebene)<a class="headerlink" href="#26-gausches-gesetz-symmetrien-kugel-zylinder-ebene" title="Permanent link">&para;</a></h2>
+<p><img alt="Gaußscher Satz &amp; Elektrischer Fluss" src="../illustrations/elektrischer_fluss_gauss.svg" /></p>
+<h3 id="spharische-symmetrie">Sphärische Symmetrie<a class="headerlink" href="#spharische-symmetrie" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[\sum_{i=1}^n \vec{E}_i \cdot \Delta \vec{A}_i = \frac{Q}{\varepsilon_0}\]</div>
+<p>Für geschlossene Flächen (Allgemein)</p>
+<p>Für Kugeln:</p>
+<div class="arithmatex">\[\vec{E} \cdot 4\pi r^2 = \frac{Q}{\varepsilon_0}\]</div>
+<p><img alt="Gaußsche Hüllflächen (Kugel, Zylinder und Schuhschachtel)" src="../illustrations/gauss_kugel_zylinder_schuhschachtel.svg" /></p>
+<p><em>Abbildung: Eine Kugel mit Äquator- und Längenkreisen. Im Mittelpunkt eine Ladung <span class="arithmatex">\(e\)</span> bzw. <span class="arithmatex">\(q\)</span> (blau), von der rote Pfeile radial nach außen zu den Polen und Rändern verlaufen.</em></p>
+<hr />
+<h3 id="zylindersymmetrie">Zylindersymmetrie<a class="headerlink" href="#zylindersymmetrie" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[E = \frac{\rho \cdot r^2}{2 r \varepsilon_0} \implies E \cdot 2\pi r l = \frac{Q}{\varepsilon_0}\]</div>
+<p><em>Abbildung: Ein Zylinder in horizontaler Ausrichtung, auf dessen Mittelachse mehrere Ladungspunkte aufgereiht sind.</em></p>
+<p>Mit dieser Formel berechnet man die elektrische Feldstärke an einem Punkt außerhalb des Zylinders.</p>
+<hr />
+<h3 id="ebene-symmetrie">Ebene Symmetrie<a class="headerlink" href="#ebene-symmetrie" title="Permanent link">&para;</a></h3>
+<p>Gauss'sche Oberfläche<br />
+„Gaußsche Schuhschachtel“ (Quaderförmige Hüllfläche)</p>
+<p>Formel dafür ist:</p>
+<div class="arithmatex">\[E \cdot A = \frac{\sigma}{\varepsilon_0} \rightarrow E = \frac{\sigma}{2\varepsilon_0}\]</div>
+<p><em>Abbildung: Eine flächige geladene Ebene mit Punktladungen, durch die senkrecht ein quaderförmiges Volumen („Schuhschachtel“, blau) hindurchstößt.</em></p>
+<hr />
+<hr />
+<h2 id="27-elektrisches-potenzial-arbeit-im-e-feld">2.7 Elektrisches Potenzial &amp; Arbeit im E-Feld<a class="headerlink" href="#27-elektrisches-potenzial-arbeit-im-e-feld" title="Permanent link">&para;</a></h2>
+<p><img alt="Elektrisches Potenzial und Arbeit im Feld" src="../illustrations/elektrisches_potenzial_weg_arbeit.svg" /></p>
+<p><em>Abbildung: 2D-Koordinatensystem mit Achsen <span class="arithmatex">\(y\)</span> und <span class="arithmatex">\(x\)</span>:</em>
+- <em>Quelladung <span class="arithmatex">\(q\)</span> (rot) im Koordinatensystem.</em>
+- <em>Anfangspunkt <span class="arithmatex">\(P_0\)</span> mit Ortsvektor <span class="arithmatex">\(\vec{r}_{P_0}\)</span> vom Ursprung.</em>
+- <em>Endpunkt <span class="arithmatex">\(P_1\)</span> mit Ortsvektor <span class="arithmatex">\(\vec{r}_{P_1}\)</span> vom Ursprung.</em>
+- <em>Ein geschwungener Pfad zwischen <span class="arithmatex">\(P_0\)</span> und <span class="arithmatex">\(P_1\)</span> mit einer Testladung <span class="arithmatex">\(e\)</span> (grün).</em>
+- <em>Gestrichelte Verbindungslinien von der Quelladung <span class="arithmatex">\(q\)</span> nach <span class="arithmatex">\(P_0\)</span> und <span class="arithmatex">\(P_1\)</span>.</em></p>
+<ul>
+<li><span class="arithmatex">\(P_1 = P_1, \quad P_0 = P_0\)</span></li>
+<li>Der Punkt <span class="arithmatex">\(q\)</span> kann man selber wählen: <span class="arithmatex">\(q = \text{Nullpunkt}\)</span></li>
+</ul>
+<p>Hier gilt:</p>
+<div class="arithmatex">\[W = e \left( \underbrace{\frac{q}{4\pi\varepsilon_0 r_{P_1}}}_{P_{P_1}} - \underbrace{\frac{q}{4\pi\varepsilon_0 r_{P_0}}}_{P_{P_0}} \right) =\]</div>
+<div class="arithmatex">\[W = e (P_{P_1} - P_{P_0})\]</div>
+<p>Wie man sieht kann man die Arbeit von der Bewegung einer Ladung mit dem elektrischem Potential berechnen.</p>
+<hr />
+<hr />
+<h2 id="28-elektrische-spannung-potenzialdifferenz">2.8 Elektrische Spannung &amp; Potenzialdifferenz<a class="headerlink" href="#28-elektrische-spannung-potenzialdifferenz" title="Permanent link">&para;</a></h2>
+<p><img alt="Elektrische Spannung als Potenzialdifferenz" src="../illustrations/elektrische_spannung_potenzialdifferenz.svg" /></p>
+<p><em>Abbildung: 2D-Koordinatensystem mit den Achsen <span class="arithmatex">\(y\)</span> und <span class="arithmatex">\(x\)</span>:</em>
+- <em>Punkt <span class="arithmatex">\(P_1\)</span> mit Kreuz im oberen Bereich.</em>
+- <em>Punkt <span class="arithmatex">\(P_2\)</span> mit Kreuz weiter unten rechts.</em>
+- <em>Ursprung als Referenzpunkt <span class="arithmatex">\(P_0\)</span>.</em></p>
+<div class="arithmatex">\[P_0 = p_0 = 0\]</div>
+<div class="arithmatex">\[W = e \cdot \lim_{\Delta s \to 0} \sum (-\vec{E}_i) \cdot \Delta \vec{s}_i\]</div>
+<div class="arithmatex">\[U_{12} = \lim_{\Delta s \to 0} \sum (-\vec{E}_i) \cdot \Delta \vec{s}_i\]</div>
+<hr />
+<div class="arithmatex">\[\left( \frac{q}{4\pi\varepsilon_0 r_{P_1}} - \underbrace{\frac{q}{4\pi\varepsilon_0 r_{P_0}}}_{0} \right) - \left( \frac{q}{4\pi\varepsilon_0 r_{P_2}} - \underbrace{\frac{q}{4\pi\varepsilon_0 r_{P_0}}}_{0} \right)\]</div>
+<div class="arithmatex">\[\downarrow\]</div>
+<div class="arithmatex">\[P_{P_1} - P_{P_2} = \frac{q}{4\pi\varepsilon_0 r_{P_1}} - \frac{q}{4\pi\varepsilon_0 r_{P_2}} = U_{12}\]</div>
+<p>Mit dieser Formel können wir ~~das~~ die Potentialdifferenz berechnen.<br />
+Wird als elektrische Spannung <span class="arithmatex">\(U\)</span> [V] angegeben.</p>
+<hr />
+<hr />
+<h2 id="29-aquipotenzialflachen">2.9 Äquipotenzialflächen<a class="headerlink" href="#29-aquipotenzialflachen" title="Permanent link">&para;</a></h2>
+<p>Da es auf beiden Seiten der Punkte auf der Äquipotentialfläche die gleiche Feldstärke hat, ergibt die Potentialdifferenz 0, daher gibt auch die Feldstärke dieser beiden Punkte 0.</p>
+<p><img alt="Elektrisches Potenzial und Äquipotentialflächen" src="../illustrations/potenzial_aequipotential_feld.svg" /></p>
+<p><em>Abbildung: Zentrales radialsymmetrisches Feld:</em>
+- <em>Punktladung <span class="arithmatex">\(q\)</span> im Zentrum.</em>
+- <em>Acht radiale Feldlinien (blaue Pfeile) nach außen.</em>
+- <em>Vier konzentrische Kreislinien um das Zentrum, beschriftet per Pfeil mit „Äquipotentialflächen“.</em>
+- <em>Auf einem der inneren Kreise liegen zwei Punkte <span class="arithmatex">\(P_1\)</span> und <span class="arithmatex">\(P_2\)</span>.</em></p>
+<hr />
+<hr />
+<h2 id="210-elektrische-felder-in-materie">2.10 Elektrische Felder in Materie<a class="headerlink" href="#210-elektrische-felder-in-materie" title="Permanent link">&para;</a></h2>
+<p>Ein <strong>Isolator</strong> z. B. Keramik oder Gummi ist ein Material in dem alle Elektronen an die Atome gebunden sind.</p>
+<p><strong>Elektrische Leiter</strong> (z. B. Kupfer, Aluminium) sind Materialien mit frei beweglichen Leitungselektronen im Leitungsband.</p>
+<hr />
+<hr />
+<h2 id="211-dunne-leitende-platten-im-homogenen-feld">2.11 Dünne leitende Platten im homogenen Feld<a class="headerlink" href="#211-dunne-leitende-platten-im-homogenen-feld" title="Permanent link">&para;</a></h2>
+<p><img alt="Homogenes E-Feld im Plattenkondensator" src="../illustrations/seite19_plattenkondensator.svg" /></p>
+<h3 id="flachenladungsdichte">Flächenladungsdichte<a class="headerlink" href="#flachenladungsdichte" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[\pm \sigma = \pm Q : A\]</div>
+<p><em>Abbildung: Plattenkondensator mit zwei vertikalen Platten:</em>
+- <em>Linke Platte positiv geladen (<span class="arithmatex">\(+\)</span>).</em>
+- <em>Rechte Platte negativ geladen (<span class="arithmatex">\(-\)</span>).</em>
+- <em>Dazwischen homogene elektrische Feldlinien (blaue Pfeile) horizontal von links nach rechts verlaufend.</em>
+- <em>Hinweispfeil auf das Einbringen von Platten zwischen die Kondensatorplatten.</em></p>
+<p>Werden zwei dünne, ungeladene leitende Platten in das Feld eingebracht:</p>
+<p><span class="arithmatex">\(\downarrow\)</span></p>
+<p>tritt Ladungstrennung durch elektrische Influenz auf. Die induzierten Oberflächenladungen kompensieren das äußere Feld im Inneren des Leiters vollständig.</p>
+<hr />
+<hr />
+<h2 id="212-leitender-korper-faraday-kafig-hohlraum">2.12 Leitender Körper &amp; Faraday-Käfig (Hohlraum)<a class="headerlink" href="#212-leitender-korper-faraday-kafig-hohlraum" title="Permanent link">&para;</a></h2>
+<p><img alt="Dielektrische Polarisation und Faradayscher Käfig" src="../illustrations/dielektrikum_polarisation_hohlraum.svg" /></p>
+<p>Wenn wir uns ungeladener Kupfer in Form von einer geschlossenen Kugel vorstellen, wirkt es wie auf dem beispiel auf der letzten Seite.</p>
+<p><em>Abbildung: Zwei konzentrische Kreise stellen einen leitenden Hohlkörper (z. B. eine geschlossene metallische Kugelschale) in einem äußeren elektrischen Feld dar. An der linken Außenoberfläche befinden sich influenzierte negative Ladungen (<span class="arithmatex">\(-\)</span>), an der rechten Außenoberfläche positive Ladungen (<span class="arithmatex">\(+\)</span>). Im inneren, vom Leiter umschlossenen Hohlraum ist das Feld kompensiert, ein Pfeil weist auf diesen zentralen Hohlraum mit der Beschriftung „Feldfrei“.</em></p>
+<hr />
+<hr />
+<h2 id="213-dielektrische-polarisation-materieeinfluss">2.13 Dielektrische Polarisation &amp; Materieeinfluss<a class="headerlink" href="#213-dielektrische-polarisation-materieeinfluss" title="Permanent link">&para;</a></h2>
+<p><img alt="Einfluss eines Dielektrikums (Drei Stadien der Polarisation)" src="../illustrations/kondensator_dielektrikum_drei_stadien.svg" /></p>
+<p><em>Abbildung: Drei Stadien eines Plattenkondensators mit Plattenabstand <span class="arithmatex">\(d\)</span>:</em>
+<em>1. Vakuum/Luft zwischen den Platten: linke Platte positiv geladen (<span class="arithmatex">\(+\)</span>), rechte Platte negativ geladen (<span class="arithmatex">\(-\)</span>). Elektrische Feldlinien verlaufen homogen von links nach rechts. Spannung <span class="arithmatex">\(U_1\)</span>.</em>
+<em>Dazwischen: <span class="arithmatex">\(U_1 &gt; U_2\)</span>.</em>
+<em>2. Kondensator mit einsetzender dielektrischer Polarisation: mikroskopische elektrische Dipole richten sich gegen das externe Feld aus und schwächen das innere Feld; Spannung <span class="arithmatex">\(U_2\)</span>.</em>
+<em>Dazwischen: <span class="arithmatex">\(U_2 &gt; U_3\)</span>.</em>
+<em>3. Kondensator mit vollständig ausgefülltem Dielektrikum (blau hervorgehoben); die Feldstärke und damit die Spannung sinken weiter auf <span class="arithmatex">\(U_3\)</span>.</em></p>
+<div class="arithmatex">\[U = E \cdot d\]</div>
+<p><em>Abbildung: Modell eines polarisierbaren Atoms/Moleküls in einem äußeren elektrischen Feld, dargestellt als Kreis mit horizontalen Feldlinien (blaue Pfeile nach rechts). An der Hülle sammeln sich Ladungsschwerpunkte: negative Ladungsträger (<span class="arithmatex">\(-\)</span>) links, positive Ladungsträger (<span class="arithmatex">\(+\)</span>) rechts. Ein kleiner Kreis stellt den verschobenen Kern bzw. die Ladungsträger dar, mit einem Abstandsvektor <span class="arithmatex">\(\vec{d}\)</span> zwischen den Schwerpunkten.</em></p>
+<p>Hier gilt:
+$<span class="arithmatex">\(\vec{p} = Q \vec{d}\)</span>$</p>
+<p>Dieser Vorgang nennt man Dipolmoment.</p>
+<hr />
+<p>Mit mehreren dipole in einem Volumen wird die Formel so gerechnet:</p>
+<div class="arithmatex">\[\vec{P} = \frac{1}{V} \sum_{n=1}^{N} \vec{p}_n\]</div>
+<hr />
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Zurück zum Seitenanfang
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "In Zwischenablage kopiert", "clipboard.copy": "In Zwischenablage kopieren", "search.result.more.one": "1 weiteres Suchergebnis auf dieser Seite", "search.result.more.other": "# weitere Suchergebnisse auf dieser Seite", "search.result.none": "Keine Suchergebnisse", "search.result.one": "1 Suchergebnis", "search.result.other": "# Suchergebnisse", "search.result.placeholder": "Suchbegriff eingeben", "search.result.term.missing": "Es fehlt", "select.version": "Version ausw\u00e4hlen"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

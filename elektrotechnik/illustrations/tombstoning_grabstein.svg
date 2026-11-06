@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 220" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb" />
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#16a34a" />
+    </marker>
+    <marker id="arrow-dark" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b" />
+    </marker>
+  </defs>
+
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Grabsteineffekt (Tombstoning bei SMD-Bauteilen)</text>
+  <!-- PCB Substrate -->
+  <rect x="60" y="150" width="340" height="25" fill="#15803d" stroke="#166534" stroke-width="2" rx="2" />
+  <text x="230" y="167" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">Leiterplatte (PCB)</text>
+  <!-- Left Copper Pad & Liquid Solder -->
+  <rect x="100" y="142" width="50" height="8" fill="#b45309" stroke="#78350f" stroke-width="1" />
+  <ellipse cx="125" cy="140" rx="22" ry="7" fill="#94a3b8" stroke="#475569" stroke-width="1.5" />
+  <text x="80" y="132" font-size="10" font-weight="bold" fill="#dc2626" text-anchor="end">Flüssiges Lot</text>
+  <!-- Right Copper Pad (Cold / Dry Solder) -->
+  <rect x="230" y="142" width="50" height="8" fill="#b45309" stroke="#78350f" stroke-width="1" />
+  <!-- Tilted / Erected SMD Component (Tombstone) -->
+  <g transform="rotate(-65 135 140)">
+    <rect x="135" y="130" width="80" height="30" fill="#334155" stroke="#1e293b" stroke-width="2" rx="2" />
+    <rect x="135" y="130" width="15" height="30" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1" />
+    <rect x="200" y="130" width="15" height="30" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1" />
+    <text x="175" y="150" font-size="11" fill="#ffffff" text-anchor="middle">SMD</text>
+  </g>
+  <!-- Surface tension force vector pulling up -->
+  <line x1="125" y1="135" x2="105" y2="75" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrow-red)" />
+  <text x="80" y="65" font-size="12" font-weight="bold" fill="#dc2626">Oberflächenspannung F_s</text>
+  <!-- Explanation note -->
+  <rect x="230" y="60" width="180" height="60" rx="4" fill="#eff6ff" stroke="#bfdbfe" />
+  <text x="240" y="80" font-size="11" font-weight="bold" fill="#1e40af">Ursache:</text>
+  <text x="240" y="97" font-size="11" fill="#1e40af">• Ungleichmäßige Erwärmung</text>
+  <text x="240" y="112" font-size="11" fill="#1e40af">• Einseitiges Aufschmelzen</text>
+</svg>

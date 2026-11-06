@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 260" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+  <defs>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
+    </marker>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb" />
+    </marker>
+  </defs>
+
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Zählpfeilsysteme: Erzeuger- vs. Verbraucherpfeilsystem</text>
+
+  <!-- Left: Erzeuger (Generatorpfeilsystem) -->
+  <g transform="translate(30, 60)">
+    <rect x="0" y="0" width="235" height="185" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="117" y="20" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Erzeugerpfeilsystem (EPS)</text>
+    
+    <!-- Source circle -->
+    <circle cx="90" cy="95" r="22" fill="#ffffff" stroke="#1e293b" stroke-width="2" />
+    <!-- Terminals -->
+    <line x1="90" y1="52" x2="90" y2="73" stroke="#1e293b" stroke-width="2" />
+    <line x1="90" y1="117" x2="90" y2="140" stroke="#1e293b" stroke-width="2" />
+    
+    <!-- Voltage and Current in SAME direction -->
+    <line x1="45" y1="125" x2="45" y2="65" stroke="#dc2626" stroke-width="2" marker-end="url(#arr-red)" />
+    <text x="35" y="98" font-size="12" font-weight="bold" fill="#dc2626" text-anchor="end">U</text>
+
+    <line x1="90" y1="65" x2="90" y2="45" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arr-blue)" />
+    <text x="105" y="55" font-size="12" font-weight="bold" fill="#2563eb">I</text>
+
+    <!-- Labels -->
+    <text x="117" y="155" font-size="11" font-weight="bold" fill="#16a34a" text-anchor="middle">U und I gleichgerichtet</text>
+    <text x="117" y="172" font-size="10" fill="#64748b" text-anchor="middle">Quelle gibt Leistung ab: P = U · I &gt; 0</text>
+  </g>
+
+  <!-- Right: Verbraucher (Verbraucherpfeilsystem) -->
+  <g transform="translate(285, 60)">
+    <rect x="0" y="0" width="235" height="185" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="117" y="20" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Verbraucherpfeilsystem (VPS)</text>
+    
+    <!-- Resistor box -->
+    <rect x="75" y="70" width="30" height="50" fill="#ffffff" stroke="#1e293b" stroke-width="2" />
+    <text x="90" y="99" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">R</text>
+    <!-- Leads -->
+    <line x1="90" y1="48" x2="90" y2="70" stroke="#1e293b" stroke-width="2" />
+    <line x1="90" y1="120" x2="90" y2="140" stroke="#1e293b" stroke-width="2" />
+    
+    <!-- Current downwards into resistor, voltage drop in direction of current -->
+    <line x1="135" y1="70" x2="135" y2="120" stroke="#dc2626" stroke-width="2" marker-end="url(#arr-red)" />
+    <text x="145" y="98" font-size="12" font-weight="bold" fill="#dc2626">U</text>
+
+    <line x1="90" y1="48" x2="90" y2="68" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arr-blue)" />
+    <text x="105" y="60" font-size="12" font-weight="bold" fill="#2563eb">I</text>
+
+    <!-- Labels -->
+    <text x="117" y="155" font-size="11" font-weight="bold" fill="#2563eb" text-anchor="middle">Spannungspfeil in Stromrichtung</text>
+    <text x="117" y="172" font-size="10" fill="#64748b" text-anchor="middle">Last nimmt Leistung auf: P = U · I &gt; 0</text>
+  </g>
+</svg>
