@@ -405,6 +405,10 @@ Transiente Überspannungen sind impulsartige Spannungsstöße mit extrem schnell
 
 ![Transienten Stoßwellenform](illustrations/lerndoku/Transzorpdiode_image4.png)
 
+![Surge-Prüfimpuls 1,2/50 µs nach IEC 61000-4-5](illustrations/lerndoku/Transient_image10.png)
+
+![Burst-Störimpulsfolge 5/50 ns nach IEC 61000-4-4](illustrations/lerndoku/Transient_image13.png)
+
 ### Genormte Störimpulse (EMV-Prüfung)
 1. **Surge (Blitz-Stoßspannung nach IEC 61000-4-5):**
    - Hochenergetischer Impuls mit Wellenform $1{,}2/50\,\mu\text{s}$ (Spannung) bzw. $8/20\,\mu\text{s}$ (Strom).
@@ -421,6 +425,14 @@ Um Hochspannungssignale bis zu mehreren Kilovolt unverfälscht auf dem Oszillosk
 Damit das Teilerverhältnis über den gesamten Frequenzbereich von Gleichstrom bis in den Megahertz-Bereich konstant bleibt, muss die RC-Zeitkonstante des Tastkopfes exakt derjenigen des Oszilloskopeingangs entsprechen:
 
 $$R_1 \cdot C_1 = R_2 \cdot C_2 \iff \frac{R_1}{R_2} = \frac{C_2}{C_1}$$
+
+![Messaufbau zum Tastkopf-Frequenzabgleich](illustrations/lerndoku/HV-Prbe_abgleichen$_image4.png)
+
+![Unterkompensierter Tastkopf (R1 C1 > R2 C2)](illustrations/lerndoku/HV-Prbe_abgleichen$_image5.png)
+
+![Überkompensierter Tastkopf (R1 C1 < R2 C2)](illustrations/lerndoku/HV-Prbe_abgleichen$_image6.png)
+
+![Korrekt abgeglichener Tastkopf (R1 C1 = R2 C2)](illustrations/lerndoku/HV-Prbe_abgleichen$_image7.png)
 
 - **Abgleichpraxis:** Anlegen des internen $1\,\text{kHz}$-Rechteck-Kalibriersignals des Oszilloskops. Mit einem isolierten Abgleichschraubendreher wird die Trimmerkapazität $C_1$ justiert:
   - **Unterkompensation ($R_1 C_1 > R_2 C_2$):** Abgerundete Vorderflanke, Tiefpassverhalten.

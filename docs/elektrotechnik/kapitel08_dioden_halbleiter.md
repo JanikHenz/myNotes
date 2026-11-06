@@ -268,6 +268,10 @@ Eine **TVS-Diode** (Transient Voltage Suppressor, Markenname *Transzorb*) ist ei
 
 ## 8.12 LED-Ansteuerung: Vorwiderstand, PWM & Dimmung
 
+![PWM-Dimmung von LEDs Tastverhältnis](illustrations/lerndoku/LED_dimmen_image4.png)
+
+![PWM-LED-Treiberschaltung mit MOSFET](illustrations/lerndoku/LED_dimmen_image7.png)
+
 Eine Leuchtdiode (LED) besitzt eine steile Diodenkennlinie und darf **niemals direkt an einer Konstantspannungsquelle** betrieben werden.
 
 ### 1. Berechnung des Vorwiderstands
@@ -285,6 +289,10 @@ Typische Flussspannungen bei $I_F = 20\,\text{mA}$:
 
 
 ## 8.13 Piezoelemente: Sensorik & Aktorik
+
+![Ersatzschaltbild eines Piezowandlers](illustrations/lerndoku/Piezoelement_image4.png)
+
+![Impedanz- und Phasengang des Piezoschwingers](illustrations/lerndoku/Piezoelement_image5.png)
 
 Piezoelemente bestehen aus polarisierten ferroelektrischen Piezokeramiken (Blei-Zirkonat-Titanat / PZT).
 

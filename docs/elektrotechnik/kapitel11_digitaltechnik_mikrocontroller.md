@@ -378,6 +378,10 @@ Flip-Flops sind die fundamentalen 1-Bit-Speicherelemente der Digitaltechnik.
 
 ![Flip-Flop Typen und Taktsymbole](illustrations/lerndoku/Flip-Flops_image4.png)
 
+![Mealy- und Moore-Automat Zustandsübergangsdiagramm](illustrations/lerndoku/Zustandsdiagramm_image4.png)
+
+![Praktisches Zustandsdiagramm einer Ablaufsteuerung](illustrations/lerndoku/Zustandsdiagramm_image5.png)
+
 1. **RS-Flip-Flop:** Setzen ($S=1$) und Rücksetzen ($R=1$). Der Zustand $S=1, R=1$ ist verboten (undefinierter Folgezustand).
 2. **D-Flip-Flop (Data / Delay):** Übernimmt bei einer Taktflanke ($\uparrow$) den Zustand am Eingang $D$ an den Ausgang $Q$.
 3. **JK-Flip-Flop:** Universelles Flip-Flop ohne verbotenen Zustand. Bei $J=1, K=1$ invertiert der Ausgang bei jeder Taktflanke (**Toggle-Modus**).
@@ -385,6 +389,12 @@ Flip-Flops sind die fundamentalen 1-Bit-Speicherelemente der Digitaltechnik.
 
 
 ## 11.17 C-Programmierung für Mikrocontroller: Arrays, Funktionen & Schleifen
+
+In eingebetteten Systemen bestimmt die Speicheranordnung von Datenfeldern und Programmablaufstrukturen direkt die Rechenzeit und Latenz:
+
+![C-Arrays und Pointer-Adressierung im RAM](illustrations/lerndoku/Array_image4.png)
+
+![Programmablaufpläne für C-Steuerstrukturen](illustrations/lerndoku/Programmschleifen_image4.png)
 
 ### 1. Eindimensionale & zweidimensionale Arrays
 ```c

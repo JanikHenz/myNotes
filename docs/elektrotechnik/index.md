@@ -6,17 +6,17 @@
     ---
     Von mathematischen Grundlagen über Halbleiter und OPVs bis zu Hochspannungsschaltungen.
     
-- :material-image-multiple: **688 Abbildungen**
+- :material-image-multiple: **183 Abbildungen**
     ---
     Präzise Vektorgrafiken (SVG), Oszillogramme und Schaltungsschemata aus der Laborpraxis.
 
-- :material-file-pdf-box: **167 Seiten Handbuch**
+- :material-file-pdf-box: **Referenzhandbuch PDF**
     ---
     Vollständig gesetztes PDF-Referenzhandbuch zum Offline-Lesen und Nachschlagen.
 
 </div>
 
-[:material-download: Referenzhandbuch als PDF herunterladen (167 Seiten)](assets/Elektrotechnik_Referenzhandbuch.pdf){ .md-button .md-button--primary }
+[:material-download: Referenzhandbuch als PDF herunterladen](assets/Elektrotechnik_Referenzhandbuch.pdf){ .md-button .md-button--primary }
 [:material-book-open: Gesamtes Skript auf einer Seite anzeigen](komplett.md){ .md-button }
 
 ---

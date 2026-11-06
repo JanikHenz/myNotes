@@ -364,6 +364,8 @@ Beim Einschalten elektronischer Geräte treten häufig extrem hohe Stromspitzen 
 - **Relais-Überbrückungsschaltung (Sanftanlauf):**
   Ein fester Leistungswiderstand ($10\dots 47\,\Omega$, z. B. $25\,\text{W}$) liegt in der Ladeleitung. Sobald der Zwischenkreis auf ca. $80\dots 90\,\%$ aufgeladen ist, überbrückt ein Relaiskontakt den Vorwiderstand verlustfrei für den Dauerbetrieb.
 
+![Sanftanlauf-Schaltung mit Vorladewiderstand und Überbrückungsrelais](illustrations/lerndoku/Inrush_current_sideeffect_image5.png)
+
 
 ## 4.14 Rückstromschutz (Reverse DC Current Protection)
 
@@ -376,8 +378,14 @@ Wird ein Netzteil oder DC/DC-Wandler an eine Batterie oder an eine busgespeiste 
 2. **Schottky-Diode:**
    - Geringere Schleusenspannung $U_F \approx 0{,}3\dots 0{,}5\,\text{V}$.
    - Gut geeignet für kleinere bis mittlere Ströme, aber höherer Sperr-Leckstrom $I_R$.
+
+![Schottky-Diode als Verpolschutz](illustrations/lerndoku/reverse_dc_current_image4.png)
 3. **Ideale Diode (MOSFET-basierter Rückstromschutz):**
    - Ein P-Kanal- oder N-Kanal-Power-MOSFET wird invers in die Versorgungsleitung geschaltet.
    - Ein Controller misst die Spannungsdifferenz über Source und Drain. Bei normalem Stromfluss schaltet er das Gate voll durch.
    - Der Spannungsabfall beträgt lediglich $U_{drop} = I_L \cdot R_{DS(on)}$ (z. B. $5\,\text{A} \cdot 5\,\text{m}\Omega = 25\,\text{mV}$).
    - Die Verlustleistung sinkt drastisch auf $P_V = I_L^2 \cdot R_{DS(on)} = (5\,\text{A})^2 \cdot 5\,\text{m}\Omega = \mathbf{0{,}125\,\text{W}}$!
+
+![P-Kanal-MOSFET Verpolschutzschaltung](illustrations/lerndoku/reverse_dc_current_image5.png)
+
+![Ideale Diode Controller Schaltung mit N-Kanal MOSFET](illustrations/lerndoku/reverse_dc_current_image7.png)

@@ -182,6 +182,8 @@ Magnetische Erscheinungen beruhen auf der Bewegung elektrischer Ladungen (Mikros
 
 ![Magnetische Feldlinien und Dipol](illustrations/lerndoku/magnetismus_image4.jpeg)
 
+![B-H Hystereseschleife mit Neukurve Remanenz und Koerzitivfeldstärke](illustrations/lerndoku/magnetismus_image11.png)
+
 ### Elementarmagnete & Weißsche Bezirke
 In ferromagnetischen Werkstoffen (Eisen $\text{Fe}$, Kobalt $\text{Co}$, Nickel $\text{Ni}$) sind die magnetischen Momente benachbarter Atome durch quantenmechanische Austauschwechselwirkung parallel ausgerichtet. Diese mikroskopischen Bereiche spontaner Magnetisierung heißen **Weißsche Bezirke** (Domänen), getrennt durch **Bloch-Wände**.
 - Im unmagnetisierten Zustand sind die Domänen statistisch regellos verteilt $\implies B_{aussen} = 0$.
@@ -196,6 +198,8 @@ In ferromagnetischen Werkstoffen (Eisen $\text{Fe}$, Kobalt $\text{Co}$, Nickel 
 
 
 ## 5.11 Sättigungsverhalten von Spulen & Induktivitäten
+
+![Einfluss des Luftspalts auf die Scherung der Hysteresekurve](illustrations/lerndoku/magnetismus_image12.png)
 
 Wird der Strom durch eine Spule mit Eisen- oder Ferritkern über den linearen Bereich hinaus gesteigert, gerät der Kern in die **magnetische Sättigung**:
 
@@ -230,6 +234,10 @@ Eine bewährte ingenieurmäßige Näherung ist die Formel von Wheeler (für Zyli
 $$L \approx \frac{N^2 \cdot r^2}{228 \cdot r + 254 \cdot l} \quad [\mu\text{H}]$$
 
 ### Hochfrequenzeffekte an Luftspulen
+
+![Skineffekt-Eindringtiefe und Eigenresonanz von Luftspulen](illustrations/lerndoku/Luftspulen_&_Frequenzen_image4.png)
+
+![Frequenzgang der Spulengüte Q](illustrations/lerndoku/Luftspulen_&_Frequenzen_image5.png)
 1. **Skineffekt:** Mit steigender Frequenz verdrängen Wirbelströme den Stromfluss an die Leiteroberfläche. Die effektive Eindringtiefe beträgt:
    $$\delta = \frac{1}{\sqrt{\pi \cdot f \cdot \mu \cdot \kappa}}$$
    Bei $1\,\text{MHz}$ in Kupfer beträgt $\delta \approx 66\,\mu\text{m}$. Abhilfe: Versilberte Drähte oder Hochfrequenz-Litze (HF-Litze).

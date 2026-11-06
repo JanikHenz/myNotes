@@ -11,6 +11,8 @@ In Hochspannungs-Prüfgeneratoren werden Zwischenkreiskondensatoren auf Spannung
 
 ![HV-Supply 8 Sicherheits-Erdschalter](illustrations/lerndoku/HV-Supply_(Erdschalter)_image4.png)
 
+![Pneumatik-Schaltung und Endschalter des Sicherheits-Erdschalters](illustrations/lerndoku/HV-Supply_(Erdschalter)_image5.png)
+
 ### Schaltungsaufbau mit Entladewiderständen
 Wird der Sicherheitskreis unterbrochen, fällt das Sicherheitsschütz ab und schließt einen federbelasteten mechanischen Hochvolt-Erdschalter.
 - **Warum werden 4 Entladewiderstände verwendet?**
@@ -27,6 +29,12 @@ Die Erzeugung von Gleichspannungen im Kilovoltbereich erfordert spezielle Gleich
 
 ![HV-Supply 8 Hochspannungsgleichrichter](illustrations/lerndoku/HV-Supply_(Gleichrichter)_image4.png)
 
+![Hochspannungs-Diodenmodul mit Symmetrierwiderständen](illustrations/lerndoku/HV-Supply_(Gleichrichter)_image5.png)
+
+![Gleichrichter- und Kaskadenschaltplan des HV-Supply 8](illustrations/lerndoku/HV-Supply_(Gleichrichter)_image6.png)
+
+![Schutzbeschaltung und Filterstufen der HV-Kaskade](illustrations/lerndoku/HV-Supply_(Gleichrichter)_image7.png)
+
 1. **Dioden-Reihenschaltung & Symmetrierung:**
    Weil einzelne Silizium-Dioden nur Sperrspannungen bis $1\,000\dots 1\,600\,\text{V}$ sperren, werden Hochvolt-Diodenketten eingesetzt. Zur Vermeidung ungleicher Spannungsaufteilung durch unterschiedliche Sperr-Leckströme wird jede Diode mit einem hochohmigen **Symmetrierwiderstand** ($R \approx 1\dots 10\,\text{M}\Omega$) und einer Symmetrierkapazität parallel geschaltet.
 2. **Spannungsvervielfacher (Greinacher- / Villard-Kaskade):**
@@ -38,6 +46,10 @@ Die Erzeugung von Gleichspannungen im Kilovoltbereich erfordert spezielle Gleich
 In der EMV-Prüfpraxis müssen Prüflinge sowohl mit **positiven** als auch mit **negativen** Stoßimpulsen (Surge) beaufschlagt werden.
 
 ![HV-Supply 8 Polarisierungsumschaltung](illustrations/lerndoku/HV-Supply_(Polarisierung)_image4.png)
+
+![Polaritätsumschalt-Relais-Matrix](illustrations/lerndoku/HV-Supply_(Polarisierung)_image5.png)
+
+![Schaltplan der HV-Polarisierungsumschaltung](illustrations/lerndoku/HV-Supply_(Polarisierung)_image6.png)
 
 - **Schaltungskonzept:** Mittels motorgetriebener Schalter oder spezieller Hochspannungs-Vakuumrelais wird die Polarität der Gleichspannungsquelle gegenüber dem gemeinsamen Bezugspotenzial (PE) umgepolt.
 - **Sicherheitsverriegelung:** Vor jeder Umpolung muss der Mikrocontroller über das Messmodul verifizieren, dass die Zwischenkreisspannung durch den Erdschalter vollständig auf $0\,\text{V}$ entladen ist, um Lichtbögen an den Relaiskontakten auszuschließen.

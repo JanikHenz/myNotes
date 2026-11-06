@@ -349,6 +349,12 @@ Der **IGBT** vereint die Vorteile des feldeffektgesteuerten MOSFETs (nahezu leis
 
 ![IGBT Schaltsymbol und Struktur](illustrations/lerndoku/IGBT_image4.png)
 
+![IGBT Schichtenaufbau und parasitärer Thyristor](illustrations/lerndoku/IGBT_image5.png)
+
+![IGBT Schaltzeiten und Tail-Strom-Oszillogramm](illustrations/lerndoku/IGBT_image6.png)
+
+![IGBT Gate-Treiberschaltung mit Miller-Clamp](illustrations/lerndoku/IGBT_image7.png)
+
 ### Schaltungsaufbau & Funktionsweise
 - **Ersatzschaltbild:** Ein N-Kanal-MOSFET treibt die Basis eines pnp-Hochleistungs-Bipolartransistors.
 - **Leitungsmechanismus:** Durch Anlegen einer Gate-Emitter-Spannung $U_{GE} > U_{GE(th)} \approx 4\dots 6\,\text{V}$ bildet sich im MOSFET-Teil ein Inversionskanal. Elektronen fließen in die schwach dotierte n-Driftzone und veranlassen die p-Substratschicht zur massiven Injektion von Löchern (**Leitfähigkeitsmodulation**).

@@ -1178,6 +1178,8 @@ Beim Einschalten elektronischer Geräte treten häufig extrem hohe Stromspitzen 
 - **Relais-Überbrückungsschaltung (Sanftanlauf):**
   Ein fester Leistungswiderstand ($10\dots 47\,\Omega$, z. B. $25\,\text{W}$) liegt in der Ladeleitung. Sobald der Zwischenkreis auf ca. $80\dots 90\,\%$ aufgeladen ist, überbrückt ein Relaiskontakt den Vorwiderstand verlustfrei für den Dauerbetrieb.
 
+![Sanftanlauf-Schaltung mit Vorladewiderstand und Überbrückungsrelais](illustrations/lerndoku/Inrush_current_sideeffect_image5.png)
+
 
 ## 4.14 Rückstromschutz (Reverse DC Current Protection)
 
@@ -1190,11 +1192,17 @@ Wird ein Netzteil oder DC/DC-Wandler an eine Batterie oder an eine busgespeiste 
 2. **Schottky-Diode:**
    - Geringere Schleusenspannung $U_F \approx 0{,}3\dots 0{,}5\,\text{V}$.
    - Gut geeignet für kleinere bis mittlere Ströme, aber höherer Sperr-Leckstrom $I_R$.
+
+![Schottky-Diode als Verpolschutz](illustrations/lerndoku/reverse_dc_current_image4.png)
 3. **Ideale Diode (MOSFET-basierter Rückstromschutz):**
    - Ein P-Kanal- oder N-Kanal-Power-MOSFET wird invers in die Versorgungsleitung geschaltet.
    - Ein Controller misst die Spannungsdifferenz über Source und Drain. Bei normalem Stromfluss schaltet er das Gate voll durch.
    - Der Spannungsabfall beträgt lediglich $U_{drop} = I_L \cdot R_{DS(on)}$ (z. B. $5\,\text{A} \cdot 5\,\text{m}\Omega = 25\,\text{mV}$).
    - Die Verlustleistung sinkt drastisch auf $P_V = I_L^2 \cdot R_{DS(on)} = (5\,\text{A})^2 \cdot 5\,\text{m}\Omega = \mathbf{0{,}125\,\text{W}}$!
+
+![P-Kanal-MOSFET Verpolschutzschaltung](illustrations/lerndoku/reverse_dc_current_image5.png)
+
+![Ideale Diode Controller Schaltung mit N-Kanal MOSFET](illustrations/lerndoku/reverse_dc_current_image7.png)
 
 
 # Kapitel 5: Magnetismus, Induktion, Spulen & Transformatoren
@@ -1381,6 +1389,8 @@ Magnetische Erscheinungen beruhen auf der Bewegung elektrischer Ladungen (Mikros
 
 ![Magnetische Feldlinien und Dipol](illustrations/lerndoku/magnetismus_image4.jpeg)
 
+![B-H Hystereseschleife mit Neukurve Remanenz und Koerzitivfeldstärke](illustrations/lerndoku/magnetismus_image11.png)
+
 ### Elementarmagnete & Weißsche Bezirke
 In ferromagnetischen Werkstoffen (Eisen $\text{Fe}$, Kobalt $\text{Co}$, Nickel $\text{Ni}$) sind die magnetischen Momente benachbarter Atome durch quantenmechanische Austauschwechselwirkung parallel ausgerichtet. Diese mikroskopischen Bereiche spontaner Magnetisierung heißen **Weißsche Bezirke** (Domänen), getrennt durch **Bloch-Wände**.
 - Im unmagnetisierten Zustand sind die Domänen statistisch regellos verteilt $\implies B_{aussen} = 0$.
@@ -1395,6 +1405,8 @@ In ferromagnetischen Werkstoffen (Eisen $\text{Fe}$, Kobalt $\text{Co}$, Nickel 
 
 
 ## 5.11 Sättigungsverhalten von Spulen & Induktivitäten
+
+![Einfluss des Luftspalts auf die Scherung der Hysteresekurve](illustrations/lerndoku/magnetismus_image12.png)
 
 Wird der Strom durch eine Spule mit Eisen- oder Ferritkern über den linearen Bereich hinaus gesteigert, gerät der Kern in die **magnetische Sättigung**:
 
@@ -1429,6 +1441,10 @@ Eine bewährte ingenieurmäßige Näherung ist die Formel von Wheeler (für Zyli
 $$L \approx \frac{N^2 \cdot r^2}{228 \cdot r + 254 \cdot l} \quad [\mu\text{H}]$$
 
 ### Hochfrequenzeffekte an Luftspulen
+
+![Skineffekt-Eindringtiefe und Eigenresonanz von Luftspulen](illustrations/lerndoku/Luftspulen_&_Frequenzen_image4.png)
+
+![Frequenzgang der Spulengüte Q](illustrations/lerndoku/Luftspulen_&_Frequenzen_image5.png)
 1. **Skineffekt:** Mit steigender Frequenz verdrängen Wirbelströme den Stromfluss an die Leiteroberfläche. Die effektive Eindringtiefe beträgt:
    $$\delta = \frac{1}{\sqrt{\pi \cdot f \cdot \mu \cdot \kappa}}$$
    Bei $1\,\text{MHz}$ in Kupfer beträgt $\delta \approx 66\,\mu\text{m}$. Abhilfe: Versilberte Drähte oder Hochfrequenz-Litze (HF-Litze).
@@ -1866,6 +1882,10 @@ Transiente Überspannungen sind impulsartige Spannungsstöße mit extrem schnell
 
 ![Transienten Stoßwellenform](illustrations/lerndoku/Transzorpdiode_image4.png)
 
+![Surge-Prüfimpuls 1,2/50 µs nach IEC 61000-4-5](illustrations/lerndoku/Transient_image10.png)
+
+![Burst-Störimpulsfolge 5/50 ns nach IEC 61000-4-4](illustrations/lerndoku/Transient_image13.png)
+
 ### Genormte Störimpulse (EMV-Prüfung)
 1. **Surge (Blitz-Stoßspannung nach IEC 61000-4-5):**
    - Hochenergetischer Impuls mit Wellenform $1{,}2/50\,\mu\text{s}$ (Spannung) bzw. $8/20\,\mu\text{s}$ (Strom).
@@ -1882,6 +1902,14 @@ Um Hochspannungssignale bis zu mehreren Kilovolt unverfälscht auf dem Oszillosk
 Damit das Teilerverhältnis über den gesamten Frequenzbereich von Gleichstrom bis in den Megahertz-Bereich konstant bleibt, muss die RC-Zeitkonstante des Tastkopfes exakt derjenigen des Oszilloskopeingangs entsprechen:
 
 $$R_1 \cdot C_1 = R_2 \cdot C_2 \iff \frac{R_1}{R_2} = \frac{C_2}{C_1}$$
+
+![Messaufbau zum Tastkopf-Frequenzabgleich](illustrations/lerndoku/HV-Prbe_abgleichen$_image4.png)
+
+![Unterkompensierter Tastkopf (R1 C1 > R2 C2)](illustrations/lerndoku/HV-Prbe_abgleichen$_image5.png)
+
+![Überkompensierter Tastkopf (R1 C1 < R2 C2)](illustrations/lerndoku/HV-Prbe_abgleichen$_image6.png)
+
+![Korrekt abgeglichener Tastkopf (R1 C1 = R2 C2)](illustrations/lerndoku/HV-Prbe_abgleichen$_image7.png)
 
 - **Abgleichpraxis:** Anlegen des internen $1\,\text{kHz}$-Rechteck-Kalibriersignals des Oszilloskops. Mit einem isolierten Abgleichschraubendreher wird die Trimmerkapazität $C_1$ justiert:
   - **Unterkompensation ($R_1 C_1 > R_2 C_2$):** Abgerundete Vorderflanke, Tiefpassverhalten.
@@ -2557,6 +2585,10 @@ Ein Varistor (**Var**iable Res**istor** oder VDR = Voltage Dependent Resistor) i
 
 ![Varistor Kennlinie und Schaltsymbol](illustrations/lerndoku/Varistor_image10.png)
 
+![Varistor Kennlinie Klemmspannung bei Stoßstrom](illustrations/lerndoku/Varistor_image11.png)
+
+![Pulsenergie-Derating Diagramm von Metalloxid-Varistoren](illustrations/lerndoku/Varistor_image12.png)
+
 ### Aufbau & Wirkungsweise
 - **Zusammensetzung:** Gesinterte Keramikscheibe aus Zinkoxid-Körnern ($\text{ZnO}$) mit Beimischungen von Wismut-, Antimon- und Manganoxiden.
 - **Mikrostruktur:** An den Berührungspunkten der leitfähigen ZnO-Kristallkörner entstehen mikroskopische Halbleiter-Sperrschichten (Reihen- und Parallelschaltung Tausender winziger Diodenbarrieren).
@@ -2576,6 +2608,8 @@ Eine PolyFuse (auch PolySwitch oder PPTC = Polymeric Positive Temperature Coeffi
 
 ![Polyfuse Aufbau und Schaltfunktion](illustrations/lerndoku/Polyfuse_image5.png)
 
+![PolyFuse Haltestrom-Derating über Temperatur](illustrations/lerndoku/Polyfuse_image4.jpeg)
+
 ### Funktionsprinzip
 - **Materialaufbau:** Matrix aus unpolarem Polymer (z. B. Polyethylen), gefüllt mit mikroskopischen Partikeln aus leitfähigem Ruß/Kohlenstoff (Carbon Black).
 - **Ruhezustand:** Bei Nennstrom berühren sich die Rußpartikel $\implies$ geringer Kaltwiderstand ($R_{cold} \approx 20\,\text{m}\Omega \dots 1\,\Omega$).
@@ -2589,6 +2623,14 @@ Eine PolyFuse (auch PolySwitch oder PPTC = Polymeric Positive Temperature Coeffi
 
 
 ## 7.25 Bauteil-Codierung: Farbringe, SMD-Codes & EIA-96
+
+![EIA-96 SMD-Widerstandscodes Lookup-Tabelle](illustrations/lerndoku/Bauteil-Codierung_image10.png)
+
+![Kabelquerschnitte und AWG Umrechnung](illustrations/lerndoku/Kabel_-durchmesser_&_-farben_image4.png)
+
+![Kabel-Schirmungsarten (U/UTP, F/UTP, S/FTP)](illustrations/lerndoku/Kabelarten_image4.jpeg)
+
+![Koaxialkabel Schichtaufbau](illustrations/lerndoku/Kabelarten_image7.png)
 
 ### 1. Farbcode-Kennzeichnung bedrahteter Widerstände
 - **4-Ring-Widerstand (Standard):** Ring 1 & 2 = Ziffern, Ring 3 = Multiplikator ($10^x$), Ring 4 = Toleranz.
@@ -2880,6 +2922,10 @@ Eine **TVS-Diode** (Transient Voltage Suppressor, Markenname *Transzorb*) ist ei
 
 ## 8.12 LED-Ansteuerung: Vorwiderstand, PWM & Dimmung
 
+![PWM-Dimmung von LEDs Tastverhältnis](illustrations/lerndoku/LED_dimmen_image4.png)
+
+![PWM-LED-Treiberschaltung mit MOSFET](illustrations/lerndoku/LED_dimmen_image7.png)
+
 Eine Leuchtdiode (LED) besitzt eine steile Diodenkennlinie und darf **niemals direkt an einer Konstantspannungsquelle** betrieben werden.
 
 ### 1. Berechnung des Vorwiderstands
@@ -2897,6 +2943,10 @@ Typische Flussspannungen bei $I_F = 20\,\text{mA}$:
 
 
 ## 8.13 Piezoelemente: Sensorik & Aktorik
+
+![Ersatzschaltbild eines Piezowandlers](illustrations/lerndoku/Piezoelement_image4.png)
+
+![Impedanz- und Phasengang des Piezoschwingers](illustrations/lerndoku/Piezoelement_image5.png)
 
 Piezoelemente bestehen aus polarisierten ferroelektrischen Piezokeramiken (Blei-Zirkonat-Titanat / PZT).
 
@@ -3260,6 +3310,12 @@ MOSFETs werden meistens für Verstärkerschaltungen verwendet.
 Der **IGBT** vereint die Vorteile des feldeffektgesteuerten MOSFETs (nahezu leistungsloser Steueranschluss über isoliertes Gate) mit den Vorteilen des Bipolartransistors (sehr geringe Durchlassverluste und hohe Stromtragfähigkeit bei hohen Spannungen).
 
 ![IGBT Schaltsymbol und Struktur](illustrations/lerndoku/IGBT_image4.png)
+
+![IGBT Schichtenaufbau und parasitärer Thyristor](illustrations/lerndoku/IGBT_image5.png)
+
+![IGBT Schaltzeiten und Tail-Strom-Oszillogramm](illustrations/lerndoku/IGBT_image6.png)
+
+![IGBT Gate-Treiberschaltung mit Miller-Clamp](illustrations/lerndoku/IGBT_image7.png)
 
 ### Schaltungsaufbau & Funktionsweise
 - **Ersatzschaltbild:** Ein N-Kanal-MOSFET treibt die Basis eines pnp-Hochleistungs-Bipolartransistors.
@@ -3641,6 +3697,8 @@ Um eine hohe DC-Eingangsspannung mit hohem Wirkungsgrad ($>90\,\%$) in eine nied
 
 ![Buck-Konverter Schaltplan und Signalverlauf](illustrations/lerndoku/Buckkonverter_image4.png)
 
+![Buck-Konverter Spulenstrom CCM vs DCM](illustrations/lerndoku/Buckkonverter_image6.png)
+
 ### Schaltungsaufbau & Arbeitsphasen
 1. **Einschaltphase ($T_{on}$):** Der Transistor (MOSFET) schaltet durch. Strom fließt von $U_{in}$ über die Spule $L$ in den Ladekondensator $C$ und die Last $R_L$. In der Spule baut sich ein Magnetfeld auf ($u_L = U_{in} - U_{out}$).
 2. **Ausschaltphase ($T_{off}$):** Der MOSFET sperrt. Die Spule wirkt der Stromunterbrechung durch Selbstinduktion entgegen und treibt den Strom über die Freilaufdiode (Schottky) weiter in Last und Ausgangskondensator ($u_L = -U_{out}$).
@@ -3662,6 +3720,8 @@ Der Boost-Konverter erzeugt aus einer niedrigen Eingangsspannung eine höhere Au
 
 ![Boost-Konverter Schaltungsaufbau](illustrations/lerndoku/Boostconverter_image4.png)
 
+![Boost-Konverter Signalverläufe an Diode und Schalter](illustrations/lerndoku/Boostconverter_image6.png)
+
 ### Arbeitsphasen & Spannungsübersetzung
 1. **Ladephase ($T_{on}$):** Schalter geschlossen. Die Spule liegt direkt an $U_{in}$, der Strom steigt linear an, Energie wird im Magnetfeld gespeichert. Die Diode sperrt; der Ausgang wird aus dem Kondensator gespeist.
 2. **Entladephase ($T_{off}$):** Schalter offen. Die Spule addiert ihre Selbstinduktionsspannung zur Eingangsspannung: $U_{L} + U_{in}$. Die Diode leitet und lädt den Ausgangskondensator auf ein höheres Potenzial auf:
@@ -3676,6 +3736,12 @@ $$U_{out} = \frac{U_{in}}{1 - D}$$
 Der NE555 ist der weltweit meistgenutzte integrierte Timer-Baustein.
 
 ![NE555 Schaltungen und Pinbelegung](illustrations/lerndoku/LM555_Timer_image4.png)
+
+![NE555 Internes Blockschaltbild](illustrations/lerndoku/LM555_Timer_image5.png)
+
+![NE555 Monostabile Kippstufe Schaltung und Signalverlauf](illustrations/lerndoku/LM555_Timer_image6.png)
+
+![NE555 Astabile Kippstufe Rechteckoszillator](illustrations/lerndoku/LM555_Timer_image8.png)
 
 ### 1. Astabile Kippstufe (Taktgenerator / Oszillator)
 Widerstand $R_1$ zwischen $V_{CC}$ und Discharge (Pin 7), $R_2$ zwischen Pin 7 und Threshold/Trigger (Pin 6/2), Kondensator $C$ nach Masse:
@@ -3705,6 +3771,12 @@ Ein Schmitt-Trigger ist ein Komparator mit **positiver Rückkopplung (Mitkopplun
 Signalwandler bilden die fundamentale Schnittstelle zwischen analoger Messwelt und digitaler Rechenwelt:
 
 ![DAC Blockschaltbild und R-2R-Leiter](illustrations/lerndoku/DAC-ADC-_Converters_image4.png)
+
+![R-2R-Netzwerk Digital-Analog-Wandler](illustrations/lerndoku/DAC-ADC-_Converters_image10.png)
+
+![Flash-ADC Parallelwandler mit Komparatorleiter](illustrations/lerndoku/DAC-ADC-_Converters_image11.png)
+
+![SAR-ADC Sukzessive Approximation Ablauf](illustrations/lerndoku/DAC-ADC-_Converters_image13.png)
 
 ### 1. D/A-Wandler (Digital-to-Analog Converter)
 - **R-2R-Widerstandsleiter:** Benötigt pro Bit nur zwei Präzisionswiderstandswerte ($R$ und $2R$). Über Umschalter speisen die Bits gewichtete Ströme in den Summierpunkt eines Operationsverstärkers.
@@ -4108,6 +4180,10 @@ Flip-Flops sind die fundamentalen 1-Bit-Speicherelemente der Digitaltechnik.
 
 ![Flip-Flop Typen und Taktsymbole](illustrations/lerndoku/Flip-Flops_image4.png)
 
+![Mealy- und Moore-Automat Zustandsübergangsdiagramm](illustrations/lerndoku/Zustandsdiagramm_image4.png)
+
+![Praktisches Zustandsdiagramm einer Ablaufsteuerung](illustrations/lerndoku/Zustandsdiagramm_image5.png)
+
 1. **RS-Flip-Flop:** Setzen ($S=1$) und Rücksetzen ($R=1$). Der Zustand $S=1, R=1$ ist verboten (undefinierter Folgezustand).
 2. **D-Flip-Flop (Data / Delay):** Übernimmt bei einer Taktflanke ($\uparrow$) den Zustand am Eingang $D$ an den Ausgang $Q$.
 3. **JK-Flip-Flop:** Universelles Flip-Flop ohne verbotenen Zustand. Bei $J=1, K=1$ invertiert der Ausgang bei jeder Taktflanke (**Toggle-Modus**).
@@ -4115,6 +4191,12 @@ Flip-Flops sind die fundamentalen 1-Bit-Speicherelemente der Digitaltechnik.
 
 
 ## 11.17 C-Programmierung für Mikrocontroller: Arrays, Funktionen & Schleifen
+
+In eingebetteten Systemen bestimmt die Speicheranordnung von Datenfeldern und Programmablaufstrukturen direkt die Rechenzeit und Latenz:
+
+![C-Arrays und Pointer-Adressierung im RAM](illustrations/lerndoku/Array_image4.png)
+
+![Programmablaufpläne für C-Steuerstrukturen](illustrations/lerndoku/Programmschleifen_image4.png)
 
 ### 1. Eindimensionale & zweidimensionale Arrays
 ```c
@@ -4184,6 +4266,8 @@ In Hochspannungs-Prüfgeneratoren werden Zwischenkreiskondensatoren auf Spannung
 
 ![HV-Supply 8 Sicherheits-Erdschalter](illustrations/lerndoku/HV-Supply_(Erdschalter)_image4.png)
 
+![Pneumatik-Schaltung und Endschalter des Sicherheits-Erdschalters](illustrations/lerndoku/HV-Supply_(Erdschalter)_image5.png)
+
 ### Schaltungsaufbau mit Entladewiderständen
 Wird der Sicherheitskreis unterbrochen, fällt das Sicherheitsschütz ab und schließt einen federbelasteten mechanischen Hochvolt-Erdschalter.
 - **Warum werden 4 Entladewiderstände verwendet?**
@@ -4200,6 +4284,12 @@ Die Erzeugung von Gleichspannungen im Kilovoltbereich erfordert spezielle Gleich
 
 ![HV-Supply 8 Hochspannungsgleichrichter](illustrations/lerndoku/HV-Supply_(Gleichrichter)_image4.png)
 
+![Hochspannungs-Diodenmodul mit Symmetrierwiderständen](illustrations/lerndoku/HV-Supply_(Gleichrichter)_image5.png)
+
+![Gleichrichter- und Kaskadenschaltplan des HV-Supply 8](illustrations/lerndoku/HV-Supply_(Gleichrichter)_image6.png)
+
+![Schutzbeschaltung und Filterstufen der HV-Kaskade](illustrations/lerndoku/HV-Supply_(Gleichrichter)_image7.png)
+
 1. **Dioden-Reihenschaltung & Symmetrierung:**
    Weil einzelne Silizium-Dioden nur Sperrspannungen bis $1\,000\dots 1\,600\,\text{V}$ sperren, werden Hochvolt-Diodenketten eingesetzt. Zur Vermeidung ungleicher Spannungsaufteilung durch unterschiedliche Sperr-Leckströme wird jede Diode mit einem hochohmigen **Symmetrierwiderstand** ($R \approx 1\dots 10\,\text{M}\Omega$) und einer Symmetrierkapazität parallel geschaltet.
 2. **Spannungsvervielfacher (Greinacher- / Villard-Kaskade):**
@@ -4211,6 +4301,10 @@ Die Erzeugung von Gleichspannungen im Kilovoltbereich erfordert spezielle Gleich
 In der EMV-Prüfpraxis müssen Prüflinge sowohl mit **positiven** als auch mit **negativen** Stoßimpulsen (Surge) beaufschlagt werden.
 
 ![HV-Supply 8 Polarisierungsumschaltung](illustrations/lerndoku/HV-Supply_(Polarisierung)_image4.png)
+
+![Polaritätsumschalt-Relais-Matrix](illustrations/lerndoku/HV-Supply_(Polarisierung)_image5.png)
+
+![Schaltplan der HV-Polarisierungsumschaltung](illustrations/lerndoku/HV-Supply_(Polarisierung)_image6.png)
 
 - **Schaltungskonzept:** Mittels motorgetriebener Schalter oder spezieller Hochspannungs-Vakuumrelais wird die Polarität der Gleichspannungsquelle gegenüber dem gemeinsamen Bezugspotenzial (PE) umgepolt.
 - **Sicherheitsverriegelung:** Vor jeder Umpolung muss der Mikrocontroller über das Messmodul verifizieren, dass die Zwischenkreisspannung durch den Erdschalter vollständig auf $0\,\text{V}$ entladen ist, um Lichtbögen an den Relaiskontakten auszuschließen.

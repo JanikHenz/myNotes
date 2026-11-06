@@ -367,6 +367,8 @@ Um eine hohe DC-Eingangsspannung mit hohem Wirkungsgrad ($>90\,\%$) in eine nied
 
 ![Buck-Konverter Schaltplan und Signalverlauf](illustrations/lerndoku/Buckkonverter_image4.png)
 
+![Buck-Konverter Spulenstrom CCM vs DCM](illustrations/lerndoku/Buckkonverter_image6.png)
+
 ### Schaltungsaufbau & Arbeitsphasen
 1. **Einschaltphase ($T_{on}$):** Der Transistor (MOSFET) schaltet durch. Strom fließt von $U_{in}$ über die Spule $L$ in den Ladekondensator $C$ und die Last $R_L$. In der Spule baut sich ein Magnetfeld auf ($u_L = U_{in} - U_{out}$).
 2. **Ausschaltphase ($T_{off}$):** Der MOSFET sperrt. Die Spule wirkt der Stromunterbrechung durch Selbstinduktion entgegen und treibt den Strom über die Freilaufdiode (Schottky) weiter in Last und Ausgangskondensator ($u_L = -U_{out}$).
@@ -388,6 +390,8 @@ Der Boost-Konverter erzeugt aus einer niedrigen Eingangsspannung eine höhere Au
 
 ![Boost-Konverter Schaltungsaufbau](illustrations/lerndoku/Boostconverter_image4.png)
 
+![Boost-Konverter Signalverläufe an Diode und Schalter](illustrations/lerndoku/Boostconverter_image6.png)
+
 ### Arbeitsphasen & Spannungsübersetzung
 1. **Ladephase ($T_{on}$):** Schalter geschlossen. Die Spule liegt direkt an $U_{in}$, der Strom steigt linear an, Energie wird im Magnetfeld gespeichert. Die Diode sperrt; der Ausgang wird aus dem Kondensator gespeist.
 2. **Entladephase ($T_{off}$):** Schalter offen. Die Spule addiert ihre Selbstinduktionsspannung zur Eingangsspannung: $U_{L} + U_{in}$. Die Diode leitet und lädt den Ausgangskondensator auf ein höheres Potenzial auf:
@@ -402,6 +406,12 @@ $$U_{out} = \frac{U_{in}}{1 - D}$$
 Der NE555 ist der weltweit meistgenutzte integrierte Timer-Baustein.
 
 ![NE555 Schaltungen und Pinbelegung](illustrations/lerndoku/LM555_Timer_image4.png)
+
+![NE555 Internes Blockschaltbild](illustrations/lerndoku/LM555_Timer_image5.png)
+
+![NE555 Monostabile Kippstufe Schaltung und Signalverlauf](illustrations/lerndoku/LM555_Timer_image6.png)
+
+![NE555 Astabile Kippstufe Rechteckoszillator](illustrations/lerndoku/LM555_Timer_image8.png)
 
 ### 1. Astabile Kippstufe (Taktgenerator / Oszillator)
 Widerstand $R_1$ zwischen $V_{CC}$ und Discharge (Pin 7), $R_2$ zwischen Pin 7 und Threshold/Trigger (Pin 6/2), Kondensator $C$ nach Masse:
@@ -431,6 +441,12 @@ Ein Schmitt-Trigger ist ein Komparator mit **positiver Rückkopplung (Mitkopplun
 Signalwandler bilden die fundamentale Schnittstelle zwischen analoger Messwelt und digitaler Rechenwelt:
 
 ![DAC Blockschaltbild und R-2R-Leiter](illustrations/lerndoku/DAC-ADC-_Converters_image4.png)
+
+![R-2R-Netzwerk Digital-Analog-Wandler](illustrations/lerndoku/DAC-ADC-_Converters_image10.png)
+
+![Flash-ADC Parallelwandler mit Komparatorleiter](illustrations/lerndoku/DAC-ADC-_Converters_image11.png)
+
+![SAR-ADC Sukzessive Approximation Ablauf](illustrations/lerndoku/DAC-ADC-_Converters_image13.png)
 
 ### 1. D/A-Wandler (Digital-to-Analog Converter)
 - **R-2R-Widerstandsleiter:** Benötigt pro Bit nur zwei Präzisionswiderstandswerte ($R$ und $2R$). Über Umschalter speisen die Bits gewichtete Ströme in den Summierpunkt eines Operationsverstärkers.

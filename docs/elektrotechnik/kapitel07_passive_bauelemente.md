@@ -655,6 +655,10 @@ Ein Varistor (**Var**iable Res**istor** oder VDR = Voltage Dependent Resistor) i
 
 ![Varistor Kennlinie und Schaltsymbol](illustrations/lerndoku/Varistor_image10.png)
 
+![Varistor Kennlinie Klemmspannung bei Stoßstrom](illustrations/lerndoku/Varistor_image11.png)
+
+![Pulsenergie-Derating Diagramm von Metalloxid-Varistoren](illustrations/lerndoku/Varistor_image12.png)
+
 ### Aufbau & Wirkungsweise
 - **Zusammensetzung:** Gesinterte Keramikscheibe aus Zinkoxid-Körnern ($\text{ZnO}$) mit Beimischungen von Wismut-, Antimon- und Manganoxiden.
 - **Mikrostruktur:** An den Berührungspunkten der leitfähigen ZnO-Kristallkörner entstehen mikroskopische Halbleiter-Sperrschichten (Reihen- und Parallelschaltung Tausender winziger Diodenbarrieren).
@@ -674,6 +678,8 @@ Eine PolyFuse (auch PolySwitch oder PPTC = Polymeric Positive Temperature Coeffi
 
 ![Polyfuse Aufbau und Schaltfunktion](illustrations/lerndoku/Polyfuse_image5.png)
 
+![PolyFuse Haltestrom-Derating über Temperatur](illustrations/lerndoku/Polyfuse_image4.jpeg)
+
 ### Funktionsprinzip
 - **Materialaufbau:** Matrix aus unpolarem Polymer (z. B. Polyethylen), gefüllt mit mikroskopischen Partikeln aus leitfähigem Ruß/Kohlenstoff (Carbon Black).
 - **Ruhezustand:** Bei Nennstrom berühren sich die Rußpartikel $\implies$ geringer Kaltwiderstand ($R_{cold} \approx 20\,\text{m}\Omega \dots 1\,\Omega$).
@@ -687,6 +693,14 @@ Eine PolyFuse (auch PolySwitch oder PPTC = Polymeric Positive Temperature Coeffi
 
 
 ## 7.25 Bauteil-Codierung: Farbringe, SMD-Codes & EIA-96
+
+![EIA-96 SMD-Widerstandscodes Lookup-Tabelle](illustrations/lerndoku/Bauteil-Codierung_image10.png)
+
+![Kabelquerschnitte und AWG Umrechnung](illustrations/lerndoku/Kabel_-durchmesser_&_-farben_image4.png)
+
+![Kabel-Schirmungsarten (U/UTP, F/UTP, S/FTP)](illustrations/lerndoku/Kabelarten_image4.jpeg)
+
+![Koaxialkabel Schichtaufbau](illustrations/lerndoku/Kabelarten_image7.png)
 
 ### 1. Farbcode-Kennzeichnung bedrahteter Widerstände
 - **4-Ring-Widerstand (Standard):** Ring 1 & 2 = Ziffern, Ring 3 = Multiplikator ($10^x$), Ring 4 = Toleranz.
