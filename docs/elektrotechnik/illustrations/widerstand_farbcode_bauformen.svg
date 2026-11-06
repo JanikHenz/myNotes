@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 270" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Widerstands-Farbcodierung (4-Ring-System)</text>
+
+  <!-- Resistor Body Diagram -->
+  <g transform="translate(50, 55)">
+    <!-- Wire leads -->
+    <line x1="0" y1="40" x2="60" y2="40" stroke="#94a3b8" stroke-width="4" />
+    <line x1="380" y1="40" x2="440" y2="40" stroke="#94a3b8" stroke-width="4" />
+
+    <!-- Ceramic body beige -->
+    <path d="M 60,40 C 60,15 90,20 110,25 L 330,25 C 350,20 380,15 380,40 C 380,65 350,60 330,55 L 110,55 C 90,60 60,65 60,40 Z" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5" />
+
+    <!-- 4 Color Rings (e.g. Gelb 4, Violett 7, Rot 10^2, Gold 5%) = 4.7 kΩ -->
+    <!-- Ring 1: Gelb -->
+    <rect x="110" y="25" width="16" height="30" fill="#eab308" />
+    <text x="118" y="72" font-size="10" font-weight="bold" fill="#a16207" text-anchor="middle">1. Ring</text>
+    <text x="118" y="86" font-size="10" font-weight="bold" fill="#a16207" text-anchor="middle">(4)</text>
+
+    <!-- Ring 2: Violett -->
+    <rect x="160" y="25" width="16" height="30" fill="#a855f7" />
+    <text x="168" y="72" font-size="10" font-weight="bold" fill="#7e22ce" text-anchor="middle">2. Ring</text>
+    <text x="168" y="86" font-size="10" font-weight="bold" fill="#7e22ce" text-anchor="middle">(7)</text>
+
+    <!-- Ring 3: Rot (Multiplikator 10^2) -->
+    <rect x="230" y="25" width="16" height="30" fill="#ef4444" />
+    <text x="238" y="72" font-size="10" font-weight="bold" fill="#dc2626" text-anchor="middle">Multiplikator</text>
+    <text x="238" y="86" font-size="10" font-weight="bold" fill="#dc2626" text-anchor="middle">(·10² = ·100)</text>
+
+    <!-- Ring 4: Gold (Toleranz 5%) -->
+    <rect x="310" y="25" width="16" height="30" fill="#d97706" />
+    <text x="318" y="72" font-size="10" font-weight="bold" fill="#b45309" text-anchor="middle">Toleranz</text>
+    <text x="318" y="86" font-size="10" font-weight="bold" fill="#b45309" text-anchor="middle">(±5%)</text>
+  </g>
+
+  <!-- Calculation Result Card -->
+  <g transform="translate(30, 160)">
+    <rect x="0" y="0" width="490" height="90" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+    <text x="20" y="26" font-size="12" font-weight="bold" fill="#0f172a">Beispielberechnung:</text>
+    <text x="20" y="48" font-size="14" font-weight="bold" fill="#2563eb">R = 47 · 10² Ω = 4700 Ω = 4,7 kΩ  (± 5%)</text>
+    <line x1="20" y1="58" x2="470" y2="58" stroke="#e2e8f0" stroke-width="1" />
+    <text x="20" y="75" font-size="10" fill="#64748b">Farbcode-Reihe: 0 Schwarz | 1 Braun | 2 Rot | 3 Orange | 4 Gelb | 5 Grün | 6 Blau | 7 Violett | 8 Grau | 9 Weiß</text>
+  </g>
+</svg>

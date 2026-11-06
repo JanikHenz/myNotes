@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 260" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Bipolartransistoren: Schichtenaufbau (NPN vs. PNP)</text>
+
+  <!-- Left: NPN Structure -->
+  <g transform="translate(30, 55)">
+    <rect x="0" y="0" width="230" height="185" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="115" y="24" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">NPN-Transistor</text>
+
+    <!-- 3 Layers -->
+    <!-- Collector n -->
+    <rect x="35" y="60" width="45" height="50" fill="#dbeafe" stroke="#2563eb" />
+    <text x="57" y="89" font-size="11" font-weight="bold" fill="#1e40af" text-anchor="middle">N (C)</text>
+    <line x1="10" y1="85" x2="35" y2="85" stroke="#1e293b" stroke-width="2" />
+    <text x="5" y="89" font-size="11" font-weight="bold" fill="#0f172a">C</text>
+
+    <!-- Base p (thin) -->
+    <rect x="80" y="60" width="25" height="50" fill="#fee2e2" stroke="#dc2626" />
+    <text x="92" y="89" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">P (B)</text>
+    <line x1="92" y1="60" x2="92" y2="45" stroke="#1e293b" stroke-width="2" />
+    <text x="92" y="40" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">B</text>
+
+    <!-- Emitter n+ -->
+    <rect x="105" y="60" width="45" height="50" fill="#dbeafe" stroke="#2563eb" />
+    <text x="127" y="89" font-size="11" font-weight="bold" fill="#1e40af" text-anchor="middle">N (E)</text>
+    <line x1="150" y1="85" x2="175" y2="85" stroke="#1e293b" stroke-width="2" />
+    <text x="182" y="89" font-size="11" font-weight="bold" fill="#0f172a">E</text>
+
+    <text x="115" y="132" font-size="11" font-weight="bold" fill="#2563eb" text-anchor="middle">Elektronen als Ladungsträger</text>
+    <text x="115" y="150" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">I_E = I_B + I_C</text>
+    <text x="115" y="168" font-size="10" fill="#16a34a" font-weight="bold" text-anchor="middle">Standardtyp in Silizium</text>
+  </g>
+
+  <!-- Right: PNP Structure -->
+  <g transform="translate(280, 55)">
+    <rect x="0" y="0" width="230" height="185" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="115" y="24" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">PNP-Transistor</text>
+
+    <!-- 3 Layers -->
+    <!-- Collector p -->
+    <rect x="35" y="60" width="45" height="50" fill="#fee2e2" stroke="#dc2626" />
+    <text x="57" y="89" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">P (C)</text>
+    <line x1="10" y1="85" x2="35" y2="85" stroke="#1e293b" stroke-width="2" />
+    <text x="5" y="89" font-size="11" font-weight="bold" fill="#0f172a">C</text>
+
+    <!-- Base n (thin) -->
+    <rect x="80" y="60" width="25" height="50" fill="#dbeafe" stroke="#2563eb" />
+    <text x="92" y="89" font-size="11" font-weight="bold" fill="#1e40af" text-anchor="middle">N (B)</text>
+    <line x1="92" y1="60" x2="92" y2="45" stroke="#1e293b" stroke-width="2" />
+    <text x="92" y="40" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">B</text>
+
+    <!-- Emitter p+ -->
+    <rect x="105" y="60" width="45" height="50" fill="#fee2e2" stroke="#dc2626" />
+    <text x="127" y="89" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">P (E)</text>
+    <line x1="150" y1="85" x2="175" y2="85" stroke="#1e293b" stroke-width="2" />
+    <text x="182" y="89" font-size="11" font-weight="bold" fill="#0f172a">E</text>
+
+    <text x="115" y="132" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">Löcher als Ladungsträger</text>
+    <text x="115" y="150" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">Pfeil am Emitter zeigt nach INNEN</text>
+    <text x="115" y="168" font-size="10" fill="#64748b" text-anchor="middle">Invertierte Polarität zu NPN</text>
+  </g>
+</svg>

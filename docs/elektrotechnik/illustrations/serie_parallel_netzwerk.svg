@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 260" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Serie- und Parallelschaltung von Widerständen</text>
+
+  <!-- Left: Series Circuit -->
+  <g transform="translate(30, 60)">
+    <rect x="0" y="0" width="230" height="180" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="115" y="25" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Serienschaltung (Reihe)</text>
+    
+    <!-- Wire & Resistors -->
+    <line x1="20" y1="75" x2="60" y2="75" stroke="#1e293b" stroke-width="2" />
+    <rect x="60" y="65" width="45" height="20" fill="#ffffff" stroke="#1e293b" stroke-width="2" />
+    <text x="82" y="79" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">R₁</text>
+    
+    <line x1="105" y1="75" x2="135" y2="75" stroke="#1e293b" stroke-width="2" />
+    <rect x="135" y="65" width="45" height="20" fill="#ffffff" stroke="#1e293b" stroke-width="2" />
+    <text x="157" y="79" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">R₂</text>
+    <line x1="180" y1="75" x2="210" y2="75" stroke="#1e293b" stroke-width="2" />
+
+    <!-- Current & Voltage labels -->
+    <text x="115" y="115" font-size="12" fill="#2563eb" font-weight="bold" text-anchor="middle">Strom I ist überall gleich</text>
+    <text x="115" y="135" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">R_ges = R₁ + R₂</text>
+    <text x="115" y="155" font-size="11" fill="#334155" text-anchor="middle">U_ges = U₁ + U₂</text>
+    <text x="115" y="170" font-size="10" fill="#64748b" text-anchor="middle">Spannungsteiler-Prinzip</text>
+  </g>
+
+  <!-- Right: Parallel Circuit -->
+  <g transform="translate(280, 60)">
+    <rect x="0" y="0" width="230" height="180" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="115" y="25" font-size="13" font-weight="bold" fill="#0f172a" text-anchor="middle">Parallelschaltung</text>
+    
+    <!-- Parallel branches -->
+    <line x1="20" y1="75" x2="60" y2="75" stroke="#1e293b" stroke-width="2" />
+    <line x1="60" y1="50" x2="60" y2="100" stroke="#1e293b" stroke-width="2" />
+    
+    <!-- Top branch R1 -->
+    <line x1="60" y1="50" x2="90" y2="50" stroke="#1e293b" stroke-width="2" />
+    <rect x="90" y="40" width="45" height="20" fill="#ffffff" stroke="#1e293b" stroke-width="2" />
+    <text x="112" y="54" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">R₁</text>
+    <line x1="135" y1="50" x2="165" y2="50" stroke="#1e293b" stroke-width="2" />
+
+    <!-- Bottom branch R2 -->
+    <line x1="60" y1="100" x2="90" y2="100" stroke="#1e293b" stroke-width="2" />
+    <rect x="90" y="90" width="45" height="20" fill="#ffffff" stroke="#1e293b" stroke-width="2" />
+    <text x="112" y="104" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">R₂</text>
+    <line x1="135" y1="100" x2="165" y2="100" stroke="#1e293b" stroke-width="2" />
+
+    <line x1="165" y1="50" x2="165" y2="100" stroke="#1e293b" stroke-width="2" />
+    <line x1="165" y1="75" x2="210" y2="75" stroke="#1e293b" stroke-width="2" />
+
+    <!-- Formulas -->
+    <text x="115" y="132" font-size="11" fill="#dc2626" font-weight="bold" text-anchor="middle">Spannung U ist gleich</text>
+    <text x="115" y="150" font-size="12" font-weight="bold" fill="#16a34a" text-anchor="middle">1/R_ges = 1/R₁ + 1/R₂</text>
+    <text x="115" y="168" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">R_ges = (R₁ · R₂) / (R₁ + R₂)</text>
+  </g>
+</svg>

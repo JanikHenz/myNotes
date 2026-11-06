@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 260" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Messgeräte-Technik: Analoges Zeigerinstrument vs. Digitalanzeige</text>
+
+  <!-- Left: Analog Needle Meter -->
+  <g transform="translate(30, 55)">
+    <rect x="0" y="0" width="230" height="185" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="115" y="24" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Analog (Drehspulinstrument)</text>
+
+    <!-- Scale Arc -->
+    <path d="M 40,110 A 90,90 0 0,1 190,110" fill="none" stroke="#1e293b" stroke-width="2" />
+    <!-- Tick marks -->
+    <line x1="40" y1="110" x2="45" y2="103" stroke="#1e293b" stroke-width="2" /><text x="35" y="125" font-size="9" fill="#64748b">0</text>
+    <line x1="75" y1="65" x2="80" y2="70" stroke="#1e293b" stroke-width="1.5" /><text x="65" y="60" font-size="9" fill="#64748b">50</text>
+    <line x1="115" y1="48" x2="115" y2="55" stroke="#1e293b" stroke-width="2" /><text x="115" y="42" font-size="9" font-weight="bold" fill="#0f172a" text-anchor="middle">100</text>
+    <line x1="155" y1="65" x2="150" y2="70" stroke="#1e293b" stroke-width="1.5" /><text x="160" y="60" font-size="9" fill="#64748b">150</text>
+    <line x1="190" y1="110" x2="185" y2="103" stroke="#1e293b" stroke-width="2" /><text x="195" y="125" font-size="9" fill="#64748b">200</text>
+
+    <!-- Needle (pointing to ~120) -->
+    <line x1="115" y1="125" x2="135" y2="55" stroke="#dc2626" stroke-width="2" />
+    <circle cx="115" cy="125" r="6" fill="#1e293b" />
+
+    <text x="115" y="152" font-size="11" font-weight="bold" fill="#2563eb" text-anchor="middle">Kontinuierliche Anzeige</text>
+    <text x="115" y="170" font-size="10" fill="#64748b" text-anchor="middle">Parallaxenfehler möglich (Spiegelskala)</text>
+  </g>
+
+  <!-- Right: Digital LCD Multimeter -->
+  <g transform="translate(280, 55)">
+    <rect x="0" y="0" width="230" height="185" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="115" y="24" font-size="12" font-weight="bold" fill="#0f172a" text-anchor="middle">Digital (DMM / LCD)</text>
+
+    <!-- LCD Display Screen -->
+    <rect x="35" y="45" width="160" height="65" rx="4" fill="#0f172a" stroke="#334155" stroke-width="2" />
+    <text x="115" y="90" font-size="28" font-family="monospace" font-weight="bold" fill="#22c55e" text-anchor="middle">12.00 V</text>
+
+    <!-- Error Specification Box -->
+    <rect x="30" y="125" width="170" height="48" rx="4" fill="#ffffff" stroke="#cbd5e1" />
+    <text x="115" y="142" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">Genauigkeitsangabe:</text>
+    <text x="115" y="160" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">± (0,5% + 2 Digits)</text>
+  </g>
+</svg>

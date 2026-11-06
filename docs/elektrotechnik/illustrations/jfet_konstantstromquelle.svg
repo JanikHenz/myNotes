@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 260" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">JFET-Schaltung als 2-Pol-Konstantstromquelle</text>
+
+  <!-- Left: Circuit Diagram -->
+  <g transform="translate(40, 55)">
+    <!-- +V Terminal (Drain) -->
+    <line x1="80" y1="20" x2="80" y2="45" stroke="#1e293b" stroke-width="2" />
+    <circle cx="80" cy="20" r="3" fill="#dc2626" />
+    <text x="80" y="12" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">+V (Drain)</text>
+
+    <!-- JFET Symbol -->
+    <g transform="translate(60, 45)">
+      <!-- Channel -->
+      <line x1="20" y1="10" x2="20" y2="50" stroke="#1e293b" stroke-width="3" />
+      <line x1="20" y1="15" x2="40" y2="15" stroke="#1e293b" stroke-width="1.8" />
+      <line x1="40" y1="15" x2="40" y2="0" stroke="#1e293b" stroke-width="1.8" />
+      <line x1="20" y1="45" x2="40" y2="45" stroke="#1e293b" stroke-width="1.8" />
+      <line x1="40" y1="45" x2="40" y2="60" stroke="#1e293b" stroke-width="1.8" />
+      <!-- Gate -->
+      <line x1="0" y1="30" x2="20" y2="30" stroke="#1e293b" stroke-width="1.8" />
+      <polygon points="15,30 8,26 8,34" fill="#2563eb" />
+      <text x="-8" y="33" font-size="9" font-weight="bold" fill="#2563eb">G</text>
+    </g>
+
+    <!-- Source Resistor RS -->
+    <line x1="100" y1="105" x2="100" y2="115" stroke="#1e293b" stroke-width="2" />
+    <rect x="92" y="115" width="16" height="30" fill="#ffffff" stroke="#1e293b" stroke-width="1.8" />
+    <text x="115" y="133" font-size="10" font-weight="bold" fill="#0f172a">R_S</text>
+    <line x1="100" y1="145" x2="100" y2="170" stroke="#1e293b" stroke-width="2" />
+    <circle cx="100" cy="170" r="3" fill="#1e293b" />
+    <text x="100" y="185" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">− Klemme</text>
+
+    <!-- Gate connected to bottom of RS (Self-Biasing) -->
+    <line x1="52" y1="75" x2="35" y2="75" stroke="#1e293b" stroke-width="1.8" />
+    <line x1="35" y1="75" x2="35" y2="155" stroke="#1e293b" stroke-width="1.8" />
+    <line x1="35" y1="155" x2="100" y2="155" stroke="#1e293b" stroke-width="1.8" />
+    <circle cx="100" cy="155" r="2.5" fill="#1e293b" />
+  </g>
+
+  <!-- Right: Explanation Card -->
+  <rect x="250" y="55" width="260" height="185" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+  <text x="265" y="80" font-size="13" font-weight="bold" fill="#0f172a">Funktionsprinzip:</text>
+
+  <text x="265" y="105" font-size="11" fill="#334155">Fließt Strom I_D durch R_S, erzeugt</text>
+  <text x="265" y="120" font-size="11" fill="#334155">dies eine negative Gate-Source-Spannung:</text>
+  <text x="265" y="142" font-size="13" font-weight="bold" fill="#dc2626">U_GS = −I_D · R_S</text>
+
+  <line x1="265" y1="155" x2="495" y2="155" stroke="#e2e8f0" stroke-width="1" />
+
+  <text x="265" y="175" font-size="11" font-weight="bold" fill="#16a34a">Gegenkopplungseffekt:</text>
+  <text x="265" y="190" font-size="10" fill="#334155">Steigt I_D, wird U_GS negativer und schnürt</text>
+  <text x="265" y="205" font-size="10" fill="#334155">den Kanal zu ⇒ I_D bleibt hochstabil!</text>
+  <text x="265" y="222" font-size="10" fill="#64748b">Wenn R_S = 0 Ω: Konstantstrom = I_DSS</text>
+</svg>

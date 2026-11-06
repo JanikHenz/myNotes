@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 270" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Zahlensysteme im Vergleich (Binär, Hexadezimal, Dezimal)</text>
+
+  <!-- Byte Table (8 Bits) -->
+  <g transform="translate(30, 55)">
+    <text x="0" y="15" font-size="12" font-weight="bold" fill="#64748b">1 Byte = 8 Bit (Aufteilung in 2 Nibbles à 4 Bit):</text>
+    
+    <!-- Table Grid -->
+    <g transform="translate(0, 25)">
+      <!-- Header: Powers of 2 -->
+      <g fill="#f1f5f9" stroke="#94a3b8" stroke-width="1">
+        <rect x="0" y="0" width="60" height="24" /><rect x="60" y="0" width="60" height="24" /><rect x="120" y="0" width="60" height="24" /><rect x="180" y="0" width="60" height="24" />
+        <rect x="250" y="0" width="60" height="24" /><rect x="310" y="0" width="60" height="24" /><rect x="370" y="0" width="60" height="24" /><rect x="430" y="0" width="60" height="24" />
+      </g>
+      <!-- Values 2^n -->
+      <g font-size="11" font-weight="bold" fill="#334155" text-anchor="middle">
+        <text x="30" y="16">2⁷ (128)</text><text x="90" y="16">2⁶ (64)</text><text x="150" y="16">2⁵ (32)</text><text x="210" y="16">2⁴ (16)</text>
+        <text x="280" y="16">2³ (8)</text><text x="340" y="16">2² (4)</text><text x="400" y="16">2¹ (2)</text><text x="460" y="16">2⁰ (1)</text>
+      </g>
+
+      <!-- Bit Pattern Row (Example: 1 0 1 0   1 1 0 0) -->
+      <g fill="#ffffff" stroke="#1e293b" stroke-width="1.5" transform="translate(0, 24)">
+        <rect x="0" y="0" width="60" height="28" /><rect x="60" y="0" width="60" height="28" /><rect x="120" y="0" width="60" height="28" /><rect x="180" y="0" width="60" height="28" />
+        <rect x="250" y="0" width="60" height="28" /><rect x="310" y="0" width="60" height="28" /><rect x="370" y="0" width="60" height="28" /><rect x="430" y="0" width="60" height="28" />
+      </g>
+      <g font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle" transform="translate(0, 24)">
+        <text x="30" y="19">1</text><text x="90" y="19">0</text><text x="150" y="19">1</text><text x="210" y="19">0</text>
+        <text x="280" y="19">1</text><text x="340" y="19">1</text><text x="400" y="19">0</text><text x="460" y="19">0</text>
+      </g>
+    </g>
+
+    <!-- Nibble brackets below -->
+    <g transform="translate(0, 85)">
+      <path d="M 5,0 L 5,12 L 120,12 L 120,20 L 120,12 L 235,12 L 235,0" fill="none" stroke="#dc2626" stroke-width="1.5" />
+      <text x="120" y="35" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">High-Nibble: 1010₂ = 0xA (10)</text>
+
+      <path d="M 255,0 L 255,12 L 370,12 L 370,20 L 370,12 L 485,12 L 485,0" fill="none" stroke="#16a34a" stroke-width="1.5" />
+      <text x="370" y="35" font-size="11" font-weight="bold" fill="#16a34a" text-anchor="middle">Low-Nibble: 1100₂ = 0xC (12)</text>
+    </g>
+  </g>
+
+  <!-- Final Equation Card -->
+  <rect x="30" y="195" width="490" height="55" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+  <text x="45" y="218" font-size="12" font-weight="bold" fill="#0f172a">Umrechnungsbeispiel:</text>
+  <text x="45" y="238" font-size="13" font-family="monospace" font-weight="bold" fill="#2563eb">1010 1100₂  =  0xAC  =  (128 + 32 + 8 + 4)  =  172₁₀</text>
+</svg>

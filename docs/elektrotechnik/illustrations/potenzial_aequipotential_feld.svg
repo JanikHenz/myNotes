@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 290" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+  <defs>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb" />
+    </marker>
+    <marker id="arr-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
+    </marker>
+  </defs>
+
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Elektrisches Potenzial &amp; Äquipotentialflächen</text>
+
+  <!-- Left: Point Charge with Equipotential lines and E-field -->
+  <g transform="translate(170, 160)">
+    <!-- Equipotential Circles -->
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="4,4" />
+    <circle cx="0" cy="0" r="70" fill="none" stroke="#60a5fa" stroke-width="1.5" stroke-dasharray="4,4" />
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4,4" />
+    
+    <text x="32" y="-28" font-size="10" font-weight="bold" fill="#2563eb">φ₁</text>
+    <text x="54" y="-50" font-size="10" font-weight="bold" fill="#60a5fa">φ₂</text>
+    <text x="76" y="-72" font-size="10" font-weight="bold" fill="#93c5fd">φ₃</text>
+
+    <!-- Radial E-Field lines -->
+    <line x1="0" y1="0" x2="0" y2="-115" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-blue)" />
+    <line x1="0" y1="0" x2="115" y2="0" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-blue)" />
+    <line x1="0" y1="0" x2="0" y2="115" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-blue)" />
+    <line x1="0" y1="0" x2="-115" y2="0" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-blue)" />
+    <line x1="0" y1="0" x2="80" y2="80" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-blue)" />
+    <line x1="0" y1="0" x2="-80" y2="-80" stroke="#2563eb" stroke-width="1.5" marker-end="url(#arr-blue)" />
+
+    <!-- Center Charge -->
+    <circle cx="0" cy="0" r="16" fill="#fee2e2" stroke="#dc2626" stroke-width="2" />
+    <text x="0" y="5" font-size="13" font-weight="bold" fill="#dc2626" text-anchor="middle">+q</text>
+
+    <!-- Path from P0 to P1 -->
+    <circle cx="28" cy="64" r="4" fill="#16a34a" />
+    <text x="35" y="75" font-size="10" font-weight="bold" fill="#16a34a">P₀</text>
+    <circle cx="65" cy="25" r="4" fill="#dc2626" />
+    <text x="75" y="32" font-size="10" font-weight="bold" fill="#dc2626">P₁</text>
+    <path d="M 28,64 Q 60,65 65,25" fill="none" stroke="#16a34a" stroke-width="2" stroke-dasharray="3,2" marker-end="url(#arr-red)" />
+  </g>
+
+  <!-- Right: Definitions Card -->
+  <rect x="320" y="60" width="205" height="215" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+  <text x="332" y="85" font-size="13" font-weight="bold" fill="#0f172a">Definitionen:</text>
+  
+  <text x="332" y="110" font-size="12" fill="#2563eb" font-weight="bold">Äquipotentialfläche:</text>
+  <text x="332" y="126" font-size="11" fill="#334155">Fläche gleichen Potenzials (φ = const.).</text>
+  <text x="332" y="140" font-size="11" fill="#16a34a">Verschiebung darauf: W = 0 J.</text>
+  
+  <line x1="332" y1="152" x2="510" y2="152" stroke="#e2e8f0" stroke-width="1" />
+  
+  <text x="332" y="174" font-size="12" fill="#dc2626" font-weight="bold">Spannung &amp; Arbeit:</text>
+  <text x="332" y="194" font-size="13" font-weight="bold" fill="#0f172a">U₁₂ = φ₁ − φ₂</text>
+  <text x="332" y="214" font-size="13" font-weight="bold" fill="#0f172a">W = e · (φ₁ − φ₀)</text>
+  <text x="332" y="235" font-size="11" fill="#64748b">Elektrische Feldlinien stehen stets</text>
+  <text x="332" y="250" font-size="11" font-weight="bold" fill="#0f172a">senkrecht (90°) auf Äquipotentiallinien!</text>
+</svg>

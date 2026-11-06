@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 550 260"
+   width="100%"
+   height="100%"
+   style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;"
+   version="1.1"
+   id="svg21"
+   sodipodi:docname="potentiometer_widerstandsnetzwerke.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs21" />
+  <sodipodi:namedview
+     id="namedview21"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="3.0405592"
+     inkscape:cx="277.74497"
+     inkscape:cy="175.2967"
+     inkscape:window-width="2560"
+     inkscape:window-height="1371"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg21" />
+  <text
+     x="20"
+     y="30"
+     font-size="16"
+     font-weight="bold"
+     fill="#0f172a"
+     id="text1">Einstellbare Widerstände &amp; Widerstandsnetzwerke</text>
+  <!-- Left: Potentiometer as Voltage Divider -->
+  <g
+     transform="translate(30, 55)"
+     id="g8">
+    <rect
+       x="0"
+       y="0"
+       width="235"
+       height="190"
+       rx="6"
+       fill="#f8fafc"
+       stroke="#cbd5e1"
+       stroke-width="1.5"
+       id="rect1" />
+    <text
+       x="117"
+       y="24"
+       font-size="13"
+       font-weight="bold"
+       fill="#0f172a"
+       text-anchor="middle"
+       id="text2">Potentiometer (Spannungsteiler)</text>
+    <!-- Potentiometer body -->
+    <line
+       x1="60"
+       y1="40"
+       x2="60"
+       y2="55"
+       stroke="#1e293b"
+       stroke-width="2"
+       id="line2" />
+    <circle
+       cx="60"
+       cy="40"
+       r="3"
+       fill="#2563eb"
+       id="circle2" />
+    <text
+       x="46.151104"
+       y="34.626724"
+       font-size="10px"
+       font-weight="bold"
+       fill="#2563eb"
+       id="text3">1 (U_in)</text>
+    <rect
+       x="48"
+       y="55"
+       width="24"
+       height="60"
+       fill="#ffffff"
+       stroke="#1e293b"
+       stroke-width="2"
+       id="rect3" />
+    <text
+       x="19.651163"
+       y="85.906975"
+       font-size="10px"
+       fill="#64748b"
+       id="text4">R_pot</text>
+    <line
+       x1="60"
+       y1="115"
+       x2="60"
+       y2="130"
+       stroke="#1e293b"
+       stroke-width="2"
+       id="line4" />
+    <circle
+       cx="60"
+       cy="130"
+       r="3"
+       fill="#1e293b"
+       id="circle4" />
+    <text
+       x="44.534885"
+       y="142.13954"
+       font-size="10px"
+       font-weight="bold"
+       fill="#1e293b"
+       id="text5">3 (GND)</text>
+    <!-- Wiper arrow (Klemme 2) -->
+    <line
+       x1="120"
+       y1="85"
+       x2="73"
+       y2="85"
+       stroke="#dc2626"
+       stroke-width="2"
+       id="line5" />
+    <polygon
+       points="73,85 81,81 81,89"
+       fill="#dc2626"
+       id="polygon5" />
+    <circle
+       cx="120"
+       cy="85"
+       r="3"
+       fill="#dc2626"
+       id="circle5" />
+    <text
+       x="130"
+       y="89"
+       font-size="11"
+       font-weight="bold"
+       fill="#dc2626"
+       id="text6">2 (U_out)</text>
+    <!-- Formula -->
+    <text
+       x="117.32889"
+       y="164.07933"
+       font-size="11px"
+       font-weight="bold"
+       fill="#2563eb"
+       text-anchor="middle"
+       id="text7">U_out = U_in · (α / α_max)</text>
+    <text
+       x="117.32889"
+       y="177.89328"
+       font-size="10px"
+       fill="#64748b"
+       text-anchor="middle"
+       id="text8">Stufenlose Spannungseinstellung</text>
+  </g>
+  <!-- Right: Resistor Networks (SIL / DIL) -->
+  <g
+     transform="translate(285, 55)"
+     id="g21">
+    <rect
+       x="0"
+       y="0"
+       width="235"
+       height="190"
+       rx="6"
+       fill="#f8fafc"
+       stroke="#cbd5e1"
+       stroke-width="1.5"
+       id="rect8" />
+    <text
+       x="117"
+       y="24"
+       font-size="13"
+       font-weight="bold"
+       fill="#0f172a"
+       text-anchor="middle"
+       id="text9">Widerstandsnetzwerke (SIL / DIL)</text>
+    <!-- SIL Package with Common Pin -->
+    <g
+       transform="translate(20, 45)"
+       id="g16">
+      <rect
+         x="0"
+         y="0"
+         width="195"
+         height="24"
+         rx="3"
+         fill="#1e293b"
+         id="rect9" />
+      <circle
+         cx="12"
+         cy="12"
+         r="3"
+         fill="#ffffff"
+         id="circle9" />
+      <text
+         x="25"
+         y="16"
+         font-size="9"
+         fill="#ffffff"
+         font-weight="bold"
+         id="text10">SIL 8-Pin (Common Bus)</text>
+      <!-- Pins -->
+      <line
+         x1="12"
+         y1="24"
+         x2="12"
+         y2="35"
+         stroke="#94a3b8"
+         stroke-width="2"
+         id="line10" />
+      <line
+         x1="38"
+         y1="24"
+         x2="38"
+         y2="35"
+         stroke="#94a3b8"
+         stroke-width="2"
+         id="line11" />
+      <line
+         x1="64"
+         y1="24"
+         x2="64"
+         y2="35"
+         stroke="#94a3b8"
+         stroke-width="2"
+         id="line12" />
+      <line
+         x1="90"
+         y1="24"
+         x2="90"
+         y2="35"
+         stroke="#94a3b8"
+         stroke-width="2"
+         id="line13" />
+      <line
+         x1="116"
+         y1="24"
+         x2="116"
+         y2="35"
+         stroke="#94a3b8"
+         stroke-width="2"
+         id="line14" />
+      <line
+         x1="142"
+         y1="24"
+         x2="142"
+         y2="35"
+         stroke="#94a3b8"
+         stroke-width="2"
+         id="line15" />
+      <line
+         x1="168"
+         y1="24"
+         x2="168"
+         y2="35"
+         stroke="#94a3b8"
+         stroke-width="2"
+         id="line16" />
+    </g>
+    <!-- Schematic of common bus -->
+    <g
+       transform="translate(25, 95)"
+       id="g20">
+      <!-- Common line (Pin 1) -->
+      <line
+         x1="10"
+         y1="10"
+         x2="175"
+         y2="10"
+         stroke="#2563eb"
+         stroke-width="1.5"
+         id="line17" />
+      <text
+         x="5"
+         y="8"
+         font-size="8"
+         fill="#2563eb"
+         font-weight="bold"
+         id="text17">COM</text>
+      <!-- 4 resistors branching down -->
+      <rect
+         x="30"
+         y="10"
+         width="10"
+         height="20"
+         fill="#ffffff"
+         stroke="#1e293b"
+         stroke-width="1.2"
+         id="rect17" />
+      <rect
+         x="75"
+         y="10"
+         width="10"
+         height="20"
+         fill="#ffffff"
+         stroke="#1e293b"
+         stroke-width="1.2"
+         id="rect18" />
+      <rect
+         x="120"
+         y="10"
+         width="10"
+         height="20"
+         fill="#ffffff"
+         stroke="#1e293b"
+         stroke-width="1.2"
+         id="rect19" />
+      <rect
+         x="160"
+         y="10"
+         width="10"
+         height="20"
+         fill="#ffffff"
+         stroke="#1e293b"
+         stroke-width="1.2"
+         id="rect20" />
+    </g>
+    <text
+       x="117"
+       y="152"
+       font-size="11"
+       font-weight="bold"
+       fill="#16a34a"
+       text-anchor="middle"
+       id="text20">Platzsparend für Pull-Up / Busse</text>
+    <text
+       x="117"
+       y="170"
+       font-size="10"
+       fill="#64748b"
+       text-anchor="middle"
+       id="text21">DIP: isolierte Einzelwiderstände</text>
+  </g>
+</svg>

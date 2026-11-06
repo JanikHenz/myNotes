@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb" />
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#dc2626" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#16a34a" />
+    </marker>
+    <marker id="arrow-dark" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b" />
+    </marker>
+  </defs>
+
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Vektorprodukt (Kreuzprodukt) in 3D</text>
+  <!-- Parallelogram plane -->
+  <polygon points="120,240 260,200 380,240 240,280" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4" />
+  <text x="240" y="245" font-size="14" font-weight="bold" fill="#64748b" text-anchor="middle">Fläche = |c| = |a × b|</text>
+  <!-- Vector a -->
+  <line x1="260" y1="200" x2="120" y2="240" stroke="#16a34a" stroke-width="3" marker-end="url(#arrow-green)" />
+  <text x="175" y="215" font-size="15" font-weight="bold" fill="#16a34a">a</text>
+  <!-- Vector b -->
+  <line x1="260" y1="200" x2="380" y2="240" stroke="#2563eb" stroke-width="3" marker-end="url(#arrow)" />
+  <text x="330" y="215" font-size="15" font-weight="bold" fill="#2563eb">b</text>
+  <!-- Vector c (orthogonal) -->
+  <line x1="260" y1="200" x2="260" y2="60" stroke="#dc2626" stroke-width="3" marker-end="url(#arrow-red)" />
+  <text x="270" y="90" font-size="16" font-weight="bold" fill="#dc2626">c = a × b</text>
+  <!-- Right angle symbols -->
+  <path d="M 260,175 L 245,180 L 245,204" fill="none" stroke="#dc2626" stroke-width="1.5" />
+  <path d="M 260,175 L 275,180 L 275,204" fill="none" stroke="#dc2626" stroke-width="1.5" />
+  <text x="285" y="170" font-size="12" fill="#dc2626">90° (orthogonal)</text>
+</svg>

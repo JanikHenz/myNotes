@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 260" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+  <defs>
+    <marker id="arr-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb" />
+    </marker>
+  </defs>
+
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Stromteiler-Regel bei Parallelschaltung</text>
+
+  <!-- Left: Circuit Diagram -->
+  <g transform="translate(30, 55)">
+    <!-- Current Source on Left -->
+    <line x1="40" y1="45" x2="40" y2="70" stroke="#1e293b" stroke-width="2" />
+    <circle cx="40" cy="95" r="22" fill="#ffffff" stroke="#1e293b" stroke-width="2" />
+    <line x1="40" y1="80" x2="40" y2="110" stroke="#1e293b" stroke-width="2" />
+    <line x1="40" y1="120" x2="40" y2="145" stroke="#1e293b" stroke-width="2" />
+    <!-- Source Arrow -->
+    <line x1="25" y1="110" x2="25" y2="80" stroke="#dc2626" stroke-width="2" marker-end="url(#arr-blue)" />
+    <text x="15" y="99" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="end">I₀</text>
+
+    <!-- Top Rail -->
+    <line x1="40" y1="45" x2="220" y2="45" stroke="#1e293b" stroke-width="2" />
+    <!-- Main Current Arrow -->
+    <line x1="55" y1="35" x2="90" y2="35" stroke="#2563eb" stroke-width="2" marker-end="url(#arr-blue)" />
+    <text x="72" y="28" font-size="11" font-weight="bold" fill="#2563eb" text-anchor="middle">I₀</text>
+
+    <!-- Branch 1: R1 -->
+    <line x1="120" y1="45" x2="120" y2="70" stroke="#1e293b" stroke-width="2" />
+    <rect x="110" y="70" width="20" height="45" fill="#ffffff" stroke="#1e293b" stroke-width="1.8" />
+    <text x="120" y="97" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">R₁</text>
+    <line x1="120" y1="115" x2="120" y2="145" stroke="#1e293b" stroke-width="2" />
+    <!-- Current I1 arrow -->
+    <line x1="135" y1="70" x2="135" y2="105" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arr-blue)" />
+    <text x="145" y="92" font-size="11" font-weight="bold" fill="#2563eb">I₁</text>
+
+    <!-- Branch 2: R2 -->
+    <line x1="200" y1="45" x2="200" y2="70" stroke="#1e293b" stroke-width="2" />
+    <rect x="190" y="70" width="20" height="45" fill="#ffffff" stroke="#1e293b" stroke-width="1.8" />
+    <text x="200" y="97" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">R₂</text>
+    <line x1="200" y1="115" x2="200" y2="145" stroke="#1e293b" stroke-width="2" />
+    <!-- Current I2 arrow -->
+    <line x1="215" y1="70" x2="215" y2="105" stroke="#2563eb" stroke-width="1.8" marker-end="url(#arr-blue)" />
+    <text x="225" y="92" font-size="11" font-weight="bold" fill="#2563eb">I₂</text>
+
+    <!-- Bottom Rail -->
+    <line x1="40" y1="145" x2="220" y2="145" stroke="#1e293b" stroke-width="2" />
+  </g>
+
+  <!-- Right: Formulas -->
+  <rect x="290" y="55" width="230" height="180" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+  <text x="305" y="80" font-size="13" font-weight="bold" fill="#0f172a">Stromteilerformeln:</text>
+
+  <text x="305" y="108" font-size="13" font-weight="bold" fill="#2563eb">I₁ = I₀ · R₂ / (R₁ + R₂)</text>
+  <text x="305" y="135" font-size="13" font-weight="bold" fill="#2563eb">I₂ = I₀ · R₁ / (R₁ + R₂)</text>
+
+  <line x1="305" y1="150" x2="505" y2="150" stroke="#e2e8f0" stroke-width="1" />
+
+  <text x="305" y="172" font-size="11" font-weight="bold" fill="#dc2626">Merksatz:</text>
+  <text x="305" y="190" font-size="11" fill="#334155">Der Strom teilt sich</text>
+  <text x="305" y="205" font-size="11" font-weight="bold" fill="#0f172a">umgekehrt proportional</text>
+  <text x="305" y="220" font-size="11" fill="#334155">zu den Widerstandswerten auf!</text>
+</svg>

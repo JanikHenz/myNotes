@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <marker id="arr-u3" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+    </marker>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#ffffff" stroke="#cbd5e1" stroke-width="2" rx="10"/>
+
+  <text x="400" y="38" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#0f172a" text-anchor="middle">
+    Widerstandstrimmung / Spannungsteiler-Anpassung
+  </text>
+  <text x="400" y="62" font-family="system-ui, sans-serif" font-size="13" fill="#64748b" text-anchor="middle">
+    Feinabgleich des Teilerverhältnisses durch Zuschalten eines Trimmwiderstands R₃ parallel zu R₂
+  </text>
+
+  <!-- Input -->
+  <circle cx="120" cy="140" r="5" fill="#1e293b"/>
+  <circle cx="120" cy="320" r="5" fill="#1e293b"/>
+  <line x1="80" y1="310" x2="80" y2="150" stroke="#2563eb" stroke-width="2" marker-end="url(#arr-u3)"/>
+  <text x="65" y="235" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">U_in</text>
+
+  <!-- Series R1 -->
+  <line x1="120" y1="140" x2="220" y2="140" stroke="#1e293b" stroke-width="2.5"/>
+  <rect x="220" y="128" width="60" height="24" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="250" y="145" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb" text-anchor="middle">R₁</text>
+  <line x1="280" y1="140" x2="380" y2="140" stroke="#1e293b" stroke-width="2.5"/>
+
+  <!-- Bottom Rail -->
+  <line x1="120" y1="320" x2="620" y2="320" stroke="#1e293b" stroke-width="2.5"/>
+
+  <!-- Node -->
+  <circle cx="380" cy="140" r="5" fill="#1e293b"/>
+
+  <!-- R2 branch -->
+  <line x1="380" y1="140" x2="380" y2="190" stroke="#1e293b" stroke-width="2.5"/>
+  <rect x="368" y="190" width="24" height="60" fill="#ffffff" stroke="#2563eb" stroke-width="2.5"/>
+  <text x="350" y="225" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">R₂</text>
+  <line x1="380" y1="250" x2="380" y2="320" stroke="#1e293b" stroke-width="2.5"/>
+  <circle cx="380" cy="320" r="5" fill="#1e293b"/>
+
+  <!-- R3 branch -->
+  <line x1="380" y1="140" x2="500" y2="140" stroke="#1e293b" stroke-width="2"/>
+  <circle cx="500" cy="140" r="4" fill="#059669"/>
+  <circle cx="500" cy="165" r="4" fill="#059669"/>
+  <line x1="500" y1="140" x2="508" y2="160" stroke="#059669" stroke-width="2"/>
+  <text x="520" y="155" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#059669">Klemmen</text>
+  <line x1="500" y1="165" x2="500" y2="190" stroke="#1e293b" stroke-width="2"/>
+  <rect x="488" y="190" width="24" height="60" fill="#ecfdf5" stroke="#059669" stroke-width="2.5"/>
+  <text x="525" y="225" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#059669">R₃</text>
+  <line x1="500" y1="250" x2="500" y2="320" stroke="#1e293b" stroke-width="2"/>
+  <circle cx="500" cy="320" r="5" fill="#1e293b"/>
+
+  <!-- Output -->
+  <line x1="500" y1="140" x2="620" y2="140" stroke="#1e293b" stroke-width="2"/>
+  <circle cx="620" cy="140" r="5" fill="#1e293b"/>
+  <circle cx="620" cy="320" r="5" fill="#1e293b"/>
+  <line x1="670" y1="310" x2="670" y2="150" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arr-u3)"/>
+  <text x="690" y="235" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">U_out</text>
+
+  <!-- Formula Callout -->
+  <rect x="160" y="355" width="480" height="75" rx="8" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="400" y="378" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#0f172a" text-anchor="middle">
+    Ersatzwiderstand der Parallelschaltung:
+  </text>
+  <text x="400" y="402" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#059669" text-anchor="middle">
+    R₂₃ = 1 / (1/R₂ + 1/R₃) = (R₂ · R₃) / (R₂ + R₃) &lt; min(R₂, R₃)
+  </text>
+</svg>

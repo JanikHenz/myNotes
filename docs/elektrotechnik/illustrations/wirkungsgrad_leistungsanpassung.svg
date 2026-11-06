@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 270" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+  <defs>
+    <marker id="arr-dark" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#1e293b" />
+    </marker>
+  </defs>
+
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Leistungsanpassung &amp; Wirkungsgrad (Reale Quelle)</text>
+
+  <!-- Left: Circuit Diagram -->
+  <g transform="translate(30, 60)">
+    <rect x="0" y="0" width="220" height="190" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="110" y="25" font-size="12" font-weight="bold" fill="#64748b" text-anchor="middle">Ersatzschaltbild</text>
+    
+    <!-- Source box dashed -->
+    <rect x="20" y="45" width="100" height="100" rx="4" fill="#eff6ff" stroke="#3b82f6" stroke-dasharray="3,3" />
+    <text x="70" y="40" font-size="10" fill="#2563eb" text-anchor="middle">Reale Quelle</text>
+
+    <!-- Source symbol -->
+    <circle cx="50" cy="95" r="14" fill="#ffffff" stroke="#1e293b" stroke-width="1.5" />
+    <text x="50" y="99" font-size="10" font-weight="bold" fill="#dc2626" text-anchor="middle">U₀</text>
+
+    <!-- Ri -->
+    <rect x="80" y="60" width="25" height="14" fill="#ffffff" stroke="#1e293b" stroke-width="1.5" />
+    <text x="92" y="55" font-size="10" font-weight="bold" fill="#0f172a" text-anchor="middle">Ri</text>
+
+    <!-- Load Ra -->
+    <rect x="160" y="80" width="16" height="36" fill="#ffffff" stroke="#1e293b" stroke-width="1.5" />
+    <text x="185" y="102" font-size="11" font-weight="bold" fill="#16a34a">Ra</text>
+
+    <!-- Wire loop -->
+    <line x1="50" y1="81" x2="50" y2="67" stroke="#1e293b" stroke-width="1.5" />
+    <line x1="50" y1="67" x2="80" y2="67" stroke="#1e293b" stroke-width="1.5" />
+    <line x1="105" y1="67" x2="168" y2="67" stroke="#1e293b" stroke-width="1.5" />
+    <line x1="168" y1="67" x2="168" y2="80" stroke="#1e293b" stroke-width="1.5" />
+    <line x1="168" y1="116" x2="168" y2="135" stroke="#1e293b" stroke-width="1.5" />
+    <line x1="168" y1="135" x2="50" y2="135" stroke="#1e293b" stroke-width="1.5" />
+    <line x1="50" y1="135" x2="50" y2="109" stroke="#1e293b" stroke-width="1.5" />
+
+    <!-- Text at bottom -->
+    <text x="110" y="165" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">Bedingung für P_max:</text>
+    <text x="110" y="180" font-size="12" font-weight="bold" fill="#2563eb" text-anchor="middle">Ra = Ri  (Leistungsanpassung)</text>
+  </g>
+
+  <!-- Right: Characteristic Curve P(Ra) & eta(Ra) -->
+  <g transform="translate(270, 60)">
+    <rect x="0" y="0" width="250" height="190" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="125" y="20" font-size="12" font-weight="bold" fill="#64748b" text-anchor="middle">Leistung Pa und Wirkungsgrad η</text>
+
+    <!-- Axes -->
+    <line x1="35" y1="140" x2="230" y2="140" stroke="#1e293b" stroke-width="1.5" marker-end="url(#arr-dark)" />
+    <line x1="35" y1="140" x2="35" y2="45" stroke="#1e293b" stroke-width="1.5" marker-end="url(#arr-dark)" />
+    <text x="235" y="145" font-size="11" fill="#1e293b">Ra</text>
+    <text x="30" y="42" font-size="11" font-weight="bold" fill="#1e293b">P, η</text>
+
+    <!-- Peak line at Ra = Ri -->
+    <line x1="100" y1="50" x2="100" y2="140" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3,3" />
+    <text x="100" y="155" font-size="11" font-weight="bold" fill="#2563eb" text-anchor="middle">Ra = Ri</text>
+
+    <!-- Pa Curve (bell-shaped, peak at Ra = Ri) -->
+    <path d="M 35,140 Q 60,60 100,60 Q 150,60 220,110" fill="none" stroke="#2563eb" stroke-width="2.5" />
+    <text x="115" y="55" font-size="11" font-weight="bold" fill="#2563eb">Pa,max</text>
+
+    <!-- eta Curve (rises to 1) -->
+    <path d="M 35,140 Q 100,100 220,70" fill="none" stroke="#16a34a" stroke-width="2" stroke-dasharray="4,2" />
+    <text x="195" y="65" font-size="11" font-weight="bold" fill="#16a34a">η</text>
+    <circle cx="100" cy="100" r="4" fill="#16a34a" />
+    <rect x="106" y="92" width="55" height="18" rx="3" fill="#ffffff" fill-opacity="0.9"/>
+    <text x="108" y="105" font-size="10" font-weight="bold" fill="#16a34a">η = 50%</text>
+
+    <!-- Formulas below -->
+    <text x="125" y="175" font-size="10" fill="#334155" text-anchor="middle">Pa,max = U₀² / (4·Ri)  bei η = 50%</text>
+  </g>
+</svg>

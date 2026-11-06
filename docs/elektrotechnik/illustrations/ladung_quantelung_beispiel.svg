@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 520 260"
+   width="100%"
+   height="100%"
+   style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;"
+   version="1.1"
+   id="svg18"
+   sodipodi:docname="ladung_quantelung_beispiel.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs18" />
+  <sodipodi:namedview
+     id="namedview18"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="12.162237"
+     inkscape:cx="419.4541"
+     inkscape:cy="171.43228"
+     inkscape:window-width="2560"
+     inkscape:window-height="1371"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg18" />
+  <text
+     x="20"
+     y="30"
+     font-size="16"
+     font-weight="bold"
+     fill="#0f172a"
+     id="text1">Ladungsmenge &amp; Ladungsquantelung (Q = n · e)</text>
+  <!-- Left: Hexagonal Box with 8 electrons -->
+  <g
+     transform="translate(40, 60)"
+     id="g11">
+    <!-- Hexagon polygon -->
+    <polygon
+       points="100,10 170,50 170,130 100,170 30,130 30,50"
+       fill="#f8fafc"
+       stroke="#2563eb"
+       stroke-width="2.5"
+       id="polygon1" />
+    <text
+       x="100"
+       y="45.697674"
+       font-size="11px"
+       font-weight="bold"
+       fill="#2563eb"
+       text-anchor="middle"
+       id="text2">Volumen / Hülle</text>
+    <!-- 8 Electron dots inside -->
+    <g
+       fill="#3b82f6"
+       stroke="#1d4ed8"
+       stroke-width="1"
+       id="g10">
+      <circle
+         cx="65"
+         cy="70"
+         r="7"
+         id="circle2" />
+      <text
+         x="65"
+         y="73"
+         font-size="8"
+         fill="#ffffff"
+         text-anchor="middle"
+         font-weight="bold"
+         id="text3">−</text>
+      <circle
+         cx="100"
+         cy="65"
+         r="7"
+         id="circle3" />
+      <text
+         x="100"
+         y="68"
+         font-size="8"
+         fill="#ffffff"
+         text-anchor="middle"
+         font-weight="bold"
+         id="text4">−</text>
+      <circle
+         cx="135"
+         cy="70"
+         r="7"
+         id="circle4" />
+      <text
+         x="135"
+         y="73"
+         font-size="8"
+         fill="#ffffff"
+         text-anchor="middle"
+         font-weight="bold"
+         id="text5">−</text>
+      <circle
+         cx="75"
+         cy="100"
+         r="7"
+         id="circle5" />
+      <text
+         x="75"
+         y="103"
+         font-size="8"
+         fill="#ffffff"
+         text-anchor="middle"
+         font-weight="bold"
+         id="text6">−</text>
+      <circle
+         cx="125"
+         cy="100"
+         r="7"
+         id="circle6" />
+      <text
+         x="125"
+         y="103"
+         font-size="8"
+         fill="#ffffff"
+         text-anchor="middle"
+         font-weight="bold"
+         id="text7">−</text>
+      <circle
+         cx="65"
+         cy="130"
+         r="7"
+         id="circle7" />
+      <text
+         x="65"
+         y="133"
+         font-size="8"
+         fill="#ffffff"
+         text-anchor="middle"
+         font-weight="bold"
+         id="text8">−</text>
+      <circle
+         cx="100"
+         cy="125"
+         r="7"
+         id="circle8" />
+      <text
+         x="100"
+         y="128"
+         font-size="8"
+         fill="#ffffff"
+         text-anchor="middle"
+         font-weight="bold"
+         id="text9">−</text>
+      <circle
+         cx="135"
+         cy="130"
+         r="7"
+         id="circle9" />
+      <text
+         x="135"
+         y="133"
+         font-size="8"
+         fill="#ffffff"
+         text-anchor="middle"
+         font-weight="bold"
+         id="text10">−</text>
+    </g>
+    <text
+       x="99.302322"
+       y="148.72093"
+       font-size="12px"
+       font-weight="bold"
+       fill="#0f172a"
+       text-anchor="middle"
+       id="text11">Anzahl n = 8</text>
+  </g>
+  <!-- Right: Calculation Box -->
+  <rect
+     x="250"
+     y="55"
+     width="144.53488"
+     height="180"
+     rx="6"
+     fill="#f8fafc"
+     stroke="#cbd5e1"
+     stroke-width="1.5"
+     id="rect11"
+     ry="8.3720932" />
+  <text
+     x="265"
+     y="80"
+     font-size="13"
+     font-weight="bold"
+     fill="#0f172a"
+     id="text12">Berechnung:</text>
+  <text
+     x="265"
+     y="105"
+     font-size="12"
+     fill="#2563eb"
+     font-weight="bold"
+     id="text13">Elementarladung:</text>
+  <text
+     x="265"
+     y="122"
+     font-size="12"
+     fill="#334155"
+     id="text14">e = 1,602 · 10⁻¹⁹ C</text>
+  <line
+     x1="265"
+     y1="135"
+     x2="378.98068"
+     y2="135"
+     stroke="#e2e8f0"
+     stroke-width="0.728109"
+     id="line14" />
+  <text
+     x="265"
+     y="155"
+     font-size="12"
+     fill="#dc2626"
+     font-weight="bold"
+     id="text15">Gesamtladung Q:</text>
+  <text
+     x="265"
+     y="175"
+     font-size="13"
+     font-weight="bold"
+     fill="#0f172a"
+     id="text16">Q = n · (±e)</text>
+  <text
+     x="265"
+     y="198"
+     font-size="12"
+     font-weight="bold"
+     fill="#16a34a"
+     id="text17">8 · 1,602 · 10⁻¹⁹ C</text>
+  <text
+     x="265"
+     y="218"
+     font-size="13"
+     font-weight="bold"
+     fill="#2563eb"
+     id="text18">= 1,2816 · 10⁻¹⁸ C</text>
+</svg>

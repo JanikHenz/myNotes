@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 300" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Atommodell &amp; Ladungsträger (Bohrsches Schalenmodell)</text>
+  
+  <!-- Atomic Shells -->
+  <g transform="translate(160, 165)">
+    <!-- Shell 3 (M) -->
+    <circle cx="0" cy="0" r="110" fill="none" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4" />
+    <text x="0" y="-115" font-size="11" fill="#94a3b8" text-anchor="middle">Valenzschale (äußerste)</text>
+    <!-- Shell 2 (L) -->
+    <circle cx="0" cy="0" r="75" fill="none" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4" />
+    <!-- Shell 1 (K) -->
+    <circle cx="0" cy="0" r="45" fill="none" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="4,4" />
+    
+    <!-- Nucleus -->
+    <circle cx="0" cy="0" r="24" fill="#fee2e2" stroke="#ef4444" stroke-width="2" />
+    <text x="0" y="-4" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">Kern</text>
+    <text x="0" y="10" font-size="9" fill="#7f1d1d" text-anchor="middle">+ p / n</text>
+    
+    <!-- Electrons Shell 1 (2 max) -->
+    <circle cx="0" cy="-45" r="5" fill="#3b82f6" />
+    <circle cx="0" cy="45" r="5" fill="#3b82f6" />
+    
+    <!-- Electrons Shell 2 (8 max) -->
+    <circle cx="-53" cy="-53" r="5" fill="#3b82f6" />
+    <circle cx="53" cy="-53" r="5" fill="#3b82f6" />
+    <circle cx="-75" cy="0" r="5" fill="#3b82f6" />
+    <circle cx="75" cy="0" r="5" fill="#3b82f6" />
+    
+    <!-- Valence electron (outermost, red highlight) -->
+    <circle cx="0" cy="110" r="7" fill="#ef4444" stroke="#ffffff" stroke-width="1.5" />
+    <text x="0" y="130" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">Valenzelektron e⁻</text>
+  </g>
+
+  <!-- Info Box on the Right -->
+  <rect x="330" y="60" width="195" height="220" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+  <text x="342" y="85" font-size="13" font-weight="bold" fill="#0f172a">Ladungsgrundlagen:</text>
+  
+  <text x="342" y="112" font-size="12" fill="#2563eb" font-weight="bold">Elektron (e⁻):</text>
+  <text x="342" y="128" font-size="12" fill="#334155">-e ≈ -1,602 · 10⁻¹⁹ C</text>
+  
+  <text x="342" y="152" font-size="12" fill="#dc2626" font-weight="bold">Proton (p⁺):</text>
+  <text x="342" y="168" font-size="12" fill="#334155">+e ≈ +1,602 · 10⁻¹⁹ C</text>
+
+  <line x1="342" y1="180" x2="515" y2="180" stroke="#e2e8f0" stroke-width="1" />
+  
+  <text x="342" y="202" font-size="12" font-weight="bold" fill="#0f172a">Ladungsmenge Q:</text>
+  <text x="342" y="222" font-size="13" font-weight="bold" fill="#16a34a">Q = n · e  [Coulomb]</text>
+  <text x="342" y="245" font-size="11" fill="#64748b">Schalenbelegung max:</text>
+  <text x="342" y="262" font-size="11" fill="#64748b">1: 2 | 2: 8 | 3: 18 | 4: 32 (2n²)</text>
+</svg>

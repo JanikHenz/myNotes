@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 460 300"
+   width="100%"
+   height="100%"
+   style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;"
+   version="1.1"
+   id="svg15"
+   sodipodi:docname="seite55_wheatstone_bruecke.svg"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview15"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="3.7266667"
+     inkscape:cx="230.09839"
+     inkscape:cy="150"
+     inkscape:window-width="2560"
+     inkscape:window-height="1371"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg15" />
+  <defs
+     id="defs4">
+    <marker
+       id="arrow"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto">
+      <path
+         d="M 0 1 L 10 5 L 0 9 z"
+         fill="#2563eb"
+         id="path1" />
+    </marker>
+    <marker
+       id="arrow-red"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto">
+      <path
+         d="M 0 1 L 10 5 L 0 9 z"
+         fill="#dc2626"
+         id="path2" />
+    </marker>
+    <marker
+       id="arrow-green"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto">
+      <path
+         d="M 0 1 L 10 5 L 0 9 z"
+         fill="#16a34a"
+         id="path3" />
+    </marker>
+    <marker
+       id="arrow-dark"
+       viewBox="0 0 10 10"
+       refX="8"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto">
+      <path
+         d="M 0 1 L 10 5 L 0 9 z"
+         fill="#1e293b"
+         id="path4" />
+    </marker>
+  </defs>
+  <text
+     x="20"
+     y="30"
+     font-size="16"
+     font-weight="bold"
+     fill="#0f172a"
+     id="text4">Wheatstonesche Messbrücke</text>
+  <!-- Rhombus Bridge -->
+  <!-- Top Node (A) -->
+  <line
+     x1="230"
+     y1="60"
+     x2="150"
+     y2="140"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line4" />
+  <line
+     x1="230"
+     y1="60"
+     x2="310"
+     y2="140"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line5" />
+  <!-- Bottom Node (B) -->
+  <line
+     x1="150"
+     y1="140"
+     x2="230"
+     y2="220"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line6" />
+  <line
+     x1="310"
+     y1="140"
+     x2="230"
+     y2="220"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line7" />
+  <!-- Resistors on arms -->
+  <!-- R1 (top left) -->
+  <rect
+     x="194.40462"
+     y="-72.389328"
+     width="22"
+     height="35"
+     rx="2"
+     fill="#f8fafc"
+     stroke="#1e293b"
+     stroke-width="2"
+     transform="rotate(43.738822)"
+     id="rect7" />
+  <text
+     x="159.29338"
+     y="93.658318"
+     font-size="13px"
+     font-weight="bold"
+     fill="#0f172a"
+     id="text7">R₁</text>
+  <!-- R2 (top right) -->
+  <rect
+     x="110.65434"
+     y="248.12917"
+     width="22"
+     height="35"
+     rx="2"
+     fill="#f8fafc"
+     stroke="#1e293b"
+     stroke-width="2"
+     transform="rotate(-44.885308)"
+     id="rect8" />
+  <text
+     x="285.87656"
+     y="92.584976"
+     font-size="13px"
+     font-weight="bold"
+     fill="#0f172a"
+     id="text8">R₂</text>
+  <!-- R3 (bottom left) -->
+  <rect
+     x="-16.518343"
+     y="-278.72311"
+     width="22"
+     height="35"
+     rx="2"
+     fill="#f8fafc"
+     stroke="#1e293b"
+     stroke-width="2"
+     transform="rotate(134.4927)"
+     id="rect9" />
+  <text
+     x="158.22003"
+     y="194.19499"
+     font-size="13px"
+     font-weight="bold"
+     fill="#0f172a"
+     id="text9">R₃</text>
+  <!-- R4 / Rx (bottom right) -->
+  <rect
+     x="-329.35562"
+     y="45.429066"
+     width="22"
+     height="35"
+     rx="2"
+     fill="#f8fafc"
+     stroke="#1e293b"
+     stroke-width="2"
+     transform="rotate(-135.1434)"
+     id="rect10" />
+  <text
+     x="288.02325"
+     y="195.53667"
+     font-size="13px"
+     font-weight="bold"
+     fill="#0f172a"
+     id="text10">R₄ (Rₓ)</text>
+  <!-- Diagonal Voltmeter -->
+  <line
+     x1="150"
+     y1="140"
+     x2="214"
+     y2="140"
+     stroke="#2563eb"
+     stroke-width="1.5"
+     stroke-dasharray="3,3"
+     id="line10" />
+  <line
+     x1="246"
+     y1="140"
+     x2="310"
+     y2="140"
+     stroke="#2563eb"
+     stroke-width="1.5"
+     stroke-dasharray="3,3"
+     id="line11" />
+  <circle
+     cx="230"
+     cy="140"
+     r="16"
+     fill="#eff6ff"
+     stroke="#2563eb"
+     stroke-width="2"
+     id="circle11" />
+  <text
+     x="230"
+     y="145"
+     font-size="13"
+     font-weight="bold"
+     fill="#2563eb"
+     text-anchor="middle"
+     id="text11">U_D</text>
+  <!-- Supply Connections -->
+  <line
+     x1="230"
+     y1="60"
+     x2="60"
+     y2="60"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line12" />
+  <line
+     x1="60"
+     y1="60"
+     x2="60"
+     y2="220"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line13" />
+  <line
+     x1="60"
+     y1="220"
+     x2="230"
+     y2="220"
+     stroke="#1e293b"
+     stroke-width="2"
+     id="line14" />
+  <text
+     x="35"
+     y="145"
+     font-size="14"
+     font-weight="bold"
+     fill="#1e293b"
+     id="text14">U₀</text>
+  <!-- Abgleichbedingung Box -->
+  <rect
+     x="110"
+     y="250"
+     width="240"
+     height="32"
+     rx="4"
+     fill="#f8fafc"
+     stroke="#cbd5e1"
+     id="rect14" />
+  <text
+     x="230"
+     y="271"
+     font-size="13"
+     font-weight="bold"
+     fill="#0f172a"
+     text-anchor="middle"
+     id="text15">Abgleich (U_D = 0):  R₁ · R₄ = R₂ · R₃</text>
+</svg>

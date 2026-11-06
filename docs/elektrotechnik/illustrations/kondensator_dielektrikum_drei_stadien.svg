@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 260" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Einfluss eines Dielektrikums: Drei Stadien der Polarisation</text>
+
+  <!-- Stage 1: Vacuum / Air -->
+  <g transform="translate(20, 55)">
+    <rect x="0" y="0" width="160" height="190" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+    <text x="80" y="22" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">Stadium 1: Vakuum / Luft</text>
+    
+    <!-- Plates -->
+    <rect x="30" y="45" width="8" height="70" fill="#fee2e2" stroke="#dc2626" />
+    <rect x="122" y="45" width="8" height="70" fill="#dbeafe" stroke="#2563eb" />
+    <!-- Empty gap -->
+    <text x="80" y="85" font-size="10" fill="#94a3b8" text-anchor="middle">Vakuum (εᵣ = 1)</text>
+
+    <text x="80" y="145" font-size="12" font-weight="bold" fill="#dc2626" text-anchor="middle">Spannung U₁ (hoch)</text>
+    <text x="80" y="165" font-size="10" fill="#64748b" text-anchor="middle">Feldstärke E₁ = U₁ / d</text>
+  </g>
+
+  <!-- Stage 2: Partial Insertion -->
+  <g transform="translate(195, 55)">
+    <rect x="0" y="0" width="160" height="190" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+    <text x="80" y="22" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">Stadium 2: Einführen</text>
+    
+    <!-- Plates -->
+    <rect x="30" y="45" width="8" height="70" fill="#fee2e2" stroke="#dc2626" />
+    <rect x="122" y="45" width="8" height="70" fill="#dbeafe" stroke="#2563eb" />
+    <!-- Half dielectric -->
+    <rect x="38" y="45" width="45" height="70" fill="#e2e8f0" stroke="#94a3b8" stroke-dasharray="2,2" />
+    <text x="60" y="85" font-size="9" fill="#475569" text-anchor="middle">Dipole</text>
+
+    <text x="80" y="145" font-size="12" font-weight="bold" fill="#ca8a04" text-anchor="middle">U₁ &gt; U₂</text>
+    <text x="80" y="165" font-size="10" fill="#64748b" text-anchor="middle">Dipole schwächen Feld</text>
+  </g>
+
+  <!-- Stage 3: Full Dielectric -->
+  <g transform="translate(370, 55)">
+    <rect x="0" y="0" width="160" height="190" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+    <text x="80" y="22" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">Stadium 3: Vollständig</text>
+
+    <!-- Plates -->
+    <rect x="30" y="45" width="8" height="70" fill="#fee2e2" stroke="#dc2626" />
+    <rect x="122" y="45" width="8" height="70" fill="#dbeafe" stroke="#2563eb" />
+    <!-- Fully filled -->
+    <rect x="38" y="45" width="84" height="70" fill="#dbeafe" stroke="#3b82f6" />
+    <text x="80" y="85" font-size="10" font-weight="bold" fill="#1e40af" text-anchor="middle">εᵣ &gt; 1</text>
+
+    <text x="80" y="145" font-size="12" font-weight="bold" fill="#16a34a" text-anchor="middle">U₂ &gt; U₃  (minimal)</text>
+    <text x="80" y="165" font-size="10" font-weight="bold" fill="#2563eb" text-anchor="middle">C₃ = εᵣ · C₁ (maximal)</text>
+  </g>
+</svg>

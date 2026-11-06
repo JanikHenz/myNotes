@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 260" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Gaußsche Hüllflächen: Sphärisch, Zylindrisch &amp; Ebene</text>
+
+  <!-- 1. Sphärische Symmetrie (Kugel) -->
+  <g transform="translate(20, 55)">
+    <rect x="0" y="0" width="160" height="190" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+    <text x="80" y="22" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">Sphärisch (Kugel)</text>
+    
+    <!-- Sphere with charge in center -->
+    <ellipse cx="80" cy="80" rx="35" ry="35" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5" />
+    <ellipse cx="80" cy="80" rx="35" ry="12" fill="none" stroke="#93c5fd" stroke-dasharray="2,2" />
+    <circle cx="80" cy="80" r="5" fill="#ef4444" />
+    <text x="80" y="83" font-size="8" fill="#ffffff" font-weight="bold" text-anchor="middle">+</text>
+
+    <!-- Outward arrows -->
+    <line x1="80" y1="45" x2="80" y2="30" stroke="#2563eb" stroke-width="1.5" />
+    <line x1="115" y1="80" x2="130" y2="80" stroke="#2563eb" stroke-width="1.5" />
+    <line x1="80" y1="115" x2="80" y2="130" stroke="#2563eb" stroke-width="1.5" />
+    <line x1="45" y1="80" x2="30" y2="80" stroke="#2563eb" stroke-width="1.5" />
+
+    <text x="80" y="150" font-size="11" font-weight="bold" fill="#2563eb" text-anchor="middle">E · 4π r² = Q / ε₀</text>
+    <text x="80" y="170" font-size="10" fill="#64748b" text-anchor="middle">E = Q / (4πε₀ r²)</text>
+  </g>
+
+  <!-- 2. Zylindersymmetrie (Draht) -->
+  <g transform="translate(195, 55)">
+    <rect x="0" y="0" width="160" height="190" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+    <text x="80" y="22" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">Zylindrisch (Linie)</text>
+
+    <!-- Horizontal Cylinder -->
+    <rect x="25" y="65" width="110" height="30" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.2" />
+    <ellipse cx="25" cy="80" rx="8" ry="15" fill="#dbeafe" stroke="#3b82f6" />
+    <ellipse cx="135" cy="80" rx="8" ry="15" fill="#dbeafe" stroke="#3b82f6" />
+    
+    <!-- Charged wire center -->
+    <line x1="10" y1="80" x2="150" y2="80" stroke="#ef4444" stroke-width="2" />
+    <text x="80" y="76" font-size="9" fill="#dc2626" text-anchor="middle">++++</text>
+
+    <text x="80" y="150" font-size="11" font-weight="bold" fill="#2563eb" text-anchor="middle">E · 2π r l = Q / ε₀</text>
+    <text x="80" y="170" font-size="10" fill="#64748b" text-anchor="middle">E = λ / (2πε₀ r)</text>
+  </g>
+
+  <!-- 3. Ebene Symmetrie (Schuhschachtel) -->
+  <g transform="translate(370, 55)">
+    <rect x="0" y="0" width="160" height="190" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.2" />
+    <text x="80" y="22" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">Ebene („Schuhschachtel“)</text>
+
+    <!-- Charged Plane -->
+    <polygon points="15,95 105,75 145,95 55,115" fill="#fee2e2" stroke="#dc2626" stroke-width="1.2" />
+    <text x="40" y="100" font-size="9" fill="#dc2626">σ</text>
+
+    <!-- Box piercing through -->
+    <polygon points="65,60 95,50 95,110 65,120" fill="#eff6ff" stroke="#2563eb" opacity="0.8" />
+    <!-- Normal vectors up and down -->
+    <line x1="80" y1="55" x2="80" y2="40" stroke="#2563eb" stroke-width="1.5" />
+    <line x1="80" y1="115" x2="80" y2="130" stroke="#2563eb" stroke-width="1.5" />
+
+    <text x="80" y="150" font-size="11" font-weight="bold" fill="#2563eb" text-anchor="middle">E · 2A = σ · A / ε₀</text>
+    <text x="80" y="170" font-size="10" font-weight="bold" fill="#16a34a" text-anchor="middle">E = σ / (2ε₀)</text>
+  </g>
+</svg>

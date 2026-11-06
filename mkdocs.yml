@@ -1,30 +1,98 @@
 site_name: myNotes
+site_description: "Janik Henz's Wissensdatenbank, Elektrotechnik-Referenzhandbuch & Projektnotizen"
+site_author: "Janik Henz"
 site_url: https://JanikHenz.github.io/myNotes/ 
 repo_url: https://github.com/JanikHenz/myNotes 
+repo_name: JanikHenz/myNotes
 
 theme:
   name: material
+  language: de
   palette:
-    scheme: slate  
-    primary: deep orange
-    accent: deep orange
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate  
+      primary: deep orange
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Heller Modus
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep orange
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Dunkler Modus
   features:
     - navigation.sections 
     - navigation.expand 
+    - navigation.top
+    - navigation.tracking
     - search.suggest 
+    - search.highlight
+    - content.code.copy
 
 markdown_extensions:
   - admonition 
-  - codehilite 
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.arithmatex:
+      generic: true
+  - tables
+  - attr_list
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
   - Home: index.md 
-  - Neovim Config:
-    - Grundlagen: neovim/basics.md
-    - Plugins: neovim/plugins.md
-  - ip5:
-    - projectdeclaration: ip5/projectdeclaration.md
-    - risks: ip5/risks.md
-    - setup: ip5/setup.md
-    - helper: ip5/helper.md
-    - milestone01: ip5/milestone01.md
+  - Elektrotechnik:
+    - Übersicht & Download: elektrotechnik/index.md
+    - 1. Mathematik & Vektoren: elektrotechnik/kapitel01_mathematik.md
+    - 2. Elektrostatik & Felder: elektrotechnik/kapitel02_elektrostatik_felder.md
+    - 3. Kondensatoren: elektrotechnik/kapitel03_kondensatoren.md
+    - 4. Gleichstromtechnik: elektrotechnik/kapitel04_gleichstrom_netzwerke.md
+    - 5. Magnetismus & Spulen: elektrotechnik/kapitel05_magnetismus_spulen.md
+    - 6. Messtechnik & Sicherheit: elektrotechnik/kapitel06_messtechnik_sicherheit.md
+    - 7. Passive Bauelemente & Fertigung: elektrotechnik/kapitel07_passive_bauelemente.md
+    - 8. Dioden & Halbleiter: elektrotechnik/kapitel08_dioden_halbleiter.md
+    - 9. Transistoren & Schaltungen: elektrotechnik/kapitel09_transistoren_schaltungen.md
+    - 10. OPVs, Filter & Signalverarbeitung: elektrotechnik/kapitel10_opv_filter_analog.md
+    - 11. Digitaltechnik & Mikrocontroller: elektrotechnik/kapitel11_digitaltechnik_mikrocontroller.md
+    - 12. Hochspannungstechnik (EMC Partner): elektrotechnik/kapitel12_hochspannung_praxis.md
+    - "Anhang: Formelsammlung": elektrotechnik/anhang_formelsammlung.md
+    - Vollständiges Skript: elektrotechnik/komplett.md
+  - IP5:
+    - Übersicht: ip5/general.md
+    - Projektvereinbarung: ip5/projectdeclaration.md
+    - Risiken: ip5/risks.md
+    - Setup: ip5/setup.md
+    - Helper: ip5/helper.md
+    - Meilenstein 01: ip5/milestone01.md
+    - Meilenstein 02: ip5/milestone02.md
+  - C++:
+    - Woche 45: cpp/week45.md
+    - Woche 46: cpp/week46.md
+    - Woche 47: cpp/week47.md
+    - Woche 48: cpp/week48.md
+    - Woche 49: cpp/week49.md
+  - Weitere Notizen:
+    - VeSys: vesys/week01.md
+    - WoSM: wosm/week01.md
+    - Allgemein: general/info.md

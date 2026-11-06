@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 280" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+  <text x="20" y="28" font-size="15" font-weight="bold" fill="#0f172a">N-Kanal Sperrschicht-FET (JFET) Aufbau &amp; Prinzip</text>
+
+  <!-- Left: Physical Channel & Depletion Layer -->
+  <g transform="translate(25, 50)">
+    <rect x="0" y="0" width="245" height="215" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="122" y="20" font-size="12" font-weight="bold" fill="#64748b" text-anchor="middle">Halbleiteraufbau</text>
+
+    <!-- Top Gate terminal G -->
+    <line x1="122" y1="60" x2="122" y2="42" stroke="#1e293b" stroke-width="2" />
+    <text x="122" y="38" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">G</text>
+
+    <!-- N-Channel block -->
+    <rect x="40" y="60" width="165" height="65" rx="3" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" />
+    <text x="65" y="115" font-size="10" font-weight="bold" fill="#1e40af">N-Kanal</text>
+
+    <!-- Drain (D) Terminal -->
+    <line x1="205" y1="92" x2="235" y2="92" stroke="#1e293b" stroke-width="2" />
+    <text x="238" y="96" font-size="11" font-weight="bold" fill="#0f172a">D</text>
+
+    <!-- Source (S) Terminal -->
+    <line x1="10" y1="92" x2="40" y2="92" stroke="#1e293b" stroke-width="2" />
+    <text x="2" y="96" font-size="11" font-weight="bold" fill="#0f172a">S</text>
+
+    <!-- P-Gate regions (top and bottom) with depletion layers -->
+    <!-- Top Gate -->
+    <rect x="100" y="60" width="45" height="18" fill="#fee2e2" stroke="#dc2626" />
+    <text x="122" y="73" font-size="9" font-weight="bold" fill="#dc2626" text-anchor="middle">P (Gate)</text>
+
+    <!-- Bottom Gate -->
+    <rect x="100" y="107" width="45" height="18" fill="#fee2e2" stroke="#dc2626" />
+    <text x="122" y="120" font-size="9" font-weight="bold" fill="#dc2626" text-anchor="middle">P (Gate)</text>
+
+    <!-- Depletion layer (RLZ) narrowing channel -->
+    <path d="M 90,78 Q 122,90 155,78 L 155,107 Q 122,95 90,107 Z" fill="#94a3b8" opacity="0.3" />
+    <text x="122" y="95" font-size="9" fill="#475569" text-anchor="middle">RLZ (Abschnürung)</text>
+
+    <text x="122" y="155" font-size="11" font-weight="bold" fill="#dc2626" text-anchor="middle">U_GS negativ gepolt</text>
+    <text x="122" y="175" font-size="10" fill="#64748b" text-anchor="middle">Je negativer U_GS, desto breiter die RLZ</text>
+    <text x="122" y="193" font-size="10" fill="#64748b" text-anchor="middle">und kleiner der Drainstrom I_D</text>
+  </g>
+
+  <!-- Right: Schematic Symbol & Formulas -->
+  <g transform="translate(285, 50)">
+    <rect x="0" y="0" width="250" height="215" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="125" y="20" font-size="12" font-weight="bold" fill="#64748b" text-anchor="middle">Schaltsymbol (N-Kanal JFET)</text>
+
+    <!-- Circuit Symbol -->
+    <g transform="translate(110, 48)">
+      <!-- Channel bar -->
+      <line x1="20" y1="10" x2="20" y2="65" stroke="#1e293b" stroke-width="3" />
+      <!-- Drain lead -->
+      <line x1="20" y1="18" x2="45" y2="18" stroke="#1e293b" stroke-width="2" />
+      <line x1="45" y1="18" x2="45" y2="0" stroke="#1e293b" stroke-width="2" />
+      <text x="45" y="-5" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">D</text>
+      <!-- Source lead -->
+      <line x1="20" y1="57" x2="45" y2="57" stroke="#1e293b" stroke-width="2" />
+      <line x1="45" y1="57" x2="45" y2="72" stroke="#1e293b" stroke-width="2" />
+      <text x="45" y="86" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">S</text>
+      <!-- Gate lead with inward arrow -->
+      <line x1="-15" y1="37" x2="20" y2="37" stroke="#1e293b" stroke-width="2" />
+      <polygon points="12,37 2,32 2,42" fill="#2563eb" />
+      <text x="-22" y="41" font-size="11" font-weight="bold" fill="#2563eb">G</text>
+    </g>
+
+    <text x="125" y="152" font-size="11" font-weight="bold" fill="#2563eb" text-anchor="middle">Selbstleitend (Depletion-Mode)</text>
+    <text x="125" y="172" font-size="10" fill="#334155" text-anchor="middle">Bei U_GS = 0 V fließt Sättigungsstrom I_DSS</text>
+    <text x="125" y="190" font-size="10" fill="#16a34a" font-weight="bold" text-anchor="middle">Gate-Strom I_G ≈ 0 (extrem hochohmig)</text>
+  </g>
+</svg>

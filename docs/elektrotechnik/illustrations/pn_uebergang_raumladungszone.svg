@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 260" width="100%" height="100%" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:8px; font-family:system-ui,-apple-system,sans-serif;">
+  <text x="20" y="30" font-size="16" font-weight="bold" fill="#0f172a">Der pn-Übergang: Raumladungszone &amp; Diffusionsspannung</text>
+
+  <!-- Left: PN Semiconductor Junction -->
+  <g transform="translate(30, 55)">
+    <!-- p-region (Left) -->
+    <rect x="0" y="20" width="120" height="90" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5" />
+    <text x="35" y="45" font-size="13" font-weight="bold" fill="#dc2626">p-Zone</text>
+    <text x="35" y="65" font-size="10" fill="#7f1d1d">Akzeptoren ⊖</text>
+    <text x="35" y="80" font-size="10" fill="#dc2626">Löcher h⁺</text>
+
+    <!-- n-region (Right) -->
+    <rect x="120" y="20" width="120" height="90" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" />
+    <text x="180" y="45" font-size="13" font-weight="bold" fill="#2563eb">n-Zone</text>
+    <text x="180" y="65" font-size="10" fill="#1e3a8a">Donatoren ⊕</text>
+    <text x="180" y="80" font-size="10" fill="#2563eb">Elektronen e⁻</text>
+
+    <!-- Depletion Zone (Raumladungszone RLZ in center) -->
+    <rect x="90" y="20" width="60" height="90" fill="#cbd5e1" fill-opacity="0.6" stroke="#475569" stroke-width="1.5" stroke-dasharray="3,2" />
+    <!-- Fixed ions in RLZ: negative left, positive right -->
+    <text x="105" y="55" font-size="12" font-weight="bold" fill="#dc2626">⊖</text>
+    <text x="105" y="85" font-size="12" font-weight="bold" fill="#dc2626">⊖</text>
+    <text x="130" y="55" font-size="12" font-weight="bold" fill="#2563eb">⊕</text>
+    <text x="130" y="85" font-size="12" font-weight="bold" fill="#2563eb">⊕</text>
+
+    <!-- Internal E-field arrow -->
+    <line x1="140" y1="125" x2="100" y2="125" stroke="#16a34a" stroke-width="2" />
+    <polygon points="100,125 108,121 108,129" fill="#16a34a" />
+    <text x="120" y="142" font-size="10" font-weight="bold" fill="#16a34a" text-anchor="middle">E_innen</text>
+
+    <text x="120" y="165" font-size="11" font-weight="bold" fill="#0f172a" text-anchor="middle">Raumladungszone (RLZ)</text>
+    <text x="120" y="180" font-size="10" fill="#64748b" text-anchor="middle">Frei von beweglichen Ladungsträgern</text>
+  </g>
+
+  <!-- Right: Potential / Barrier Info -->
+  <rect x="295" y="55" width="225" height="185" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+  <text x="310" y="80" font-size="13" font-weight="bold" fill="#0f172a">Diffusionsspannung U_D:</text>
+
+  <text x="310" y="105" font-size="11" fill="#334155">Durch Rekombination an der</text>
+  <text x="310" y="120" font-size="11" fill="#334155">Grenzschicht entsteht eine</text>
+  <text x="310" y="135" font-size="11" font-weight="bold" fill="#dc2626">Potenzialbarriere (Schleusenspannung):</text>
+
+  <text x="310" y="160" font-size="13" font-weight="bold" fill="#2563eb">• Silizium (Si): U_D ≈ 0,7 V</text>
+  <text x="310" y="180" font-size="13" font-weight="bold" fill="#16a34a">• Germanium (Ge): U_D ≈ 0,3 V</text>
+
+  <line x1="310" y1="192" x2="505" y2="192" stroke="#e2e8f0" stroke-width="1" />
+  <text x="310" y="210" font-size="10" fill="#64748b">In Durchlassrichtung (U &gt; U_D) wird</text>
+  <text x="310" y="226" font-size="10" fill="#64748b">die RLZ abgebaut und Strom fließt.</text>
+</svg>
